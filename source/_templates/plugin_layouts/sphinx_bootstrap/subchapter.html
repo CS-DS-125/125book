@@ -1,0 +1,22 @@
+{% if prev %}
+  <nav class="navgutter" id="relations-prev-outer">
+    <a id="relations-prev" class="navLink" title='Previous Section - {{ prev.title }}' data-toggle="tooltip" href="{{ prev.link|e }}" >
+      <i id="relationsPrevIcon" class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </nav>
+{% endif %}
+
+{% if next %}
+  <nav class="navgutter" id="relations-next-outer">
+    <a id="relations-next" class="navLink" title='Next Section - {{ next.title }}' data-toggle="tooltip" href="{{ next.link|e }}" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </nav>
+{%- endif %}
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>

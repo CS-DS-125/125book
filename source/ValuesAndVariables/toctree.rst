@@ -12,5 +12,5 @@ This chapter introduces some of the most core concepts in programming.  "Values"
    Operators
    Input
    UpdatingVars
-   Other
+   Asides
    Glossary

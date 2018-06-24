@@ -24,10 +24,10 @@ data structures like lists, tuples, and dictionaries.
 
 As we build programs, we design data structures and write code to
 manipulate those data structures. There are many ways to write programs
-and by now, you probably have written some programs that are “not so
-elegant” and other programs that are “more elegant”. Even though your
+and by now, you probably have written some programs that are "not so
+elegant" and other programs that are "more elegant". Even though your
 programs may be small, you are starting to see how there is a bit of
-“art” and “aesthetic” to writing code.
+"art" and "aesthetic" to writing code.
 
 As programs get to be millions of lines long, it becomes increasingly
 important to write code that is easy to understand. If you are working
@@ -152,7 +152,7 @@ very short but complete program showing all three of these steps.
 
    # Code: http://www.py4e.com/code3/elev.py
 
-If we think a bit more about this program, there is the “outside world”
+If we think a bit more about this program, there is the "outside world"
 and the program. The input and output aspects are where the program
 interacts with the outside world. Within the program we have code and
 data to accomplish the task the program is designed to solve.
@@ -162,13 +162,13 @@ data to accomplish the task the program is designed to solve.
 
    A Program
 
-When we are “in” the program, we have some defined interactions with the
-“outside” world, but those interactions are well defined and generally
+When we are "in" the program, we have some defined interactions with the
+"outside" world, but those interactions are well defined and generally
 not something we focus on. While we are coding we worry only about the
-details “inside the program”.
+details "inside the program".
 
 One way to think about object oriented programming is that we are
-separating our program into multiple “zones”. Each “zone” contains some
+separating our program into multiple "zones". Each "zone" contains some
 code and data (like a program) and has well defined interactions with
 the outside world and the other zones within the program.
 
@@ -232,8 +232,8 @@ see how we build a network of interacting objects and orchestrate the
 movement of information between the objects to create a program. It is
 also important to note that when you looked at that program several
 chapters back, you could fully understand what was going on in the
-program without even realizing that the program was “orchestrating the
-movement of data between objects”. Back then it was just lines of code
+program without even realizing that the program was "orchestrating the
+movement of data between objects". Back then it was just lines of code
 that got the job done.
 
 Subdividing a Problem - Encapsulation
@@ -266,7 +266,7 @@ page.
 .. index:: encapsulation
 
 Another word we use to capture this idea that we ignore the internal
-detail of objects we use is “encapsulation”. This means that we can know
+detail of objects we use is "encapsulation". This means that we can know
 how to use an object without knowing how it internally accomplishes what
 we need done.
 
@@ -278,9 +278,9 @@ smaller than a whole program. Defining a function allows us to store a
 bit of code and give it a name and then later invoke that code using the
 name of the function.
 
-An object can contain a number of functions (which we call “methods”) as
+An object can contain a number of functions (which we call "methods") as
 well as data that is used by those functions. We call data items that
-are part of the object “attributes”.
+are part of the object "attributes".
 
 
 .. index:: class keyword
@@ -339,7 +339,7 @@ line of code:
 .. index:: instance, class
 
 This is where we instruct Python to construct (e.g. create) an *object*
-or “instance of the class named PartyAnimal”. It looks like a function
+or "instance of the class named PartyAnimal". It looks like a function
 call to the class itself and Python constructs the object with the right
 data and methods and returns the object which is then assigned to the
 variable ``an``. In a way this is quite similar to the following line
@@ -774,6 +774,6 @@ parent class
    If you are curious about where the list class is defined, take a look
    at (hopefully the URL won’t change)
    https://github.com/python/cpython/blob/master/Objects/listobject.c -
-   the list class is written in a language called “C”. If you take a
+   the list class is written in a language called "C". If you take a
    look at that source code and find it curious you might want to
    explore a few Computer Science courses.

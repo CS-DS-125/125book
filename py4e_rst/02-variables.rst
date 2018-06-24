@@ -14,11 +14,11 @@ Values and types
 .. index:: string
 
 A *value* is one of the basic things a program works with, like a letter
-or a number. The values we have seen so far are 1, 2, and “Hello,
-World!”
+or a number. The values we have seen so far are 1, 2, and "Hello,
+World!"
 
-These values belong to different *types*: 2 is an integer, and “Hello,
-World!” is a *string*, so called because it contains a “string” of
+These values belong to different *types*: 2 is an integer, and "Hello,
+World!" is a *string*, so called because it contains a "string" of
 letters. You (and the interpreter) can identify strings because they are
 enclosed in quotation marks.
 
@@ -62,7 +62,7 @@ format called *floating point*.
    >>> type(3.2)
    <class 'float'>
 
-What about values like “17” and “3.2”? They look like numbers, but they
+What about values like "17" and "3.2"? They look like numbers, but they
 are in quotation marks like strings.
 
 
@@ -96,7 +96,7 @@ between.
 .. index:: error message
 
 This is the first example we have seen of a semantic error: the code
-runs without producing an error message, but it doesn’t do the “right”
+runs without producing an error message, but it doesn’t do the "right"
 thing.
 
 Variables
@@ -616,8 +616,8 @@ Humans will most quickly understand the *intent* of the second program
 because the programmer has chosen variable names that reflect their
 intent regarding what data will be stored in each variable.
 
-We call these wisely chosen variable names “mnemonic variable names”.
-The word *mnemonic*\  [2]_ means “memory aid”. We choose mnemonic
+We call these wisely chosen variable names "mnemonic variable names".
+The word *mnemonic*\  [2]_ means "memory aid". We choose mnemonic
 variable names to help us remember why we created the variable in the
 first place.
 
@@ -722,7 +722,7 @@ messages are ``SyntaxError: invalid syntax`` and
 
 .. index:: error!runtime
 
-The runtime error you are most likely to make is a “use before def;”
+The runtime error you are most likely to make is a "use before def;"
 that is, trying to use a variable before you have assigned a value. This
 can happen if you spell a variable name wrong:
 
@@ -895,4 +895,4 @@ converted temperature.**
 
 .. [2]
    See https://en.wikipedia.org/wiki/Mnemonic for an extended
-   description of the word “mnemonic”.
+   description of the word "mnemonic".

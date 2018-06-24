@@ -43,12 +43,12 @@ times. So we break the problem into two phases.
 
 .. index:: cache
 
-In the first phase we take our input “survey” data in the file
+In the first phase we take our input "survey" data in the file
 *where.data* and read it one line at a time, and retrieve the geocoded
 information from Google and store it in a database *geodata.sqlite*.
 Before we use the geocoding API for each user-entered location, we
 simply check to see if we already have the data for that particular line
-of input. The database is functioning as a local “cache” of our
+of input. The database is functioning as a local "cache" of our
 geocoding data to make sure we never ask Google for the same data twice.
 
 You can restart the process at any time by removing the file
@@ -194,7 +194,7 @@ run of *spider.py* is additive.
    How many pages:
 
 You can have multiple starting points in the same database—within the
-program, these are called “webs”. The spider chooses randomly amongst
+program, these are called "webs". The spider chooses randomly amongst
 all non-visited links across all the webs as the next page to spider.
 
 If you want to dump the contents of the *spider.sqlite* file, you can
@@ -463,8 +463,8 @@ you will have a nicely indexed version of the email in *index.sqlite*.
 This is the file to use to do data analysis. With this file, data
 analysis will be really quick.
 
-The first, simplest data analysis is to determine “who sent the most
-mail?” and “which organization sent the most mail”? This is done using
+The first, simplest data analysis is to determine "who sent the most
+mail?" and "which organization sent the most mail"? This is done using
 *gbasic.py*:
 
 ::

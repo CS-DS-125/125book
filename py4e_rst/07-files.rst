@@ -18,7 +18,7 @@ So far, we have learned how to write programs and communicate our
 intentions to the *Central Processing Unit* using conditional execution,
 functions, and iterations. We have learned how to create and use data
 structures in the *Main Memory*. The CPU and memory are where our
-software works and runs. It is where all of the “thinking” happens.
+software works and runs. It is where all of the "thinking" happens.
 
 But if you recall from our hardware architecture discussions, once the
 power is turned off, anything stored in either the CPU or main memory is
@@ -68,7 +68,7 @@ when you start Python. You can download this file from
 
 If the ``open`` is successful, the operating system returns us a *file
 handle*. The file handle is not the actual data contained in the file,
-but instead it is a “handle” that we can use to read the data. You are
+but instead it is a "handle" that we can use to read the data. You are
 given a handle if the requested file exists and you have the proper
 permissions to read the file.
 
@@ -118,13 +118,13 @@ and a shortened version of the file is available from
 `www.py4e.com/code3/mbox-short.txt <http://www.py4e.com/code3/mbox-short.txt>`__
 
 These files are in a standard format for a file containing multiple mail
-messages. The lines which start with “From” separate the messages and
-the lines which start with “From:” are part of the messages. For more
+messages. The lines which start with "From" separate the messages and
+the lines which start with "From:" are part of the messages. For more
 information about the mbox format, see
 https://en.wikipedia.org/wiki/Mbox.
 
 To break the file into lines, there is a special character that
-represents the “end of the line” called the *newline* character.
+represents the "end of the line" called the *newline* character.
 
 
 .. index:: newline
@@ -132,7 +132,7 @@ represents the “end of the line” called the *newline* character.
 In Python, we represent the *newline* character as a backslash-n in
 string constants. Even though this looks like two characters, it is
 actually a single character. When we look at the variable by entering
-“stuff” in the interpreter, it shows us the ``\n`` in the string, but
+"stuff" in the interpreter, it shows us the ``\n`` in the string, but
 when we use ``print`` to show the string, we see the string broken into
 two lines by the newline character.
 
@@ -190,8 +190,8 @@ the lines in a file:
 We can use the file handle as the sequence in our ``for`` loop. Our
 ``for`` loop simply counts the number of lines in the file and prints
 them out. The rough translation of the ``for`` loop into English is,
-“for each line in the file represented by the file handle, add one to
-the ``count`` variable.”
+"for each line in the file represented by the file handle, add one to
+the ``count`` variable."
 
 The reason that the ``open`` function does not read the entire file is
 that the file might be quite large with many gigabytes of data. The
@@ -260,7 +260,7 @@ mechanisms.
 .. index:: filter pattern, pattern!filter
 
 For example, if we wanted to read a file and only print out lines which
-started with the prefix “From:”, we could use the string method
+started with the prefix "From:", we could use the string method
 *startswith* to select only those lines with the desired prefix:
 
 .. code:: python
@@ -293,7 +293,7 @@ When this program runs, we get the following output:
    ...
 
 The output looks great since the only lines we are seeing are those
-which start with “From:”, but why are we seeing the extra blank lines?
+which start with "From:", but why are we seeing the extra blank lines?
 This is due to that invisible *newline* character. Each of the lines
 ends with a newline, so the ``print`` statement prints the string in the
 variable *line* which includes a newline and then ``print`` adds
@@ -334,8 +334,8 @@ When this program runs, we get the following output:
 
 As your file processing programs get more complicated, you may want to
 structure your search loops using ``continue``. The basic idea of the
-search loop is that you are looking for “interesting” lines and
-effectively skipping “uninteresting” lines. And then when we find an
+search loop is that you are looking for "interesting" lines and
+effectively skipping "uninteresting" lines. And then when we find an
 interesting line, we do something with that line.
 
 We can structure the loop to follow the pattern of skipping
@@ -361,16 +361,16 @@ uninteresting lines as follows:
    \end{trinketfiles}
 
 The output of the program is the same. In English, the uninteresting
-lines are those which do not start with “From:”, which we skip using
-``continue``. For the “interesting” lines (i.e., those that start with
-“From:”) we perform the processing on those lines.
+lines are those which do not start with "From:", which we skip using
+``continue``. For the "interesting" lines (i.e., those that start with
+"From:") we perform the processing on those lines.
 
 We can use the ``find`` string method to simulate a text editor search
 that finds lines where the search string is anywhere in the line. Since
 ``find`` looks for an occurrence of a string within another string and
 either returns the position of the string or -1 if the string was not
 found, we can write the following loop to show lines which contain the
-string “@uct.ac.za” (i.e., they come from the University of Cape Town in
+string "@uct.ac.za" (i.e., they come from the University of Cape Town in
 South Africa):
 
 .. code:: python
@@ -452,10 +452,10 @@ different files.
    There were 27 subject lines in mbox-short.txt
 
 Before peeking at the next section, take a look at the above program and
-ask yourself, “What could go possibly wrong here?” or “What might our
+ask yourself, "What could go possibly wrong here?" or "What might our
 friendly user do that would cause our nice little program to
 ungracefully exit with a traceback, making us look not-so-cool in the
-eyes of our users?”
+eyes of our users?"
 
 Using ``try, except,`` and ``open``
 -----------------------------------
@@ -531,7 +531,7 @@ as follows:
 
 The ``exit`` function terminates the program. It is a function that we
 call that never returns. Now when our user (or QA team) types in
-silliness or bad file names, we “catch” them and recover gracefully:
+silliness or bad file names, we "catch" them and recover gracefully:
 
 ::
 
@@ -547,13 +547,13 @@ silliness or bad file names, we “catch” them and recover gracefully:
 .. index:: Pythonic
 
 Protecting the ``open`` call is a good example of the proper use of
-``try`` and ``except`` in a Python program. We use the term “Pythonic”
-when we are doing something the “Python way”. We might say that the
+``try`` and ``except`` in a Python program. We use the term "Pythonic"
+when we are doing something the "Python way". We might say that the
 above example is the Pythonic way to open a file.
 
 Once you become more skilled in Python, you can engage in repartee with
 other Python programmers to decide which of two equivalent solutions to
-a problem is “more Pythonic”. The goal to be “more Pythonic” captures
+a problem is "more Pythonic". The goal to be "more Pythonic" captures
 the notion that programming is part engineering and part art. We are not
 always interested in just making something work, we also want our
 solution to be elegant and to be appreciated as elegant by our peers.
@@ -564,7 +564,7 @@ Writing files
 
 .. index:: file!writing
 
-To write a file, you have to open it with mode “w” as a second
+To write a file, you have to open it with mode "w" as a second
 parameter:
 
 .. code:: python
@@ -680,8 +680,8 @@ newline
    a line.
 .. index:: newline
 Pythonic
-   A technique that works elegantly in Python. “Using try and except is
-   the *Pythonic* way to recover from missing files”.
+   A technique that works elegantly in Python. "Using try and except is
+   the *Pythonic* way to recover from missing files".
 
 .. index:: Pythonic
 Quality Assurance
@@ -722,7 +722,7 @@ through the file and look for lines of the form:**
 
    X-DSPAM-Confidence: 0.8475
 
-**When you encounter a line that starts with “X-DSPAM-Confidence:” pull
+**When you encounter a line that starts with "X-DSPAM-Confidence:" pull
 apart the line to extract the floating-point number on the line. Count
 these lines and then compute the total of the spam confidence values
 from these lines. When you reach the end of the file, print out the
@@ -741,8 +741,8 @@ average spam confidence.**
 **Exercise 3: Sometimes when programmers get bored or want to have a bit
 of fun, they add a harmless Easter Egg to their program Modify the
 program that prompts the user for the file name so that it prints a
-funny message when the user types in the exact file name “na na boo
-boo”. The program should behave normally for all other files which exist
+funny message when the user types in the exact file name "na na boo
+boo". The program should behave normally for all other files which exist
 and don’t exist. Here is a sample execution of the program:**
 
 ::

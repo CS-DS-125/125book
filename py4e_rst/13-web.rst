@@ -13,7 +13,7 @@ consumed by other programs (i.e., not HTML to be displayed in a
 browser).
 
 There are two common formats that we use when exchanging data across the
-web. The “eXtensible Markup Language” or XML has been in use for a very
+web. The "eXtensible Markup Language" or XML has been in use for a very
 long time and is best suited for exchanging document-style data. When
 programs just want to exchange dictionaries, lists, or other internal
 information with each other, they use JavaScript Object Notation or JSON
@@ -78,12 +78,12 @@ elements from the XML:
    # Code: http://www.py4e.com/code3/xml1.py
 
 Calling ``fromstring`` converts the string representation of the XML
-into a “tree” of XML nodes. When the XML is in a tree, we have a series
+into a "tree" of XML nodes. When the XML is in a tree, we have a series
 of methods we can call to extract portions of data from the XML.
 
 The ``find`` function searches through the XML tree and retrieves a
 *node* that matches the specified tag. Each node can have some text,
-some attributes (like hide), and some “child” nodes. Each node can be
+some attributes (like hide), and some "child" nodes. Each node can be
 the top of a tree of nodes.
 
 ::
@@ -184,8 +184,8 @@ from above:
    }
 
 You will notice some differences. First, in XML, we can add attributes
-like “intl” to the “phone” tag. In JSON, we simply have key-value pairs.
-Also the XML “person” tag is gone, replaced by a set of outer curly
+like "intl" to the "phone" tag. In JSON, we simply have key-value pairs.
+Also the XML "person" tag is gone, replaced by a set of outer curly
 braces.
 
 In general, JSON structures are simpler than XML because JSON has fewer
@@ -276,12 +276,12 @@ HyperText Transport Protocol (HTTP) and a way to represent complex data
 that we are sending back and forth between these applications using
 eXtensible Markup Language (XML) or JavaScript Object Notation (JSON).
 
-The next step is to begin to define and document “contracts” between
+The next step is to begin to define and document "contracts" between
 applications using these techniques. The general name for these
 application-to-application contracts is *Application Program Interfaces*
 or APIs. When we use an API, generally one program makes a set of
 *services* available for use by other applications and publishes the
-APIs (i.e., the “rules”) that must be followed to access the services
+APIs (i.e., the "rules") that must be followed to access the services
 provided by the program.
 
 When we begin to build our programs where the functionality of our
@@ -328,7 +328,7 @@ Google geocoding web service
 
 Google has an excellent web service that allows us to make use of their
 large database of geographic information. We can submit a geographical
-search string like “Ann Arbor, MI” to their geocoding API and have
+search string like "Ann Arbor, MI" to their geocoding API and have
 Google return its best guess as to where on a map we might find our
 search string and tell us about the landmarks nearby.
 
@@ -469,7 +469,7 @@ Security and API usage
 
 .. index:: OAuth, API!key
 
-It is quite common that you need some kind of “API key” to make use of a
+It is quite common that you need some kind of "API key" to make use of a
 vendor’s API. The general idea is that they want to know who is using
 their services and how much each user is using. Perhaps they have free
 and pay tiers of their services or have a policy that limits the number
@@ -620,7 +620,7 @@ request to the API.
 
 In the following example, we retrieve a user’s Twitter friends, parse
 the returned JSON, and extract some of the information about the
-friends. We also dump the JSON after parsing and “pretty-print” it with
+friends. We also dump the JSON after parsing and "pretty-print" it with
 an indent of four characters to allow us to pore through the data when
 we want to extract more fields.
 
@@ -733,10 +733,10 @@ shortened to fit on the page):
    Enter Twitter Account:
 
 The last bit of the output is where we see the for loop reading the five
-most recent “friends” of the *drchuck* Twitter account and printing the
+most recent "friends" of the *drchuck* Twitter account and printing the
 most recent status for each friend. There is a great deal more data
 available in the returned JSON. If you look in the output of the
-program, you can also see that the “find the friends” of a particular
+program, you can also see that the "find the friends" of a particular
 account has a different rate limitation than the number of timeline
 queries we are allowed to run per time period.
 
@@ -787,5 +787,5 @@ or
 `www.py4e.com/code3/geoxml.py <http://www.py4e.com/code3/geoxml.py>`__
 to print out the two-character country code from the retrieved data. Add
 error checking so your program does not traceback if the country code is
-not there. Once you have it working, search for “Atlantic Ocean” and
+not there. Once you have it working, search for "Atlantic Ocean" and
 make sure it can handle locations that are not in any country.

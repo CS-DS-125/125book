@@ -13,7 +13,7 @@ Function calls
 
 In the context of programming, a *function* is a named sequence of
 statements that performs a computation. When you define a function, you
-specify the name and the sequence of statements. Later, you can “call”
+specify the name and the sequence of statements. Later, you can "call"
 the function by name. We have already seen one example of a *function
 call*:
 
@@ -30,7 +30,7 @@ The result, for the ``type`` function, is the type of the argument.
 
 .. index:: parentheses!argument in
 
-It is common to say that a function “takes” an argument and “returns” a
+It is common to say that a function "takes" an argument and "returns" a
 result. The result is called the *return value*.
 
 
@@ -55,8 +55,8 @@ values in a list, respectively:
    ' '
    >>>
 
-The ``max`` function tells us the “largest character” in the string
-(which turns out to be the letter “w”) and the ``min`` function shows us
+The ``max`` function tells us the "largest character" in the string
+(which turns out to be the letter "w") and the ``min`` function shows us
 the smallest character (which turns out to be a space).
 
 Another very common built-in function is the ``len`` function which
@@ -73,7 +73,7 @@ These functions are not limited to looking at strings. They can operate
 on any set of values, as we will see in later chapters.
 
 You should treat the names of built-in functions as reserved words
-(i.e., avoid using “max” as a variable name).
+(i.e., avoid using "max" as a variable name).
 
 Type conversion functions
 -------------------------
@@ -239,7 +239,7 @@ but impossible to distinguish them from random.
 .. index:: random module, module!random
 
 The ``random`` module provides functions that generate pseudorandom
-numbers (which I will simply call “random” from here on).
+numbers (which I will simply call "random" from here on).
 
 
 .. index:: random function
@@ -390,7 +390,7 @@ Defining a function creates a variable with the same name.
    <class 'function'>
 
 The value of ``print_lyrics`` is a *function object*, which has type
-“function”.
+"function".
 
 
 .. index:: function object
@@ -656,7 +656,7 @@ result to a variable, you get a special value called ``None``.
    >>> print(result)
    None
 
-The value ``None`` is not the same as the string “None”. It is a special
+The value ``None`` is not the same as the string "None". It is a special
 value that has its own type:
 
 .. code:: python
@@ -679,7 +679,7 @@ our function. For example, we could make a very simple function called
 
    # Code: http://www.py4e.com/code3/addtwo.py
 
-When this script executes, the ``print`` statement will print out “8”
+When this script executes, the ``print`` statement will print out "8"
 because the ``addtwo`` function was called with 3 and 5 as arguments.
 Within the function, the parameters ``a`` and ``b`` were 3 and 5
 respectively. The function computed the sum of the two numbers and
@@ -712,8 +712,8 @@ functions. There are several reasons:
 
 Throughout the rest of the book, often we will use a function definition
 to explain a concept. Part of the skill of creating and using functions
-is to have a function properly capture an idea such as “find the
-smallest value in a list of values”. Later we will show you code that
+is to have a function properly capture an idea such as "find the
+smallest value in a list of values". Later we will show you code that
 finds the smallest in a list of values and we will present it to you as
 a function named ``min`` which takes a list of values as its argument
 and returns the smallest value in the list.
@@ -839,9 +839,9 @@ void function
 Exercises
 ---------
 
-**Exercise 4: What is the purpose of the “def” keyword in Python?**
+**Exercise 4: What is the purpose of the "def" keyword in Python?**
 
-| a) It is slang that means “the following code is really cool”
+| a) It is slang that means "the following code is really cool"
 | b) It indicates the start of a function
 | c) It indicates that the following indented section of code is to be
   stored for later

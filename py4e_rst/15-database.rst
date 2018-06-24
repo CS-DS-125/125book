@@ -131,10 +131,10 @@ columns in the database is as follows:
 
 .. index:: function!cursor
 
-The ``connect`` operation makes a “connection” to the database stored in
+The ``connect`` operation makes a "connection" to the database stored in
 the file ``music.sqlite3`` in the current directory. If the file does
-not exist, it will be created. The reason this is called a “connection”
-is that sometimes the database is stored on a separate “database server”
+not exist, it will be created. The reason this is called a "connection"
+is that sometimes the database is stored on a separate "database server"
 from the server on which we are running our application. In our simple
 examples the database will just be a local file in the same directory as
 the Python code we are running.
@@ -167,7 +167,7 @@ The first SQL command removes the ``Tracks`` table from the database if
 it exists. This pattern is simply to allow us to run the same program to
 create the ``Tracks`` table over and over again without causing an
 error. Note that the ``DROP TABLE`` command deletes the table and all of
-its contents from the database (i.e., there is no “undo”).
+its contents from the database (i.e., there is no "undo").
 
 .. code:: python
 
@@ -365,11 +365,11 @@ statuses, looping through the list of friends, and adding each of the
 friends to a database to be retrieved in the future. After we process
 one person’s Twitter friends, we check in our database and retrieve one
 of the friends of the friend. We do this over and over, picking an
-“unvisited” person, retrieving their friend list, and adding friends we
+"unvisited" person, retrieving their friend list, and adding friends we
 have not seen to our list for a future visit.
 
 We also track how many times we have seen a particular friend in the
-database to get some sense of their “popularity”.
+database to get some sense of their "popularity".
 
 By storing our list of known accounts and whether we have retrieved the
 account or not, and how popular the account is in a database on the disk
@@ -454,10 +454,10 @@ Here is the source code for our Twitter spidering application:
 Our database is stored in the file ``spider.sqlite3`` and it has one
 table named ``Twitter``. Each row in the ``Twitter`` table has a column
 for the account name, whether we have retrieved the friends of this
-account, and how many times this account has been “friended”.
+account, and how many times this account has been "friended".
 
 In the main loop of the program, we prompt the user for a Twitter
-account name or “quit” to exit the program. If the user enters a Twitter
+account name or "quit" to exit the program. If the user enters a Twitter
 account, we retrieve the list of friends and statuses for that user and
 add each friend to the database if not already in the database. If the
 friend is already in the list, we add 1 to the ``friends`` field in the
@@ -574,7 +574,7 @@ friend.
 
 Now our database reflects the retrieval of the friends of our first
 Twitter account (*drchuck*). We can run the program again and tell it to
-retrieve the friends of the next “unprocessed” account by simply
+retrieve the friends of the next "unprocessed" account by simply
 pressing enter instead of a Twitter account as follows:
 
 ::
@@ -601,7 +601,7 @@ following code is executed:
            continue
 
 We use the SQL ``SELECT`` statement to retrieve the name of the first
-(``LIMIT 1``) user who still has their “have we retrieved this user”
+(``LIMIT 1``) user who still has their "have we retrieved this user"
 value set to zero. We also use the ``fetchone()[0]`` pattern within a
 try/except block to either extract a ``screen_name`` from the retrieved
 data or put out an error message and loop back up.
@@ -698,7 +698,7 @@ insert a row of the form:
    INSERT INTO Pals (from_friend,to_friend) VALUES ('drchuck', 'lhawthorn')
 
 As we are processing the 20 friends from the ``drchuck`` Twitter feed,
-we will insert 20 records with “drchuck” as the first parameter so we
+we will insert 20 records with "drchuck" as the first parameter so we
 will end up duplicating the string many times in the database.
 
 This duplication of string data violates one of the best practices for
@@ -755,7 +755,7 @@ programs, as we will see in a moment. The rules both keep us from making
 mistakes and make it simpler to write some of our code.
 
 In essence, in creating this ``Follows`` table, we are modelling a
-“relationship” where one person “follows” someone else and representing
+"relationship" where one person "follows" someone else and representing
 it with a pair of numbers indicating that (a) the people are connected
 and (b) the direction of the relationship.
 
@@ -889,7 +889,7 @@ tables. The basic patterns are:
    for the person or (2) add the person to the ``People`` table and get
    the ``id`` value for the newly added row.
 
-3. Insert the row that captures the “follows” relationship.
+3. Insert the row that captures the "follows" relationship.
 
 We will cover each of these in turn.
 
@@ -923,7 +923,7 @@ We can take advantage of these constraints in the following code:
 
 We add the ``OR IGNORE`` clause to our ``INSERT`` statement to indicate
 that if this particular ``INSERT`` would cause a violation of the
-“``name`` must be unique” rule, the database system is allowed to ignore
+"``name`` must be unique" rule, the database system is allowed to ignore
 the ``INSERT``. We are using the database constraint as a safety net to
 make sure we don’t inadvertently do something incorrect.
 
@@ -1006,7 +1006,7 @@ the JSON, it is a simple matter to insert the two numbers into the
        (id, friend_id) )
 
 Notice that we let the database take care of keeping us from
-“double-inserting” a relationship by creating the table with a
+"double-inserting" a relationship by creating the table with a
 uniqueness constraint and then adding ``OR IGNORE`` to our ``INSERT``
 statement.
 
@@ -1070,7 +1070,7 @@ multiple linked tables and linking the rows in those tables using
 *keys*, we need to look at some terminology around keys. There are
 generally three kinds of keys used in a database model.
 
--  A *logical key* is a key that the “real world” might use to look up a
+-  A *logical key* is a key that the "real world" might use to look up a
    row. In our example data model, the ``name`` field is a logical key.
    It is the screen name for the user and we indeed look up a user’s row
    several times in the program using the ``name`` field. You will often
@@ -1126,7 +1126,7 @@ append the row from ``People`` where the field ``from_id`` in
 
    Connecting Tables Using JOIN
 
-The result of the JOIN is to create extra-long “metarows” which have
+The result of the JOIN is to create extra-long "metarows" which have
 both the fields from ``People`` and the matching fields from
 ``Follows``. Where there is more than one match between the ``id`` field
 from ``People`` and the ``from_id`` from ``People``, then JOIN creates a
@@ -1209,13 +1209,13 @@ last set of rows is the result of the ``SELECT`` with the ``JOIN``
 clause.
 
 In the last select, we are looking for accounts that are friends of
-“opencontent” (i.e., ``People.id=2``).
+"opencontent" (i.e., ``People.id=2``).
 
-In each of the “metarows” in the last select, the first two columns are
+In each of the "metarows" in the last select, the first two columns are
 from the ``Follows`` table followed by columns three through five from
 the ``People`` table. You can also see that the second column
 (``Follows.to_id``) matches the third column (``People.id``) in each of
-the joined-up “metarows”.
+the joined-up "metarows".
 
 Summary
 -------
@@ -1253,7 +1253,7 @@ quickly check to see if your program is working properly.
 You must be careful because SQLite takes care to keep two programs from
 changing the same data at the same time. For example, if you open a
 database in the browser and make a change to the database and have not
-yet pressed the “save” button in the browser, the browser “locks” the
+yet pressed the "save" button in the browser, the browser "locks" the
 database file and keeps any other program from accessing the file. In
 particular, your Python program will not be able to access the file if
 it is locked.
@@ -1267,8 +1267,8 @@ Glossary
 --------
 
 attribute
-   One of the values within a tuple. More commonly called a “column” or
-   “field”.
+   One of the values within a tuple. More commonly called a "column" or
+   "field".
 .. index:: attribute
 constraint
    When we tell the database to enforce a rule on a field or a row in a
@@ -1298,7 +1298,7 @@ index
 
 .. index:: index, 
 logical key
-   A key that the “outside world” uses to look up a particular row. For
+   A key that the "outside world" uses to look up a particular row. For
    example in a table of user accounts, a person’s email address might
    be a good candidate as the logical key for the user’s data.
 
@@ -1318,11 +1318,11 @@ primary key
 .. index:: primary key
 relation
    An area within a database that contains tuples and attributes. More
-   typically called a “table”.
+   typically called a "table".
 .. index:: relation
 tuple
    A single entry in a database table that is a set of attributes. More
-   typically called “row”.
+   typically called "row".
 
 
 .. index:: tuple
@@ -1334,5 +1334,5 @@ tuple
    as MySQL.
 
 .. [2]
-   In general, when a sentence starts with “if all goes well” you will
+   In general, when a sentence starts with "if all goes well" you will
    find that the code needs to use try/except.

@@ -22,8 +22,8 @@ the old.
 
    x = x + 1
 
-This means “get the current value of ``x``, add 1, and then update ``x``
-with the new value.”
+This means "get the current value of ``x``, add 1, and then update ``x``
+with the new value."
 
 If you try to update a variable that doesn’t exist, you get an error,
 because Python evaluates the right side before it assigns a value to
@@ -65,7 +65,7 @@ computers do well and people do poorly. Because iteration is so common,
 Python provides several language features to make it easier.
 
 One form of iteration in Python is the ``while`` statement. Here is a
-simple program that counts down from five and then says “Blastoff!”.
+simple program that counts down from five and then says "Blastoff!".
 
 .. code:: python
 
@@ -76,9 +76,9 @@ simple program that counts down from five and then says “Blastoff!”.
    print('Blastoff!')
 
 You can almost read the ``while`` statement as if it were English. It
-means, “While ``n`` is greater than 0, display the value of ``n`` and
+means, "While ``n`` is greater than 0, display the value of ``n`` and
 then reduce the value of ``n`` by 1. When you get to 0, exit the
-``while`` statement and display the word ``Blastoff!``”
+``while`` statement and display the word ``Blastoff!``"
 
 
 .. index:: flow of execution
@@ -95,7 +95,7 @@ More formally, here is the flow of execution for a ``while`` statement:
 
 This type of flow is called a *loop* because the third step loops back
 around to the top. We call each time we execute the body of the loop an
-*iteration*. For the above loop, we would say, “It had five iterations”,
+*iteration*. For the above loop, we would say, "It had five iterations",
 which means that the body of the loop was executed five times.
 
 
@@ -114,7 +114,7 @@ Infinite loops
 --------------
 
 An endless source of amusement for programmers is the observation that
-the directions on shampoo, “Lather, rinse, repeat,” are an infinite loop
+the directions on shampoo, "Lather, rinse, repeat," are an infinite loop
 because there is no *iteration variable* telling you how many times to
 execute the loop.
 
@@ -127,7 +127,7 @@ the value of ``n`` gets smaller each time through the loop, so
 eventually we have to get to 0. Other times a loop is obviously infinite
 because it has no iteration variable at all.
 
-“Infinite loops” and ``break``
+"Infinite loops" and ``break``
 ------------------------------
 
 
@@ -195,8 +195,8 @@ the loop. Here’s a sample run:
 
 This way of writing ``while`` loops is common because you can check the
 condition anywhere in the loop (not just at the top) and you can express
-the stop condition affirmatively (“stop when this happens”) rather than
-negatively (“keep going until that happens.”).
+the stop condition affirmatively ("stop when this happens") rather than
+negatively ("keep going until that happens.").
 
 Finishing iterations with ``continue``
 --------------------------------------
@@ -213,7 +213,7 @@ iteration without finishing the body of the loop for the current
 iteration.
 
 Here is an example of a loop that copies its input until the user types
-“done”, but treats lines that start with the hash character as lines not
+"done", but treats lines that start with the hash character as lines not
 to be printed (kind of like Python comments).
 
 .. code:: python
@@ -283,8 +283,8 @@ once for each of the three strings in the list resulting in this output:
 
 Translating this ``for`` loop to English is not as direct as the
 ``while``, but if you think of friends as a *set*, it goes like this:
-“Run the statements in the body of the for loop once for each friend
-*in* the set named friends.”
+"Run the statements in the body of the for loop once for each friend
+*in* the set named friends."
 
 Looking at the ``for`` loop, *for* and *in* are reserved Python
 keywords, and ``friend`` and ``friends`` are variables.
@@ -340,10 +340,10 @@ once for each of the values in the list.
 
 In the body of the loop, we add 1 to the current value of ``count`` for
 each of the values in the list. While the loop is executing, the value
-of ``count`` is the number of values we have seen “so far”.
+of ``count`` is the number of values we have seen "so far".
 
 Once the loop completes, the value of ``count`` is the total number of
-items. The total number “falls in our lap” at the end of the loop. We
+items. The total number "falls in our lap" at the end of the loop. We
 construct the loop so that we have what we want when the loop finishes.
 
 Another similar loop that computes the total of a set of numbers is as
@@ -360,7 +360,7 @@ In this loop we *do* use the *iteration variable*. Instead of simply
 adding one to the ``count`` as in the previous loop, we add the actual
 number (3, 41, 12, etc.) to the running total during each loop
 iteration. If you think about the variable ``total``, it contains the
-“running total of the values so far”. So before the loop starts
+"running total of the values so far". So before the loop starts
 ``total`` is zero because we have not yet seen any values, during the
 loop ``total`` is the running total, and at the end of the loop
 ``total`` is the overall total of all the values in the list.
@@ -412,10 +412,10 @@ When the program executes, the output is as follows:
    Loop: 15 74
    Largest: 74
 
-The variable ``largest`` is best thought of as the “largest value we
-have seen so far”. Before the loop, we set ``largest`` to the constant
+The variable ``largest`` is best thought of as the "largest value we
+have seen so far". Before the loop, we set ``largest`` to the constant
 ``None``. ``None`` is a special constant value which we can store in a
-variable to mark the variable as “empty”.
+variable to mark the variable as "empty".
 
 Before the loop starts, the largest value we have seen so far is
 ``None`` since we have not yet seen any values. While the loop is
@@ -427,7 +427,7 @@ set ``largest`` to be 3.
 After the first iteration, ``largest`` is no longer ``None``, so the
 second part of the compound logical expression that checks
 ``itervar > largest`` triggers only when we see a value that is larger
-than the “largest so far”. When we see a new “even larger” value we take
+than the "largest so far". When we see a new "even larger" value we take
 that new value for ``largest``. You can see in the program output that
 ``largest`` progresses from 3 to 41 to 74.
 
@@ -447,7 +447,7 @@ change:
        print('Loop:', itervar, smallest)
    print('Smallest:', smallest)
 
-Again, ``smallest`` is the “smallest so far” before, during, and after
+Again, ``smallest`` is the "smallest so far" before, during, and after
 the loop executes. When the loop has completed, ``smallest`` contains
 the minimum value in the list.
 
@@ -482,7 +482,7 @@ more places for bugs to hide.
 
 .. index:: bisection, debugging by
 
-One way to cut your debugging time is “debugging by bisection.” For
+One way to cut your debugging time is "debugging by bisection." For
 example, if there are 100 lines in your program and you check them one
 at a time, it would take 100 steps.
 
@@ -499,7 +499,7 @@ Every time you perform a check like this, you halve the number of lines
 you have to search. After six steps (which is much less than 100), you
 would be down to one or two lines of code, at least in theory.
 
-In practice it is not always clear what the “middle of the program” is
+In practice it is not always clear what the "middle of the program" is
 and not always possible to check it. It doesn’t make sense to count
 lines and find the exact midpoint. Instead, think about places in the
 program where there might be errors and places where it is easy to put a
@@ -516,7 +516,7 @@ accumulator
 counter
    A variable used in a loop to count the number of times something
    happened. We initialize a counter to zero and then increment the
-   counter each time we want to “count” something.
+   counter each time we want to "count" something.
 
 .. index:: counter
 decrement
@@ -544,7 +544,7 @@ Exercises
 ---------
 
 **Exercise 1: Write a program which repeatedly reads numbers until the
-user enters “done”. Once “done” is entered, print out the total, count,
+user enters "done". Once "done" is entered, print out the total, count,
 and average of the numbers. If the user enters anything other than a
 number, detect their mistake using ``try`` and ``except`` and print an
 error message and skip to the next number.**

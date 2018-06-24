@@ -30,10 +30,10 @@ Thomas Strassel, Ryan Clement, Alissa Talley, Caitlin Holman, Yong-Mi
 Kim, Karen Stover, Cherie Edmonds, Maria Seiferle, Romer Kristi D.
 Aranas (RK), Grant Boyer, Hedemarrie Dussan,
 
-Preface for “Think Python”
+Preface for "Think Python"
 --------------------------
 
-The strange history of “Think Python”
+The strange history of "Think Python"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (Allen B. Downey)
@@ -108,7 +108,7 @@ who was interested in publishing the next edition. Good timing!
 I hope you enjoy working with this book, and that it helps you learn to
 program and think, at least a little bit, like a computer scientist.
 
-Acknowledgements for “Think Python”
+Acknowledgements for "Think Python"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (Allen B. Downey)
@@ -145,7 +145,7 @@ Press, and everything else, too.
 Allen Downey is an Associate Professor of Computer Science at the
 Franklin W. Olin College of Engineering.
 
-Contributor List for “Think Python”
+Contributor List for "Think Python"
 -----------------------------------
 
 
@@ -158,7 +158,7 @@ and corrections over the past few years. Their contributions, and
 enthusiasm for this project, have been a huge help.
 
 For the detail on the nature of each of the contributions from these
-individuals, see the “Think Python” text.
+individuals, see the "Think Python" text.
 
 Lloyd Hugh Allen, Yvon Boulianne, Fred Bremmer, Jonah Cohen, Michael
 Conlon, Benoit Girard, Courtney Gleason and Katherine Smith, Lee Harr,

@@ -88,7 +88,7 @@ what the server sends back.
 
 First the program makes a connection to port 80 on the server
 `www.py4e.com <http://www.py4e.com>`__. Since our program is playing the
-role of the “web browser”, the HTTP protocol says we must send the GET
+role of the "web browser", the HTTP protocol says we must send the GET
 command followed by a blank line. ``\r\n`` signifies an EOL (end of
 line), so ``\r\n\r\n`` signifies nothing between two EOL sequences. That
 is the equivalent of a blank line.
@@ -260,7 +260,7 @@ of the socket and there is no more data forthcoming.
 
 We can slow down our successive ``recv()`` calls by uncommenting the
 call to ``time.sleep()``. This way, we wait a quarter of a second after
-each call so that the server can “get ahead” of us and send more data to
+each call so that the server can "get ahead" of us and send more data to
 us before we call ``recv()`` again. With the delay, in place the program
 executes as follows:
 
@@ -297,7 +297,7 @@ application making ``recv()`` requests. When we run the program with the
 delay in place, at some point the server might fill up the buffer in the
 socket and be forced to pause until our program starts to empty the
 buffer. The pausing of either the sending application or the receiving
-application is called “flow control.”
+application is called "flow control."
 
 
 .. index:: flow control
@@ -448,7 +448,7 @@ pages, extracting links, and so on. Using this technique, Google
 *spiders* its way through nearly all of the pages on the web.
 
 Google also uses the frequency of links from pages it finds to a
-particular page as one measure of how “important” a page is and how high
+particular page as one measure of how "important" a page is and how high
 the page should appear in its search results.
 
 Parsing HTML using regular expressions
@@ -475,13 +475,13 @@ the link values from the above text as follows:
 
    href="http[s]?://.+?"
 
-Our regular expression looks for strings that start with “href="http://”
-or “href="https://”, followed by one or more characters (``.+?``),
+Our regular expression looks for strings that start with "href="http://"
+or "href="https://", followed by one or more characters (``.+?``),
 followed by another double quote. The question mark behind the ``[s]?``
-indicates to search for the string “http” followed by zero or one “s”.
+indicates to search for the string "http" followed by zero or one "s".
 
 The question mark added to the ``.+?`` indicates that the match is to be
-done in a “non-greedy” fashion instead of a “greedy” fashion. A
+done in a "non-greedy" fashion instead of a "greedy" fashion. A
 non-greedy match tries to find the *smallest* possible matching string
 and a greedy match tries to find the *largest* possible matching string.
 
@@ -545,7 +545,7 @@ When we run the program and input a URL, we get the following output:
    http://sphinx.pocoo.org/
 
 Regular expressions work very nicely when your HTML is well formatted
-and predictable. But since there are a lot of “broken” HTML pages out
+and predictable. But since there are a lot of "broken" HTML pages out
 there, a solution only using regular expressions might either miss some
 valid links or end up with bad data.
 
@@ -670,7 +670,7 @@ When the program runs, it produces the following output:
 
 This list is much longer because some HTML anchor tags are relative
 paths (e.g., tutorial/index.html) or in-page references (e.g., ‘#’) that
-do not include “http://” or “https://”, which was a requirement in our
+do not include "http://" or "https://", which was a requirement in our
 regular expression.
 
 You can use also BeautifulSoup to pull out various parts of each tag:
@@ -741,7 +741,7 @@ One of these commands is ``curl``:
 
    $ curl -O http://www.py4e.com/cover.jpg
 
-The command ``curl`` is short for “copy URL” and so the two examples
+The command ``curl`` is short for "copy URL" and so the two examples
 listed earlier to retrieve binary files with ``urllib`` are cleverly
 named ``curl1.py`` and ``curl2.py`` on
 `www.py4e.com/code3 <http://www.py4e.com/code3>`__ as they implement

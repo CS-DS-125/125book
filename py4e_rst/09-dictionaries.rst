@@ -53,7 +53,7 @@ to the dictionary, you can use square brackets:
    >>> eng2sp['one'] = 'uno'
 
 This line creates an item that maps from the key ``'one'`` to the value
-“uno”. If we print the dictionary again, we see a key-value pair with a
+"uno". If we print the dictionary again, we see a key-value pair with a
 colon between the key and value:
 
 .. code:: python
@@ -84,7 +84,7 @@ corresponding values:
    >>> print(eng2sp['two'])
    'dos'
 
-The key ``'two'`` always maps to the value “dos” so the order of the
+The key ``'two'`` always maps to the value "dos" so the order of the
 items doesn’t matter.
 
 If the key isn’t in the dictionary, you get an exception:
@@ -230,7 +230,7 @@ Here’s the output of the program:
 
    {'a': 1, 'b': 1, 'o': 2, 'n': 1, 's': 2, 'r': 2, 'u': 2, 't': 1}
 
-The histogram indicates that the letters “a” and “b” appear once; “o”
+The histogram indicates that the letters "a" and "b" appear once; "o"
 appears twice, and so on.
 
 
@@ -263,7 +263,7 @@ a dictionary, we can reduce four lines down to one and eliminate the
    print(d)
 
 The use of the ``get`` method to simplify this counting loop ends up
-being a very commonly used “idiom” in Python and we will use it many
+being a very commonly used "idiom" in Python and we will use it many
 times in the rest of the book. So you should take a moment and compare
 the loop using the ``if`` statement and ``in`` operator with the loop
 using the ``get`` method. They do exactly the same thing, but one is
@@ -305,7 +305,7 @@ the other loop is the *inner* loop.
 
 Because the inner loop executes all of its iterations each time the
 outer loop makes a single iteration, we think of the inner loop as
-iterating “more quickly” and the outer loop as iterating more slowly.
+iterating "more quickly" and the outer loop as iterating more slowly.
 
 
 .. index:: Romeo and Juliet
@@ -471,11 +471,11 @@ has lots of punctuation, as shown below.
    Who is already sick and pale with grief,
 
 Since the Python ``split`` function looks for spaces and treats words as
-tokens separated by spaces, we would treat the words “soft!” and “soft”
+tokens separated by spaces, we would treat the words "soft!" and "soft"
 as *different* words and create a separate dictionary entry for each
 word.
 
-Also since the file has capitalization, we would treat “who” and “Who”
+Also since the file has capitalization, we would treat "who" and "Who"
 as different words with different counts.
 
 We can solve both these problems by using the string methods ``lower``,
@@ -491,7 +491,7 @@ the ``deletestr`` parameter can be omitted.*
 
 We will not specify the ``tostr`` but we will use the ``deletestr``
 parameter to delete all of the punctuation. We will even let Python tell
-us the list of characters that it considers “punctuation”:
+us the list of characters that it considers "punctuation":
 
 .. code:: python
 
@@ -536,7 +536,7 @@ We make the following modifications to our program:
    ../code3/romeo-full.txt
    \end{trinketfiles}
 
-Part of learning the “Art of Python” or “Thinking Pythonically” is
+Part of learning the "Art of Python" or "Thinking Pythonically" is
 realizing that Python often has built-in capabilities for many common
 data analysis problems. Over time, you will see enough example code and
 read enough of the documentation to know where to look to see if someone
@@ -592,8 +592,8 @@ Write self-checks
    Sometimes you can write code to check for errors automatically. For
    example, if you are computing the average of a list of numbers, you
    could check that the result is not greater than the largest element
-   in the list or less than the smallest. This is called a “sanity
-   check” because it detects results that are “completely illogical”.
+   in the list or less than the smallest. This is called a "sanity
+   check" because it detects results that are "completely illogical".
 
 .. index:: sanity check
 
@@ -601,7 +601,7 @@ Write self-checks
 
    Another kind of check compares the results of two different
    computations to see if they are consistent. This is called a
-   “consistency check”.
+   "consistency check".
 
 Pretty print the output
    Formatting debugging output can make it easier to spot an error.
@@ -649,14 +649,14 @@ lookup
    value.
 .. index:: lookup
 nested loops
-   When there are one or more loops “inside” of another loop. The inner
+   When there are one or more loops "inside" of another loop. The inner
    loop runs to completion each time the outer loop runs once.
 
 .. index:: nested loops, loop!nested
 value
    An object that appears in a dictionary as the second part of a
    key-value pair. This is more specific than our previous use of the
-   word “value”.
+   word "value".
 .. index:: value
 
 Exercises
@@ -664,7 +664,7 @@ Exercises
 
 **Exercise 2: Write a program that categorizes each mail message by
 which day of the week the commit was done. To do this look for lines
-that start with “From”, then look for the third word and keep a running
+that start with "From", then look for the third word and keep a running
 count of each of the days of the week. At the end of the program print
 out the contents of your dictionary (order does not matter).**
 

@@ -39,7 +39,7 @@ But you might not get what you expect:
    >>> print(letter)
    a
 
-For most people, the first letter of “banana” is “b”, not “a”. But in
+For most people, the first letter of "banana" is "b", not "a". But in
 Python, the index is an offset from the beginning of the string, and the
 offset of the first letter is zero.
 
@@ -49,8 +49,8 @@ offset of the first letter is zero.
    >>> print(letter)
    b
 
-So “b” is the 0th letter (“zero-th”) of “banana”, “a” is the 1th letter
-(“one-th”), and “n” is the 2th (“two-th”) letter.
+So "b" is the 0th letter ("zero-th") of "banana", "a" is the 1th letter
+("one-th"), and "n" is the 2th ("two-th") letter.
 
 .. figure:: ../images/string.svg
    :alt: String Indexes
@@ -105,7 +105,7 @@ something like this:
    >>> last = fruit[length]
    IndexError: string index out of range
 
-The reason for the ``IndexError`` is that there is no letter in “banana”
+The reason for the ``IndexError`` is that there is no letter in "banana"
 with the index 6. Since we started counting at zero, the six letters are
 numbered 0 to 5. To get the last character, you have to subtract 1 from
 ``length``:
@@ -190,8 +190,8 @@ to selecting a character:
    >>> print(s[6:12])
    Python
 
-The operator returns the part of the string from the “n-th” character to
-the “m-th” character, including the first but excluding the last.
+The operator returns the part of the string from the "n-th" character to
+the "m-th" character, including the first but excluding the last.
 
 If you omit the first index (before the colon), the slice starts at the
 beginning of the string. If you omit the second index, the slice goes to
@@ -246,7 +246,7 @@ with the intention of changing a character in a string. For example:
    >>> greeting[0] = 'J'
    TypeError: 'str' object does not support item assignment
 
-The “object” in this case is the string and the “item” is the character
+The "object" in this case is the string and the "item" is the character
 you tried to assign. For now, an *object* is the same thing as a value,
 but we will refine that definition later. An *item* is one of the values
 in a sequence.
@@ -283,7 +283,7 @@ Looping and counting
 
 .. index:: looping!with strings
 
-The following program counts the number of times the letter “a” appears
+The following program counts the number of times the letter "a" appears
 in a string:
 
 .. code:: python
@@ -297,7 +297,7 @@ in a string:
 
 This program demonstrates another pattern of computation called a
 *counter*. The variable ``count`` is initialized to 0 and then
-incremented each time an “a” is found. When the loop exits, ``count``
+incremented each time an "a" is found. When the loop exits, ``count``
 contains the result: the total number of a’s.
 
 
@@ -514,7 +514,7 @@ using the ``lower`` method.
 
 In the last example, the method ``lower`` is called and then we use
 ``startswith`` to see if the resulting lowercase string starts with the
-letter “h”. As long as we are careful with the order, we can make
+letter "h". As long as we are careful with the order, we can make
 multiple method calls in a single expression.
 
 
@@ -525,7 +525,7 @@ to the function in the previous exercise. Read the documentation of this
 method
 at**\ https://docs.python.org/3.5/library/stdtypes.html#string-methods\ **and
 write an invocation that counts the number of times the letter a occurs
-in “banana”.**
+in "banana".**
 
 Parsing strings
 ---------------
@@ -560,8 +560,8 @@ are looking for.
 
 We use a version of the ``find`` method which allows us to specify a
 position in the string where we want ``find`` to start looking. When we
-slice, we extract the characters from “one beyond the at-sign through up
-to *but not including* the space character”.
+slice, we extract the characters from "one beyond the at-sign through up
+to *but not including* the space character".
 
 The documentation for the ``find`` method is available at
 
@@ -591,7 +591,7 @@ result is a string.
 .. index:: format sequence
 
 For example, the format sequence ``%d`` means that the second operand
-should be formatted as an integer (“d” stands for “decimal”):
+should be formatted as an integer ("d" stands for "decimal"):
 
 .. code:: python
 
@@ -652,8 +652,8 @@ Debugging
 .. index:: debugging
 
 A skill that you should cultivate as you program is always asking
-yourself, “What could go wrong here?” or alternatively, “What crazy
-thing might our user do to crash our (seemingly) perfect program?”
+yourself, "What could go wrong here?" or alternatively, "What crazy
+thing might our user do to crash our (seemingly) perfect program?"
 
 For example, look at the program which we used to demonstrate the
 ``while`` loop in the chapter on iteration:
@@ -688,7 +688,7 @@ Look what happens when the user enters an empty line of input:
 
 The code works fine until it is presented an empty line. Then there is
 no zero-th character, so we get a traceback. There are two solutions to
-this to make line three “safe” even if the line is empty.
+this to make line three "safe" even if the line is empty.
 
 One possibility is to simply use the ``startswith`` method which returns
 ``False`` if the string is empty.
@@ -763,8 +763,8 @@ method
    notation.
 .. index:: method
 object
-   Something a variable can refer to. For now, you can use “object” and
-   “value” interchangeably.
+   Something a variable can refer to. For now, you can use "object" and
+   "value" interchangeably.
 .. index:: object
 search
    A pattern of traversal that stops when it finds what it is looking

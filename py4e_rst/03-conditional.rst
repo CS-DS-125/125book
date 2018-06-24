@@ -108,7 +108,7 @@ than or equal to ``y``.
 
 Strictly speaking, the operands of the logical operators should be
 boolean expressions, but Python is not very strict. Any nonzero number
-is interpreted as “true.”
+is interpreted as "true."
 
 .. code:: python
 
@@ -268,7 +268,7 @@ conditional*:
    else:
        print('x and y are equal')
 
-``elif`` is an abbreviation of “else if.” Again, exactly one branch will
+``elif`` is an abbreviation of "else if." Again, exactly one branch will
 be executed.
 
 .. figure:: ../images/elif.svg
@@ -369,7 +369,7 @@ also saw how treacherous doing this could be:
    >>>
 
 When we are executing these statements in the Python interpreter, we get
-a new prompt from the interpreter, think “oops”, and move on to our next
+a new prompt from the interpreter, think "oops", and move on to our next
 statement.
 
 However if you place this code in a Python script and this error occurs,
@@ -415,14 +415,14 @@ an unfriendly error message:
    ValueError: could not convert string to float: 'fred'
 
 There is a conditional execution structure built into Python to handle
-these types of expected and unexpected errors called “try / except”. The
+these types of expected and unexpected errors called "try / except". The
 idea of ``try`` and ``except`` is that you know that some sequence of
 instruction(s) may have a problem and you want to add some statements to
 be executed if an error occurs. These extra statements (the except
 block) are ignored if there is no error.
 
 You can think of the ``try`` and ``except`` feature in Python as an
-“insurance policy” on a sequence of statements.
+"insurance policy" on a sequence of statements.
 
 We can rewrite our temperature converter as follows:
 

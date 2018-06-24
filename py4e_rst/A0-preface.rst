@@ -33,7 +33,7 @@ http://creativecommons.org/licenses/by-nc-sa/3.0/
 
 You can see what the author considers commercial and non-commercial uses
 of this material as well as license exemptions in the Appendix titled
-“Copyright Detail”.
+"Copyright Detail".
 
 .. raw:: latex
 
@@ -45,10 +45,10 @@ Preface
 Remixing an Open Book
 ---------------------
 
-It is quite natural for academics who are continuously told to “publish
-or perish” to want to always create something from scratch that is their
+It is quite natural for academics who are continuously told to "publish
+or perish" to want to always create something from scratch that is their
 own fresh creation. This book is an experiment in not starting from
-scratch, but instead “remixing” the book titled *Think Python: How to
+scratch, but instead "remixing" the book titled *Think Python: How to
 Think Like a Computer Scientist* written by Allen B. Downey, Jeff
 Elkner, and others.
 
@@ -83,7 +83,7 @@ part of the chapter on conditionals. Functions are given very light
 treatment until they are needed to handle program complexity rather than
 introduced as an early lesson in abstraction. Nearly all user-defined
 functions have been removed from the example code and exercises outside
-of Chapter 4. The word “recursion” [1]_ does not appear in the book at
+of Chapter 4. The word "recursion" [1]_ does not appear in the book at
 all.
 
 In chapters 1 and 11–16, all of the material is brand new, focusing on

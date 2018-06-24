@@ -217,7 +217,7 @@ tells ``sort`` to go in decreasing order.
 
 The second loop traverses the list of tuples and builds a list of words
 in descending order of length. The four-character words are sorted in
-*reverse* alphabetical order, so “what” appears before “soft” in the
+*reverse* alphabetical order, so "what" appears before "soft" in the
 following list.
 
 The output of the program is as follows:
@@ -641,7 +641,7 @@ data structure
    dictionaries, tuples, etc.
 .. index:: data structure
 DSU
-   Abbreviation of “decorate-sort-undecorate”, a pattern that involves
+   Abbreviation of "decorate-sort-undecorate", a pattern that involves
    building a list of tuples, sorting, and extracting part of the
    result.
 .. index:: DSU pattern
@@ -682,7 +682,7 @@ Exercises
 ---------
 
 **Exercise 1: Revise a previous program as follows: Read and parse the
-“From” lines and pull out the addresses from the line. Count the number
+"From" lines and pull out the addresses from the line. Count the number
 of messages from each person using a dictionary.**
 
 **After all the data has been read, print the person with the most
@@ -702,7 +702,7 @@ most commits.**
    zqian@umich.edu 195
 
 **Exercise 2: This program counts the distribution of the hour of the
-day for each of the messages. You can pull the hour from the “From” line
+day for each of the messages. You can pull the hour from the "From" line
 by finding the time string and then splitting that string into parts
 using the colon character. Once you have accumulated the counts for each
 hour, print out the counts, one per line, sorted by hour as shown
@@ -739,7 +739,7 @@ the tables at**\ https://wikipedia.org/wiki/Letter_frequencies\ **.**
 .. index:: frequency!letter
 
 .. [1]
-   Fun fact: The word “tuple” comes from the names given to sequences of
+   Fun fact: The word "tuple" comes from the names given to sequences of
    numbers of varying lengths: single, double, triple, quadruple,
    quituple, sextuple, septuple, etc.
 

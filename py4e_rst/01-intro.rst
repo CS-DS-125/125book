@@ -21,10 +21,10 @@ program you will figure out what you want to do with your newfound
 skills.
 
 We are surrounded in our daily lives with computers ranging from laptops
-to cell phones. We can think of these computers as our “personal
-assistants” who can take care of many things on our behalf. The hardware
+to cell phones. We can think of these computers as our "personal
+assistants" who can take care of many things on our behalf. The hardware
 in our current-day computers is essentially built to continuously ask us
-the question, “What would you like me to do next?”
+the question, "What would you like me to do next?"
 
 .. figure:: ../images/pda.svg
    :alt: Personal Digital Assistant
@@ -37,7 +37,7 @@ helpful and capable of helping us do many different things.
 
 Our computers are fast and have vast amounts of memory and could be very
 helpful to us if we only knew the language to speak to explain to the
-computer what we would like it to “do next”. If we knew this language,
+computer what we would like it to "do next". If we knew this language,
 we could tell the computer to do tasks on our behalf that were
 repetitive. Interestingly, the kinds of things computers can do best are
 often the kinds of things that we humans find boring and mind-numbing.
@@ -57,12 +57,12 @@ most used word was used is very easy for the computer:
    Enter file:words.txt
    to 16
 
-Our “personal information analysis assistant” quickly told us that the
-word “to” was used sixteen times in the first three paragraphs of this
+Our "personal information analysis assistant" quickly told us that the
+word "to" was used sixteen times in the first three paragraphs of this
 chapter.
 
 This very fact that computers are good at things that humans are not is
-why you need to become skilled at talking “computer language”. Once you
+why you need to become skilled at talking "computer language". Once you
 learn this new language, you can delegate mundane tasks to your partner
 (the computer), leaving more time for you to do the things that you are
 uniquely suited for. You bring creativity, intuition, and inventiveness
@@ -116,8 +116,8 @@ phone and look deep inside, you would find the following parts:
 The high-level definitions of these parts are as follows:
 
 -  The *Central Processing Unit* (or CPU) is the part of the computer
-   that is built to be obsessed with “what is next?” If your computer is
-   rated at 3.0 Gigahertz, it means that the CPU will ask “What next?”
+   that is built to be obsessed with "what is next?" If your computer is
+   rated at 3.0 Gigahertz, it means that the CPU will ask "What next?"
    three billion times per second. You are going to have to learn how to
    talk fast to keep up with the CPU.
 
@@ -140,7 +140,7 @@ The high-level definitions of these parts are as follows:
 -  These days, most computers also have a *Network Connection* to
    retrieve information over a network. We can think of the network as a
    very slow place to store and retrieve data that might not always be
-   “up”. So in a sense, the network is a slower and at times unreliable
+   "up". So in a sense, the network is a slower and at times unreliable
    form of *Secondary Memory*.
 
 While most of the detail of how these components work is best left to
@@ -150,7 +150,7 @@ about these different parts as we write our programs.
 As a programmer, your job is to use and orchestrate each of these
 resources to solve the problem that you need to solve and analyze the
 data you get from the solution. As a programmer you will mostly be
-“talking” to the CPU and telling it what to do next. Sometimes you will
+"talking" to the CPU and telling it what to do next. Sometimes you will
 tell the CPU to use the main memory, secondary memory, network, or the
 input/output devices.
 
@@ -159,7 +159,7 @@ input/output devices.
 
    Where Are You?
 
-You need to be the person who answers the CPU’s “What next?” question.
+You need to be the person who answers the CPU’s "What next?" question.
 But it would be very uncomfortable to shrink you down to 5mm tall and
 insert you into the computer just so you could issue a command three
 billion times per second. So instead, you must write down your
@@ -184,14 +184,14 @@ In a sense, you need two skills to be a programmer:
 -  First, you need to know the programming language (Python) - you need
    to know the vocabulary and the grammar. You need to be able to spell
    the words in this new language properly and know how to construct
-   well-formed “sentences” in this new language.
+   well-formed "sentences" in this new language.
 
--  Second, you need to “tell a story”. In writing a story, you combine
+-  Second, you need to "tell a story". In writing a story, you combine
    words and sentences to convey an idea to the reader. There is a skill
    and art in constructing the story, and skill in story writing is
    improved by doing some writing and getting some feedback. In
-   programming, our program is the “story” and the problem you are
-   trying to solve is the “idea”.
+   programming, our program is the "story" and the problem you are
+   trying to solve is the "idea".
 
 Once you learn one programming language such as Python, you will find it
 much easier to learn a second programming language such as JavaScript or
@@ -199,12 +199,12 @@ C++. The new programming language has very different vocabulary and
 grammar but the problem-solving skills will be the same across all
 programming languages.
 
-You will learn the “vocabulary” and “sentences” of Python pretty
+You will learn the "vocabulary" and "sentences" of Python pretty
 quickly. It will take longer for you to be able to write a coherent
 program to solve a brand-new problem. We teach programming much like we
 teach writing. We start reading and explaining programs, then we write
 simple programs, and then we write increasingly complex programs over
-time. At some point you “get your muse” and see the patterns on your own
+time. At some point you "get your muse" and see the patterns on your own
 and can see more naturally how to take a problem and write a program
 that solves that problem. And once you get to that point, programming
 becomes a very pleasant and creative process.
@@ -222,7 +222,7 @@ Words and sentences
 .. index:: language!programming
 
 Unlike human languages, the Python vocabulary is actually pretty small.
-We call this “vocabulary” the “reserved words”. These are words that
+We call this "vocabulary" the "reserved words". These are words that
 have very special meaning to Python. When Python sees these words in a
 Python program, they have one and only one meaning to Python. Later as
 you write programs you will make up your own words that have meaning to
@@ -230,12 +230,12 @@ you called *variables*. You will have great latitude in choosing your
 names for your variables, but you cannot use any of Python’s reserved
 words as a name for a variable.
 
-When we train a dog, we use special words like “sit”, “stay”, and
-“fetch”. When you talk to a dog and don’t use any of the reserved words,
+When we train a dog, we use special words like "sit", "stay", and
+"fetch". When you talk to a dog and don’t use any of the reserved words,
 they just look at you with a quizzical look on their face until you say
-a reserved word. For example, if you say, “I wish more people would walk
-to improve their overall health”, what most dogs likely hear is, “blah
-blah blah *walk* blah blah blah blah.” That is because “walk” is a
+a reserved word. For example, if you say, "I wish more people would walk
+to improve their overall health", what most dogs likely hear is, "blah
+blah blah *walk* blah blah blah blah." That is because "walk" is a
 reserved word in dog language. Many might suggest that the language
 between humans and cats has no reserved words [1]_.
 
@@ -253,10 +253,10 @@ the following:
    def       from      nonlocal    while    
 
 That is it, and unlike a dog, Python is already completely trained. When
-you say “try”, Python will try every time you say it without fail.
+you say "try", Python will try every time you say it without fail.
 
 We will learn these reserved words and how they are used in good time,
-but for now we will focus on the Python equivalent of “speak” (in
+but for now we will focus on the Python equivalent of "speak" (in
 human-to-dog language). The nice thing about telling Python to speak is
 that we can even tell it what to say by giving it a message in quotes:
 
@@ -298,8 +298,8 @@ will start executing in interactive mode and appear somewhat as follows:
    Type "help", "copyright", "credits" or "license" for more information.
    >>>
 
-The ``>>>`` prompt is the Python interpreter’s way of asking you, “What
-do you want me to do next?” Python is ready to have a conversation with
+The ``>>>`` prompt is the Python interpreter’s way of asking you, "What
+do you want me to do next?" Python is ready to have a conversation with
 you. All you have to know is how to speak the Python language.
 
 Let’s say for example that you did not know even the simplest Python
@@ -362,7 +362,7 @@ few more chapters, you will be one of those programmers using Python to
 talk to the users of your program.
 
 Before we leave our first conversation with the Python interpreter, you
-should probably know the proper way to say “good-bye” when interacting
+should probably know the proper way to say "good-bye" when interacting
 with the inhabitants of Planet Python:
 
 .. code:: python
@@ -383,7 +383,7 @@ attempts. The second error is different because *if* is a reserved word
 and Python saw the reserved word and thought we were trying to say
 something but got the syntax of the sentence wrong.
 
-The proper way to say “good-bye” to Python is to enter *quit()* at the
+The proper way to say "good-bye" to Python is to enter *quit()* at the
 interactive chevron ``>>>`` prompt. It would have probably taken you
 quite a while to guess that one, so having a book handy probably will
 turn out to be helpful.
@@ -468,8 +468,8 @@ high-level source code into machine language and then the compiler puts
 the resulting machine language into a file for later execution.
 
 If you have a Windows system, often these executable machine language
-programs have a suffix of “.exe” or “.dll” which stand for “executable”
-and “dynamic link library” respectively. In Linux and Macintosh, there
+programs have a suffix of ".exe" or ".dll" which stand for "executable"
+and "dynamic link library" respectively. In Linux and Macintosh, there
 is no suffix that uniquely marks a file as executable.
 
 If you were to open an executable file in a text editor, it would look
@@ -491,9 +491,9 @@ languages like Python or C.
 Now at this point in our discussion of compilers and interpreters, you
 should be wondering a bit about the Python interpreter itself. What
 language is it written in? Is it written in a compiled language? When we
-type “python”, what exactly is happening?
+type "python", what exactly is happening?
 
-The Python interpreter is written in a high-level language called “C”.
+The Python interpreter is written in a high-level language called "C".
 You can look at the actual source code for the Python interpreter by
 going to `www.python.org <http://www.python.org>`__ and working your way
 to their source code. So Python is a program itself and it is compiled
@@ -535,12 +535,12 @@ follows:
    $ python hello.py
    Hello world!
 
-The “$” is the operating system prompt, and the “cat hello.py” is
-showing us that the file “hello.py” has a one-line Python program to
+The "$" is the operating system prompt, and the "cat hello.py" is
+showing us that the file "hello.py" has a one-line Python program to
 print a string.
 
 We call the Python interpreter and tell it to read its source code from
-the file “hello.py” instead of prompting us for lines of Python code
+the file "hello.py" instead of prompting us for lines of Python code
 interactively.
 
 You will notice that there was no need to have *quit()* at the end of
@@ -646,7 +646,7 @@ part of every programming language from machine language up to the
 high-level languages.
 
 input
-   Get data from the “outside world”. This might be reading data from a
+   Get data from the "outside world". This might be reading data from a
    file, or even some kind of sensor like a microphone or GPS. In our
    initial programs, our input will come from the user typing data on
    the keyboard.
@@ -668,8 +668,8 @@ reuse
    those instructions as needed throughout your program.
 
 It sounds almost too simple to be true, and of course it is never so
-simple. It is like saying that walking is simply “putting one foot in
-front of the other”. The “art” of writing a program is composing and
+simple. It is like saying that walking is simply "putting one foot in
+front of the other". The "art" of writing a program is composing and
 weaving these basic elements together many times over to produce
 something that is useful to its users.
 
@@ -687,7 +687,7 @@ Beginning programmers often take the fact that Python leaves no room for
 errors as evidence that Python is mean, hateful, and cruel. While Python
 seems to like everyone else, Python knows them personally and holds a
 grudge against them. Because of this grudge, Python takes our perfectly
-written programs and rejects them as “unfit” just to torment us.
+written programs and rejects them as "unfit" just to torment us.
 
 .. code:: python
 
@@ -722,16 +722,16 @@ understand what you have entered.
 Python is much more like a dog, loving you unconditionally, having a few
 key words that it understands, looking you with a sweet look on its face
 (``>>>``), and waiting for you to say something it understands. When
-Python says “SyntaxError: invalid syntax”, it is simply wagging its tail
-and saying, “You seemed to say something but I just don’t understand
-what you meant, but please keep talking to me (``>>>``).”
+Python says "SyntaxError: invalid syntax", it is simply wagging its tail
+and saying, "You seemed to say something but I just don’t understand
+what you meant, but please keep talking to me (``>>>``)."
 
 As your programs become increasingly sophisticated, you will encounter
 three general types of errors:
 
 Syntax errors
    These are the first errors you will make and the easiest to fix. A
-   syntax error means that you have violated the “grammar” rules of
+   syntax error means that you have violated the "grammar" rules of
    Python. Python does its best to point right at the line and character
    where it noticed it was confused. The only tricky bit of syntax
    errors is that sometimes the mistake that needs fixing is actually
@@ -742,24 +742,24 @@ Logic errors
    A logic error is when your program has good syntax but there is a
    mistake in the order of the statements or perhaps a mistake in how
    the statements relate to one another. A good example of a logic error
-   might be, “take a drink from your water bottle, put it in your
+   might be, "take a drink from your water bottle, put it in your
    backpack, walk to the library, and then put the top back on the
-   bottle.”
+   bottle."
 Semantic errors
    A semantic error is when your description of the steps to take is
    syntactically perfect and in the right order, but there is simply a
    mistake in the program. The program is perfectly correct but it does
    not do what you *intended* for it to do. A simple example would be if
-   you were giving a person directions to a restaurant and said, “…when
+   you were giving a person directions to a restaurant and said, "…when
    you reach the intersection with the gas station, turn left and go one
-   mile and the restaurant is a red building on your left.” Your friend
+   mile and the restaurant is a red building on your left." Your friend
    is very late and calls you to tell you that they are on a farm and
    walking around behind a barn, with no sign of a restaurant. Then you
-   say “did you turn left or right at the gas station?” and they say, “I
+   say "did you turn left or right at the gas station?" and they say, "I
    followed your directions perfectly, I have them written down, it says
-   turn left and go one mile at the gas station.” Then you say, “I am
+   turn left and go one mile at the gas station." Then you say, "I am
    very sorry, because while my instructions were syntactically correct,
-   they sadly contained a small but undetected semantic error.”.
+   they sadly contained a small but undetected semantic error.".
 
 Again in all three types of errors, Python is merely trying its hardest
 to do exactly what you have asked.
@@ -815,7 +815,7 @@ your head.
 
 Running experiments can help, especially if you run small, simple tests.
 But if you run experiments without thinking or reading your code, you
-might fall into a pattern I call “random walk programming”, which is the
+might fall into a pattern I call "random walk programming", which is the
 process of making random changes until the program does the right thing.
 Needless to say, random walk programming can take a long time.
 
@@ -865,13 +865,13 @@ linearly, and if you are taking a course it will progress in a linear
 fashion, don’t hesitate to be very nonlinear in how you approach the
 material. Look forwards and backwards and read with a light touch. By
 skimming more advanced material without fully understanding the details,
-you can get a better understanding of the “why?” of programming. By
+you can get a better understanding of the "why?" of programming. By
 reviewing previous material and even redoing earlier exercises, you will
 realize that you actually learned a lot of material even if the material
 you are currently staring at seems a bit impenetrable.
 
 Usually when you are learning your first programming language, there are
-a few wonderful “Ah Hah!” moments where you can look up from pounding
+a few wonderful "Ah Hah!" moments where you can look up from pounding
 away at some rock with a hammer and chisel and step away and see that
 you are indeed building a beautiful sculpture.
 
@@ -891,7 +891,7 @@ bug
 .. index:: bug
 central processing unit
    The heart of any computer. It is what runs the software that we
-   write; also called “CPU” or “the processor”.
+   write; also called "CPU" or "the processor".
 
 .. index:: central processing unit, CPU
 compile
@@ -913,7 +913,7 @@ interpret
 .. index:: interpret
 low-level language
    A programming language that is designed to be easy for a computer to
-   execute; also called “machine code” or “assembly language”.
+   execute; also called "machine code" or "assembly language".
 
 .. index:: low-level language
 machine code
@@ -984,7 +984,7 @@ computer?**
 **Exercise 3: What is the difference between a compiler and an
 interpreter?**
 
-**Exercise 4: Which of the following contains “machine code”?**
+**Exercise 4: Which of the following contains "machine code"?**
 
 | a) The Python interpreter
 | b) The keyboard
@@ -1002,7 +1002,7 @@ interpreter?**
    SyntaxError: invalid syntax
    >>>
 
-**Exercise 6: Where in the computer is a variable such as “x” stored
+**Exercise 6: Where in the computer is a variable such as "x" stored
 after the following Python line finishes?**
 
 .. code:: python
@@ -1030,10 +1030,10 @@ after the following Python line finishes?**
 
 **Exercise 8: Explain each of the following using an example of a human
 capability: (1) Central processing unit, (2) Main Memory, (3) Secondary
-Memory, (4) Input Device, and (5) Output Device. For example, “What is
-the human equivalent to a Central Processing Unit”?**
+Memory, (4) Input Device, and (5) Output Device. For example, "What is
+the human equivalent to a Central Processing Unit"?**
 
-**Exercise 9: How do you fix a “Syntax Error”?**
+**Exercise 9: How do you fix a "Syntax Error"?**
 
 .. [1]
    http://xkcd.com/231/

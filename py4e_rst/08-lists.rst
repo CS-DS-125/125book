@@ -21,7 +21,7 @@ called *elements* or sometimes *items*.
 .. index:: item
 
 There are several ways to create a new list; the simplest is to enclose
-the elements in square brackets (“[" and "]”):
+the elements in square brackets ("[" and "]"):
 
 .. code:: python
 
@@ -106,7 +106,7 @@ The one-th element of ``numbers``, which used to be 123, is now 5.
 .. index:: zero, index starting at
 
 You can think of a list as a relationship between indices and elements.
-This relationship is called a *mapping*; each index “maps to” one of the
+This relationship is called a *mapping*; each index "maps to" one of the
 elements.
 
 
@@ -519,8 +519,8 @@ string to a list of characters, you can use ``list``:
    ['s', 'p', 'a', 'm']
 
 Because ``list`` is the name of a built-in function, you should avoid
-using it as a variable name. I also avoid the letter “l” because it
-looks too much like the number “1”. So that’s why I use “t”.
+using it as a variable name. I also avoid the letter "l" because it
+looks too much like the number "1". So that’s why I use "t".
 
 The ``list`` function breaks a string into individual letters. If you
 want to break a string into words, you can use the ``split`` method:
@@ -585,9 +585,9 @@ Parsing lines
 
 Usually when we are reading a file we want to do something to the lines
 other than just printing the whole line. Often we want to find the
-“interesting lines” and then *parse* the line to find some interesting
+"interesting lines" and then *parse* the line to find some interesting
 *part* of the line. What if we wanted to print out the day of the week
-from those lines that start with “From”?
+from those lines that start with "From"?
 
 ::
 
@@ -595,7 +595,7 @@ from those lines that start with “From”?
 
 The ``split`` method is very effective when faced with this kind of
 problem. We can write a small program that looks for lines where the
-line starts with “From”, ``split`` those lines, and then print out the
+line starts with "From", ``split`` those lines, and then print out the
 third word in the line:
 
 .. code:: python
@@ -689,7 +689,7 @@ but if they are equivalent, they are not necessarily identical.
 
 .. index:: equivalence, identity
 
-Until now, we have been using “object” and “value” interchangeably, but
+Until now, we have been using "object" and "value" interchangeably, but
 it is more precise to say that an object has a value. If you execute
 ``a = [1,2,3]``, ``a`` refers to a list object whose value is a
 particular sequence of elements. If another list has the same elements,
@@ -944,7 +944,7 @@ of debugging. Here are some common pitfalls and ways to avoid them:
    When we read and parse files, there are many opportunities to
    encounter input that can crash our program so it is a good idea to
    revisit the *guardian* pattern when it comes writing programs that
-   read through a file and look for a “needle in the haystack”.
+   read through a file and look for a "needle in the haystack".
 
    Let’s revisit our program that is looking for the day of the week on
    the from lines of our file:
@@ -956,7 +956,7 @@ of debugging. Here are some common pitfalls and ways to avoid them:
    Since we are breaking this line into words, we could dispense with
    the use of ``startswith`` and simply look at the first word of the
    line to determine if we are interested in the line at all. We can use
-   ``continue`` to skip lines that don’t have “From” as the first word
+   ``continue`` to skip lines that don’t have "From" as the first word
    as follows:
 
    .. code:: python
@@ -993,7 +993,7 @@ of debugging. Here are some common pitfalls and ways to avoid them:
    Now this approach may generate a lot of lines of output, but at least
    you will immediately have some clue as to the problem at hand. So we
    add a print of the variable ``words`` right before line five. We even
-   add a prefix “Debug:” to the line so we can keep our regular output
+   add a prefix "Debug:" to the line so we can keep our regular output
    separate from our debug output.
 
    .. code:: python
@@ -1033,10 +1033,10 @@ of debugging. Here are some common pitfalls and ways to avoid them:
       Details: http://source.sakaiproject.org/viewsvn/?view=rev&rev=39772
 
    The error occurs when our program encounters a blank line! Of course
-   there are “zero words” on a blank line. Why didn’t we think of that
+   there are "zero words" on a blank line. Why didn’t we think of that
    when we were writing the code? When the code looks for the first word
-   (``word[0]``) to check to see if it matches “From”, we get an “index
-   out of range” error.
+   (``word[0]``) to check to see if it matches "From", we get an "index
+   out of range" error.
 
    This of course is the perfect place to add some *guardian* code to
    avoid checking the first word if the first word is not there. There
@@ -1061,15 +1061,15 @@ of debugging. Here are some common pitfalls and ways to avoid them:
    file.
 
    We can think of the two ``continue`` statements as helping us refine
-   the set of lines which are “interesting” to us and which we want to
-   process some more. A line which has no words is “uninteresting” to us
-   so we skip to the next line. A line which does not have “From” as its
+   the set of lines which are "interesting" to us and which we want to
+   process some more. A line which has no words is "uninteresting" to us
+   so we skip to the next line. A line which does not have "From" as its
    first word is uninteresting to us so we skip it.
 
    The program as modified runs successfully, so perhaps it is correct.
    Our guardian statement does make sure that the ``words[0]`` will
    never fail, but perhaps it is not enough. When we are programming, we
-   must always be thinking, “What might go wrong?”
+   must always be thinking, "What might go wrong?"
 
 **Exercise 2: Figure out which line of the above program is still not
 properly guarded. See if you can construct a text file which causes the
@@ -1152,7 +1152,7 @@ order.**
    'with', 'yonder']
 
 **Exercise 5: Write a program to read through the mail box data and when
-you find line that starts with “From”, you will split the line into
+you find line that starts with "From", you will split the line into
 words using the ``split`` function. We are interested in who sent the
 message, which is the second word on the From line.**
 
@@ -1183,7 +1183,7 @@ few lines removed:**
 
 **Exercise 6: Rewrite the program that prompts the user for a list of
 numbers and prints out the maximum and minimum of the numbers at the end
-when the user enters “done”. Write the program to store the numbers the
+when the user enters "done". Write the program to store the numbers the
 user enters in a list and use the ``max()`` and ``min()`` functions to
 compute the maximum and minimum numbers after the loop completes.**
 

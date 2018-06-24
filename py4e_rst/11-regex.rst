@@ -60,7 +60,7 @@ a trivial use of the search function.
    \end{trinketfiles}
 
 We open the file, loop through each line, and use the regular expression
-``search()`` to only print out lines that contain the string “From:”.
+``search()`` to only print out lines that contain the string "From:".
 This program does not use the real power of regular expressions, since
 we could have just as easily used ``line.find()`` to accomplish the same
 result.
@@ -75,8 +75,8 @@ regular expression allow us to do sophisticated matching and extraction
 while writing very little code.
 
 For example, the caret character is used in regular expressions to match
-“the beginning” of a line. We could change our program to only match
-lines where “From:” was at the beginning of the line as follows:
+"the beginning" of a line. We could change our program to only match
+lines where "From:" was at the beginning of the line as follows:
 
 .. code:: python
 
@@ -96,7 +96,7 @@ lines where “From:” was at the beginning of the line as follows:
    ../code3/mbox-short.txt
    \end{trinketfiles}
 
-Now we will only match lines that *start with* the string “From:”. This
+Now we will only match lines that *start with* the string "From:". This
 is still a very simple example that we could have done equivalently with
 the ``startswith()`` method from the string library. But it serves to
 introduce the notion that regular expressions contain special action
@@ -117,7 +117,7 @@ character is the period or full stop, which matches any character.
 .. index:: wild card, regex!wild card
 
 In the following example, the regular expression ``F..m:`` would match
-any of the strings “From:”, “Fxxm:”, “F12m:”, or “F!@m:” since the
+any of the strings "From:", "Fxxm:", "F12m:", or "F!@m:" since the
 period characters in the regular expression match any character.
 
 .. code:: python
@@ -168,7 +168,7 @@ We can further narrow down the lines that we match using a repeated
    \end{trinketfiles}
 
 The search string ``^From:.+@`` will successfully match lines that start
-with “From:”, followed by one or more characters (``.+``), followed by
+with "From:", followed by one or more characters (``.+``), followed by
 an at-sign. So this will match the following line:
 
 ::
@@ -182,7 +182,7 @@ characters between the colon character and the at-sign.
 
    From:.+@
 
-It is good to think of the plus and asterisk characters as “pushy”. For
+It is good to think of the plus and asterisk characters as "pushy". For
 example, the following string would match the last at-sign in the string
 as the ``.+`` pushes outwards, as shown below:
 
@@ -190,7 +190,7 @@ as the ``.+`` pushes outwards, as shown below:
 
    From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu
 
-It is possible to tell an asterisk or plus sign not to be so “greedy” by
+It is possible to tell an asterisk or plus sign not to be so "greedy" by
 adding another character. See the detailed documentation for information
 on turning off the greedy behavior.
 
@@ -255,7 +255,7 @@ followed by at least one more non-whitespace character. The ``\S+``
 matches as many non-whitespace characters as possible.
 
 The regular expression would match twice (csev@umich.edu and
-cwen@iupui.edu), but it would not match the string “@2PM” because there
+cwen@iupui.edu), but it would not match the string "@2PM" because there
 are no non-blank characters *before* the at-sign. We can use this
 regular expression in a program to read all the lines in a file and
 print out anything that looks like an email address as follows:
@@ -299,14 +299,14 @@ If we run the program on ``mbox.txt`` we get the following output:
    ['apache@localhost)']
    ['source@collab.sakaiproject.org;']
 
-Some of our email addresses have incorrect characters like “<” or “;” at
+Some of our email addresses have incorrect characters like "<" or ";" at
 the beginning or end. Let’s declare that we are only interested in the
 portion of the string that starts and ends with a letter or a number.
 
 To do this, we use another feature of regular expressions. Square
 brackets are used to indicate a set of multiple acceptable characters we
 are willing to consider matching. In a sense, the ``\S`` is asking to
-match the set of “non-whitespace characters”. Now we will be a little
+match the set of "non-whitespace characters". Now we will be a little
 more explicit in terms of the characters we will match.
 
 Here is our new regular expression:
@@ -319,7 +319,7 @@ This is getting a little complicated and you can begin to see why
 regular expressions are their own little language unto themselves.
 Translating this regular expression, we are looking for substrings that
 start with a *single* lowercase letter, uppercase letter, or number
-“[a-zA-Z0-9]”, followed by zero or more non-blank characters (``\S*``),
+"[a-zA-Z0-9]", followed by zero or more non-blank characters (``\S*``),
 followed by an at-sign, followed by zero or more non-blank characters
 (``\S*``), followed by an uppercase or lowercase letter. Note that we
 switched from ``+`` to ``*`` to indicate zero or more non-blank
@@ -365,12 +365,12 @@ If we use this expression in our program, our data is much cleaner:
    ['apache@localhost']
 
 Notice that on the ``source@collab.sakaiproject.org`` lines, our regular
-expression eliminated two letters at the end of the string (“>;”). This
+expression eliminated two letters at the end of the string (">;"). This
 is because when we append ``[a-zA-Z]`` to the end of our regular
 expression, we are demanding that whatever string the regular expression
-parser finds must end with a letter. So when it sees the “>” at the end
-of “sakaiproject.org>;” it simply stops at the last “matching” letter it
-found (i.e., the “g” was the last good match).
+parser finds must end with a letter. So when it sees the ">" at the end
+of "sakaiproject.org>;" it simply stops at the last "matching" letter it
+found (i.e., the "g" was the last good match).
 
 Also note that the output of the program is a Python list that has a
 string as the single element in the list.
@@ -378,7 +378,7 @@ string as the single element in the list.
 Combining searching and extracting
 ----------------------------------
 
-If we want to find numbers on lines that start with the string “X-” such
+If we want to find numbers on lines that start with the string "X-" such
 as:
 
 ::
@@ -549,9 +549,9 @@ When we run the program, we get the following output:
    ['39769']
    ...
 
-Remember that the ``[0-9]+`` is “greedy” and it tries to make as large a
+Remember that the ``[0-9]+`` is "greedy" and it tries to make as large a
 string of digits as possible before extracting those digits. This
-“greedy” behavior is why we get all five digits for each number. The
+"greedy" behavior is why we get all five digits for each number. The
 regular expression library expands in both directions until it
 encounters a non-digit, or the beginning or the end of a line.
 
@@ -631,7 +631,7 @@ Escape character
 
 Since we use special characters in regular expressions to match the
 beginning or end of a line or specify wild cards, we need a way to
-indicate that these characters are “normal” and we want to match the
+indicate that these characters are "normal" and we want to match the
 actual character such as a dollar sign or caret.
 
 We can indicate that we want to simply match a character by prefixing
@@ -645,11 +645,11 @@ with the following regular expression.
    y = re.findall('\$[0-9.]+',x)
 
 Since we prefix the dollar sign with a backslash, it actually matches
-the dollar sign in the input string instead of matching the “end of
-line”, and the rest of the regular expression matches one or more digits
+the dollar sign in the input string instead of matching the "end of
+line", and the rest of the regular expression matches one or more digits
 or the period character. *Note:* Inside square brackets, characters are
-not “special”. So when we say ``[0-9.]``, it really means digits or a
-period. Outside of square brackets, a period is the “wild-card”
+not "special". So when we say ``[0-9.]``, it really means digits or a
+period. Outside of square brackets, a period is the "wild-card"
 character and matches any character. Inside square brackets, the period
 is a period.
 
@@ -659,7 +659,7 @@ Summary
 While this only scratched the surface of regular expressions, we have
 learned a bit about the language of regular expressions. They are search
 strings with special characters in them that communicate your wishes to
-the regular expression system as to what defines “matching” and what is
+the regular expression system as to what defines "matching" and what is
 extracted from the matched strings. Here are some of those special
 characters and character sequences:
 
@@ -677,23 +677,23 @@ characters and character sequences:
 match zero or more times.
 
 ``*?`` Applies to the immediately preceding character(s) and indicates
-to match zero or more times in “non-greedy mode”.
+to match zero or more times in "non-greedy mode".
 
 ``+`` Applies to the immediately preceding character(s) and indicates to
 match one or more times.
 
 ``+?`` Applies to the immediately preceding character(s) and indicates
-to match one or more times in “non-greedy mode”.
+to match one or more times in "non-greedy mode".
 
 ``?`` Applies to the immediately preceding character(s) and indicates to
 match zero or one time.
 
 ``??`` Applies to the immediately preceding character(s) and indicates
-to match zero or one time in “non-greedy mode”.
+to match zero or one time in "non-greedy mode".
 
 ``[aeiou]`` Matches a single character as long as that character is in
-the specified set. In this example, it would match “a”, “e”, “i”, “o”,
-or “u”, but no other characters.
+the specified set. In this example, it would match "a", "e", "i", "o",
+or "u", but no other characters.
 
 ``[a-z0-9]`` You can specify ranges of characters using the minus sign.
 This example is a single character that must be a lowercase letter or a
@@ -740,7 +740,7 @@ your command-line window.
    From: zqian@umich.edu
    From: rjlowe@iupui.edu
 
-This tells ``grep`` to show you lines that start with the string “From:”
+This tells ``grep`` to show you lines that start with the string "From:"
 in the file ``mbox-short.txt``. If you experiment with the ``grep``
 command a bit and read the documentation for ``grep``, you will find
 some subtle differences between the regular expression support in Python
@@ -799,7 +799,7 @@ Glossary
 brittle code
    Code that works when the input data is in a particular format but is
    prone to breakage if there is some deviation from the correct format.
-   We call this “brittle code” because it is easily broken.
+   We call this "brittle code" because it is easily broken.
 greedy matching
    The notion that the ``+`` and ``*`` characters in a regular
    expression expand outward to match the largest possible string.
@@ -808,7 +808,7 @@ greedy matching
 grep
    A command available in most Unix systems that searches through text
    files looking for lines that match regular expressions. The command
-   name stands for “Generalized Regular Expression Parser”.
+   name stands for "Generalized Regular Expression Parser".
 
 .. index:: grep
 regular expression

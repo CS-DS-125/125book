@@ -18,6 +18,8 @@
 
 from runestone import runestone_static_dirs, runestone_extensions
 
+# to get runestone version
+import pkg_resources
 
 # -- Project information -----------------------------------------------------
 
@@ -108,6 +110,7 @@ html_context = {
     'python3': 'true',
     'downloads_enabled': 'true',
     'loglevel': 10,
+    'runestone_version': pkg_resources.require("runestone")[0].version,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,

@@ -8,7 +8,8 @@ Using Databases and SQL
 What is a database?
 -------------------
 
-:raw-latex:`\index{database}`
+
+.. index:: database
 
 A *database* is a file that is organized for storing data. Most
 databases are organized like a dictionary in the sense that they map
@@ -18,7 +19,8 @@ ends. Because a database is stored on permanent storage, it can store
 far more data than a dictionary, which is limited to the size of the
 memory in the computer.
 
-:raw-latex:`\index{database!indexes}`
+
+.. index:: database!indexes
 
 Like a dictionary, database software is designed to keep the inserting
 and accessing of data very fast, even for large amounts of data.
@@ -103,7 +105,8 @@ database contains a large amount of data.
 The code to create a database file and a table named ``Tracks`` with two
 columns in the database is as follows:
 
-:raw-latex:`\index{sqlite3 module}` :raw-latex:`\index{module!sqlite3}`
+
+.. index:: sqlite3 module, module!sqlite3
 
 .. code:: python
 
@@ -119,10 +122,14 @@ columns in the database is as follows:
 
    # Code: http://www.py4e.com/code3/db1.py
 
-:raw-latex:`\index{connect function}`
-:raw-latex:`\index{function!connect}`
-:raw-latex:`\index{cursor function}`
-:raw-latex:`\index{function!cursor}`
+
+.. index:: connect function
+
+.. index:: function!connect
+
+.. index:: cursor function
+
+.. index:: function!cursor
 
 The ``connect`` operation makes a “connection” to the database stored in
 the file ``music.sqlite3`` in the current directory. If the file does
@@ -234,7 +241,8 @@ The output of the program is as follows:
    ('Thunderstruck', 20)
    ('My Way', 15)
 
-:raw-latex:`\index{Unicode}`
+
+.. index:: Unicode
 
 Our ``for`` loop finds two rows, and each row is a Python tuple with the
 first value as the ``title`` and the second value as the number of
@@ -1260,52 +1268,64 @@ Glossary
 
 attribute
    One of the values within a tuple. More commonly called a “column” or
-   “field”. :raw-latex:`\index{attribute}`
+   “field”.
+.. index:: attribute
 constraint
    When we tell the database to enforce a rule on a field or a row in a
    table. A common constraint is to insist that there can be no
    duplicate values in a particular field (i.e., all the values must be
-   unique). :raw-latex:`\index{constraint}`
+   unique).
+.. index:: constraint
 cursor
    A cursor allows you to execute SQL commands in a database and
    retrieve data from the database. A cursor is similar to a socket or
    file handle for network connections and files, respectively.
-   :raw-latex:`\index{cursor}`
+
+.. index:: cursor
 database browser
    A piece of software that allows you to directly connect to a database
    and manipulate the database directly without writing a program.
-   :raw-latex:`\index{database browser}`
+
+.. index:: database browser
 foreign key
    A numeric key that points to the primary key of a row in another
    table. Foreign keys establish relationships between rows stored in
-   different tables. :raw-latex:`\index{foreign key}`
+   different tables.
+.. index:: foreign key
 index
    Additional data that the database software maintains as rows and
    inserts into a table to make lookups very fast.
-   :raw-latex:`\index{index}` :raw-latex:`\index{}`
+
+.. index:: index, 
 logical key
    A key that the “outside world” uses to look up a particular row. For
    example in a table of user accounts, a person’s email address might
    be a good candidate as the logical key for the user’s data.
-   :raw-latex:`\index{logical key}`
+
+.. index:: logical key
 normalization
    Designing a data model so that no data is replicated. We store each
    item of data at one place in the database and reference it elsewhere
-   using a foreign key. :raw-latex:`\index{normalization}`
-   :raw-latex:`\index{database normalization}`
+   using a foreign key.
+.. index:: normalization
+
+.. index:: database normalization
 primary key
    A numeric key assigned to each row that is used to refer to one row
    in a table from another table. Often the database is configured to
    automatically assign primary keys as rows are inserted.
-   :raw-latex:`\index{primary key}`
+
+.. index:: primary key
 relation
    An area within a database that contains tuples and attributes. More
-   typically called a “table”. :raw-latex:`\index{relation}`
+   typically called a “table”.
+.. index:: relation
 tuple
    A single entry in a database table that is a set of attributes. More
    typically called “row”.
 
-:raw-latex:`\index{tuple}`
+
+.. index:: tuple
 
 .. [1]
    SQLite actually does allow some flexibility in the type of data

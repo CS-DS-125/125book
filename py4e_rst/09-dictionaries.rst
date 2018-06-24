@@ -5,11 +5,15 @@
 Dictionaries
 ============
 
-:raw-latex:`\index{dictionary}` :raw-latex:`\index{dictionary}`
 
-:raw-latex:`\index{type!dict}` :raw-latex:`\index{key}`
-:raw-latex:`\index{key-value pair}` :raw-latex:`\index{index}`
-:raw-latex:`\index{}`
+.. index:: dictionary, dictionary
+
+
+.. index:: type!dict, key
+
+.. index:: key-value pair, index
+
+.. index:: 
 
 A *dictionary* is like a list, but more general. In a list, the index
 positions have to be integers; in a dictionary, the indices can be
@@ -27,7 +31,8 @@ The function ``dict`` creates a new dictionary with no items. Because
 ``dict`` is the name of a built-in function, you should avoid using it
 as a variable name.
 
-:raw-latex:`\index{dict function}` :raw-latex:`\index{function!dict}`
+
+.. index:: dict function, function!dict
 
 .. code:: python
 
@@ -38,8 +43,10 @@ as a variable name.
 The curly brackets, ``{}``, represent an empty dictionary. To add items
 to the dictionary, you can use square brackets:
 
-:raw-latex:`\index{squiggly bracket}`
-:raw-latex:`\index{bracket!squiggly}`
+
+.. index:: squiggly bracket
+
+.. index:: bracket!squiggly
 
 .. code:: python
 
@@ -82,7 +89,8 @@ items doesn’t matter.
 
 If the key isn’t in the dictionary, you get an exception:
 
-:raw-latex:`\index{exception!KeyError}` :raw-latex:`\index{KeyError}`
+
+.. index:: exception!KeyError, KeyError
 
 .. code:: python
 
@@ -92,7 +100,8 @@ If the key isn’t in the dictionary, you get an exception:
 The ``len`` function works on dictionaries; it returns the number of
 key-value pairs:
 
-:raw-latex:`\index{len function}` :raw-latex:`\index{function!len}`
+
+.. index:: len function, function!len
 
 .. code:: python
 
@@ -103,8 +112,10 @@ The ``in`` operator works on dictionaries; it tells you whether
 something appears as a *key* in the dictionary (appearing as a value is
 not good enough).
 
-:raw-latex:`\index{membership!dictionary}`
-:raw-latex:`\index{in operator}` :raw-latex:`\index{operator!in}`
+
+.. index:: membership!dictionary
+
+.. index:: in operator, operator!in
 
 .. code:: python
 
@@ -117,7 +128,8 @@ To see whether something appears as a value in a dictionary, you can use
 the method ``values``, which returns the values as a list, and then use
 the ``in`` operator:
 
-:raw-latex:`\index{values method}` :raw-latex:`\index{method!values}`
+
+.. index:: values method, method!values
 
 .. code:: python
 
@@ -135,8 +147,10 @@ dictionary. I won’t explain why hash functions are so magical, but you
 can read more about it at
 `wikipedia.org/wiki/Hash_table <https://wikipedia.org/wiki/Hash_table>`__.
 
-:raw-latex:`\index{hash table}` :raw-latex:`\index{set membership}`
-:raw-latex:`\index{membership!set}`
+
+.. index:: hash table, set membership
+
+.. index:: membership!set
 
 **Exercise 1: Download a copy of the file from**
 `www.py4e.com/code3/words.txt <http://www.py4e.com/code3/words.txt>`__
@@ -149,7 +163,8 @@ in the dictionary.**
 Dictionary as a set of counters
 -------------------------------
 
-:raw-latex:`\index{counter}`
+
+.. index:: counter
 
 Suppose you are given a string and you want to count how many times each
 letter appears. There are several ways you could do it:
@@ -171,7 +186,8 @@ letter appears. There are several ways you could do it:
 Each of these options performs the same computation, but each of them
 implements that computation in a different way.
 
-:raw-latex:`\index{implementation}`
+
+.. index:: implementation
 
 An *implementation* is a way of performing a computation; some
 implementations are better than others. For example, an advantage of the
@@ -195,15 +211,18 @@ Here is what the code might look like:
 We are effectively computing a *histogram*, which is a statistical term
 for a set of counters (or frequencies).
 
-:raw-latex:`\index{histogram}` :raw-latex:`\index{frequency}`
-:raw-latex:`\index{traversal}`
+
+.. index:: histogram, frequency
+
+.. index:: traversal
 
 The ``for`` loop traverses the string. Each time through the loop, if
 the character ``c`` is not in the dictionary, we create a new item with
 key ``c`` and the initial value 1 (since we have seen this letter once).
 If ``c`` is already in the dictionary we increment ``d[c]``.
 
-:raw-latex:`\index{histogram}`
+
+.. index:: histogram
 
 Here’s the output of the program:
 
@@ -214,7 +233,8 @@ Here’s the output of the program:
 The histogram indicates that the letters “a” and “b” appear once; “o”
 appears twice, and so on.
 
-:raw-latex:`\index{get method}` :raw-latex:`\index{method!get}`
+
+.. index:: get method, method!get
 
 Dictionaries have a method called ``get`` that takes a key and a default
 value. If the key appears in the dictionary, ``get`` returns the
@@ -249,7 +269,8 @@ the loop using the ``if`` statement and ``in`` operator with the loop
 using the ``get`` method. They do exactly the same thing, but one is
 more succinct.
 
-:raw-latex:`\index{idiom}`
+
+.. index:: idiom
 
 Dictionaries and files
 ----------------------
@@ -273,7 +294,8 @@ We will write a Python program to read through the lines of the file,
 break each line into a list of words, and then loop through each of the
 words in the line and count each word using a dictionary.
 
-:raw-latex:`\index{nested loops}` :raw-latex:`\index{loop!nested}`
+
+.. index:: nested loops, loop!nested
 
 You will see that we have two ``for`` loops. The outer loop is reading
 the lines of the file and the inner loop is iterating through each of
@@ -285,7 +307,8 @@ Because the inner loop executes all of its iterations each time the
 outer loop makes a single iteration, we think of the inner loop as
 iterating “more quickly” and the outer loop as iterating more slowly.
 
-:raw-latex:`\index{Romeo and Juliet}`
+
+.. index:: Romeo and Juliet
 
 The combination of the two nested loops ensures that we will count every
 word on every line of the input file.
@@ -346,9 +369,12 @@ to get us the output that will be more helpful.
 Looping and dictionaries
 ------------------------
 
-:raw-latex:`\index{dictionary!looping with}`
-:raw-latex:`\index{looping!with dictionaries}`
-:raw-latex:`\index{traversal}`
+
+.. index:: dictionary!looping with
+
+.. index:: looping!with dictionaries
+
+.. index:: traversal
 
 If you use a dictionary as the sequence in a ``for`` statement, it
 traverses the keys of the dictionary. This loop prints each key and the
@@ -370,7 +396,8 @@ Here’s what the output looks like:
 
 Again, the keys are in no particular order.
 
-:raw-latex:`\index{idiom}`
+
+.. index:: idiom
 
 We can use this pattern to implement the various loop idioms that we
 have described earlier. For example if we wanted to find all the entries
@@ -395,7 +422,8 @@ each key. Here’s what the output looks like:
 
 We see only the entries with a value above 10.
 
-:raw-latex:`\index{keys method}` :raw-latex:`\index{method!keys}`
+
+.. index:: keys method, method!keys
 
 If you want to print the keys in alphabetical order, you first make a
 list of the keys in the dictionary using the ``keys`` method available
@@ -428,7 +456,8 @@ First you see the list of keys in unsorted order that we get from the
 Advanced text parsing
 ---------------------
 
-:raw-latex:`\index{Romeo and Juliet}`
+
+.. index:: Romeo and Juliet
 
 In the above example using the file ``romeo.txt``, we made the file as
 simple as possible by removing all punctuation by hand. The actual text
@@ -532,7 +561,8 @@ tuples.
 Debugging
 ---------
 
-:raw-latex:`\index{debugging}`
+
+.. index:: debugging
 
 As you work with bigger datasets it can become unwieldy to debug by
 printing and checking data by hand. Here are some suggestions for
@@ -564,8 +594,10 @@ Write self-checks
    could check that the result is not greater than the largest element
    in the list or less than the smallest. This is called a “sanity
    check” because it detects results that are “completely illogical”.
-   :raw-latex:`\index{sanity check}`
-   :raw-latex:`\index{consistency check}`
+
+.. index:: sanity check
+
+.. index:: consistency check
 
    Another kind of check compares the results of two different
    computations to see if they are consistent. This is called a
@@ -575,45 +607,57 @@ Pretty print the output
    Formatting debugging output can make it easier to spot an error.
 
 Again, time you spend building scaffolding can reduce the time you spend
-debugging. :raw-latex:`\index{scaffolding}`
+debugging.
+.. index:: scaffolding
 
 Glossary
 --------
 
 dictionary
    A mapping from a set of keys to their corresponding values.
-   :raw-latex:`\index{dictionary}`
+
+.. index:: dictionary
 hashtable
    The algorithm used to implement Python dictionaries.
-   :raw-latex:`\index{hashtable}`
+
+.. index:: hashtable
 hash function
    A function used by a hashtable to compute the location for a key.
-   :raw-latex:`\index{hash function}`
+
+.. index:: hash function
 histogram
-   A set of counters. :raw-latex:`\index{histogram}`
+   A set of counters.
+.. index:: histogram
 implementation
    A way of performing a computation.
-   :raw-latex:`\index{implementation}`
+
+.. index:: implementation
 item
    Another name for a key-value pair.
-   :raw-latex:`\index{item!dictionary}`
+
+.. index:: item!dictionary
 key
    An object that appears in a dictionary as the first part of a
-   key-value pair. :raw-latex:`\index{key}`
+   key-value pair.
+.. index:: key
 key-value pair
    The representation of the mapping from a key to a value.
-   :raw-latex:`\index{key-value pair}`
+
+.. index:: key-value pair
 lookup
    A dictionary operation that takes a key and finds the corresponding
-   value. :raw-latex:`\index{lookup}`
+   value.
+.. index:: lookup
 nested loops
    When there are one or more loops “inside” of another loop. The inner
    loop runs to completion each time the outer loop runs once.
-   :raw-latex:`\index{nested loops}` :raw-latex:`\index{loop!nested}`
+
+.. index:: nested loops, loop!nested
 value
    An object that appears in a dictionary as the second part of a
    key-value pair. This is more specific than our previous use of the
-   word “value”. :raw-latex:`\index{value}`
+   word “value”.
+.. index:: value
 
 Exercises
 ---------

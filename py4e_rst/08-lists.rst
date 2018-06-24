@@ -5,7 +5,8 @@
 Lists
 =====
 
-:raw-latex:`\index{list}` :raw-latex:`\index{type!list}`
+
+.. index:: list, type!list
 
 A list is a sequence
 --------------------
@@ -14,8 +15,10 @@ Like a string, a *list* is a sequence of values. In a string, the values
 are characters; in a list, they can be any type. The values in list are
 called *elements* or sometimes *items*.
 
-:raw-latex:`\index{element}` :raw-latex:`\index{sequence}`
-:raw-latex:`\index{item}`
+
+.. index:: element, sequence
+
+.. index:: item
 
 There are several ways to create a new list; the simplest is to enclose
 the elements in square brackets (“[" and "]”):
@@ -36,12 +39,14 @@ another list:
 
 A list within another list is *nested*.
 
-:raw-latex:`\index{nested list}` :raw-latex:`\index{list!nested}`
+
+.. index:: nested list, list!nested
 
 A list that contains no elements is called an empty list; you can create
 one with empty brackets, ``[]``.
 
-:raw-latex:`\index{empty list}` :raw-latex:`\index{list!empty}`
+
+.. index:: empty list, list!empty
 
 As you might expect, you can assign list values to variables:
 
@@ -53,15 +58,20 @@ As you might expect, you can assign list values to variables:
    >>> print(cheeses, numbers, empty)
    ['Cheddar', 'Edam', 'Gouda'] [17, 123] []
 
-:raw-latex:`\index{assignment}`
+
+.. index:: assignment
 
 Lists are mutable
 -----------------
 
-:raw-latex:`\index{list!element}` :raw-latex:`\index{access}`
-:raw-latex:`\index{index}` :raw-latex:`\index{}`
-:raw-latex:`\index{bracket operator}`
-:raw-latex:`\index{operator!bracket}`
+
+.. index:: list!element, access
+
+.. index:: index, 
+
+.. index:: bracket operator
+
+.. index:: operator!bracket
 
 The syntax for accessing the elements of a list is the same as for
 accessing the characters of a string: the bracket operator. The
@@ -78,7 +88,8 @@ items in a list or reassign an item in a list. When the bracket operator
 appears on the left side of an assignment, it identifies the element of
 the list that will be assigned.
 
-:raw-latex:`\index{mutability}`
+
+.. index:: mutability
 
 .. code:: python
 
@@ -89,15 +100,19 @@ the list that will be assigned.
 
 The one-th element of ``numbers``, which used to be 123, is now 5.
 
-:raw-latex:`\index{index!starting at zero}`
-:raw-latex:`\index{zero, index starting at}`
+
+.. index:: index!starting at zero
+
+.. index:: zero, index starting at
 
 You can think of a list as a relationship between indices and elements.
 This relationship is called a *mapping*; each index “maps to” one of the
 elements.
 
-:raw-latex:`\index{item assignment}`
-:raw-latex:`\index{assignment!item}`
+
+.. index:: item assignment
+
+.. index:: assignment!item
 
 List indices work the same way as string indices:
 
@@ -106,15 +121,20 @@ List indices work the same way as string indices:
 -  If you try to read or write an element that does not exist, you get
    an ``IndexError``.
 
-:raw-latex:`\index{exception!IndexError}`
-:raw-latex:`\index{IndexError}`
+
+.. index:: exception!IndexError
+
+.. index:: IndexError
 
 -  If an index has a negative value, it counts backward from the end of
    the list.
 
-:raw-latex:`\index{list!index}` :raw-latex:`\index{list!membership}`
-:raw-latex:`\index{membership!list}` :raw-latex:`\index{in operator}`
-:raw-latex:`\index{operator!in}`
+
+.. index:: list!index, list!membership
+
+.. index:: membership!list, in operator
+
+.. index:: operator!in
 
 The ``in`` operator also works on lists.
 
@@ -129,9 +149,12 @@ The ``in`` operator also works on lists.
 Traversing a list
 -----------------
 
-:raw-latex:`\index{list!traversal}` :raw-latex:`\index{traversal!list}`
-:raw-latex:`\index{for loop}` :raw-latex:`\index{loop!for}`
-:raw-latex:`\index{statement!for}`
+
+.. index:: list!traversal, traversal!list
+
+.. index:: for loop, loop!for
+
+.. index:: statement!for
 
 The most common way to traverse the elements of a list is with a ``for``
 loop. The syntax is the same as for strings:
@@ -145,8 +168,10 @@ This works well if you only need to read the elements of the list. But
 if you want to write or update the elements, you need the indices. A
 common way to do that is to combine the functions ``range`` and ``len``:
 
-:raw-latex:`\index{looping!with indices}`
-:raw-latex:`\index{index!looping with}`
+
+.. index:: looping!with indices
+
+.. index:: index!looping with
 
 .. code:: python
 
@@ -160,7 +185,8 @@ time through the loop, ``i`` gets the index of the next element. The
 assignment statement in the body uses ``i`` to read the old value of the
 element and to assign the new value.
 
-:raw-latex:`\index{item update}` :raw-latex:`\index{update!item}`
+
+.. index:: item update, update!item
 
 A ``for`` loop over an empty list never executes the body:
 
@@ -172,7 +198,8 @@ A ``for`` loop over an empty list never executes the body:
 Although a list can contain another list, the nested list still counts
 as a single element. The length of this list is four:
 
-:raw-latex:`\index{nested list}` :raw-latex:`\index{list!nested}`
+
+.. index:: nested list, list!nested
 
 .. code:: python
 
@@ -181,12 +208,15 @@ as a single element. The length of this list is four:
 List operations
 ---------------
 
-:raw-latex:`\index{list!operation}`
+
+.. index:: list!operation
 
 The ``+`` operator concatenates lists:
 
-:raw-latex:`\index{concatenation!list}`
-:raw-latex:`\index{list!concatenation}`
+
+.. index:: concatenation!list
+
+.. index:: list!concatenation
 
 .. code:: python
 
@@ -198,8 +228,10 @@ The ``+`` operator concatenates lists:
 
 Similarly, the ``*`` operator repeats a list a given number of times:
 
-:raw-latex:`\index{repetition!list}`
-:raw-latex:`\index{list!repetition}`
+
+.. index:: repetition!list
+
+.. index:: list!repetition
 
 .. code:: python
 
@@ -214,9 +246,12 @@ list three times.
 List slices
 -----------
 
-:raw-latex:`\index{slice operator}` :raw-latex:`\index{operator!slice}`
-:raw-latex:`\index{index!slice}` :raw-latex:`\index{list!slice}`
-:raw-latex:`\index{slice!list}`
+
+.. index:: slice operator, operator!slice
+
+.. index:: index!slice, list!slice
+
+.. index:: slice!list
 
 The slice operator also works on lists:
 
@@ -234,8 +269,10 @@ If you omit the first index, the slice starts at the beginning. If you
 omit the second, the slice goes to the end. So if you omit both, the
 slice is a copy of the whole list.
 
-:raw-latex:`\index{list!copy}` :raw-latex:`\index{slice!copy}`
-:raw-latex:`\index{copy!slice}`
+
+.. index:: list!copy, slice!copy
+
+.. index:: copy!slice
 
 .. code:: python
 
@@ -245,12 +282,14 @@ slice is a copy of the whole list.
 Since lists are mutable, it is often useful to make a copy before
 performing operations that fold, spindle, or mutilate lists.
 
-:raw-latex:`\index{mutability}`
+
+.. index:: mutability
 
 A slice operator on the left side of an assignment can update multiple
 elements:
 
-:raw-latex:`\index{slice!update}` :raw-latex:`\index{update!slice}`
+
+.. index:: slice!update, update!slice
 
 .. code:: python
 
@@ -262,12 +301,14 @@ elements:
 List methods
 ------------
 
-:raw-latex:`\index{list!method}` :raw-latex:`\index{method, list}`
+
+.. index:: list!method, method, list
 
 Python provides methods that operate on lists. For example, ``append``
 adds a new element to the end of a list:
 
-:raw-latex:`\index{append method}` :raw-latex:`\index{method!append}`
+
+.. index:: append method, method!append
 
 .. code:: python
 
@@ -278,7 +319,8 @@ adds a new element to the end of a list:
 
 ``extend`` takes a list as an argument and appends all of the elements:
 
-:raw-latex:`\index{extend method}` :raw-latex:`\index{method!extend}`
+
+.. index:: extend method, method!extend
 
 .. code:: python
 
@@ -292,7 +334,8 @@ This example leaves ``t2`` unmodified.
 
 ``sort`` arranges the elements of the list from low to high:
 
-:raw-latex:`\index{sort method}` :raw-latex:`\index{method!sort}`
+
+.. index:: sort method, method!sort
 
 .. code:: python
 
@@ -305,20 +348,26 @@ Most list methods are void; they modify the list and return ``None``. If
 you accidentally write ``t = t.sort()``, you will be disappointed with
 the result.
 
-:raw-latex:`\index{void method}` :raw-latex:`\index{method!void}`
-:raw-latex:`\index{None special value}`
-:raw-latex:`\index{special value!None}`
+
+.. index:: void method, method!void
+
+.. index:: None special value
+
+.. index:: special value!None
 
 Deleting elements
 -----------------
 
-:raw-latex:`\index{element deletion}`
-:raw-latex:`\index{deletion, element of list}`
+
+.. index:: element deletion
+
+.. index:: deletion, element of list
 
 There are several ways to delete elements from a list. If you know the
 index of the element you want, you can use ``pop``:
 
-:raw-latex:`\index{pop method}` :raw-latex:`\index{method!pop}`
+
+.. index:: pop method, method!pop
 
 .. code:: python
 
@@ -334,7 +383,8 @@ you don’t provide an index, it deletes and returns the last element.
 
 If you don’t need the removed value, you can use the ``del`` operator:
 
-:raw-latex:`\index{del operator}` :raw-latex:`\index{operator!del}`
+
+.. index:: del operator, operator!del
 
 .. code:: python
 
@@ -346,7 +396,8 @@ If you don’t need the removed value, you can use the ``del`` operator:
 If you know the element you want to remove (but not the index), you can
 use ``remove``:
 
-:raw-latex:`\index{remove method}` :raw-latex:`\index{method!remove}`
+
+.. index:: remove method, method!remove
 
 .. code:: python
 
@@ -357,8 +408,10 @@ use ``remove``:
 
 The return value from ``remove`` is ``None``.
 
-:raw-latex:`\index{None special value}`
-:raw-latex:`\index{special value!None}`
+
+.. index:: None special value
+
+.. index:: special value!None
 
 To remove more than one element, you can use ``del`` with a slice index:
 
@@ -446,14 +499,17 @@ the numbers in the list to come up with the average.
 Lists and strings
 -----------------
 
-:raw-latex:`\index{list}` :raw-latex:`\index{string}`
-:raw-latex:`\index{sequence}`
+
+.. index:: list, string
+
+.. index:: sequence
 
 A string is a sequence of characters and a list is a sequence of values,
 but a list of characters is not the same as a string. To convert from a
 string to a list of characters, you can use ``list``:
 
-:raw-latex:`\index{list!function}` :raw-latex:`\index{function!list}`
+
+.. index:: list!function, function!list
 
 .. code:: python
 
@@ -469,7 +525,8 @@ looks too much like the number “1”. So that’s why I use “t”.
 The ``list`` function breaks a string into individual letters. If you
 want to break a string into words, you can use the ``split`` method:
 
-:raw-latex:`\index{split method}` :raw-latex:`\index{method!split}`
+
+.. index:: split method, method!split
 
 .. code:: python
 
@@ -488,8 +545,10 @@ You can call ``split`` with an optional argument called a *delimiter*
 that specifies which characters to use as word boundaries. The following
 example uses a hyphen as a delimiter:
 
-:raw-latex:`\index{optional argument}`
-:raw-latex:`\index{argument!optional}` :raw-latex:`\index{delimiter}`
+
+.. index:: optional argument
+
+.. index:: argument!optional, delimiter
 
 .. code:: python
 
@@ -502,8 +561,10 @@ example uses a hyphen as a delimiter:
 concatenates the elements. ``join`` is a string method, so you have to
 invoke it on the delimiter and pass the list as a parameter:
 
-:raw-latex:`\index{join method}` :raw-latex:`\index{method!join}`
-:raw-latex:`\index{concatenation}`
+
+.. index:: join method, method!join
+
+.. index:: concatenation
 
 .. code:: python
 
@@ -516,7 +577,8 @@ In this case the delimiter is a space character, so ``join`` puts a
 space between words. To concatenate strings without spaces, you can use
 the empty string, "", as a delimiter.
 
-:raw-latex:`\index{empty string}` :raw-latex:`\index{string!empty}`
+
+.. index:: empty string, string!empty
 
 Parsing lines
 -------------
@@ -570,7 +632,8 @@ bit of information we are looking for.
 Objects and values
 ------------------
 
-:raw-latex:`\index{object}` :raw-latex:`\index{value}`
+
+.. index:: object, value
 
 If we execute these assignment statements:
 
@@ -582,7 +645,8 @@ If we execute these assignment statements:
 we know that ``a`` and ``b`` both refer to a string, but we don’t know
 whether they refer to the *same* string. There are two possible states:
 
-:raw-latex:`\index{aliasing}`
+
+.. index:: aliasing
 
 .. figure:: ../images/list1.svg
    :alt: Variables and Objects
@@ -592,7 +656,8 @@ whether they refer to the *same* string. There are two possible states:
 In one case, ``a`` and ``b`` refer to two different objects that have
 the same value. In the second case, they refer to the same object.
 
-:raw-latex:`\index{is operator}` :raw-latex:`\index{operator!is}`
+
+.. index:: is operator, operator!is
 
 To check whether two variables refer to the same object, you can use the
 ``is`` operator.
@@ -621,7 +686,8 @@ they have the same elements, but not *identical*, because they are not
 the same object. If two objects are identical, they are also equivalent,
 but if they are equivalent, they are not necessarily identical.
 
-:raw-latex:`\index{equivalence}` :raw-latex:`\index{identity}`
+
+.. index:: equivalence, identity
 
 Until now, we have been using “object” and “value” interchangeably, but
 it is more precise to say that an object has a value. If you execute
@@ -629,12 +695,14 @@ it is more precise to say that an object has a value. If you execute
 particular sequence of elements. If another list has the same elements,
 we would say it has the same value.
 
-:raw-latex:`\index{object}` :raw-latex:`\index{value}`
+
+.. index:: object, value
 
 Aliasing
 --------
 
-:raw-latex:`\index{aliasing}` :raw-latex:`\index{reference!aliasing}`
+
+.. index:: aliasing, reference!aliasing
 
 If ``a`` refers to an object and you assign ``b = a``, then both
 variables refer to the same object:
@@ -649,12 +717,14 @@ variables refer to the same object:
 The association of a variable with an object is called a *reference*. In
 this example, there are two references to the same object.
 
-:raw-latex:`\index{reference}`
+
+.. index:: reference
 
 An object with more than one reference has more than one name, so we say
 that the object is *aliased*.
 
-:raw-latex:`\index{mutability}`
+
+.. index:: mutability
 
 If the aliased object is mutable, changes made with one alias affect the
 other:
@@ -668,7 +738,8 @@ other:
 Although this behavior can be useful, it is error-prone. In general, it
 is safer to avoid aliasing when you are working with mutable objects.
 
-:raw-latex:`\index{immutability}`
+
+.. index:: immutability
 
 For immutable objects like strings, aliasing is not as much of a
 problem. In this example:
@@ -684,9 +755,12 @@ same string or not.
 List arguments
 --------------
 
-:raw-latex:`\index{list!as argument}` :raw-latex:`\index{argument}`
-:raw-latex:`\index{argument!list}` :raw-latex:`\index{reference}`
-:raw-latex:`\index{parameter}`
+
+.. index:: list!as argument, argument
+
+.. index:: argument!list, reference
+
+.. index:: parameter
 
 When you pass a list to a function, the function gets a reference to the
 list. If the function modifies a list parameter, the caller sees the
@@ -714,9 +788,12 @@ It is important to distinguish between operations that modify lists and
 operations that create new lists. For example, the ``append`` method
 modifies a list, but the ``+`` operator creates a new list:
 
-:raw-latex:`\index{append method}` :raw-latex:`\index{method!append}`
-:raw-latex:`\index{list!concatenation}`
-:raw-latex:`\index{concatenation!list}`
+
+.. index:: append method, method!append
+
+.. index:: list!concatenation
+
+.. index:: concatenation!list
 
 .. code:: python
 
@@ -746,7 +823,8 @@ The slice operator creates a new list and the assignment makes ``t``
 refer to it, but none of that has any effect on the list that was passed
 as an argument.
 
-:raw-latex:`\index{slice operator}` :raw-latex:`\index{operator!slice}`
+
+.. index:: slice operator, operator!slice
 
 An alternative is to write a function that creates and returns a new
 list. For example, ``tail`` returns all but the first element of a list:
@@ -774,7 +852,8 @@ new list that contains all but the first and last elements.**
 Debugging
 ---------
 
-:raw-latex:`\index{debugging}`
+
+.. index:: debugging
 
 Careless use of lists (and other mutable objects) can lead to long hours
 of debugging. Here are some common pitfalls and ways to avoid them:
@@ -795,7 +874,8 @@ of debugging. Here are some common pitfalls and ways to avoid them:
 
       t = t.sort()           # WRONG!
 
-   :raw-latex:`\index{sort method}` :raw-latex:`\index{method!sort}`
+
+.. index:: sort method, method!sort
 
    Because ``sort`` returns ``None``, the next operation you perform
    with ``t`` is likely to fail.
@@ -811,7 +891,8 @@ of debugging. Here are some common pitfalls and ways to avoid them:
 
 2. Pick an idiom and stick with it.
 
-   :raw-latex:`\index{idiom}`
+
+.. index:: idiom
 
    Part of the problem with lists is that there are too many ways to do
    things. For example, to remove an element from a list, you can use
@@ -841,8 +922,10 @@ of debugging. Here are some common pitfalls and ways to avoid them:
 
 3. Make copies to avoid aliasing.
 
-   :raw-latex:`\index{aliasing!copying to avoid}`
-   :raw-latex:`\index{copy!to avoid aliasing}`
+
+.. index:: aliasing!copying to avoid
+
+.. index:: copy!to avoid aliasing
 
    If you want to use a method like ``sort`` that modifies the argument,
    but you need to keep the original list as well, you can make a copy.
@@ -1002,40 +1085,52 @@ Glossary
 
 aliasing
    A circumstance where two or more variables refer to the same object.
-   :raw-latex:`\index{aliasing}`
+
+.. index:: aliasing
 delimiter
    A character or string used to indicate where a string should be
-   split. :raw-latex:`\index{delimiter}`
+   split.
+.. index:: delimiter
 element
    One of the values in a list (or other sequence); also called items.
-   :raw-latex:`\index{element}`
+
+.. index:: element
 equivalent
-   Having the same value. :raw-latex:`\index{equivalent}`
+   Having the same value.
+.. index:: equivalent
 index
    An integer value that indicates an element in a list.
-   :raw-latex:`\index{index}` :raw-latex:`\index{}`
+
+.. index:: index, 
 identical
    Being the same object (which implies equivalence).
-   :raw-latex:`\index{identical}`
+
+.. index:: identical
 list
-   A sequence of values. :raw-latex:`\index{list}`
+   A sequence of values.
+.. index:: list
 list traversal
    The sequential accessing of each element in a list.
-   :raw-latex:`\index{list!traversal}`
+
+.. index:: list!traversal
 nested list
    A list that is an element of another list.
-   :raw-latex:`\index{nested list}`
+
+.. index:: nested list
 object
    Something a variable can refer to. An object has a type and a value.
-   :raw-latex:`\index{object}`
+
+.. index:: object
 reference
    The association between a variable and its value.
-   :raw-latex:`\index{reference}`
+
+.. index:: reference
 
 Exercises
 ---------
 
-:raw-latex:`\index{Romeo and Juliet}`
+
+.. index:: Romeo and Juliet
 
 **Exercise 4: Download a copy of the file from**
 `www.py4e.com/code3/romeo.txt <http://www.py4e.com/code3/romeo.txt>`__

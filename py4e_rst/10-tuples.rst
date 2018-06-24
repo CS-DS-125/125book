@@ -8,8 +8,10 @@ Tuples
 Tuples are immutable
 --------------------
 
-:raw-latex:`\index{tuple}` :raw-latex:`\index{type!tuple}`
-:raw-latex:`\index{sequence}`
+
+.. index:: tuple, type!tuple
+
+.. index:: sequence
 
 A tuple [1]_ is a sequence of values much like a list. The values stored
 in a tuple can be any type, and they are indexed by integers. The
@@ -17,8 +19,10 @@ important difference is that tuples are *immutable*. Tuples are also
 *comparable* and *hashable* so we can sort lists of them and use tuples
 as key values in Python dictionaries.
 
-:raw-latex:`\index{mutability}` :raw-latex:`\index{hashable}`
-:raw-latex:`\index{comparable}` :raw-latex:`\index{immutability}`
+
+.. index:: mutability, hashable
+
+.. index:: comparable, immutability
 
 Syntactically, a tuple is a comma-separated list of values:
 
@@ -30,7 +34,8 @@ Although it is not necessary, it is common to enclose tuples in
 parentheses to help us quickly identify tuples when we look at Python
 code:
 
-:raw-latex:`\index{parentheses!tuples in}`
+
+.. index:: parentheses!tuples in
 
 .. code:: python
 
@@ -39,7 +44,8 @@ code:
 To create a tuple with a single element, you have to include the final
 comma:
 
-:raw-latex:`\index{singleton}` :raw-latex:`\index{tuple!singleton}`
+
+.. index:: singleton, tuple!singleton
 
 .. code:: python
 
@@ -59,7 +65,8 @@ in parentheses that evaluates to a string:
 Another way to construct a tuple is the built-in function ``tuple``.
 With no argument, it creates an empty tuple:
 
-:raw-latex:`\index{tuple function}` :raw-latex:`\index{function!tuple}`
+
+.. index:: tuple function, function!tuple
 
 .. code:: python
 
@@ -82,8 +89,10 @@ it as a variable name.
 Most list operators also work on tuples. The bracket operator indexes an
 element:
 
-:raw-latex:`\index{bracket operator}`
-:raw-latex:`\index{operator!bracket}`
+
+.. index:: bracket operator
+
+.. index:: operator!bracket
 
 .. code:: python
 
@@ -93,8 +102,10 @@ element:
 
 And the slice operator selects a range of elements.
 
-:raw-latex:`\index{slice operator}` :raw-latex:`\index{operator!slice}`
-:raw-latex:`\index{tuple!slice}` :raw-latex:`\index{slice!tuple}`
+
+.. index:: slice operator, operator!slice
+
+.. index:: tuple!slice, slice!tuple
 
 .. code:: python
 
@@ -104,9 +115,12 @@ And the slice operator selects a range of elements.
 But if you try to modify one of the elements of the tuple, you get an
 error:
 
-:raw-latex:`\index{exception!TypeError}` :raw-latex:`\index{TypeError}`
-:raw-latex:`\index{item assignment}`
-:raw-latex:`\index{assignment!item}`
+
+.. index:: exception!TypeError, TypeError
+
+.. index:: item assignment
+
+.. index:: assignment!item
 
 .. code:: python
 
@@ -125,9 +139,12 @@ with another:
 Comparing tuples
 ----------------
 
-:raw-latex:`\index{comparison!tuple}`
-:raw-latex:`\index{tuple!comparison}` :raw-latex:`\index{sort method}`
-:raw-latex:`\index{method!sort}`
+
+.. index:: comparison!tuple
+
+.. index:: tuple!comparison, sort method
+
+.. index:: method!sort
 
 The comparison operators work with tuples and other sequences. Python
 starts by comparing the first element from each sequence. If they are
@@ -156,10 +173,14 @@ Sort
 Undecorate
    by extracting the sorted elements of the sequence.
 
-:raw-latex:`\index{DSU pattern}` :raw-latex:`\index{pattern!DSU}`
-:raw-latex:`\index{decorate-sort-undecorate pattern}`
-:raw-latex:`\index{pattern!decorate-sort-undecorate}`
-:raw-latex:`\index{Romeo and Juliet}`
+
+.. index:: DSU pattern, pattern!DSU
+
+.. index:: decorate-sort-undecorate pattern
+
+.. index:: pattern!decorate-sort-undecorate
+
+.. index:: Romeo and Juliet
 
 For example, suppose you have a list of words and you want to sort them
 from longest to shortest:
@@ -189,8 +210,10 @@ preceded by its length.
 the second element to break ties. The keyword argument ``reverse=True``
 tells ``sort`` to go in decreasing order.
 
-:raw-latex:`\index{keyword argument}`
-:raw-latex:`\index{argument!keyword}` :raw-latex:`\index{traversal}`
+
+.. index:: keyword argument
+
+.. index:: argument!keyword, traversal
 
 The second loop traverses the list of tuples and builds a list of words
 in descending order of length. The four-character words are sorted in
@@ -210,9 +233,12 @@ Python list and sorted in descending word length order.
 Tuple assignment
 ----------------
 
-:raw-latex:`\index{tuple!assignment}`
-:raw-latex:`\index{assignment!tuple}` :raw-latex:`\index{swap pattern}`
-:raw-latex:`\index{pattern!swap}`
+
+.. index:: tuple!assignment
+
+.. index:: assignment!tuple, swap pattern
+
+.. index:: pattern!swap
 
 One of the unique syntactic features of the Python language is the
 ability to have a tuple on the left side of an assignment statement.
@@ -277,8 +303,10 @@ assignments.
 The number of variables on the left and the number of values on the
 right must be the same:
 
-:raw-latex:`\index{exception!ValueError}`
-:raw-latex:`\index{ValueError}`
+
+.. index:: exception!ValueError
+
+.. index:: ValueError
 
 .. code:: python
 
@@ -289,8 +317,10 @@ More generally, the right side can be any kind of sequence (string,
 list, or tuple). For example, to split an email address into a user name
 and a domain, you could write:
 
-:raw-latex:`\index{split method}` :raw-latex:`\index{method!split}`
-:raw-latex:`\index{email address}`
+
+.. index:: split method, method!split
+
+.. index:: email address
 
 .. code:: python
 
@@ -310,8 +340,10 @@ element is assigned to ``uname``, the second to ``domain``.
 Dictionaries and tuples
 -----------------------
 
-:raw-latex:`\index{dictionary}` :raw-latex:`\index{items method}`
-:raw-latex:`\index{method!items}` :raw-latex:`\index{key-value pair}`
+
+.. index:: dictionary, items method
+
+.. index:: method!items, key-value pair
 
 Dictionaries have a method called ``items`` that returns a list of
 tuples, where each tuple is a key-value pair:
@@ -346,8 +378,10 @@ The new list is sorted in ascending alphabetical order by the key value.
 Multiple assignment with dictionaries
 -------------------------------------
 
-:raw-latex:`\index{traverse!dictionary}`
-:raw-latex:`\index{dictionary!traversal}`
+
+.. index:: traverse!dictionary
+
+.. index:: dictionary!traversal
 
 Combining ``items``, tuple assignment, and ``for``, you can see a nice
 code pattern for traversing the keys and values of a dictionary in a
@@ -407,7 +441,8 @@ dictionary contents sorted by value.
 The most common words
 ---------------------
 
-:raw-latex:`\index{Romeo and Juliet}`
+
+.. index:: Romeo and Juliet
 
 Coming back to our running example of the text from *Romeo and Juliet*
 Act 2, Scene 2, we can augment our program to use this technique to
@@ -484,8 +519,10 @@ good choice as a language for exploring information.
 Using tuples as keys in dictionaries
 ------------------------------------
 
-:raw-latex:`\index{tuple!as key in dictionary}`
-:raw-latex:`\index{hashable}`
+
+.. index:: tuple!as key in dictionary
+
+.. index:: hashable
 
 Because tuples are *hashable* and lists are not, if we want to create a
 *composite* key to use in a dictionary we must use a tuple as the key.
@@ -503,7 +540,8 @@ statement as follows:
 The expression in brackets is a tuple. We could use tuple assignment in
 a ``for`` loop to traverse this dictionary.
 
-:raw-latex:`\index{tuple!in brackets}`
+
+.. index:: tuple!in brackets
 
 .. code:: python
 
@@ -517,7 +555,8 @@ prints the name and corresponding telephone number.
 Sequences: strings, lists, and tuples - Oh My!
 ----------------------------------------------
 
-:raw-latex:`\index{sequence}`
+
+.. index:: sequence
 
 I have focused on lists of tuples, but almost all of the examples in
 this chapter also work with lists of lists, tuples of tuples, and tuples
@@ -528,9 +567,12 @@ In many contexts, the different kinds of sequences (strings, lists, and
 tuples) can be used interchangeably. So how and why do you choose one
 over the others?
 
-:raw-latex:`\index{string}` :raw-latex:`\index{list}`
-:raw-latex:`\index{tuple}` :raw-latex:`\index{mutability}`
-:raw-latex:`\index{immutability}`
+
+.. index:: string, list
+
+.. index:: tuple, mutability
+
+.. index:: immutability
 
 To start with the obvious, strings are more limited than other sequences
 because the elements have to be characters. They are also immutable. If
@@ -557,16 +599,22 @@ the built-in functions ``sorted`` and ``reversed``, which take any
 sequence as a parameter and return a new sequence with the same elements
 in a different order.
 
-:raw-latex:`\index{sorted function}`
-:raw-latex:`\index{function!sorted}`
-:raw-latex:`\index{reversed function}`
-:raw-latex:`\index{function!reversed}`
+
+.. index:: sorted function
+
+.. index:: function!sorted
+
+.. index:: reversed function
+
+.. index:: function!reversed
 
 Debugging
 ---------
 
-:raw-latex:`\index{debugging}` :raw-latex:`\index{data structure}`
-:raw-latex:`\index{shape error}` :raw-latex:`\index{error!shape}`
+
+.. index:: debugging, data structure
+
+.. index:: shape error, error!shape
 
 Lists, dictionaries and tuples are known generically as *data
 structures*; in this chapter we are starting to see compound data
@@ -586,38 +634,49 @@ comparable
    A type where one value can be checked to see if it is greater than,
    less than, or equal to another value of the same type. Types which
    are comparable can be put in a list and sorted.
-   :raw-latex:`\index{comparable}`
+
+.. index:: comparable
 data structure
    A collection of related values, often organized in lists,
-   dictionaries, tuples, etc. :raw-latex:`\index{data structure}`
+   dictionaries, tuples, etc.
+.. index:: data structure
 DSU
    Abbreviation of “decorate-sort-undecorate”, a pattern that involves
    building a list of tuples, sorting, and extracting part of the
-   result. :raw-latex:`\index{DSU pattern}`
+   result.
+.. index:: DSU pattern
 gather
    The operation of assembling a variable-length argument tuple.
-   :raw-latex:`\index{gather}`
+
+.. index:: gather
 hashable
    A type that has a hash function. Immutable types like integers,
    floats, and strings are hashable; mutable types like lists and
-   dictionaries are not. :raw-latex:`\index{hashable}`
+   dictionaries are not.
+.. index:: hashable
 scatter
    The operation of treating a sequence as a list of arguments.
-   :raw-latex:`\index{scatter}`
+
+.. index:: scatter
 shape (of a data structure)
    A summary of the type, size, and composition of a data structure.
-   :raw-latex:`\index{shape}`
+
+.. index:: shape
 singleton
    A list (or other sequence) with a single element.
-   :raw-latex:`\index{singleton}`
+
+.. index:: singleton
 tuple
-   An immutable sequence of elements. :raw-latex:`\index{tuple}`
+   An immutable sequence of elements.
+.. index:: tuple
 tuple assignment
    An assignment with a sequence on the right side and a tuple of
    variables on the left. The right side is evaluated and then its
    elements are assigned to the variables on the left.
-   :raw-latex:`\index{tuple assignment}`
-   :raw-latex:`\index{assignment!tuple}`
+
+.. index:: tuple assignment
+
+.. index:: assignment!tuple
 
 Exercises
 ---------
@@ -674,8 +733,10 @@ letters a-z. Find text samples from several different languages and see
 how letter frequency varies between languages. Compare your results with
 the tables at**\ https://wikipedia.org/wiki/Letter_frequencies\ **.**
 
-:raw-latex:`\index{letter frequency}`
-:raw-latex:`\index{frequency!letter}`
+
+.. index:: letter frequency
+
+.. index:: frequency!letter
 
 .. [1]
    Fun fact: The word “tuple” comes from the names given to sequences of

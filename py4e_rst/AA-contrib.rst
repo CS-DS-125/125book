@@ -77,8 +77,10 @@ practice.
 I released the book under the GNU Free Documentation License, which
 allows users to copy, modify, and distribute the book.
 
-:raw-latex:`\index{GNU Free Documentation License}`
-:raw-latex:`\index{Free Documentation License, GNU}`
+
+.. index:: GNU Free Documentation License
+
+.. index:: Free Documentation License, GNU
 
 What happened next is the cool part. Jeff Elkner, a high school teacher
 in Virginia, adopted my book and translated it into Python. He sent me a
@@ -122,8 +124,10 @@ And I thank the Free Software Foundation for developing the GNU Free
 Documentation License, which helped make my collaboration with Jeff and
 Chris possible.
 
-:raw-latex:`\index{GNU Free Documentation License}`
-:raw-latex:`\index{Free Documentation License, GNU}`
+
+.. index:: GNU Free Documentation License
+
+.. index:: Free Documentation License, GNU
 
 I also thank the editors at Lulu who worked on *How to Think Like a
 Computer Scientist*.
@@ -144,7 +148,8 @@ Franklin W. Olin College of Engineering.
 Contributor List for “Think Python”
 -----------------------------------
 
-:raw-latex:`\index{contributors}`
+
+.. index:: contributors
 
 (Allen B. Downey)
 

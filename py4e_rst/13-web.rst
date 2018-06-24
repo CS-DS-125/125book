@@ -48,9 +48,12 @@ drawn as *children* of their parent nodes.
 Parsing XML
 -----------
 
-:raw-latex:`\index{ElementTree}`
-:raw-latex:`\index{ElementTree!fromstring}`
-:raw-latex:`\index{ElementTree!find}`
+
+.. index:: ElementTree
+
+.. index:: ElementTree!fromstring
+
+.. index:: ElementTree!find
 
 Here is a simple application that parses some XML and extracts some data
 elements from the XML:
@@ -96,8 +99,10 @@ data from XML without worrying about the rules of XML syntax.
 Looping through nodes
 ---------------------
 
-:raw-latex:`\index{ElementTree!findall}`
-:raw-latex:`\index{ElementTree!get}`
+
+.. index:: ElementTree!findall
+
+.. index:: ElementTree!get
 
 Often the XML has multiple nodes and we need to write a loop to process
 all of the nodes. In the following program, we loop through all of the
@@ -151,8 +156,10 @@ the ``user`` node.
 JavaScript Object Notation - JSON
 ---------------------------------
 
-:raw-latex:`\index{JSON}`
-:raw-latex:`\index{JavaScript Object Notation}`
+
+.. index:: JSON
+
+.. index:: JavaScript Object Notation
 
 The JSON format was inspired by the object and array format used in the
 JavaScript language. But since Python was invented before JavaScript,
@@ -314,8 +321,10 @@ the web, we call these *web services*.
 Google geocoding web service
 ----------------------------
 
-:raw-latex:`\index{Google}` :raw-latex:`\index{geocoding}`
-:raw-latex:`\index{web service}`
+
+.. index:: Google, geocoding
+
+.. index:: web service
 
 Google has an excellent web service that allows us to make use of their
 large database of geographic information. We can submit a geographical
@@ -334,7 +343,8 @@ be respectful in your use of these resources. If too many people abuse
 the service, Google might drop or significantly curtail its free
 service.*
 
-:raw-latex:`\index{rate limiting}`
+
+.. index:: rate limiting
 
 You can read the online documentation for this service, but it is quite
 simple and you can even test it using a browser by typing the following
@@ -456,7 +466,8 @@ to explore the XML variant of the Google geocoding API.
 Security and API usage
 ----------------------
 
-:raw-latex:`\index{OAuth}` :raw-latex:`\index{API!key}`
+
+.. index:: OAuth, API!key
 
 It is quite common that you need some kind of “API key” to make use of a
 vendor’s API. The general idea is that they want to know who is using
@@ -741,23 +752,31 @@ Glossary
 API
    Application Program Interface - A contract between applications that
    defines the patterns of interaction between two application
-   components. :raw-latex:`\index{API}`
+   components.
+.. index:: API
 ElementTree
    A built-in Python library used to parse XML data.
-   :raw-latex:`\index{ElementTree}`
+
+.. index:: ElementTree
 JSON
    JavaScript Object Notation. A format that allows for the markup of
    structured data based on the syntax of JavaScript Objects.
-   :raw-latex:`\index{JSON}`
-   :raw-latex:`\index{JavaScript Object Notation}`
+
+.. index:: JSON
+
+.. index:: JavaScript Object Notation
 SOA
    Service-Oriented Architecture. When an application is made of
-   components connected across a network. :raw-latex:`\index{SOA}`
-   :raw-latex:`\index{Service Oriented Architecture}`
+   components connected across a network.
+.. index:: SOA
+
+.. index:: Service Oriented Architecture
 XML
    eXtensible Markup Language. A format that allows for the markup of
-   structured data. :raw-latex:`\index{XML}`
-   :raw-latex:`\index{eXtensible Markup Language}`
+   structured data.
+.. index:: XML
+
+.. index:: eXtensible Markup Language
 
 Exercises
 ---------

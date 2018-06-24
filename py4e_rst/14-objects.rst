@@ -8,7 +8,8 @@ Object-Oriented Programming
 Managing Larger Programs
 ------------------------
 
-:raw-latex:`\index{object-oriented}`
+
+.. index:: object-oriented
 
 At the beginning of this book, we came up with four basic programming
 patterns which we use to construct programs:
@@ -61,7 +62,8 @@ It turns out we have been using objects all along in this class. Python
 provides us with many built-in objects. Here is some simple code where
 the first few lines should feel very simple and natural to you.
 
-:raw-latex:`\index{list object}`
+
+.. index:: list object
 
 .. code:: python
 
@@ -174,8 +176,10 @@ If we look back at the link extraction application where we used the
 BeautifulSoup library, we can see a program that is constructed by
 connecting different objects together to accomplish a task:
 
-:raw-latex:`\index{BeautifulSoup}` :raw-latex:`\index{HTML}`
-:raw-latex:`\index{parsing!HTML}`
+
+.. index:: BeautifulSoup, HTML
+
+.. index:: parsing!HTML
 
 .. code:: python
 
@@ -258,7 +262,8 @@ page.
 
    Ignoring Detail When Building an Object
 
-:raw-latex:`\index{encapsulation}`
+
+.. index:: encapsulation
 
 Another word we use to capture this idea that we ignore the internal
 detail of objects we use is “encapsulation”. This means that we can know
@@ -277,7 +282,8 @@ An object can contain a number of functions (which we call “methods”) as
 well as data that is used by those functions. We call data items that
 are part of the object “attributes”.
 
-:raw-latex:`\index{class keyword}`
+
+.. index:: class keyword
 
 We use the ``class`` keyword to define the data and code that will make
 up each of the objects. The class keyword includes the name of the class
@@ -327,8 +333,10 @@ line of code:
 
    an = PartyAnimal()
 
-:raw-latex:`\index{construct}` :raw-latex:`\index{object}`
-:raw-latex:`\index{instance}` :raw-latex:`\index{class}`
+
+.. index:: construct, object
+
+.. index:: instance, class
 
 This is where we instruct Python to construct (e.g. create) an *object*
 or “instance of the class named PartyAnimal”. It looks like a function
@@ -399,7 +407,8 @@ times, both incrementing and printing the value for ``x`` within the
 Classes as Types
 ----------------
 
-:raw-latex:`\index{dir}` :raw-latex:`\index{type}`
+
+.. index:: dir, type
 
 As we have seen, in Python, all variables have a type. And we can use
 the built-in ``dir`` function to examine the capabilities of a variable.
@@ -440,8 +449,10 @@ attribute and the ``party`` method are available in the object.
 Object Lifecycle
 ----------------
 
-:raw-latex:`\index{constructor}` :raw-latex:`\index{destructor}`
-:raw-latex:`\index{object lifecycle}`
+
+.. index:: constructor, destructor
+
+.. index:: object lifecycle
 
 In the previous examples, we are defining a class (template) and using
 that class to create an instance of that class (object) and then using
@@ -705,43 +716,52 @@ Glossary
 --------
 
 attribute
-   A variable that is part of a class. :raw-latex:`\index{attribute}`
+   A variable that is part of a class.
+.. index:: attribute
 class
    A template that can be used to construct an object. Defines the
    attributes and methods that will make up the object.
-   :raw-latex:`\index{class}`
+
+.. index:: class
 child class
    A new class created when a parent class is extended. The child class
    inherits all of the attributes and methods of the parent class.
-   :raw-latex:`\index{child class}`
+
+.. index:: child class
 constructor
    An optional specially named method (``__init__``) that is called at
    the moment when a class is being used to construct an object. Usually
    this is used to set up initial values for the object.
-   :raw-latex:`\index{constructor}`
+
+.. index:: constructor
 destructor
    An optional specially named method (``__del__``) that is called at
    the moment just before an object is destroyed. Destructors are rarely
-   used. :raw-latex:`\index{destructor}`
+   used.
+.. index:: destructor
 inheritance
    When we create a new class (child) by extending an existing class
    (parent). The child class has all the attributes and methods of the
    parent class plus additional attributes and methods defined by the
-   child class. :raw-latex:`\index{inheritance}`
+   child class.
+.. index:: inheritance
 method
    A function that is contained within a class and the objects that are
    constructed from the class. Some object-oriented patterns use
    ‘message’ instead of ‘method’ to describe this concept.
-   :raw-latex:`\index{method}` :raw-latex:`\index{message}`
+
+.. index:: method, message
 object
    A constructed instance of a class. An object contains all of the
    attributes and methods that were defined by the class. Some
    object-oriented documentation uses the term ‘instance’
-   interchangeably with ‘object’. :raw-latex:`\index{method}`
+   interchangeably with ‘object’.
+.. index:: method
 parent class
    The class which is being extended to create a new child class. The
    parent class contributes all of its methods and attributes to the new
-   child class. :raw-latex:`\index{parent class}`
+   child class.
+.. index:: parent class
 
 .. [1]
    https://docs.python.org/3/library/html.parser.html

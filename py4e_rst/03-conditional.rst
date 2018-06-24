@@ -8,10 +8,14 @@ Conditional execution
 Boolean expressions
 -------------------
 
-:raw-latex:`\index{boolean expression}`
-:raw-latex:`\index{expression!boolean}`
-:raw-latex:`\index{logical operator}`
-:raw-latex:`\index{operator!logical}`
+
+.. index:: boolean expression
+
+.. index:: expression!boolean
+
+.. index:: logical operator
+
+.. index:: operator!logical
 
 A *boolean expression* is an expression that is either true or false.
 The following examples use the operator ``==``, which compares two
@@ -29,11 +33,16 @@ otherwise:
 ``True`` and ``False`` are special values that belong to the class
 ``bool``; they are not strings:
 
-:raw-latex:`\index{True special value}`
-:raw-latex:`\index{False special value}`
-:raw-latex:`\index{special value!True}`
-:raw-latex:`\index{special value!False}` :raw-latex:`\index{bool type}`
-:raw-latex:`\index{type!bool}`
+
+.. index:: True special value
+
+.. index:: False special value
+
+.. index:: special value!True
+
+.. index:: special value!False, bool type
+
+.. index:: type!bool
 
 .. code:: python
 
@@ -62,14 +71,18 @@ of a double equal sign (``==``). Remember that ``=`` is an assignment
 operator and ``==`` is a comparison operator. There is no such thing as
 ``=<`` or ``=>``.
 
-:raw-latex:`\index{comparison operator}`
-:raw-latex:`\index{operator!comparison}`
+
+.. index:: comparison operator
+
+.. index:: operator!comparison
 
 Logical operators
 -----------------
 
-:raw-latex:`\index{logical operator}`
-:raw-latex:`\index{operator!logical}`
+
+.. index:: logical operator
+
+.. index:: operator!logical
 
 There are three *logical operators*: ``and``, ``or``, and ``not``. The
 semantics (meaning) of these operators is similar to their meaning in
@@ -79,9 +92,12 @@ English. For example,
 
 is true only if ``x`` is greater than 0 *and* less than 10.
 
-:raw-latex:`\index{and operator}` :raw-latex:`\index{or operator}`
-:raw-latex:`\index{not operator}` :raw-latex:`\index{operator!and}`
-:raw-latex:`\index{operator!or}` :raw-latex:`\index{operator!not}`
+
+.. index:: and operator, or operator
+
+.. index:: not operator, operator!and
+
+.. index:: operator!or, operator!not
 
 ``n%2 == 0 or n%3 == 0`` is true if *either* of the conditions is true,
 that is, if the number is divisible by 2 *or* 3.
@@ -108,10 +124,14 @@ know what you are doing.
 Conditional execution
 ---------------------
 
-:raw-latex:`\index{conditional statement}`
-:raw-latex:`\index{statement!conditional}`
-:raw-latex:`\index{if statement}` :raw-latex:`\index{statement!if}`
-:raw-latex:`\index{conditional executions}`
+
+.. index:: conditional statement
+
+.. index:: statement!conditional
+
+.. index:: if statement, statement!if
+
+.. index:: conditional executions
 
 In order to write useful programs, we almost always need the ability to
 check conditions and change the behavior of the program accordingly.
@@ -136,8 +156,10 @@ If the logical condition is true, then the indented statement gets
 executed. If the logical condition is false, the indented statement is
 skipped.
 
-:raw-latex:`\index{condition}` :raw-latex:`\index{compound statement}`
-:raw-latex:`\index{statement!compound}`
+
+.. index:: condition, compound statement
+
+.. index:: statement!compound
 
 ``if`` statements have the same structure as function definitions or
 ``for`` loops [1]_. The statement consists of a header line that ends
@@ -151,7 +173,8 @@ a body with no statements (usually as a place holder for code you
 haven’t written yet). In that case, you can use the ``pass`` statement,
 which does nothing.
 
-:raw-latex:`\index{pass statement}` :raw-latex:`\index{statement!pass}`
+
+.. index:: pass statement, statement!pass
 
 .. code:: python
 
@@ -192,8 +215,10 @@ code.
 Alternative execution
 ---------------------
 
-:raw-latex:`\index{alternative execution}`
-:raw-latex:`\index{else keyword}` :raw-latex:`\index{keyword!else}`
+
+.. index:: alternative execution
+
+.. index:: else keyword, keyword!else
 
 A second form of the ``if`` statement is *alternative execution*, in
 which there are two possibilities and the condition determines which one
@@ -219,13 +244,16 @@ Since the condition must either be true or false, exactly one of the
 alternatives will be executed. The alternatives are called *branches*,
 because they are branches in the flow of execution.
 
-:raw-latex:`\index{branch}`
+
+.. index:: branch
 
 Chained conditionals
 --------------------
 
-:raw-latex:`\index{chained conditional}`
-:raw-latex:`\index{conditional!chained}`
+
+.. index:: chained conditional
+
+.. index:: conditional!chained
 
 Sometimes there are more than two possibilities and we need more than
 two branches. One way to express a computation like that is a *chained
@@ -252,7 +280,8 @@ There is no limit on the number of ``elif`` statements. If there is an
 ``else`` clause, it has to be at the end, but there doesn’t have to be
 one.
 
-:raw-latex:`\index{elif keyword}` :raw-latex:`\index{keyword!elif}`
+
+.. index:: elif keyword, keyword!elif
 
 .. code:: python
 
@@ -271,8 +300,10 @@ true, only the first true branch executes.
 Nested conditionals
 -------------------
 
-:raw-latex:`\index{nested conditional}`
-:raw-latex:`\index{conditional!nested}`
+
+.. index:: nested conditional
+
+.. index:: conditional!nested
 
 One conditional can also be nested within another. We could have written
 the three-branch example like this:
@@ -345,13 +376,16 @@ However if you place this code in a Python script and this error occurs,
 your script immediately stops in its tracks with a traceback. It does
 not execute the following statement.
 
-:raw-latex:`\index{traceback}`
+
+.. index:: traceback
 
 Here is a sample program to convert a Fahrenheit temperature to a
 Celsius temperature:
 
-:raw-latex:`\index{fahrenheit}` :raw-latex:`\index{celsius}`
-:raw-latex:`\index{temperature conversion}`
+
+.. index:: fahrenheit, celsius
+
+.. index:: temperature conversion
 
 .. code:: python
 
@@ -430,7 +464,8 @@ problem, or try again, or at least end the program gracefully.
 Short-circuit evaluation of logical expressions
 -----------------------------------------------
 
-:raw-latex:`\index{short circuit}`
+
+.. index:: short circuit
 
 When Python is processing a logical expression such as
 ``x >= 2 and (x/y) > 2``, it evaluates the expression from left to
@@ -445,8 +480,10 @@ the computations in the rest of the logical expression. When the
 evaluation of a logical expression stops because the overall value is
 already known, it is called *short-circuiting* the evaluation.
 
-:raw-latex:`\index{guardian pattern}`
-:raw-latex:`\index{pattern!guardian}`
+
+.. index:: guardian pattern
+
+.. index:: pattern!guardian
 
 While this may seem like a fine point, the short-circuit behavior leads
 to a clever technique called the *guardian pattern*. Consider the
@@ -510,7 +547,8 @@ insure that we only execute ``(x/y)`` if ``y`` is non-zero.
 Debugging
 ---------
 
-:raw-latex:`\index{debugging}` :raw-latex:`\index{traceback}`
+
+.. index:: debugging, traceback
 
 The traceback Python displays when an error occurs contains a lot of
 information, but it can be overwhelming. The most useful parts are
@@ -524,7 +562,8 @@ Syntax errors are usually easy to find, but there are a few gotchas.
 Whitespace errors can be tricky because spaces and tabs are invisible
 and we are used to ignoring them.
 
-:raw-latex:`\index{whitespace}`
+
+.. index:: whitespace
 
 .. code:: python
 
@@ -549,53 +588,69 @@ Glossary
 
 body
    The sequence of statements within a compound statement.
-   :raw-latex:`\index{body}`
+
+.. index:: body
 boolean expression
    An expression whose value is either ``True`` or ``False``.
-   :raw-latex:`\index{boolean expression}`
-   :raw-latex:`\index{expression!boolean}`
+
+.. index:: boolean expression
+
+.. index:: expression!boolean
 branch
    One of the alternative sequences of statements in a conditional
-   statement. :raw-latex:`\index{branch}`
+   statement.
+.. index:: branch
 chained conditional
    A conditional statement with a series of alternative branches.
-   :raw-latex:`\index{chained conditional}`
-   :raw-latex:`\index{conditional!chained}`
+
+.. index:: chained conditional
+
+.. index:: conditional!chained
 comparison operator
    One of the operators that compares its operands: ``==``, ``!=``,
    ``>``, ``<``, ``>=``, and ``<=``.
 conditional statement
    A statement that controls the flow of execution depending on some
-   condition. :raw-latex:`\index{conditional statement}`
-   :raw-latex:`\index{statement!conditional}`
+   condition.
+.. index:: conditional statement
+
+.. index:: statement!conditional
 condition
    The boolean expression in a conditional statement that determines
-   which branch is executed. :raw-latex:`\index{condition}`
+   which branch is executed.
+.. index:: condition
 compound statement
    A statement that consists of a header and a body. The header ends
    with a colon (:). The body is indented relative to the header.
-   :raw-latex:`\index{compound statement}`
+
+.. index:: compound statement
 guardian pattern
    Where we construct a logical expression with additional comparisons
    to take advantage of the short-circuit behavior.
-   :raw-latex:`\index{guardian pattern}`
-   :raw-latex:`\index{pattern!guardian}`
+
+.. index:: guardian pattern
+
+.. index:: pattern!guardian
 logical operator
    One of the operators that combines boolean expressions: ``and``,
    ``or``, and ``not``.
 nested conditional
    A conditional statement that appears in one of the branches of
    another conditional statement.
-   :raw-latex:`\index{nested conditional}`
-   :raw-latex:`\index{conditional!nested}`
+
+.. index:: nested conditional
+
+.. index:: conditional!nested
 traceback
    A list of the functions that are executing, printed when an exception
-   occurs. :raw-latex:`\index{traceback}`
+   occurs.
+.. index:: traceback
 short circuit
    When Python is part-way through evaluating a logical expression and
    stops the evaluation because Python knows the final value for the
    expression without needing to evaluate the rest of the expression.
-   :raw-latex:`\index{short circuit}`
+
+.. index:: short circuit
 
 Exercises
 ---------

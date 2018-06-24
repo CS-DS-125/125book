@@ -160,8 +160,10 @@ be stored as a bytes object. ``encode()`` and ``b''`` are equivalent.
 Retrieving an image over HTTP
 -----------------------------
 
-:raw-latex:`\index{urllib!image}` :raw-latex:`\index{image!jpg}`
-:raw-latex:`\index{jpg}`
+
+.. index:: urllib!image, image!jpg
+
+.. index:: jpg
 
 In the above example, we retrieved a plain text file which had newlines
 in the file and we simply copied the data to the screen as the program
@@ -253,7 +255,8 @@ of the stream, and in the next call to ``recv()`` we get a zero-length
 string that tells us that the server has called ``close()`` on its end
 of the socket and there is no more data forthcoming.
 
-:raw-latex:`\index{time}` :raw-latex:`\index{time.sleep}`
+
+.. index:: time, time.sleep
 
 We can slow down our successive ``recv()`` calls by uncommenting the
 call to ``time.sleep()``. This way, we wait a quarter of a second after
@@ -296,7 +299,8 @@ socket and be forced to pause until our program starts to empty the
 buffer. The pausing of either the sending application or the receiving
 application is called “flow control.”
 
-:raw-latex:`\index{flow control}`
+
+.. index:: flow control
 
 Retrieving web pages with ``urllib``
 ------------------------------------
@@ -366,7 +370,8 @@ image or video file. The data in these files is generally not useful to
 print out, but you can easily make a copy of a URL to a local file on
 your hard disk using ``urllib``.
 
-:raw-latex:`\index{binary file}`
+
+.. index:: binary file
 
 The pattern is to open the URL and use ``read`` to download the entire
 contents of the document into a string variable (``img``) then write
@@ -429,7 +434,8 @@ This program runs as follows:
 Parsing HTML and scraping the web
 ---------------------------------
 
-:raw-latex:`\index{web!scraping}` :raw-latex:`\index{parsing HTML}`
+
+.. index:: web!scraping, parsing HTML
 
 One of the common uses of the ``urllib`` capability in Python is to
 *scrape* the web. Web scraping is when we write a program that pretends
@@ -479,14 +485,17 @@ done in a “non-greedy” fashion instead of a “greedy” fashion. A
 non-greedy match tries to find the *smallest* possible matching string
 and a greedy match tries to find the *largest* possible matching string.
 
-:raw-latex:`\index{greedy}` :raw-latex:`\index{non-greedy}`
+
+.. index:: greedy, non-greedy
 
 We add parentheses to our regular expression to indicate which part of
 our matched string we would like to extract, and produce the following
 program:
 
-:raw-latex:`\index{regex!parentheses}`
-:raw-latex:`\index{parentheses!regular expression}`
+
+.. index:: regex!parentheses
+
+.. index:: parentheses!regular expression
 
 .. code:: python
 
@@ -545,7 +554,8 @@ This can be solved by using a robust HTML parsing library.
 Parsing HTML using BeautifulSoup
 --------------------------------
 
-:raw-latex:`\index{BeautifulSoup}`
+
+.. index:: BeautifulSoup
 
 Even though HTML looks like XML [1]_ and some pages are carefully
 constructed to be XML, most HTML is generally broken in ways that cause
@@ -570,8 +580,10 @@ https://packaging.python.org/tutorials/installing-packages/
 We will use ``urllib`` to read the page and then use ``BeautifulSoup``
 to extract the ``href`` attributes from the anchor (``a``) tags.
 
-:raw-latex:`\index{BeautifulSoup}` :raw-latex:`\index{HTML}`
-:raw-latex:`\index{parsing!HTML}`
+
+.. index:: BeautifulSoup, HTML
+
+.. index:: parsing!HTML
 
 .. code:: python
 
@@ -722,7 +734,8 @@ commands built in to your operating system that retrieves both plain
 text and binary files using the HTTP or File Transfer (FTP) protocols.
 One of these commands is ``curl``:
 
-:raw-latex:`\index{curl}`
+
+.. index:: curl
 
 .. code:: bash
 
@@ -739,7 +752,8 @@ you are writing.
 
 A second command that functions very similarly is ``wget``:
 
-:raw-latex:`\index{wget}`
+
+.. index:: wget
 
 .. code:: bash
 
@@ -756,26 +770,31 @@ BeautifulSoup
    HTML documents that compensates for most of the imperfections in the
    HTML that browsers generally ignore. You can download the
    BeautifulSoup code from `www.crummy.com <http://www.crummy.com>`__.
-   :raw-latex:`\index{BeautifulSoup}`
+
+.. index:: BeautifulSoup
 port
    A number that generally indicates which application you are
    contacting when you make a socket connection to a server. As an
    example, web traffic usually uses port 80 while email traffic uses
-   port 25. :raw-latex:`\index{port}`
+   port 25.
+.. index:: port
 scrape
    When a program pretends to be a web browser and retrieves a web page,
    then looks at the web page content. Often programs are following the
    links in one page to find the next page so they can traverse a
-   network of pages or a social network. :raw-latex:`\index{socket}`
+   network of pages or a social network.
+.. index:: socket
 socket
    A network connection between two applications where the applications
    can send and receive data in either direction.
-   :raw-latex:`\index{socket}`
+
+.. index:: socket
 spider
    The act of a web search engine retrieving a page and then all the
    pages linked from a page and so on until they have nearly all of the
    pages on the Internet which they use to build their search index.
-   :raw-latex:`\index{spider}`
+
+.. index:: spider
 
 Exercises
 ---------

@@ -19,7 +19,8 @@ onto your computer and execute.
 Building a Google map from geocoded data
 ----------------------------------------
 
-:raw-latex:`\index{Google!map}` :raw-latex:`\index{Visualization!map}`
+
+.. index:: Google!map, Visualization!map
 
 In this project, we are using the Google geocoding API to clean up some
 user-entered geographic locations of university names and then placing
@@ -39,7 +40,8 @@ rate-limited to a certain number of requests per day. If you have a lot
 of data, you might need to stop and restart the lookup process several
 times. So we break the problem into two phases.
 
-:raw-latex:`\index{cache}`
+
+.. index:: cache
 
 In the first phase we take our input “survey” data in the file
 *where.data* and read it one line at a time, and retrieve the geocoded
@@ -137,9 +139,12 @@ developer console for your browser.
 Visualizing networks and interconnections
 -----------------------------------------
 
-:raw-latex:`\index{Google!page rank}`
-:raw-latex:`\index{Visualization!networks}`
-:raw-latex:`\index{Visualization!page rank}`
+
+.. index:: Google!page rank
+
+.. index:: Visualization!networks
+
+.. index:: Visualization!page rank
 
 In this application, we will perform some of the functions of a search
 engine. We will first spider a small subset of the web and run a

@@ -100,7 +100,8 @@ you, your thoughts may turn toward developing programs for others.
 Computer hardware architecture
 ------------------------------
 
-:raw-latex:`\index{hardware}` :raw-latex:`\index{hardware!architecture}`
+
+.. index:: hardware, hardware!architecture
 
 Before we start learning the language we speak to give instructions to
 computers to develop software, we need to learn a small amount about how
@@ -175,7 +176,8 @@ skilled in the art of programming. In the end you will be a *programmer*
 skills to look at a data/information analysis problem and develop a
 program to solve the problem.
 
-:raw-latex:`\index{problem solving}`
+
+.. index:: problem solving
 
 In a sense, you need two skills to be a programmer:
 
@@ -214,8 +216,10 @@ for the first time.
 Words and sentences
 -------------------
 
-:raw-latex:`\index{programming language}`
-:raw-latex:`\index{language!programming}`
+
+.. index:: programming language
+
+.. index:: language!programming
 
 Unlike human languages, the Python vocabulary is actually pretty small.
 We call this “vocabulary” the “reserved words”. These are words that
@@ -284,7 +288,8 @@ Macintosh and Windows systems. At some point, you will be in a terminal
 or command window and you will type *python* and the Python interpreter
 will start executing in interactive mode and appear somewhat as follows:
 
-:raw-latex:`\index{interactive mode}`
+
+.. index:: interactive mode
 
 .. code:: python
 
@@ -516,7 +521,8 @@ When we want to write a program, we use a text editor to write the
 Python instructions into a file, which is called a *script*. By
 convention, Python scripts have names that end with ``.py``.
 
-:raw-latex:`\index{script}`
+
+.. index:: script
 
 To execute the script, you have to tell the Python interpreter the name
 of the file. In a command window, you would type ``python hello.py`` as
@@ -616,7 +622,8 @@ saved you so much manual effort. You simply type the code into a file
 called *words.py* and run it or you download the source code from
 http://www.py4e.com/code3/ and run it.
 
-:raw-latex:`\index{program}`
+
+.. index:: program
 
 This is a good example of how Python and the Python language are acting
 as an intermediary between you (the end user) and me (the programmer).
@@ -760,7 +767,8 @@ to do exactly what you have asked.
 Debugging
 ---------
 
-:raw-latex:`\index{debugging}`
+
+.. index:: debugging
 
 When you Python spits out an error or even when it gives you a result
 that is different from what you had intended, then begins the hunt for
@@ -793,7 +801,8 @@ ruminating, and sometimes retreating. If you get stuck on one of these
 activities, try the others. Each activity comes with its own failure
 mode.
 
-:raw-latex:`\index{typographical error}`
+
+.. index:: typographical error
 
 For example, reading your code might help if the problem is a
 typographical error, but not if the problem is a conceptual
@@ -801,7 +810,8 @@ misunderstanding. If you don’t understand what your program does, you
 can read it 100 times and never see the error, because the error is in
 your head.
 
-:raw-latex:`\index{experimental debugging}`
+
+.. index:: experimental debugging
 
 Running experiments can help, especially if you run small, simple tests.
 But if you run experiments without thinking or reading your code, you
@@ -809,8 +819,10 @@ might fall into a pattern I call “random walk programming”, which is the
 process of making random changes until the program does the right thing.
 Needless to say, random walk programming can take a long time.
 
-:raw-latex:`\index{random walk programming}`
-:raw-latex:`\index{development plan!random walk programming}`
+
+.. index:: random walk programming
+
+.. index:: development plan!random walk programming
 
 You have to take time to think. Debugging is like an experimental
 science. You should have at least one hypothesis about what the problem
@@ -875,66 +887,86 @@ Glossary
 --------
 
 bug
-   An error in a program. :raw-latex:`\index{bug}`
+   An error in a program.
+.. index:: bug
 central processing unit
    The heart of any computer. It is what runs the software that we
    write; also called “CPU” or “the processor”.
-   :raw-latex:`\index{central processing unit}` :raw-latex:`\index{CPU}`
+
+.. index:: central processing unit, CPU
 compile
    To translate a program written in a high-level language into a
    low-level language all at once, in preparation for later execution.
-   :raw-latex:`\index{compile}`
+
+.. index:: compile
 high-level language
    A programming language like Python that is designed to be easy for
-   humans to read and write. :raw-latex:`\index{high-level language}`
+   humans to read and write.
+.. index:: high-level language
 interactive mode
    A way of using the Python interpreter by typing commands and
-   expressions at the prompt. :raw-latex:`\index{interactive mode}`
+   expressions at the prompt.
+.. index:: interactive mode
 interpret
    To execute a program in a high-level language by translating it one
-   line at a time. :raw-latex:`\index{interpret}`
+   line at a time.
+.. index:: interpret
 low-level language
    A programming language that is designed to be easy for a computer to
    execute; also called “machine code” or “assembly language”.
-   :raw-latex:`\index{low-level language}`
+
+.. index:: low-level language
 machine code
    The lowest-level language for software, which is the language that is
    directly executed by the central processing unit (CPU).
-   :raw-latex:`\index{machine code}`
+
+.. index:: machine code
 main memory
    Stores programs and data. Main memory loses its information when the
-   power is turned off. :raw-latex:`\index{main memory}`
+   power is turned off.
+.. index:: main memory
 parse
    To examine a program and analyze the syntactic structure.
-   :raw-latex:`\index{parse}`
+
+.. index:: parse
 portability
    A property of a program that can run on more than one kind of
-   computer. :raw-latex:`\index{portability}`
+   computer.
+.. index:: portability
 print function
    An instruction that causes the Python interpreter to display a value
-   on the screen. :raw-latex:`\index{print function}`
-   :raw-latex:`\index{function!print}`
+   on the screen.
+.. index:: print function
+
+.. index:: function!print
 problem solving
    The process of formulating a problem, finding a solution, and
-   expressing the solution. :raw-latex:`\index{problem solving}`
+   expressing the solution.
+.. index:: problem solving
 program
    A set of instructions that specifies a computation.
-   :raw-latex:`\index{program}`
+
+.. index:: program
 prompt
    When a program displays a message and pauses for the user to type
-   some input to the program. :raw-latex:`\index{prompt}`
+   some input to the program.
+.. index:: prompt
 secondary memory
    Stores programs and data and retains its information even when the
    power is turned off. Generally slower than main memory. Examples of
    secondary memory include disk drives and flash memory in USB sticks.
-   :raw-latex:`\index{secondary memory}`
+
+.. index:: secondary memory
 semantics
-   The meaning of a program. :raw-latex:`\index{semantics}`
+   The meaning of a program.
+.. index:: semantics
 semantic error
    An error in a program that makes it do something other than what the
-   programmer intended. :raw-latex:`\index{semantic error}`
+   programmer intended.
+.. index:: semantic error
 source code
-   A program in a high-level language. :raw-latex:`\index{source code}`
+   A program in a high-level language.
+.. index:: source code
 
 Exercises
 ---------

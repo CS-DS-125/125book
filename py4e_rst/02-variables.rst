@@ -8,8 +8,10 @@ Variables, expressions, and statements
 Values and types
 ----------------
 
-:raw-latex:`\index{value}` :raw-latex:`\index{type}`
-:raw-latex:`\index{string}`
+
+.. index:: value, type
+
+.. index:: string
 
 A *value* is one of the basic things a program works with, like a letter
 or a number. The values we have seen so far are 1, 2, and “Hello,
@@ -20,7 +22,8 @@ World!” is a *string*, so called because it contains a “string” of
 letters. You (and the interpreter) can identify strings because they are
 enclosed in quotation marks.
 
-:raw-latex:`\index{quotation mark}`
+
+.. index:: quotation mark
 
 The ``print`` statement also works for integers. We use the ``python``
 command to start the interpreter.
@@ -45,10 +48,14 @@ to the type ``int``. Less obviously, numbers with a decimal point belong
 to a type called ``float``, because these numbers are represented in a
 format called *floating point*.
 
-:raw-latex:`\index{type}` :raw-latex:`\index{string type}`
-:raw-latex:`\index{class!str}` :raw-latex:`\index{int type}`
-:raw-latex:`\index{class!int}` :raw-latex:`\index{float type}`
-:raw-latex:`\index{class!float}`
+
+.. index:: type, string type
+
+.. index:: class!str, int type
+
+.. index:: class!int, float type
+
+.. index:: class!float
 
 .. code:: python
 
@@ -58,7 +65,8 @@ format called *floating point*.
 What about values like “17” and “3.2”? They look like numbers, but they
 are in quotation marks like strings.
 
-:raw-latex:`\index{quotation mark}`
+
+.. index:: quotation mark
 
 .. code:: python
 
@@ -82,8 +90,10 @@ Well, that’s not what we expected at all! Python interprets 1,000,000 as
 a comma-separated sequence of integers, which it prints with spaces
 between.
 
-:raw-latex:`\index{semantic error}` :raw-latex:`\index{error!semantic}`
-:raw-latex:`\index{error message}`
+
+.. index:: semantic error, error!semantic
+
+.. index:: error message
 
 This is the first example we have seen of a semantic error: the code
 runs without producing an error message, but it doesn’t do the “right”
@@ -92,8 +102,10 @@ thing.
 Variables
 ---------
 
-:raw-latex:`\index{variable}` :raw-latex:`\index{assignment statement}`
-:raw-latex:`\index{statement!assignment}`
+
+.. index:: variable, assignment statement
+
+.. index:: statement!assignment
 
 One of the most powerful features of a programming language is the
 ability to manipulate *variables*. A variable is a name that refers to a
@@ -135,7 +147,8 @@ The type of a variable is the type of the value it refers to.
 Variable names and keywords
 ---------------------------
 
-:raw-latex:`\index{keyword}`
+
+.. index:: keyword
 
 Programmers generally choose names for their variables that are
 meaningful and document what the variable is used for.
@@ -151,7 +164,8 @@ in names with multiple words, such as ``my_name`` or
 underscore character, but we generally avoid doing this unless we are
 writing library code for others to use.
 
-:raw-latex:`\index{underscore character}`
+
+.. index:: underscore character
 
 If you give a variable an illegal name, you get a syntax error:
 
@@ -172,7 +186,8 @@ It turns out that ``class`` is one of Python’s *keywords*. The
 interpreter uses keywords to recognize the structure of the program, and
 they cannot be used as variable names.
 
-:raw-latex:`\index{keyword}`
+
+.. index:: keyword
 
 Python reserves 33 keywords:
 
@@ -197,8 +212,10 @@ A *statement* is a unit of code that the Python interpreter can execute.
 We have seen two kinds of statements: print being an expression
 statement and assignment.
 
-:raw-latex:`\index{statement}` :raw-latex:`\index{interactive mode}`
-:raw-latex:`\index{script mode}`
+
+.. index:: statement, interactive mode
+
+.. index:: script mode
 
 When you type a statement in interactive mode, the interpreter executes
 it and displays the result, if there is one.
@@ -227,9 +244,12 @@ The assignment statement produces no output.
 Operators and operands
 ----------------------
 
-:raw-latex:`\index{operator, arithmetic}`
-:raw-latex:`\index{arithmetic operator}` :raw-latex:`\index{operand}`
-:raw-latex:`\index{expression}`
+
+.. index:: operator, arithmetic
+
+.. index:: arithmetic operator, operand
+
+.. index:: expression
 
 *Operators* are special symbols that represent computations like
 addition and multiplication. The values the operator is applied to are
@@ -279,9 +299,12 @@ division.
 In Python 3.0 integer division functions much more as you would expect
 if you entered the expression on a calculator.
 
-:raw-latex:`\index{Python 3.0}` :raw-latex:`\index{Python 2.0}`
-:raw-latex:`\index{floating-point division}`
-:raw-latex:`\index{division!floating-point}`
+
+.. index:: Python 3.0, Python 2.0
+
+.. index:: floating-point division
+
+.. index:: division!floating-point
 
 Expressions
 -----------
@@ -291,7 +314,8 @@ value all by itself is considered an expression, and so is a variable,
 so the following are all legal expressions (assuming that the variable
 ``x`` has been assigned a value):
 
-:raw-latex:`\index{expression}` :raw-latex:`\index{evaluate}`
+
+.. index:: expression, evaluate
 
 .. code:: python
 
@@ -322,15 +346,18 @@ see what they do:**
 Order of operations
 -------------------
 
-:raw-latex:`\index{order of operations}`
-:raw-latex:`\index{rules of precedence}` :raw-latex:`\index{PEMDAS}`
+
+.. index:: order of operations
+
+.. index:: rules of precedence, PEMDAS
 
 When more than one operator appears in an expression, the order of
 evaluation depends on the *rules of precedence*. For mathematical
 operators, Python follows mathematical convention. The acronym *PEMDAS*
 is a useful way to remember the rules:
 
-:raw-latex:`\index{parentheses!overriding precedence}`
+
+.. index:: parentheses!overriding precedence
 
 -  *P*\ arentheses have the highest precedence and can be used to force
    an expression to evaluate in the order you want. Since expressions in
@@ -356,8 +383,10 @@ the computations are performed in the order you intend.
 Modulus operator
 ----------------
 
-:raw-latex:`\index{modulus operator}`
-:raw-latex:`\index{operator!modulus}`
+
+.. index:: modulus operator
+
+.. index:: operator!modulus
 
 The *modulus operator* works on integers and yields the remainder when
 the first operand is divided by the second. In Python, the modulus
@@ -379,7 +408,8 @@ The modulus operator turns out to be surprisingly useful. For example,
 you can check whether one number is divisible by another: if ``x % y``
 is zero, then ``x`` is divisible by ``y``.
 
-:raw-latex:`\index{divisibility}`
+
+.. index:: divisibility
 
 You can also extract the right-most digit or digits from a number. For
 example, ``x % 10`` yields the right-most digit of ``x`` (in base 10).
@@ -388,14 +418,17 @@ Similarly, ``x % 100`` yields the last two digits.
 String operations
 -----------------
 
-:raw-latex:`\index{string!operation}`
-:raw-latex:`\index{operator!string}`
+
+.. index:: string!operation
+
+.. index:: operator!string
 
 The ``+`` operator works with strings, but it is not addition in the
 mathematical sense. Instead it performs *concatenation*, which means
 joining the strings by linking them end to end. For example:
 
-:raw-latex:`\index{concatenation}`
+
+.. index:: concatenation
 
 .. code:: python
 
@@ -421,7 +454,8 @@ a string by an integer. For example:
 Asking the user for input
 -------------------------
 
-:raw-latex:`\index{keyboard input}`
+
+.. index:: keyboard input
 
 Sometimes we would like to take the value for a variable from the user
 via their keyboard. Python provides a built-in function called ``input``
@@ -430,7 +464,8 @@ the program stops and waits for the user to type something. When the
 user presses ``Return`` or ``Enter``, the program resumes and ``input``
 returns what the user typed as a string.
 
-:raw-latex:`\index{Python 2.0}`
+
+.. index:: Python 2.0
 
 .. code:: python
 
@@ -443,7 +478,8 @@ Before getting input from the user, it is a good idea to print a prompt
 telling the user what to input. You can pass a string to ``input`` to be
 displayed to the user before pausing for input:
 
-:raw-latex:`\index{prompt}`
+
+.. index:: prompt
 
 .. code:: python
 
@@ -457,7 +493,8 @@ The sequence ``\n`` at the end of the prompt represents a *newline*,
 which is a special character that causes a line break. That’s why the
 user’s input appears below the prompt.
 
-:raw-latex:`\index{newline}`
+
+.. index:: newline
 
 If you expect the user to type an integer, you can try to convert the
 return value to ``int`` using the ``int()`` function:
@@ -486,13 +523,16 @@ an error:
 
 We will see how to handle this kind of error later.
 
-:raw-latex:`\index{ValueError}`
-:raw-latex:`\index{exception!ValueError}`
+
+.. index:: ValueError
+
+.. index:: exception!ValueError
 
 Comments
 --------
 
-:raw-latex:`\index{comment}`
+
+.. index:: comment
 
 As programs get bigger and more complicated, they get more difficult to
 read. Formal languages are dense, and it is often difficult to look at a
@@ -539,7 +579,8 @@ make complex expressions hard to read, so there is a trade-off.
 Choosing mnemonic variable names
 --------------------------------
 
-:raw-latex:`\index{mnemonic}`
+
+.. index:: mnemonic
 
 As long as you follow the simple rules of variable naming, and avoid
 reserved words, you have a lot of choice when you name your variables.
@@ -644,13 +685,15 @@ and what is a reserved word.
 Debugging
 ---------
 
-:raw-latex:`\index{debugging}`
+
+.. index:: debugging
 
 At this point, the syntax error you are most likely to make is an
 illegal variable name, like ``class`` and ``yield``, which are keywords,
 or ``odd~job`` and ``US$``, which contain illegal characters.
 
-:raw-latex:`\index{syntax error}` :raw-latex:`\index{error!syntax}`
+
+.. index:: syntax error, error!syntax
 
 If you put a space in a variable name, Python thinks it is two operands
 without an operator:
@@ -672,9 +715,12 @@ For syntax errors, the error messages don’t help much. The most common
 messages are ``SyntaxError: invalid syntax`` and
 ``SyntaxError: invalid token``, neither of which is very informative.
 
-:raw-latex:`\index{error message}` :raw-latex:`\index{use before def}`
-:raw-latex:`\index{exception}` :raw-latex:`\index{runtime error}`
-:raw-latex:`\index{error!runtime}`
+
+.. index:: error message, use before def
+
+.. index:: exception, runtime error
+
+.. index:: error!runtime
 
 The runtime error you are most likely to make is a “use before def;”
 that is, trying to use a variable before you have assigned a value. This
@@ -689,8 +735,10 @@ can happen if you spell a variable name wrong:
 Variables names are case sensitive, so ``LaTeX`` is not the same as
 ``latex``.
 
-:raw-latex:`\index{case-sensitivity, variable names}`
-:raw-latex:`\index{semantic error}` :raw-latex:`\index{error!semantic}`
+
+.. index:: case-sensitivity, variable names
+
+.. index:: semantic error, error!semantic
 
 At this point, the most likely cause of a semantic error is the order of
 operations. For example, to evaluate :math:`1/2\pi`, you might be
@@ -705,72 +753,92 @@ is not the same thing! There is no way for Python to know what you meant
 to write, so in this case you don’t get an error message; you just get
 the wrong answer.
 
-:raw-latex:`\index{order of operations}`
+
+.. index:: order of operations
 
 Glossary
 --------
 
 assignment
    A statement that assigns a value to a variable.
-   :raw-latex:`\index{assignment}`
+
+.. index:: assignment
 concatenate
-   To join two operands end to end. :raw-latex:`\index{concatenation}`
+   To join two operands end to end.
+.. index:: concatenation
 comment
    Information in a program that is meant for other programmers (or
    anyone reading the source code) and has no effect on the execution of
-   the program. :raw-latex:`\index{comment}`
+   the program.
+.. index:: comment
 evaluate
    To simplify an expression by performing the operations in order to
    yield a single value.
 expression
    A combination of variables, operators, and values that represents a
-   single result value. :raw-latex:`\index{expression}`
+   single result value.
+.. index:: expression
 floating point
    A type that represents numbers with fractional parts.
-   :raw-latex:`\index{floating-point}`
+
+.. index:: floating-point
 integer
-   A type that represents whole numbers. :raw-latex:`\index{integer}`
+   A type that represents whole numbers.
+.. index:: integer
 keyword
    A reserved word that is used by the compiler to parse a program; you
    cannot use keywords like ``if``, ``def``, and ``while`` as variable
-   names. :raw-latex:`\index{keyword}`
+   names.
+.. index:: keyword
 mnemonic
    A memory aid. We often give variables mnemonic names to help us
    remember what is stored in the variable.
-   :raw-latex:`\index{mnemonic}`
+
+.. index:: mnemonic
 modulus operator
    An operator, denoted with a percent sign (``%``), that works on
    integers and yields the remainder when one number is divided by
-   another. :raw-latex:`\index{modulus operator}`
-   :raw-latex:`\index{operator!modulus}`
+   another.
+.. index:: modulus operator
+
+.. index:: operator!modulus
 operand
    One of the values on which an operator operates.
-   :raw-latex:`\index{operand}`
+
+.. index:: operand
 operator
    A special symbol that represents a simple computation like addition,
    multiplication, or string concatenation.
-   :raw-latex:`\index{operator}`
+
+.. index:: operator
 rules of precedence
    The set of rules governing the order in which expressions involving
    multiple operators and operands are evaluated.
-   :raw-latex:`\index{rules of precedence}`
-   :raw-latex:`\index{precedence}`
+
+.. index:: rules of precedence
+
+.. index:: precedence
 statement
    A section of code that represents a command or action. So far, the
    statements we have seen are assignments and print expression
-   statement. :raw-latex:`\index{statement}`
+   statement.
+.. index:: statement
 string
    A type that represents sequences of characters.
-   :raw-latex:`\index{string}`
+
+.. index:: string
 type
    A category of values. The types we have seen so far are integers
    (type ``int``), floating-point numbers (type ``float``), and strings
-   (type ``str``). :raw-latex:`\index{type}`
+   (type ``str``).
+.. index:: type
 value
    One of the basic units of data, like a number or string, that a
-   program manipulates. :raw-latex:`\index{value}`
+   program manipulates.
+.. index:: value
 variable
-   A name that refers to a value. :raw-latex:`\index{variable}`
+   A name that refers to a value.
+.. index:: variable
 
 Exercises
 ---------

@@ -107,8 +107,10 @@ thinking that are covered in *Think Python*. And given that the books
 have a similar writing style, they should be able to move quickly
 through *Think Python* with a minimum of effort.
 
-:raw-latex:`\index{Creative Commons License}`
-:raw-latex:`\index{CC-BY-SA}` :raw-latex:`\index{BY-SA}`
+
+.. index:: Creative Commons License
+
+.. index:: CC-BY-SA, BY-SA
 
 As the copyright holder of *Think Python*, Allen has given me permission
 to change the book’s license on the material from his book that remains

@@ -8,9 +8,12 @@ Strings
 A string is a sequence
 ----------------------
 
-:raw-latex:`\index{sequence}` :raw-latex:`\index{character}`
-:raw-latex:`\index{bracket operator}`
-:raw-latex:`\index{operator!bracket}`
+
+.. index:: sequence, character
+
+.. index:: bracket operator
+
+.. index:: operator!bracket
 
 A string is a *sequence* of characters. You can access the characters
 one at a time with the bracket operator:
@@ -20,7 +23,8 @@ one at a time with the bracket operator:
    >>> fruit = 'banana'
    >>> letter = fruit[1]
 
-:raw-latex:`\index{index}` :raw-latex:`\index{}`
+
+.. index:: index, 
 
 The second statement extracts the character at index position 1 from the
 ``fruit`` variable and assigns it to the ``letter`` variable.
@@ -53,15 +57,19 @@ So “b” is the 0th letter (“zero-th”) of “banana”, “a” is the 1th
 
    String Indexes
 
-:raw-latex:`\index{index!starting at zero}`
-:raw-latex:`\index{zero, index starting at}`
+
+.. index:: index!starting at zero
+
+.. index:: zero, index starting at
 
 You can use any expression, including variables and operators, as an
 index, but the value of the index has to be an integer. Otherwise you
 get:
 
-:raw-latex:`\index{index}` :raw-latex:`\index{}`
-:raw-latex:`\index{exception!TypeError}` :raw-latex:`\index{TypeError}`
+
+.. index:: index, 
+
+.. index:: exception!TypeError, TypeError
 
 .. code:: python
 
@@ -71,7 +79,8 @@ get:
 Getting the length of a string using ``len``
 --------------------------------------------
 
-:raw-latex:`\index{len function}` :raw-latex:`\index{function!len}`
+
+.. index:: len function, function!len
 
 ``len`` is a built-in function that returns the number of characters in
 a string:
@@ -85,8 +94,10 @@ a string:
 To get the last letter of a string, you might be tempted to try
 something like this:
 
-:raw-latex:`\index{exception!IndexError}`
-:raw-latex:`\index{IndexError}`
+
+.. index:: exception!IndexError
+
+.. index:: IndexError
 
 .. code:: python
 
@@ -109,14 +120,18 @@ Alternatively, you can use negative indices, which count backward from
 the end of the string. The expression ``fruit[-1]`` yields the last
 letter, ``fruit[-2]`` yields the second to last, and so on.
 
-:raw-latex:`\index{index!negative}` :raw-latex:`\index{negative index}`
+
+.. index:: index!negative, negative index
 
 Traversal through a string with a loop
 --------------------------------------
 
-:raw-latex:`\index{traversal}` :raw-latex:`\index{loop!traversal}`
-:raw-latex:`\index{for loop}` :raw-latex:`\index{loop!for}`
-:raw-latex:`\index{statement!for}` :raw-latex:`\index{traversal}`
+
+.. index:: traversal, loop!traversal
+
+.. index:: for loop, loop!for
+
+.. index:: statement!for, traversal
 
 A lot of computations involve processing a string one character at a
 time. Often they start at the beginning, select each character in turn,
@@ -157,9 +172,12 @@ left.
 String slices
 -------------
 
-:raw-latex:`\index{slice operator}` :raw-latex:`\index{operator!slice}`
-:raw-latex:`\index{index!slice}` :raw-latex:`\index{string!slice}`
-:raw-latex:`\index{slice!string}`
+
+.. index:: slice operator, operator!slice
+
+.. index:: index!slice, string!slice
+
+.. index:: slice!string
 
 A segment of a string is called a *slice*. Selecting a slice is similar
 to selecting a character:
@@ -190,7 +208,8 @@ the end of the string:
 If the first index is greater than or equal to the second the result is
 an *empty string*, represented by two quotation marks:
 
-:raw-latex:`\index{quotation mark}`
+
+.. index:: quotation mark
 
 .. code:: python
 
@@ -204,18 +223,22 @@ that, it is the same as any other string.
 **Exercise 2: Given that ``fruit`` is a string, what does ``fruit[:]``
 mean?**
 
-:raw-latex:`\index{copy!slice}` :raw-latex:`\index{slice!copy}`
+
+.. index:: copy!slice, slice!copy
 
 Strings are immutable
 ---------------------
 
-:raw-latex:`\index{mutability}` :raw-latex:`\index{immutability}`
-:raw-latex:`\index{string!immutable}`
+
+.. index:: mutability, immutability
+
+.. index:: string!immutable
 
 It is tempting to use the operator on the left side of an assignment,
 with the intention of changing a character in a string. For example:
 
-:raw-latex:`\index{TypeError}` :raw-latex:`\index{exception!TypeError}`
+
+.. index:: TypeError, exception!TypeError
 
 .. code:: python
 
@@ -228,8 +251,10 @@ you tried to assign. For now, an *object* is the same thing as a value,
 but we will refine that definition later. An *item* is one of the values
 in a sequence.
 
-:raw-latex:`\index{object}` :raw-latex:`\index{item assignment}`
-:raw-latex:`\index{assignment!item}` :raw-latex:`\index{immutability}`
+
+.. index:: object, item assignment
+
+.. index:: assignment!item, immutability
 
 The reason for the error is that strings are *immutable*, which means
 you can’t change an existing string. The best you can do is create a new
@@ -245,14 +270,18 @@ string that is a variation on the original:
 This example concatenates a new first letter onto a slice of
 ``greeting``. It has no effect on the original string.
 
-:raw-latex:`\index{concatenation}`
+
+.. index:: concatenation
 
 Looping and counting
 --------------------
 
-:raw-latex:`\index{counter}` :raw-latex:`\index{counting and looping}`
-:raw-latex:`\index{looping and counting}`
-:raw-latex:`\index{looping!with strings}`
+
+.. index:: counter, counting and looping
+
+.. index:: looping and counting
+
+.. index:: looping!with strings
 
 The following program counts the number of times the letter “a” appears
 in a string:
@@ -271,7 +300,8 @@ This program demonstrates another pattern of computation called a
 incremented each time an “a” is found. When the loop exits, ``count``
 contains the result: the total number of a’s.
 
-:raw-latex:`\index{encapsulation}`
+
+.. index:: encapsulation
 
 **Exercise 3: Encapsulate this code in a function named ``count``, and
 generalize it so that it accepts the string and the letter as
@@ -280,9 +310,12 @@ arguments.**
 The ``in`` operator
 -------------------
 
-:raw-latex:`\index{in operator}` :raw-latex:`\index{operator!in}`
-:raw-latex:`\index{boolean operator}`
-:raw-latex:`\index{operator!boolean}`
+
+.. index:: in operator, operator!in
+
+.. index:: boolean operator
+
+.. index:: operator!boolean
 
 The word ``in`` is a boolean operator that takes two strings and returns
 ``True`` if the first appears as a substring in the second:
@@ -297,8 +330,10 @@ The word ``in`` is a boolean operator that takes two strings and returns
 String comparison
 -----------------
 
-:raw-latex:`\index{string!comparison}`
-:raw-latex:`\index{comparison!string}`
+
+.. index:: string!comparison
+
+.. index:: comparison!string
 
 The comparison operators work on strings. To see if two strings are
 equal:
@@ -383,12 +418,14 @@ delimiter.
 For example, the method ``upper`` takes a string and returns a new
 string with all uppercase letters:
 
-:raw-latex:`\index{method}` :raw-latex:`\index{string!method}`
+
+.. index:: method, string!method
 
 Instead of the function syntax ``upper(word)``, it uses the method
 syntax ``word.upper()``.
 
-:raw-latex:`\index{dot notation}`
+
+.. index:: dot notation
 
 .. code:: python
 
@@ -401,12 +438,14 @@ This form of dot notation specifies the name of the method, ``upper``,
 and the name of the string to apply the method to, ``word``. The empty
 parentheses indicate that this method takes no argument.
 
-:raw-latex:`\index{parentheses!empty}`
+
+.. index:: parentheses!empty
 
 A method call is called an *invocation*; in this case, we would say that
 we are invoking ``upper`` on the ``word``.
 
-:raw-latex:`\index{invocation}`
+
+.. index:: invocation
 
 For example, there is a string method named ``find`` that searches for
 the position of one string within another:
@@ -430,8 +469,10 @@ The ``find`` method can find substrings as well as characters:
 
 It can take as a second argument the index where it should start:
 
-:raw-latex:`\index{optional argument}`
-:raw-latex:`\index{argument!optional}`
+
+.. index:: optional argument
+
+.. index:: argument!optional
 
 .. code:: python
 
@@ -476,7 +517,8 @@ In the last example, the method ``lower`` is called and then we use
 letter “h”. As long as we are careful with the order, we can make
 multiple method calls in a single expression.
 
-:raw-latex:`\index{count method}` :raw-latex:`\index{method!count}`
+
+.. index:: count method, method!count
 
 **Exercise 4: There is a string method called ``count`` that is similar
 to the function in the previous exercise. Read the documentation of this
@@ -528,21 +570,25 @@ https://docs.python.org/3.5/library/stdtypes.html#string-methods.
 Format operator
 ---------------
 
-:raw-latex:`\index{format operator}`
-:raw-latex:`\index{operator!format}`
+
+.. index:: format operator
+
+.. index:: operator!format
 
 The *format operator*, ``%`` allows us to construct strings, replacing
 parts of the strings with the data stored in variables. When applied to
 integers, ``%`` is the modulus operator. But when the first operand is a
 string, ``%`` is the format operator.
 
-:raw-latex:`\index{format string}`
+
+.. index:: format string
 
 The first operand is the *format string*, which contains one or more
 *format sequences* that specify how the second operand is formatted. The
 result is a string.
 
-:raw-latex:`\index{format sequence}`
+
+.. index:: format sequence
 
 For example, the format sequence ``%d`` means that the second operand
 should be formatted as an integer (“d” stands for “decimal”):
@@ -581,7 +627,8 @@ The number of elements in the tuple must match the number of format
 sequences in the string. The types of the elements also must match the
 format sequences:
 
-:raw-latex:`\index{exception!TypeError}` :raw-latex:`\index{TypeError}`
+
+.. index:: exception!TypeError, TypeError
 
 .. code:: python
 
@@ -601,7 +648,8 @@ https://docs.python.org/3.5/library/stdtypes.html#printf-style-string-formatting
 Debugging
 ---------
 
-:raw-latex:`\index{debugging}`
+
+.. index:: debugging
 
 A skill that you should cultivate as you program is always asking
 yourself, “What could go wrong here?” or alternatively, “What crazy
@@ -649,8 +697,10 @@ One possibility is to simply use the ``startswith`` method which returns
 
    if line.startswith('#'):
 
-:raw-latex:`\index{guardian pattern}`
-:raw-latex:`\index{pattern!guardian}`
+
+.. index:: guardian pattern
+
+.. index:: pattern!guardian
 
 Another way is to safely write the ``if`` statement using the *guardian*
 pattern and make sure the second logical expression is evaluated only
@@ -665,56 +715,75 @@ Glossary
 
 counter
    A variable used to count something, usually initialized to zero and
-   then incremented. :raw-latex:`\index{counter}`
+   then incremented.
+.. index:: counter
 empty string
    A string with no characters and length 0, represented by two
-   quotation marks. :raw-latex:`\index{empty string}`
+   quotation marks.
+.. index:: empty string
 format operator
    An operator, ``%``, that takes a format string and a tuple and
    generates a string that includes the elements of the tuple formatted
    as specified by the format string.
-   :raw-latex:`\index{format operator}`
-   :raw-latex:`\index{operator!format}`
+
+.. index:: format operator
+
+.. index:: operator!format
 format sequence
    A sequence of characters in a format string, like ``%d``, that
    specifies how a value should be formatted.
-   :raw-latex:`\index{format sequence}`
+
+.. index:: format sequence
 format string
    A string, used with the format operator, that contains format
-   sequences. :raw-latex:`\index{format string}`
+   sequences.
+.. index:: format string
 flag
    A boolean variable used to indicate whether a condition is true or
-   false. :raw-latex:`\index{flag}`
+   false.
+.. index:: flag
 invocation
-   A statement that calls a method. :raw-latex:`\index{invocation}`
+   A statement that calls a method.
+.. index:: invocation
 immutable
    The property of a sequence whose items cannot be assigned.
-   :raw-latex:`\index{immutability}`
+
+.. index:: immutability
 index
    An integer value used to select an item in a sequence, such as a
-   character in a string. :raw-latex:`\index{index}`
-   :raw-latex:`\index{}`
+   character in a string.
+.. index:: index
+
+.. index:: 
 item
-   One of the values in a sequence. :raw-latex:`\index{item}`
+   One of the values in a sequence.
+.. index:: item
 method
    A function that is associated with an object and called using dot
-   notation. :raw-latex:`\index{method}`
+   notation.
+.. index:: method
 object
    Something a variable can refer to. For now, you can use “object” and
-   “value” interchangeably. :raw-latex:`\index{object}`
+   “value” interchangeably.
+.. index:: object
 search
    A pattern of traversal that stops when it finds what it is looking
-   for. :raw-latex:`\index{search pattern}`
-   :raw-latex:`\index{pattern!search}`
+   for.
+.. index:: search pattern
+
+.. index:: pattern!search
 sequence
    An ordered set; that is, a set of values where each value is
-   identified by an integer index. :raw-latex:`\index{sequence}`
+   identified by an integer index.
+.. index:: sequence
 slice
    A part of a string specified by a range of indices.
-   :raw-latex:`\index{slice}`
+
+.. index:: slice
 traverse
    To iterate through the items in a sequence, performing a similar
-   operation on each. :raw-latex:`\index{traversal}`
+   operation on each.
+.. index:: traversal
 
 Exercises
 ---------
@@ -727,7 +796,8 @@ Exercises
 after the colon character and then use the ``float`` function to convert
 the extracted string into a floating point number.**
 
-:raw-latex:`\index{string method}` :raw-latex:`\index{method!string}`
+
+.. index:: string method, method!string
 
 **Exercise 6: Read the documentation of the string methods
 at**\ https://docs.python.org/3.5/library/stdtypes.html#string-methods\ **You

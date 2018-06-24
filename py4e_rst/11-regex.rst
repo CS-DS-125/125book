@@ -11,8 +11,10 @@ extracting various bits of lines that we find interesting. We have been
 using string methods like ``split`` and ``find`` and using lists and
 string slicing to extract portions of the lines.
 
-:raw-latex:`\index{regular expressions}` :raw-latex:`\index{regex}`
-:raw-latex:`\index{re module}`
+
+.. index:: regular expressions, regex
+
+.. index:: re module
 
 This task of searching and extracting is so common that Python has a
 very powerful library called *regular expressions* that handles many of
@@ -36,7 +38,8 @@ before you can use it. The simplest use of the regular expression
 library is the ``search()`` function. The following program demonstrates
 a trivial use of the search function.
 
-:raw-latex:`\index{regex!search}`
+
+.. index:: regex!search
 
 .. code:: python
 
@@ -62,7 +65,8 @@ This program does not use the real power of regular expressions, since
 we could have just as easily used ``line.find()`` to accomplish the same
 result.
 
-:raw-latex:`\index{string!find}`
+
+.. index:: string!find
 
 The power of the regular expressions comes when we add special
 characters to the search string that allow us to more precisely control
@@ -99,7 +103,8 @@ introduce the notion that regular expressions contain special action
 characters that give us more control as to what will match the regular
 expression.
 
-:raw-latex:`\index{string!startswith}`
+
+.. index:: string!startswith
 
 Character matching in regular expressions
 -----------------------------------------
@@ -108,7 +113,8 @@ There are a number of other special characters that let us build even
 more powerful regular expressions. The most commonly used special
 character is the period or full stop, which matches any character.
 
-:raw-latex:`\index{wild card}` :raw-latex:`\index{regex!wild card}`
+
+.. index:: wild card, regex!wild card
 
 In the following example, the regular expression ``F..m:`` would match
 any of the strings “From:”, “Fxxm:”, “F12m:”, or “F!@m:” since the
@@ -188,7 +194,8 @@ It is possible to tell an asterisk or plus sign not to be so “greedy” by
 adding another character. See the detailed documentation for information
 on turning off the greedy behavior.
 
-:raw-latex:`\index{greedy}`
+
+.. index:: greedy
 
 Extracting data using regular expressions
 -----------------------------------------
@@ -213,7 +220,8 @@ and slicing differently for each line. This following program uses
 ``findall()`` to find the lines with email addresses in them and extract
 one or more addresses from each of those lines.
 
-:raw-latex:`\index{findall}` :raw-latex:`\index{regex!findall}`
+
+.. index:: findall, regex!findall
 
 .. code:: python
 
@@ -319,7 +327,8 @@ characters since ``[a-zA-Z0-9]`` is already one non-blank character.
 Remember that the ``*`` or ``+`` applies to the single character
 immediately to the left of the plus or asterisk.
 
-:raw-latex:`\index{regex!character sets(brackets)}`
+
+.. index:: regex!character sets(brackets)
 
 If we use this expression in our program, our data is much cleaner:
 
@@ -431,7 +440,8 @@ But now we have to solve the problem of extracting the numbers. While it
 would be simple enough to use ``split``, we can use another feature of
 regular expressions to both search and parse the line at the same time.
 
-:raw-latex:`\index{string!split}`
+
+.. index:: string!split
 
 Parentheses are another special character in regular expressions. When
 you add parentheses to a regular expression, they are ignored when
@@ -440,8 +450,10 @@ indicate that while you want the whole expression to match, you only are
 interested in extracting a portion of the substring that matches the
 regular expression.
 
-:raw-latex:`\index{regex!parentheses}`
-:raw-latex:`\index{parentheses!regular expression}`
+
+.. index:: regex!parentheses
+
+.. index:: parentheses!regular expression
 
 So we make the following change to our program:
 
@@ -711,7 +723,8 @@ Support for searching files using regular expressions was built into the
 Unix operating system since the 1960s and it is available in nearly all
 programming languages in one form or another.
 
-:raw-latex:`\index{grep}`
+
+.. index:: grep
 
 As a matter of fact, there is a command-line program built into Unix
 called *grep* (Generalized Regular Expression Parser) that does pretty
@@ -790,12 +803,14 @@ brittle code
 greedy matching
    The notion that the ``+`` and ``*`` characters in a regular
    expression expand outward to match the largest possible string.
-   :raw-latex:`\index{greedy}` :raw-latex:`\index{greedy matching}`
+
+.. index:: greedy, greedy matching
 grep
    A command available in most Unix systems that searches through text
    files looking for lines that match regular expressions. The command
    name stands for “Generalized Regular Expression Parser”.
-   :raw-latex:`\index{grep}`
+
+.. index:: grep
 regular expression
    A language for expressing more complex search strings. A regular
    expression may contain special characters that indicate that a search
@@ -804,7 +819,8 @@ regular expression
 wild card
    A special character that matches any character. In regular
    expressions the wild-card character is the period.
-   :raw-latex:`\index{wild card}`
+
+.. index:: wild card
 
 Exercises
 ---------

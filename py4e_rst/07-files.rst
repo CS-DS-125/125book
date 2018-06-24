@@ -5,12 +5,14 @@
 Files
 =====
 
-:raw-latex:`\index{file}` :raw-latex:`\index{type!file}`
+
+.. index:: file, type!file
 
 Persistence
 -----------
 
-:raw-latex:`\index{persistence}` :raw-latex:`\index{secondary memory}`
+
+.. index:: persistence, secondary memory
 
 So far, we have learned how to write programs and communicate our
 intentions to the *Central Processing Unit* using conditional execution,
@@ -41,8 +43,10 @@ written through database software.
 Opening files
 -------------
 
-:raw-latex:`\index{file!open}` :raw-latex:`\index{open function}`
-:raw-latex:`\index{function!open}`
+
+.. index:: file!open, open function
+
+.. index:: function!open
 
 When we want to read or write a file (say on your hard drive), we first
 must *open* the file. Opening the file communicates with your operating
@@ -59,7 +63,8 @@ when you start Python. You can download this file from
    >>> print(fhand)
    <_io.TextIOWrapper name='mbox.txt' mode='r' encoding='cp1252'>
 
-:raw-latex:`\index{file handle}`
+
+.. index:: file handle
 
 If the ``open`` is successful, the operating system returns us a *file
 handle*. The file handle is not the actual data contained in the file,
@@ -121,7 +126,8 @@ https://en.wikipedia.org/wiki/Mbox.
 To break the file into lines, there is a special character that
 represents the “end of the line” called the *newline* character.
 
-:raw-latex:`\index{newline}`
+
+.. index:: newline
 
 In Python, we represent the *newline* character as a backslash-n in
 string constants. Even though this looks like two characters, it is
@@ -158,7 +164,8 @@ lines.
 Reading files
 -------------
 
-:raw-latex:`\index{file!reading}` :raw-latex:`\index{counter}`
+
+.. index:: file!reading, counter
 
 While the *file handle* does not contain the data for the file, it is
 quite easy to construct a ``for`` loop to read through and count each of
@@ -249,7 +256,8 @@ processing lines which meet a particular condition. We can combine the
 pattern for reading a file with string methods to build simple search
 mechanisms.
 
-:raw-latex:`\index{filter pattern}` :raw-latex:`\index{pattern!filter}`
+
+.. index:: filter pattern, pattern!filter
 
 For example, if we wanted to read a file and only print out lines which
 started with the prefix “From:”, we could use the string method
@@ -479,16 +487,20 @@ person or group called *Quality Assurance* (or QA for short) whose very
 job it is to do the craziest things possible in an attempt to break the
 software that the programmer has created.
 
-:raw-latex:`\index{Quality Assurance}` :raw-latex:`\index{QA}`
+
+.. index:: Quality Assurance, QA
 
 The QA team is responsible for finding the flaws in programs before we
 have delivered the program to the end users who may be purchasing the
 software or paying our salary to write the software. So the QA team is
 the programmer’s best friend.
 
-:raw-latex:`\index{try statement}` :raw-latex:`\index{statement!try}`
-:raw-latex:`\index{open function}` :raw-latex:`\index{function!open}`
-:raw-latex:`\index{exception!IOError}` :raw-latex:`\index{IOError}`
+
+.. index:: try statement, statement!try
+
+.. index:: open function, function!open
+
+.. index:: exception!IOError, IOError
 
 So now that we see the flaw in the program, we can elegantly fix it
 using the ``try``/``except`` structure. We need to assume that the
@@ -531,7 +543,8 @@ silliness or bad file names, we “catch” them and recover gracefully:
    Enter the file name: na na boo boo
    File cannot be opened: na na boo boo
 
-:raw-latex:`\index{Pythonic}`
+
+.. index:: Pythonic
 
 Protecting the ``open`` call is a good example of the proper use of
 ``try`` and ``except`` in a Python program. We use the term “Pythonic”
@@ -548,7 +561,8 @@ solution to be elegant and to be appreciated as elegant by our peers.
 Writing files
 -------------
 
-:raw-latex:`\index{file!writing}`
+
+.. index:: file!writing
 
 To write a file, you have to open it with mode “w” as a second
 parameter:
@@ -573,7 +587,8 @@ text for writing (and reading) strings.
    >>> fout.write(line1)
    24
 
-:raw-latex:`\index{newline}`
+
+.. index:: newline
 
 Again, the file object keeps track of where it is, so if you call
 ``write`` again, it adds the new data to the end.
@@ -603,12 +618,14 @@ that all open files are closed when the program ends. When we are
 writing files, we want to explicitly close the files so as to leave
 nothing to chance.
 
-:raw-latex:`\index{close method}` :raw-latex:`\index{method!close}`
+
+.. index:: close method, method!close
 
 Debugging
 ---------
 
-:raw-latex:`\index{debugging}` :raw-latex:`\index{whitespace}`
+
+.. index:: debugging, whitespace
 
 When you are reading and writing files, you might run into problems with
 whitespace. These errors can be hard to debug because spaces, tabs, and
@@ -621,8 +638,10 @@ newlines are normally invisible:
    1 2  3
     4
 
-:raw-latex:`\index{repr function}` :raw-latex:`\index{function!repr}`
-:raw-latex:`\index{string representation}`
+
+.. index:: repr function, function!repr
+
+.. index:: string representation
 
 The built-in function ``repr`` can help. It takes any object as an
 argument and returns a string representation of the object. For strings,
@@ -641,7 +660,8 @@ newline, represented ``\n``. Others use a return character, represented
 ``\r``. Some use both. If you move files between different systems,
 these inconsistencies might cause problems.
 
-:raw-latex:`\index{end of line character}`
+
+.. index:: end of line character
 
 For most systems, there are applications to convert from one format to
 another. You can find them (and read more about this issue) at
@@ -653,22 +673,27 @@ Glossary
 
 catch
    To prevent an exception from terminating a program using the ``try``
-   and ``except`` statements. :raw-latex:`\index{catch}`
+   and ``except`` statements.
+.. index:: catch
 newline
    A special character used in files and strings to indicate the end of
-   a line. :raw-latex:`\index{newline}`
+   a line.
+.. index:: newline
 Pythonic
    A technique that works elegantly in Python. “Using try and except is
    the *Pythonic* way to recover from missing files”.
-   :raw-latex:`\index{Pythonic}`
+
+.. index:: Pythonic
 Quality Assurance
    A person or team focused on insuring the overall quality of a
    software product. QA is often involved in testing a product and
    identifying problems before the product is released.
-   :raw-latex:`\index{Quality Assurance}` :raw-latex:`\index{QA}`
+
+.. index:: Quality Assurance, QA
 text file
    A sequence of characters stored in permanent storage like a hard
-   drive. :raw-latex:`\index{text file}`
+   drive.
+.. index:: text file
 
 Exercises
 ---------

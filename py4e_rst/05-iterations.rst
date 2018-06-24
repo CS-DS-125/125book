@@ -5,12 +5,14 @@
 Iteration
 =========
 
-:raw-latex:`\index{iteration}`
+
+.. index:: iteration
 
 Updating variables
 ------------------
 
-:raw-latex:`\index{update}` :raw-latex:`\index{variable!updating}`
+
+.. index:: update, variable!updating
 
 A common pattern in assignment statements is an assignment statement
 that updates a variable, where the new value of the variable depends on
@@ -35,7 +37,8 @@ because Python evaluates the right side before it assigns a value to
 Before you can update a variable, you have to *initialize* it, usually
 with a simple assignment:
 
-:raw-latex:`\index{initialization (before update)}`
+
+.. index:: initialization (before update)
 
 .. code:: python
 
@@ -45,13 +48,16 @@ with a simple assignment:
 Updating a variable by adding 1 is called an *increment*; subtracting 1
 is called a *decrement*.
 
-:raw-latex:`\index{increment}` :raw-latex:`\index{decrement}`
+
+.. index:: increment, decrement
 
 The ``while`` statement
 -----------------------
 
-:raw-latex:`\index{statement!while}` :raw-latex:`\index{while loop}`
-:raw-latex:`\index{loop!while}` :raw-latex:`\index{iteration}`
+
+.. index:: statement!while, while loop
+
+.. index:: loop!while, iteration
 
 Computers are often used to automate repetitive tasks. Repeating
 identical or similar tasks without making errors is something that
@@ -74,7 +80,8 @@ means, “While ``n`` is greater than 0, display the value of ``n`` and
 then reduce the value of ``n`` by 1. When you get to 0, exit the
 ``while`` statement and display the word ``Blastoff!``”
 
-:raw-latex:`\index{flow of execution}`
+
+.. index:: flow of execution
 
 More formally, here is the flow of execution for a ``while`` statement:
 
@@ -91,8 +98,10 @@ around to the top. We call each time we execute the body of the loop an
 *iteration*. For the above loop, we would say, “It had five iterations”,
 which means that the body of the loop was executed five times.
 
-:raw-latex:`\index{condition}` :raw-latex:`\index{loop}`
-:raw-latex:`\index{body}`
+
+.. index:: condition, loop
+
+.. index:: body
 
 The body of the loop should change the value of one or more variables so
 that eventually the condition becomes false and the loop terminates. We
@@ -109,7 +118,8 @@ the directions on shampoo, “Lather, rinse, repeat,” are an infinite loop
 because there is no *iteration variable* telling you how many times to
 execute the loop.
 
-:raw-latex:`\index{infinite loop}` :raw-latex:`\index{loop!infinite}`
+
+.. index:: infinite loop, loop!infinite
 
 In the case of ``countdown``, we can prove that the loop terminates
 because we know that the value of ``n`` is finite, and we can see that
@@ -120,8 +130,10 @@ because it has no iteration variable at all.
 “Infinite loops” and ``break``
 ------------------------------
 
-:raw-latex:`\index{break statement}`
-:raw-latex:`\index{statement!break}`
+
+.. index:: break statement
+
+.. index:: statement!break
 
 Sometimes you don’t know it’s time to end a loop until you get half way
 through the body. In that case you can write an infinite loop on purpose
@@ -189,8 +201,10 @@ negatively (“keep going until that happens.”).
 Finishing iterations with ``continue``
 --------------------------------------
 
-:raw-latex:`\index{continue statement}`
-:raw-latex:`\index{statement!continue}`
+
+.. index:: continue statement
+
+.. index:: statement!continue
 
 Sometimes you are in an iteration of a loop and want to finish the
 current iteration and immediately jump to the next iteration. In that
@@ -235,7 +249,8 @@ thus skipping the ``print`` statement.
 Definite loops using ``for``
 ----------------------------
 
-:raw-latex:`\index{for statement}` :raw-latex:`\index{statement!for}`
+
+.. index:: for statement, statement!for
 
 Sometimes we want to loop through a *set* of things such as a list of
 words, the lines in a file, or a list of numbers. When we have a list of
@@ -353,7 +368,8 @@ loop ``total`` is the running total, and at the end of the loop
 As the loop executes, ``total`` accumulates the sum of the elements; a
 variable used this way is sometimes called an *accumulator*.
 
-:raw-latex:`\index{accumulator!sum}`
+
+.. index:: accumulator!sum
 
 Neither the counting loop nor the summing loop are particularly useful
 in practice because there are built-in functions ``len()`` and ``sum()``
@@ -363,9 +379,12 @@ the list respectively.
 Maximum and minimum loops
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:raw-latex:`\index{loop!maximum}` :raw-latex:`\index{loop!minimum}`
-:raw-latex:`\index{None special value}`
-:raw-latex:`\index{special value!None}`
+
+.. index:: loop!maximum, loop!minimum
+
+.. index:: None special value
+
+.. index:: special value!None
 
 To find the largest value in a list or sequence, we construct the
 following loop:
@@ -458,8 +477,10 @@ As you start writing bigger programs, you might find yourself spending
 more time debugging. More code means more chances to make an error and
 more places for bugs to hide.
 
-:raw-latex:`\index{debugging!by bisection}`
-:raw-latex:`\index{bisection, debugging by}`
+
+.. index:: debugging!by bisection
+
+.. index:: bisection, debugging by
 
 One way to cut your debugging time is “debugging by bisection.” For
 example, if there are 100 lines in your program and you check them one
@@ -490,28 +511,34 @@ Glossary
 
 accumulator
    A variable used in a loop to add up or accumulate a result.
-   :raw-latex:`\index{accumulator}`
+
+.. index:: accumulator
 counter
    A variable used in a loop to count the number of times something
    happened. We initialize a counter to zero and then increment the
    counter each time we want to “count” something.
-   :raw-latex:`\index{counter}`
+
+.. index:: counter
 decrement
    An update that decreases the value of a variable.
-   :raw-latex:`\index{decrement}`
+
+.. index:: decrement
 initialize
    An assignment that gives an initial value to a variable that will be
    updated.
 increment
    An update that increases the value of a variable (often by one).
-   :raw-latex:`\index{increment}`
+
+.. index:: increment
 infinite loop
    A loop in which the terminating condition is never satisfied or for
    which there is no terminating condition.
-   :raw-latex:`\index{infinite loop}`
+
+.. index:: infinite loop
 iteration
    Repeated execution of a set of statements using either a function
-   that calls itself or a loop. :raw-latex:`\index{iteration}`
+   that calls itself or a loop.
+.. index:: iteration
 
 Exercises
 ---------

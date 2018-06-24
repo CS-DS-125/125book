@@ -13,7 +13,7 @@ Table of Contents
    :maxdepth: 3
 
    Introduction/index
-   VariablesAndValues/index
+   ValuesAndVariables/toctree
 
 
 Index and Search
@@ -21,3 +21,7 @@ Index and Search
 
 * :ref:`genindex`
 * :ref:`search`
+
+TODOs
+=====
+.. todolist::

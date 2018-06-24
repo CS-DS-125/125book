@@ -75,11 +75,6 @@ thinking that are covered in *Think Python*. And given that the books
 have a similar writing style, they should be able to move quickly
 through *Think Python* with a minimum of effort.
 
-
-.. index:: Creative Commons License
-
-.. index:: CC-BY-SA, BY-SA
-
 As the copyright holder of *Think Python*, Allen has given me permission
 to change the book’s license on the material from his book that remains
 in this book from the GNU Free Documentation License to the more recent
@@ -184,11 +179,6 @@ practice.
 I released the book under the GNU Free Documentation License, which
 allows users to copy, modify, and distribute the book.
 
-
-.. index:: GNU Free Documentation License
-
-.. index:: Free Documentation License, GNU
-
 What happened next is the cool part. Jeff Elkner, a high school teacher
 in Virginia, adopted my book and translated it into Python. He sent me a
 copy of his translation, and I had the unusual experience of learning
@@ -231,11 +221,6 @@ And I thank the Free Software Foundation for developing the GNU Free
 Documentation License, which helped make my collaboration with Jeff and
 Chris possible.
 
-
-.. index:: GNU Free Documentation License
-
-.. index:: Free Documentation License, GNU
-
 I also thank the editors at Lulu who worked on *How to Think Like a
 Computer Scientist*.
 
@@ -254,9 +239,6 @@ Franklin W. Olin College of Engineering.
 
 Contributor List for "Think Python"
 -----------------------------------
-
-
-.. index:: contributors
 
 (Allen B. Downey)
 

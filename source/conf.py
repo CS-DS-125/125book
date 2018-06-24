@@ -93,7 +93,11 @@ html_theme_path = ["_templates/plugin_layouts"]
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'navbar_site_name': "Chapters",
+    'globaltoc_depth': 1,
+    'source_link_position': "",  # Options: 'nav', 'footer', anything else to disable
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

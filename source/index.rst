@@ -1,20 +1,23 @@
-.. 125book documentation master file, created by
-   sphinx-quickstart on Sat Jun 23 22:19:55 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. meta::
+   :description: An interactive textbook for CS/DS 125 - Introduction to Computer and Data Science
+   :keywords: python, python3, introduction, computer science, data science
 
-Welcome to 125book's documentation!
-===================================
+CS/DS 125 Boook (Title TBD)
+===========================
+
+Table of Contents
+:::::::::::::::::
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :numbered:
+   :maxdepth: 3
+
+   Introduction/index
+   VariablesAndValues/index
 
 
-
-Indices and tables
-==================
+Index and Search
+::::::::::::::::
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`

@@ -209,10 +209,11 @@ data will be stored in each variable.
 
 .. tip::
 
-   Choose names for your variables that are descriptive and meaningful to you
-   or anyone else reading your code.  Generally, they should describe or relate
-   to the information held by that variable.  Doing this consistently will help
-   you and others understand your code and what each variable is used for.
+   Choose names for your variables that will be descriptive and meaningful to
+   you and anyone else reading your code.  Generally, they should describe or
+   relate to the information held by that variable.  Doing this consistently
+   will help you and others understand your code and what each variable is used
+   for.
 
 We call these wisely chosen variable names "mnemonic variable names".  The word
 *mnemonic* means "memory aid". We choose mnemonic variable names to help us

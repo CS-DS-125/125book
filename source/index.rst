@@ -15,6 +15,14 @@ Table of Contents
    Introduction/index
    ValuesAndVariables/toctree
 
+Appendices
+::::::::::
+
+.. toctree::
+   :maxdepth: 1
+
+   AA-contrib.rst
+   AB-copyright.rst
 
 Index and Search
 ::::::::::::::::

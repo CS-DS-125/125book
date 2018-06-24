@@ -327,6 +327,12 @@ div.ExecutionVisualizer table.visualizer {
     border-color: #bce8f1;
 }
 
+/* for todos from sphinx.ext.todo */
+.admonition-todo {
+    background-color: #fa9;
+    border-color: #d98;
+}
+
 /* from web2py.css */
 div.flash {
     font-weight: bold;

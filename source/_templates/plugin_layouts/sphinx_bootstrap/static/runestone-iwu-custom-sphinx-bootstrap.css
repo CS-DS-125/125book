@@ -4,6 +4,22 @@ body {
     font-family: Calibri, Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13pt;
 }
+@media (max-width: 600px) {
+    body {
+        font-size: 12pt;
+    }
+}
+
+/* all code, inline, pre, codemirror, etc. */
+code, pre, kbd, samp, .CodeMirror {
+    font-family: Consolas, Monaco, Menlo, monospace;
+    font-size: 90%;
+}
+@media (max-width: 600px) {
+    code, pre, kbd, samp, .CodeMirror {
+        font-size: 80%;
+    }
+}
 
 h5 {
     font-weight: bold;
@@ -37,7 +53,16 @@ div#content-wrapper {
     flex-grow: 1;
     max-width: 100%;
     min-width: 0;  /* so flexbox will push beyond what CodeMirror might otherwise want when shrinking. */
-    padding: 0 1em;
+}
+@media (max-width: 600px) {
+    div#content-wrapper {
+        padding: 0 0.5em;
+    }
+}
+@media (min-width: 768px) {
+    div#content-wrapper {
+        padding: 0 1em;
+    }
 }
 .container{
 	padding-left:0;
@@ -82,7 +107,8 @@ div#content-wrapper {
 }
 
 .footer {
-    padding: 5px;
+    padding: 10px;
+    margin-top: 20px;
     background-color: #eeeeee;
 }
 
@@ -144,46 +170,6 @@ code {
     background-color: #f5f5f0;
     border: 1px solid #ddd;
 }
-
-/* all code, inline, pre, codemirror, etc. */
-code, pre, kbd, samp, .CodeMirror {
-    font-family: Consolas, Monaco, Menlo, monospace;
-    font-size: 90%;
-}
-
-.CodeMirror {
-    /*
-    margin: 0 0 1em 0;
-    background-color: #fff;
-	clear:both;
-    */
-}
-
-.CodeMirror-scroll {
-    /* this allows CM elements to be resized to (almost) any 
-     * height while still relying on max-height (which keeps 
-     * the CM editors to no more than the size needed 
-     * unless resized) */
-/*
-    max-height: 30em;
-    min-width: 35em;
-*/
-}
-
-/*
-.ac_section .CodeMirror pre {
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  border-width: 0; margin: 0; padding: 0; background: transparent;
-  font-family:  Monaco, Courier New, monospace;
-  font-size: inherit;
-  padding: 0; margin: 0;
-  white-space: pre;
-  word-wrap: normal;
-}
-*/
 
 div#main_content .btn {
     margin: 5px;
@@ -502,6 +488,12 @@ div.flash {
 
 .navgutter {
     flex-shrink: 0;  /* So flexbox doesn't muck them up. */
+    width: 3em;
+}
+@media (max-width: 600px) {
+    .navgutter {
+        display: none;
+    }
 }
 a.navLink {
     position: sticky;

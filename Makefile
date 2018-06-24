@@ -2,6 +2,7 @@
 #
 
 # You can set these variables from the command line.
+# e.g.  "make normal SPHINXOPTS=-a"
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 SOURCEDIR     = source

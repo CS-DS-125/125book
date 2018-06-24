@@ -22,6 +22,7 @@ from runestone import runestone_static_dirs, runestone_extensions
 # -- Project information -----------------------------------------------------
 
 project = 'CS/DS 125 Book (Title TBD)'
+course_id = '125book'  # for Runestone
 copyright = '2018, Mark Liffiton and Brad Sheese'
 author = 'Mark Liffiton and Brad Sheese'
 
@@ -97,6 +98,16 @@ html_theme_options = {
     'navbar_site_name': "Chapters",
     'globaltoc_depth': 1,
     'source_link_position': "",  # Options: 'nav', 'footer', anything else to disable
+}
+
+# For Runestone
+html_context = {
+    'course_id': course_id,
+    'login_required': 'false',
+    'use_services': 'false',
+    'python3': 'true',
+    'downloads_enabled': 'true',
+    'loglevel': 10,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,

@@ -16,7 +16,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-from runestone import runestone_static_dirs, runestone_extensions
+import runestone
 
 # to get runestone version
 import pkg_resources
@@ -43,7 +43,10 @@ release = ''
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.mathjax', 'sphinx.ext.todo'] + runestone_extensions()
+extensions = ['sphinx.ext.mathjax', 'sphinx.ext.todo']
+extensions += ['runestone.common', 'runestone.activecode']
+# Or:
+#extensions += runestone.runestone_extensions()
 
 # Enable todos
 todo_include_todos = True
@@ -75,15 +78,19 @@ exclude_patterns = []
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
-# -- Options for .rst input --------------------------------------------------
+# -- Options for Runestone ---------------------------------------------------
+
+# Class(es) assigned to activecode divs
+# (Doesn't override the javascript's addition of alert and alert-warning to an
+# inner div, though...)
+activecode_div_class = "runestone explainer ac_section"
 
 # `rst_prolog <http://www.sphinx-doc.org/en/stable/config.html#confval-rst_prolog>`_:
 # A string of reStructuredText that will be included at the beginning of every
 # source file that is read.
-rst_prolog = (
-    # For fill-in-the-blank questions, provide a convenient means to indicate a blank.
-    ".. |blank| replace:: :blank:`x`"
-)
+# For fill-in-the-blank questions, provide a convenient means to indicate a blank.
+# 2018-06-25: Probably only works with the right runestone ext installed above...
+#rst_prolog = ".. |blank| replace:: :blank:`x`"
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -119,7 +126,7 @@ html_context = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static'] + runestone_static_dirs()
+html_static_path = ['_static'] + runestone.runestone_static_dirs()
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.

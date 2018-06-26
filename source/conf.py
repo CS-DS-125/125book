@@ -27,6 +27,9 @@ project = 'CS/DS 125 Book (Title TBD)'
 course_id = '125book'  # for Runestone
 copyright = '2018, Mark Liffiton and Brad Sheese'
 author = 'Mark Liffiton and Brad Sheese'
+license_text = """
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.  See <a href="AB-License.html">License</a> for details.
+"""
 
 # The short X.Y version
 version = ''
@@ -120,6 +123,7 @@ html_context = {
     'python3': 'true',
     'downloads_enabled': 'true',
     'loglevel': 10,
+    'license_text': license_text,
     'runestone_version': pkg_resources.require("runestone")[0].version,
 }
 

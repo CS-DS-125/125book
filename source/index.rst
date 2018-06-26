@@ -10,9 +10,9 @@ Table of Contents
 
 .. toctree::
    :numbered:
-   :maxdepth: 3
+   :maxdepth: 2
 
-   Introduction/index
+   Introduction/toctree
    ValuesAndVariables/toctree
 
 Appendices
@@ -21,8 +21,8 @@ Appendices
 .. toctree::
    :maxdepth: 1
 
-   AA-contrib.rst
-   AB-copyright.rst
+   AA-Contributions
+   AB-License
 
 Index and Search
 ::::::::::::::::

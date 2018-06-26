@@ -230,7 +230,7 @@
     {% endif %}
     <a href="#">Back to top</a>
     {% if theme_source_link_position == "footer" %}
-      <br />
+      <br/>
       {% include "sourcelink.html" %}
     {% endif %}
   </p>
@@ -243,6 +243,11 @@
     {%- endif %}
     <br/>
   {%- endif %}
+  <small>
+  {%- if license_text %}
+    {{ license_text }}
+    <br/>
+  {%- endif %}
   {%- if last_updated %}
     {% trans last_updated=last_updated|e %}
       Last updated on {{ last_updated }}.
@@ -250,8 +255,9 @@
     <br/>
   {%- endif %}
   {%- if show_sphinx %}
-    {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://runestoneinteractive.org/">Runestone</a> {{ runestone_version }}.{% endtrans %}
+  {% trans sphinx_version=sphinx_version|e %}Created using <a href="https://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}, <a href="http://runestoneinteractive.org/">Runestone</a> {{ runestone_version }}.{% endtrans %}
   {%- endif %}
+  </small>
   </p>
 </footer>
 

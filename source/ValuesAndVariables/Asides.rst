@@ -5,7 +5,7 @@ Now is a good time to talk briefly about some good coding practices.
 These are things that will help you write better code
 
 
-.. index:: comments
+.. index:: comment
 
 Comments
 ::::::::
@@ -165,7 +165,7 @@ spend more time comparing details of what the program *should* do and what it
 
 
 .. index:: semantic error
-   single: error: semantic
+   single: error; semantic
 
 Semantic Errors
 ^^^^^^^^^^^^^^^

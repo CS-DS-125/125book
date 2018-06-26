@@ -1,7 +1,5 @@
 
-.. index:: value, data
-.. index:: data type, type, integer, string, floating point
-.. index::
+.. index:: value, data, data type, type, integer, string, floating point
    single: type; str
    single: type; int
    single: type; float
@@ -123,7 +121,6 @@ comma-separated sequence of integers, which it prints with spaces between.
       Hello, World! 1 2 123.45
 
 .. index:: semantic error, error message
-.. index::
    single: error; semantic
 
 This is the first example we have seen of a **semantic error**: the code is
@@ -155,8 +152,8 @@ of the three data types we've seen so far has a matching function that converts
 into that type:
 
 - ``int()``
-- ``str()``
 - ``float()``
+- ``str()``
 
 The ``int()`` function can convert a floating point number or a string into an
 int.  When given a floating point number, it *discards* the decimal portion of

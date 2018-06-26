@@ -98,10 +98,8 @@ of the value it refers to.
    executed one at a time.
 
 
-.. index:: statement, interactive mode
-
 .. index:: keyword, underscore character
-   single: variable, naming
+   single: variable; naming
 
 Variable Names and Keywords
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^

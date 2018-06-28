@@ -1,6 +1,6 @@
 <nav class="navgutter" id="relations-prev-outer">
 {% if prev %}
-  <a id="relations-prev" class="navLink" title='Previous Section - {{ prev.title }}' data-toggle="tooltip" href="{{ prev.link|e }}" ><!--
+  <a id="relations-prev" class="navLink btn btn-primary" role="button" title='Previous Section - {{ prev.title }}' data-toggle="tooltip" href="{{ prev.link|e }}" ><!--
   --><i id="relationsPrevIcon" class='prevNav glyphicon glyphicon-chevron-left'></i><!--
   --></a>
 {% endif %}
@@ -8,7 +8,7 @@
 
 <nav class="navgutter" id="relations-next-outer">
 {% if next %}
-  <a id="relations-next" class="navLink" title='Next Section - {{ next.title }}' data-toggle="tooltip" href="{{ next.link|e }}" ><!--
+  <a id="relations-next" class="navLink btn btn-primary" role="button" title='Next Section - {{ next.title }}' data-toggle="tooltip" href="{{ next.link|e }}" ><!--
   --><i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i><!--
   --></a>
 {% endif %}

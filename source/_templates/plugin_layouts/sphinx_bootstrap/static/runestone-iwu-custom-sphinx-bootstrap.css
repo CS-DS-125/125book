@@ -9,6 +9,10 @@ body {
         font-size: 12pt;
     }
 }
+/* override bootstrap's specific font size for dropdowns */
+.dropdown-menu {
+    font-size: unset;
+}
 
 /* all code, inline, pre, codemirror, etc. */
 code, pre, kbd, samp, .CodeMirror {
@@ -21,28 +25,9 @@ code, pre, kbd, samp, .CodeMirror {
     }
 }
 
-h5 {
-    font-weight: bold;
-    padding: 10px 0;
-}
-
-/* navbar and menu related styles */
-@media (max-width: 768px) {
-    .navbar-fixed-top {
-        position: static;
-    }
-}
-
-@media (min-width: 768px) {
-    /* when navbar is collapsed we don't want any vertical dividers taking up space */
-    .navbar .divider-vertical {
-        margin: 0 3px;
-        border-left: 1px solid #f2f2f2;
-    }
-}
-
 div.container {
     width: 100%;
+    padding: 0;
 }
 
 div.flexcontainer {
@@ -64,10 +49,6 @@ div#content-wrapper {
         padding: 0 1em;
     }
 }
-.container{
-	padding-left:0;
-	padding-right:0;
-}
 .container  .section >*:not(.section) {
 	max-width: 500pt;
     /*
@@ -75,11 +56,6 @@ div#content-wrapper {
 	margin-right: auto;
     */
 }
-
-.container .section > .table {
-    width: unset;  /* don't need to stretch tables to 100%, which is what bootstrap seems to want */
-}
-
 /* This rule is meant to override the behavior of the
    previous rule since it is not possible to exclude
    more than one section in the not() part of the rule
@@ -88,6 +64,10 @@ div#content-wrapper {
 	margin-left: auto;
 	margin-right: auto;
     max-width: 90%;
+}
+
+.container .section > .table {
+    width: unset;  /* don't need to stretch tables to 100%, which is what bootstrap seems to want */
 }
 
 .container .section>img {
@@ -108,7 +88,7 @@ div#content-wrapper {
 
 .footer {
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 15px;
     background-color: #eeeeee;
 }
 
@@ -119,42 +99,6 @@ div#content-wrapper {
     width: 40px;
     height: 40px;
     margin-top: 4px;
-}
-
-.social-menu {
-    width: 220px;
-    padding: 10px 10px 15px 20px;
-}
-
-.fb-like {
-    margin-top: 7px;
-}
-
-.fb_iframe_widget span, .fb_iframe_widget iframe {
-    height: 20px !important;
-    width: 82px !important;
-}
-
-.twitter-follow-button {
-    margin-top: 10px;
-}
-
-.gittip {
-    margin-top: 8px;
-}
-
-.gittip-button {
-    margin-bottom: -6px;
-}
-
-.dropdown-menu > li > span {
-    display: block;
-    padding: 3px 20px;
-    clear: both;
-    font-weight: bold;
-    line-height: 20px;
-    color: #333;
-    white-space: nowrap;
 }
 
 .loggedinuser {
@@ -171,29 +115,9 @@ code {
     border: 1px solid #ddd;
 }
 
-div#main_content .btn {
-    margin: 5px;
-}
-
 .btn.disabled {
     /* needed in Bootstrap 3 to allow tooltips on disabled buttons */
     pointer-events: auto;
-}
-
-.btn-default,
-.btn-default.disabled,
-.btn-default[disabled],
-.btn-default.disabled:hover,
-.btn-default[disabled]:hover {
-    color: #fff;
-    background-color: #474949;
-    border-color: #474949;
-}
-
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
-    background-color: #3a3c3c;
-    border-color: #2e2f2f;
-    color: #fff;
 }
 
 input[type="radio"],
@@ -208,10 +132,6 @@ input[type="checkbox"] {
 .tooltip.in {
     opacity: 0.8;
     filter: alpha(opacity=80);
-}
-
-h2 {
-    margin-top: 20px;
 }
 
 .alert form {
@@ -273,7 +193,7 @@ div.ac_actions {
     content: "ActiveCode " counter(codelens) ":";
     counter-increment: codelens;
 }
-body {
+html {
     counter-reset: activecode codelens;
 }
 /* End copy from video.css. */
@@ -507,28 +427,18 @@ div.flash {
 
 .navgutter {
     flex-shrink: 0;  /* So flexbox doesn't muck them up. */
-    width: 3em;
+    padding: 0.5em;
 }
 @media (max-width: 600px) {
+    /* hide navgutters when showing the top/bottom buttons instead */
     .navgutter {
         display: none;
     }
 }
-a.navLink {
+.navgutter a.navLink {
     position: sticky;
     top: calc(100% - 6em);
-    margin: 0.5em;
     padding: 2em 0.5em;
-    border-radius: 0.5em;
-	color: #fff;
-    background: #2c3e50;
-}
-#bottom-relations-console a.navLink, #top-relations-console a.navLink {
-    position: static;
-    top: 0;
-}
-a.navLink:hover {
-    background: #4c5e70;
 }
 
 #relations-prev-outer {
@@ -542,15 +452,19 @@ a.navLink:hover {
 ul#top-relations-console,
 ul#bottom-relations-console {
     list-style: none;
-    text-align: center;
     width: 100%;
-    padding: 0.5em;
+    padding: 0;
+    margin: 0;
 }
 #top-relations-next,
 #top-relations-prev,
 #bottom-relations-next,
 #bottom-relations-prev {
     padding: 0.5em 2em;
+}
+#top-relations-next,
+#bottom-relations-next {
+    float: right;
 }
 
 #completionButton{

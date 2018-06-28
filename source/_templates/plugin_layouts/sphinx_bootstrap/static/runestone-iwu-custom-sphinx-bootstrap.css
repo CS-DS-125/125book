@@ -142,13 +142,14 @@ input[type="checkbox"] {
 /* Flex, flex-wrap, and order to rearrange things without having to change runestonecomponents html */
 div.ac_section, div.cd_section {
     color: #000;
-    background: none;
-    border: none;
-    padding: 0;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    border-left: 5px solid #ddd;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin: 1em -10px;
 }
 div.ac_section > div.ac_section, div.cd_section > div {
+    background: none;
+    border: none;
     margin: 0.25em 0;
     display: flex;
     flex-wrap: wrap;
@@ -212,9 +213,19 @@ div.ExecutionVisualizer table.visualizer {
 .unittest-results.alert-danger {
     background-color: #f2dede !important;
 }
-
 .unittest-results.alert-success {
     background-color: #dff0d8 !important;
+}
+.unittest-results {
+    width: 100%;
+    text-align: center;
+}
+.unittest-results table {
+    margin: auto;
+}
+.ac-feedback {
+    border: 1px solid #ccc;
+    padding: 0.1em 0.5em;
 }
 
 .alert label {
@@ -404,7 +415,6 @@ div.flash {
 
 .ac-canvas {
     background-color: white;
-    display: inline-block;
 }
 
 .video-play-overlay {

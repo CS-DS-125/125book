@@ -192,3 +192,21 @@ string into a float.
 
 And finally, ``str()`` can convert just about anything into a string.  This has
 more niche uses, but it's worth remembering it exists.
+
+
+.. rubric:: Check your understanding
+
+.. activecode:: exercise01
+
+    Make a variable named ``x`` and assign it the value ``123``.
+    ~~~~
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(x, 123)
+
+    myTests().main()
+

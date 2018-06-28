@@ -142,14 +142,12 @@ input[type="checkbox"] {
 /* Flex, flex-wrap, and order to rearrange things without having to change runestonecomponents html */
 div.ac_section, div.cd_section {
     color: #000;
-    border-left: 5px solid #ddd;
-    border-radius: 5px;
     padding: 0 5px;
-    margin: 1em -10px;
+    border: none;
+    margin: 1em 0;
 }
 div.ac_section > div.ac_section, div.cd_section > div {
     background: none;
-    border: none;
     margin: 0.25em 0;
     display: flex;
     flex-wrap: wrap;
@@ -235,7 +233,7 @@ div.ExecutionVisualizer table.visualizer {
 /* These admonition styles styles are copied from the Bootstrap .alert classes.
  Most of the !important declarations are to override the Sphinx basic.css styles */
 .admonition {
-    padding: 8px 35px 8px 14px !important;
+    padding: 8px 14px 8px 14px !important;
     margin-bottom: 20px !important;
     margin-top: 20px !important;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -244,10 +242,8 @@ div.ExecutionVisualizer table.visualizer {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-}
-
-.admonition.note {
-    /* Because runestone adds .alert and .alert-info instead of just using admonition on these... */
+    /* Because runestone adds .alert and .alert-info on some of these instead
+     * of just using admonition on these... */
     color: inherit;
 }
 
@@ -261,6 +257,21 @@ div.ExecutionVisualizer table.visualizer {
 .admonition.tip, .admonition.note {
     background-color: #d9edf7;
     border-color: #bce8f1;
+}
+
+/* .alert-success */
+.admonition-syntax-rule,
+.admonition-syntax-pattern,
+.admonition-definition {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.admonition-check-your-understanding {
+    width: 100%;
+    max-width: unset !important;
+    background: none;
+    box-shadow: inset 0px 0px 10px 0px rgba(100,50,0,0.5);
 }
 
 /* for todos from sphinx.ext.todo */

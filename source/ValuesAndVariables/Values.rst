@@ -129,7 +129,7 @@ doesn’t do what *thought* or *wanted* it to do.  In this case, Python's rule
 about what commas mean doesn't exactly match what we might assume about them
 based on using commas in other domains.
 
-.. admonition:: Remember
+.. caution::
 
    Programming languages are formal languages with strict, precise rules about
    what is valid code and what that code means.  The computer will do exactly
@@ -190,23 +190,30 @@ string into a float.
     print('"123.45"', float("123.45"))
     print(123.45, float(123.45))
 
-And finally, ``str()`` can convert just about anything into a string.  This has
-more niche uses, but it's worth remembering it exists.
+And finally, ``str()`` can convert just about anything into a string.  The
+applications of this are a bit less common, but it's worth remembering it
+exists.
 
 
-.. rubric:: Check your understanding
+.. admonition:: Check your understanding
 
-.. activecode:: exercise01
+   .. activecode:: exercise01
 
-    Make a variable named ``x`` and assign it the value ``123``.
-    ~~~~
-    ====
-    from unittest.gui import TestCaseGui
+      Make a variable named ``x``, and assign it the value ``123``.
+    
+      Make another variable named ``word``, and assign it the value
+      ``"horse"``.
+      ~~~~
+      ====
+      from unittest.gui import TestCaseGui
 
-    class myTests(TestCaseGui):
+      class myTests(TestCaseGui):
 
-        def testOne(self):
-            self.assertEqual(x, 123)
+          def testOne(self):
+              self.assertIsInstance(x, int, "x should be an integer.")
+              self.assertEqual(x, 123, "x should be assigned 123.")
+              self.assertIsInstance(word, str, "word should b a string.")
+              self.assertEqual(word, 'horse', "word should be assigned \"horse\".")
 
-    myTests().main()
+      myTests().main()
 

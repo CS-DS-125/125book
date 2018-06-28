@@ -6,20 +6,19 @@
 # full list see the documentation:
 # http://www.sphinx-doc.org/en/master/config
 
+# Imports for runestone
+import runestone
+import pkg_resources  # to get runestone version
+
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
-
-import runestone
-
-# to get runestone version
-import pkg_resources
+import os
+import sys
+sys.path.insert(0, os.path.abspath('_exts'))
 
 # -- Project information -----------------------------------------------------
 
@@ -28,7 +27,7 @@ course_id = '125book'  # for Runestone
 copyright = '2018, Mark Liffiton and Brad Sheese'
 author = 'Mark Liffiton and Brad Sheese'
 license_text = """
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.  See <a href="AB-License.html">License</a> for details.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.  See <a href="/AB-License.html">License</a> for details.
 """
 
 # The short X.Y version
@@ -50,6 +49,10 @@ extensions = ['sphinx.ext.mathjax', 'sphinx.ext.todo']
 extensions += ['runestone.common', 'runestone.activecode']
 # Or:
 #extensions += runestone.runestone_extensions()
+
+# Add my extension
+extensions += ['trinket']
+
 
 # Enable todos
 todo_include_todos = True

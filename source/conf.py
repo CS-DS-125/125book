@@ -46,7 +46,7 @@ release = ''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.mathjax', 'sphinx.ext.todo']
-extensions += ['runestone.common', 'runestone.activecode', 'runestone.fitb']
+extensions += ['runestone.common', 'runestone.activecode', 'runestone.fitb', 'runestone.datafile']
 # Or:
 #extensions += runestone.runestone_extensions()
 
@@ -95,7 +95,7 @@ activecode_div_class = "runestone explainer ac_section"
 # A string of reStructuredText that will be included at the beginning of every
 # source file that is read.
 # For fill-in-the-blank questions, provide a convenient means to indicate a blank.
-# 2018-06-25: Probably only works with the right runestone ext installed above...
+# Only works if runestone.fitb is added to the extensions list above.
 rst_prolog = ".. |blank| replace:: :blank:`x`"
 
 # -- Options for HTML output -------------------------------------------------

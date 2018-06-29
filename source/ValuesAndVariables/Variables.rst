@@ -129,7 +129,7 @@ names are generally used for classes, which we'll see later.  If we follow this
 convention, then we can easily see whether a name is a variable or a class just based
 on whether or not it is capitalized.
 
-The underscore character ``\_`` is often used in names with multiple words,
+The underscore character ``_`` is often used in names with multiple words,
 such as ``my_name`` or ``airspeed_of_unladen_swallow``.  Variable names can
 start with an underscore character, but we generally avoid doing this unless we
 are writing library code for others to use.

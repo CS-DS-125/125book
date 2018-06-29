@@ -92,6 +92,12 @@ long."``.
 
     print('Okay, so \'this\' works.')
 
+And by the way:  since strings are sequences of characters, and emoji are characters...
+
+.. activecode:: strings04
+
+   print('My password is ✓🐎🔋✂😕')
+
 
 Numbers
 ^^^^^^^
@@ -193,27 +199,4 @@ string into a float.
 And finally, ``str()`` can convert just about anything into a string.  The
 applications of this are a bit less common, but it's worth remembering it
 exists.
-
-
-.. admonition:: Check your understanding
-
-   .. activecode:: exercise01
-
-      Make a variable named ``x``, and assign it the value ``123``.
-    
-      Make another variable named ``word``, and assign it the value
-      ``"horse"``.
-      ~~~~
-      ====
-      from unittest.gui import TestCaseGui
-
-      class myTests(TestCaseGui):
-
-          def testOne(self):
-              self.assertIsInstance(x, int, "x should be an integer.")
-              self.assertEqual(x, 123, "x should be assigned 123.")
-              self.assertIsInstance(word, str, "word should b a string.")
-              self.assertEqual(word, 'horse', "word should be assigned \"horse\".")
-
-      myTests().main()
 

@@ -1,4 +1,7 @@
 /* Runestone/IWU custom modifications */
+html {
+    counter-reset: activecode codelens figure;
+}
 
 body {
     font-family: Calibri, Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -70,9 +73,23 @@ div#content-wrapper {
     width: unset;  /* don't need to stretch tables to 100%, which is what bootstrap seems to want */
 }
 
-.container .section>img {
+.container .section a.image-reference {
+    /* to get them centered within the weird width thing we have going here */
 	display: block;
-    margin: 1em 3em;
+    margin: 1em auto;
+}
+
+div.figure {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+div.figure p.caption {
+    font-style: italic;
+}
+div.figure p.caption:before {
+    content: "Figure " counter(figure) ": ";
+    counter-increment: figure;
 }
 
 .container  .section .parsons, .container  .section .parsons .sortable-code-container, .container  .section .ac_section, .container  .section .cd_section{
@@ -185,15 +202,12 @@ div.ac_actions {
 
 /* Copied/adapted from: video.css, for some reason, and so not included if we don't include the video extension... */
 .cl_caption:before {
-    content: "CodeLens " counter(codelens) ":";
+    content: "CodeLens " counter(codelens) ": ";
     counter-increment: codelens;
 }
 .ac_caption:before {
-    content: "ActiveCode " counter(codelens) ":";
+    content: "ActiveCode " counter(codelens) ": ";
     counter-increment: codelens;
-}
-html {
-    counter-reset: activecode codelens;
 }
 /* End copy from video.css. */
 
@@ -684,12 +698,3 @@ ul.dropdown-menu.globaltoc {
     overflow: auto;
 }
 
-span.caption-text {
-    display: none;
-}
-
-.globaltoc span.caption-text {
-    display: inline-block;
-    font-weight: bold;
-    font-size: large;
-}

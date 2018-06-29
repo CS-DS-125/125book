@@ -4,9 +4,12 @@
 Variables
 ---------
 
-One of the most powerful features of a programming language is the
-ability to manipulate **variables**. A variable is a name that refers to a
-value.
+One of the most basic but important features of a programming language is the
+ability to manipulate **variables**.
+
+.. admonition:: Definition
+
+   A variable is a name that refers to a value.
 
 .. index:: assignment
 .. index::
@@ -45,7 +48,7 @@ there!"`` to a new variable named ``message``; the second assigns the integer
  
    **Assignment always "goes from right to left."**
 
-So what happens if you get it backwards?
+So what happens if you get it backwards?  Try running this:
 
 .. activecode:: variables01
 
@@ -61,9 +64,19 @@ So what happens if you get it backwards?
    the value 17" or "n gets 17."  This also clarifies why ``17 = n`` is
    invalid: "17 gets n" doesn't make sense.
 
-.. todo:: Create section for visual understanding of assignment
+It can be very useful to *visualize* how programs work and make that part of
+your mental mode of code.  When visualizing variable assignments, its common to
+think of them as connections or arrows leading *from* a variable's name *to*
+the value that it references.  The figure below is an illustration of this
+visualization for the three variables in the example code above.
 
-To display the value of a variable, you can use a print statement:
+.. figure:: figs/variables_visual.svg
+   :alt: Visual representation of variables referencing values.
+   :width: 300px
+
+   A visual representation of variables referencing values.
+
+To output the value of a variable, you can use a print statement:
 
 .. activecode:: variables02
 
@@ -74,6 +87,18 @@ To display the value of a variable, you can use a print statement:
    print(message)
    print(n)
    print(pi)
+
+.. .. index:: statement
+.. 
+.. .. admonition:: Definition
+.. 
+..    A **statement** is a unit of code that the Python interpreter can execute.
+..    We have seen two kinds of statements so far: print statements and assignment
+..    statements.  Programs are made up of sequences of statements that are
+..    executed one at a time.
+
+.. index::
+   single: variable; types
 
 Variables have types, just like values do.  The type of a variable is the type
 of the value it refers to.
@@ -88,14 +113,47 @@ of the value it refers to.
    print(type(n))
    print(type(pi))
 
-.. index:: statement
+.. admonition:: Check your understanding
 
-.. admonition:: Definition
+   .. fillintheblank:: cyu_vars01
 
-   A **statement** is a unit of code that the Python interpreter can execute.
-   We have seen two kinds of statements so far: print statements and assignment
-   statements.  Programs are made up of sequences of statements that are
-   executed one at a time.
+      After running this code:
+
+      ::
+
+         var1 = 1
+         var2 = '2'
+
+      The type of ``var1`` will be |blank|.
+
+      The type of ``var2`` will be |blank|.
+
+      -   :int: Correct.
+          :<class 'int'>: That's technically right, but we usually just say or write ``int``.
+          :x: Incorrect.  Re-read above about variable types.
+      -   :str: Correct.
+          :<class 'str'>: That's technically right, but we usually just say or write ``str``.
+          :x: Incorrect.  Re-read above about variable types.
+
+   .. activecode:: cyu_vars02
+
+      Make a variable named ``x``, and assign it the value ``123``.
+    
+      Make another variable named ``word``, and assign it the value
+      ``"horse"``.
+      ~~~~
+      ====
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+
+          def testOne(self):
+              self.assertIsInstance(x, int, "x should be an integer.")
+              self.assertEqual(x, 123, "x should be assigned 123.")
+              self.assertIsInstance(word, str, "word should b a string.")
+              self.assertEqual(word, 'horse', "word should be assigned \"horse\".")
+
+      myTests().main()
 
 
 .. index:: keyword, underscore character

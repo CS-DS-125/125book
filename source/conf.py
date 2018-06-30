@@ -107,6 +107,8 @@ html_theme = 'sphinx_bootstrap'
 
 # Tell it where to find the theme
 html_theme_path = ["_templates/plugin_layouts"]
+# Just for testing components updates against the original theme
+#html_theme_path = ["_templates/thinkcspy_orig"]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

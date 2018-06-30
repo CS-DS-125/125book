@@ -200,3 +200,75 @@ And finally, ``str()`` can convert just about anything into a string.  The
 applications of this are a bit less common, but it's worth remembering it
 exists.
 
+.. admonition:: Check your understanding
+
+   .. fillintheblank:: cyu_values01
+
+      For each value, write its type to the right.
+
+      ``1234``: |blank|
+
+      ``12.34``: |blank|
+
+      ``"1234"``: |blank|
+
+      ``'12.34'``: |blank|
+
+      ``"Hello, 1234!"``: |blank|
+
+      -   :int: Correct.
+          :<class 'int'>: That's technically right, but we usually just say or write ``int``.
+          :x: Incorrect.  Re-read above about data types.
+      -   :float: Correct.
+          :<class 'float'>: That's technically right, but we usually just say or write ``float``.
+          :x: Incorrect.  Re-read above about data types.
+      -   :str: Correct.
+          :string: Correct, but the type is formally called ``str``.
+          :<class 'str'>: That's technically right, but we usually just say or write ``str``.
+          :x: Incorrect.  Re-read above about data types.
+      -   :str: Correct.
+          :string: Correct, but the type is formally called ``str``.
+          :<class 'str'>: That's technically right, but we usually just say or write ``str``.
+          :x: Incorrect.  Re-read above about data types.
+      -   :str: Correct.
+          :string: Correct, but the type is formally called ``str``.
+          :<class 'str'>: That's technically right, but we usually just say or write ``str``.
+
+   .. mchoice:: cyu_values02
+      :multiple_answers:
+      :answer_a: 'Average'
+      :answer_b: '"Cheese!", she exclaimed.'
+      :answer_c: 'Euler's Identity'
+      :answer_d: '👁️❤️🐍'
+      :answer_e: "Hello, World!"
+      :correct: a,b,d,e
+      :feedback_a: Nothing wrong with this one.
+      :feedback_b: Strings can contain quotation marks that aren't the same as the marks delimiting (surrounding) the string.
+      :feedback_c: Strings cannot contain qutation marks that are the same as the marks delimiting (surrounding) the string unless they are escaped (see above).
+      :feedback_d: Emoji (or more broadly, Unicode characters) are allowed.
+      :feedback_e: A classic string.
+
+      Which of the following are valid strings in Python?  (Mark all that are correct.)
+
+   .. fillintheblank:: cyu_values03
+
+      For each type conversion function call, write the value it will produce to the right.
+
+      ``int(1234)``: |blank|
+
+      ``int(8.8)``: |blank|
+
+      ``float("1234")``: |blank|
+
+      ``float(42.42)``: |blank|
+
+      -   :1234: Correct.
+          :x: Incorrect.  Applying ``int()`` to an integer will produce the same value, unchanged.
+      -   :8: Correct.  
+          :9: Incorrect.  ``int()`` doesn't round to the nearest integer; it always rounds down.
+          :x: Incorrect.  See above to review type conversion functions.
+      -   :1234.0: Correct.
+          :1234: Almost, but written that way it is an integer.  Floats are always written with a decimal point and a digit after it, even if the digit is just 0.
+          :x: Incorrect.  See above to review type conversion functions.
+      -   :42.42: Correct.
+          :x: Incorrect.  See above to review type conversion functions.

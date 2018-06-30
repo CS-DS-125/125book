@@ -137,9 +137,9 @@ of the value it refers to.
 
    .. activecode:: cyu_vars02
 
-      Make a variable named ``x``, and assign it the value ``123``.
-    
-      Make another variable named ``word``, and assign it the value
+      Make two variables, one named ``x`` and one named ``word``.
+      
+      And assign ``x`` the value ``123`` and assign ``word`` the value
       ``"horse"``.
       ~~~~
       ====
@@ -150,7 +150,7 @@ of the value it refers to.
           def testOne(self):
               self.assertIsInstance(x, int, "x should be an integer.")
               self.assertEqual(x, 123, "x should be assigned 123.")
-              self.assertIsInstance(word, str, "word should b a string.")
+              self.assertIsInstance(word, str, "word should be a string.")
               self.assertEqual(word, 'horse', "word should be assigned \"horse\".")
 
       myTests().main()

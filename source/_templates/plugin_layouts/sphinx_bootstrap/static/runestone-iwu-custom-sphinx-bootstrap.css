@@ -220,6 +220,12 @@ div.ExecutionVisualizer table.visualizer {
     margin: 0;
 }
 
+/* override alert-warning that runestone seems to use everywhere */
+.runestone.alert-warning, .runestone .alert-warning {
+    color: unset;
+    background: unset;
+    border: unset;
+}
 
 /* override the color styles applied by Skulpt to the unittest results divs */
 .unittest-results.alert-danger {
@@ -285,7 +291,7 @@ div.ExecutionVisualizer table.visualizer {
     width: 100%;
     max-width: unset !important;
     background: none;
-    box-shadow: inset 0px 0px 10px 0px rgba(100,50,0,0.5);
+    box-shadow: 0px 0px 4px 1px rgba(200,150,0,0.5);
 }
 
 /* for todos from sphinx.ext.todo */

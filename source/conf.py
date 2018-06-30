@@ -46,7 +46,7 @@ release = ''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.mathjax', 'sphinx.ext.todo']
-extensions += ['runestone.common', 'runestone.activecode', 'runestone.fitb', 'runestone.datafile']
+extensions += ['runestone.common', 'runestone.activecode', 'runestone.assess', 'runestone.fitb', 'runestone.datafile']
 # Or:
 #extensions += runestone.runestone_extensions()
 

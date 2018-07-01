@@ -120,6 +120,11 @@ html_theme_options = {
     'source_link_position': "",  # Options: 'nav', 'footer', anything else to disable
 }
 
+# If this is not None, a ‘Last updated on:’ timestamp is inserted at every page
+# bottom, using the given strftime() format. The empty string is equivalent to
+# '%b %d, %Y' (or a locale-dependent equivalent).
+html_last_updated_fmt = ''
+
 # For Runestone
 html_context = {
     'course_id': course_id,

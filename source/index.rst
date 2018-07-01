@@ -14,6 +14,7 @@ Table of Contents
 
    Introduction/toctree
    ValuesAndVariables/toctree
+   ControlStructures/toctree
 
 Appendices
 ::::::::::

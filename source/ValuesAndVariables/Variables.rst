@@ -54,7 +54,11 @@ So what happens if you get it backwards?  Try running this:
 
    17 = n
 
+.. _assignment-is-not-equality:
+
 .. tip::
+
+   **Assignment is not equality.**
 
    Though assignment uses the ``=`` sign, do not think of it as "equality."
    Writing ``n = 17`` does *not* mean "n equals 17," at least not forever.

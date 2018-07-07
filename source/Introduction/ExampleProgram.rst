@@ -1,5 +1,5 @@
-An Example Program
-------------------
+An Example Program: Word Count
+------------------------------
 
 One branch of data science involves text analysis; let's look at a little
 example of that type of analysis.  The file below contains the opening lines of

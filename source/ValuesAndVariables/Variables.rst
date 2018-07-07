@@ -230,6 +230,8 @@ Python reserves 33 keywords:
 You might want to keep this list handy. If the interpreter complains about one
 of your variable names and you don’t know why, see if it is on this list.
 
+.. _variable-naming:
+
 Choosing Good Variable Names
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

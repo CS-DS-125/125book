@@ -120,6 +120,9 @@ html_theme_options = {
     'source_link_position': "",  # Options: 'nav', 'footer', anything else to disable
 }
 
+html_title = project
+html_short_title = project
+
 # If this is not None, a ‘Last updated on:’ timestamp is inserted at every page
 # bottom, using the given strftime() format. The empty string is equivalent to
 # '%b %d, %Y' (or a locale-dependent equivalent).
@@ -156,7 +159,7 @@ html_static_path = ['_static'] + runestone.runestone_static_dirs()
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = '125bookdoc'
+htmlhelp_basename = '125book'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -183,7 +186,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, '125book.tex', '125book Documentation',
+    (master_doc, '125book.tex', project,
      'Mark Liffiton and Brad Sheese', 'manual'),
 ]
 
@@ -193,7 +196,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    #(master_doc, '125book', '125book Documentation',
+    #(master_doc, '125book', project,
     # [author], 1)
 ]
 
@@ -204,7 +207,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    #(master_doc, '125book', '125book Documentation',
+    #(master_doc, '125book', project,
     # author, '125book', 'One line description of project.',
     # 'Miscellaneous'),
 ]

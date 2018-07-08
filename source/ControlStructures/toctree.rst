@@ -1,3 +1,5 @@
+.. index:: control structures
+
 Control Structures
 ==================
 

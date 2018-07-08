@@ -4,7 +4,7 @@
     '_static'+'/jquery-ui-1.10.3.custom.min.js',
     '_static'+'/jquery-fix.js',
     '_static'+'/bootstrap-sphinx.js',
-    'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
+    '_static'+'/bootstrap_3.3.7_custom/js/bootstrap.min.js',
     '_static'+'/waypoints.min.js',
     '_static'+'/user-highlights.js',
     '_static'+'/jquery.idle-timer.js',
@@ -20,7 +20,7 @@
   %}
 {% else %}
   {% set css_files = css_files +
-    ['https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css']
+    ['_static'+'/bootstrap_3.3.7_custom/css/bootstrap.min.css']
   %}
 {% endif %}
 
@@ -223,7 +223,7 @@
 
 {%- block footer %}
 <footer class="footer">
-  <p class="pull-right">
+  <div class="pull-right">
     {% if use_services == 'true' %}
     <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> |
     {% endif %}
@@ -232,8 +232,8 @@
       <br/>
       {% include "sourcelink.html" %}
     {% endif %}
-  </p>
-  <p>
+  </div>
+  <div>
   {%- if show_copyright %}
     {%- if hasdoc('copyright') %}
       {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
@@ -250,12 +250,11 @@
     {% trans last_updated=last_updated|e %}
       Last updated on {{ last_updated }}.
     {% endtrans %}
-    <br/>
   {%- endif %}
   {%- if show_sphinx %}
   {% trans sphinx_version=sphinx_version|e %}Created using <a href="https://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}, <a href="http://runestoneinteractive.org/">Runestone</a> {{ runestone_version }}.{% endtrans %}
   {%- endif %}
-  </p>
+  </div>
 </footer>
 
 

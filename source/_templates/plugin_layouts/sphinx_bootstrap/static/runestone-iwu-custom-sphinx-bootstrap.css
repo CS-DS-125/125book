@@ -3,18 +3,10 @@ html {
     counter-reset: activecode codelens figure;
 }
 
-body {
-    font-family: Calibri, Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13pt;
-}
 @media (max-width: 600px) {
     body {
-        font-size: 12pt;
+        font-size: 14px;
     }
-}
-/* override bootstrap's specific font size for dropdowns */
-.dropdown-menu {
-    font-size: unset;
 }
 
 /* all code, inline, pre, codemirror, etc. */
@@ -41,16 +33,7 @@ div#content-wrapper {
     flex-grow: 1;
     max-width: 100%;
     min-width: 0;  /* so flexbox will push beyond what CodeMirror might otherwise want when shrinking. */
-}
-@media (max-width: 600px) {
-    div#content-wrapper {
-        padding: 0 0.5em;
-    }
-}
-@media (min-width: 768px) {
-    div#content-wrapper {
-        padding: 0 1em;
-    }
+    padding: 0 1em;
 }
 .container  .section >*:not(.section) {
 	max-width: 500pt;
@@ -95,13 +78,6 @@ div.figure p.caption:before {
 .container  .section .parsons, .container  .section .parsons .sortable-code-container, .container  .section .ac_section, .container  .section .cd_section{
 	max-width: none !important;
 }
-.navbar>.container .navbar-brand {
-    margin-left: 0;
-}
-
-.navbar>.container  {
-    background-color: #f8f8f8;
-}
 
 .footer {
     padding: 10px;
@@ -109,15 +85,6 @@ div.figure p.caption:before {
     background-color: #eeeeee;
     font-size: 12pt;
     line-height: 1.25em;
-}
-
-.brand-logo {
-    float: left;
-    display: block;
-    background-size: 40px 40px !important;
-    width: 40px;
-    height: 40px;
-    margin-top: 4px;
 }
 
 .loggedinuser {

@@ -24,7 +24,7 @@ multiple values separated by commas between ``[`` and ``]`` symbols:
 
 .. activecode:: forloop_listdef
 
-   friends = ['Aisha', 'Beto', 'Carl', 'Donna']
+   friends = ['Aisha', 'Bo', 'Carl', 'Donna']
    print(friends)
    print(type(friends))
 
@@ -35,7 +35,7 @@ example:
 
 .. activecode:: forloop01
 
-   friends = ['Aisha', 'Beto', 'Carl', 'Donna']
+   friends = ['Aisha', 'Bo', 'Carl', 'Donna']
    for friend in friends:
        print('Happy New Year:', friend)
    print('Done!')

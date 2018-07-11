@@ -95,7 +95,7 @@ What if we just wanted to know how many *whole* hours are in 1234 minutes?  Pyth
 Modulus
 ^^^^^^^
 
-The **modulus** operator works on integers and yields the **remainder** when
+The **modulus** operator works on integers and produces the **remainder** when
 the first operand is divided by the second. In Python, the modulus operator is
 a percent sign ``%``.
 

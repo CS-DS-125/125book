@@ -2,7 +2,7 @@
    :description: An interactive textbook for CS/DS 125 - Introduction to Computer and Data Science
    :keywords: python, python3, introduction, computer science, data science
 
-CS/DS 125 Boook (Title TBD)
+CS/DS 125 Book (Title TBD)
 ===========================
 
 Table of Contents

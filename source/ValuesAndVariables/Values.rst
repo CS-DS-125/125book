@@ -272,6 +272,7 @@ exists.
       -   :str: Correct.
           :string: Correct, but the type is formally called ``str``.
           :<class 'str'>: That's technically right, but we usually just say or write ``str``.
+          :x: Incorrect.  Re-read above about data types.
 
    .. mchoice:: cyu_values02
       :multiple_answers:

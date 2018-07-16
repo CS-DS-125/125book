@@ -7,6 +7,45 @@
 Values and Data Types
 ---------------------
 
+Computers are very fast and very precise, but they don't understand things the
+way humans do. At a very deep level computers only really work with 0's and 1's. 
+Absolutely everything they do is some combination or transformation of 0's and 1's. 
+
+So for a computer, the word 'cat' is just more 0's and 1's in some particular
+configuration. If I ask a child to multiply 'cat' times 'dog', they would probably
+laugh. The answer ('cog?', 'dat?') might be amusing but the question itself doesn't
+make any sense. For a computer, since both 'cat' and 'dog' are really numbers, multiplying
+the two together doesn't seem wrong. It wouldn't know that both the question and the
+answer are nonsense.
+
+Every human has developed a bunch of mental categories that help us to understand the
+world. We have a mental category for numbers and math, and a seperate
+category for pets. We know that a square root can be applied to 92 but not to our cat.  
+Your computer doesn't have any categories at all built in, so humans have to help,
+so our interactions with computers are less likely to produce nonsense. 
+
+Any information we give to a program is called **data**. Data that is used by a program
+is almost always classified into a **data type**. 
+
+'Cat' is text information. The text data type is called **string**. 
+93 is numeric information. There are a few different numeric data types. This particular
+example's data type would be **integer**. 
+
+By classifying 'Cat' as a string and 93 as an integer, we have told the computer that
+certain kinds of actions (what we will call 'operations') make sense with one but not
+with the other. For example, if the computer knows that 'Cat' is a string, and I ask it to
+calculate the square root of cat, it will tell me I've made a mistake that can't be done
+with a string. If I ask it to capitalize 93, it will tell me I've made a mistake, that 
+can't be done with an integer.
+
+Now since we've been using these obvious examples, you might think that the data type
+issue isn't terribly important. You are not going to ask the computer to do arithmetic
+on pets. However, once you start coding you'll find these types of errors to be both
+subtle and pretty common. 
+
+So pay attention to this next bit. It's important that you become really comfortable
+with basic data types. 
+
 A **value** is any of the basic pieces of information -- like a word or a
 number -- that a program works with.  The values we have seen so far are ``1``,
 ``2``, and ``"Hello, World!"``.  Values manipulated by a program are also
@@ -204,7 +243,7 @@ exists.
 
    .. fillintheblank:: cyu_values01
 
-      For each value, write its type to the right.
+      For each value, write its type - int, float, or str - to the right.
 
       ``1234``: |blank|
 

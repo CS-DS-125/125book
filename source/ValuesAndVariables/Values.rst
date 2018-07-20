@@ -210,9 +210,15 @@ the number, called *truncation towards zero* on the number line.  For example:
     print("Printing values of different types & their conversion to ints.")
     print('The float', 3.0, 'converts to', int(3.0))
     print('The float', 3.14, 'converts to', int(3.14))
-    print('The float', 3.9999, 'converts to', int(3.9999))   # This does *not* round to the closest int!
-    print('The float', -3.999,  'converts to', int(-3.999))   # Note that the result is closer to zero
-    print('The string','"2345"',  'converts to',  int("2345")) # a string can produce an int
+    
+    # This following does *not* round to the closest int!
+    print('The float', 3.9999, 'converts to', int(3.9999))  
+    
+    # Note that the result is closer to zero
+    print('The float', -3.999,  'converts to', int(-3.999))
+    
+    # A string can also produce an int
+    print('The string','"2345"',  'converts to',  int("2345")) 
 
 Python won't always succeed in converting from one data type to another.
 
@@ -230,10 +236,10 @@ string into a float.
     :nocanvas:
 
     print("Printing values of different types & their conversion to floats.")
-    print('The integer',123, float(123))
-    print('The string','"123"', float("123"))
-    print('The string','"123.45"', float("123.45"))
-    print('The float',123.45, float(123.45))
+    print('The integer',123, 'converts to', float(123))
+    print('The string','"123"', 'converts to', float("123"))
+    print('The string','"123.45"', 'converts to', float("123.45"))
+    print('The float',123.45, 'converts to', float(123.45))
 
 And finally, ``str()`` can convert just about anything into a string.  The
 applications of this are a bit less common, but it's worth remembering it

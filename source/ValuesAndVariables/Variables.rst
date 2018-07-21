@@ -9,7 +9,8 @@ ability to manipulate **variables**.
 
 .. admonition:: Definition
 
-   A variable is a name that refers to a value.
+   A variable is a name that is used to represent a value that can change when
+   a program is run.
 
 .. index:: assignment
 .. index::
@@ -18,7 +19,7 @@ ability to manipulate **variables**.
 Variable Assignment
 ^^^^^^^^^^^^^^^^^^^
 
-**Assignment statements** create new variables and give them values:
+**Assignment statements** both create new variables and give them values:
 
 .. code:: python
 
@@ -60,19 +61,20 @@ So what happens if you get it backwards?  Try running this:
 
    **Assignment is not equality.**
 
-   Though assignment uses the ``=`` sign, do not think of it as "equality."
+   Though assignment uses the ``=`` sign, do not think of it as "equals."
    Writing ``n = 17`` does *not* mean "n equals 17," at least not forever.
    Remember that ``n`` is a *variable*, and so it can change.
  
    The statement ``n = 17`` means, and you should read it as, "n is assigned
-   the value 17" or "n gets 17."  This also clarifies why ``17 = n`` is
-   invalid: "17 gets n" doesn't make sense.
+   the value 17" or "n gets 17."  
+   
+   This also explains why ``17 = n`` is invalid: "17 gets n" doesn't make sense.
 
-It can be very useful to *visualize* how programs work and make that part of
-your mental mode of code.  When visualizing variable assignments, its common to
+It can be very useful to *visualize* how programs work to understand them better.
+When visualizing variable assignments, its common to
 think of them as connections or arrows leading *from* a variable's name *to*
-the value that it references.  The figure below is an illustration of this
-visualization for the three variables in the example code above.
+the value that it references.  The figure below illustrates this for the three
+variables in the example code above.
 
 .. figure:: figs/variables_visual.svg
    :alt: Visual representation of variables referencing values.
@@ -80,7 +82,9 @@ visualization for the three variables in the example code above.
 
    A visual representation of variables referencing values.
 
-To output the value of a variable, you can use a print statement:
+To output the value of a variable, you can use a print statement. If you are
+working in a notebook on an interpreter, you can simply enter the variable 
+to return its value. 
 
 .. activecode:: variables02
 
@@ -166,8 +170,8 @@ of the value it refers to.
 Variable Names and Keywords
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Programmers generally choose names for their variables that are meaningful and
-document what the variable is used for.
+Programmers should choose names for variables that are meaningful and
+help others understand what the variable is used for in the program.
 
 Python has syntax rules about valid variable names.  If you don't follow these
 rules, you will either get a syntax error *or* a semantic error: you might
@@ -196,7 +200,7 @@ such as ``my_name`` or ``airspeed_of_unladen_swallow``.  Variable names can
 start with an underscore character, but we generally avoid doing this unless we
 are writing library code for others to use.
 
-If you give a variable an illegal name, you get a syntax error.  In this code,
+If you give a variable an illegal name, you will get a syntax error.  In this code,
 each of the variable names is illegal.
 
 ::

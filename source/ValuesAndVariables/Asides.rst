@@ -11,7 +11,7 @@ Comments
 ::::::::
 
 As programs get bigger and more complicated, they get more difficult to
-read. Formal languages are dense, and it is often difficult to look at a
+read. Programming languages are dense, and it is often difficult to look at a
 piece of code and figure out what it is doing, or why.
 
 For this reason, it is a good idea to add notes to your programs to
@@ -30,8 +30,8 @@ comments at the end of a line:
 
    percentage = (minute * 100) / 60     # percentage of an hour
 
-Everything from the ``#`` to the end of the line is ignored; it has no
-effect on the program.
+Everything from the ``#`` to the end of the line is ignored by the computer
+so it has no effect on the program.
 
 Comments are most useful when they document non-obvious features of the
 code. It is reasonable to assume that the reader can figure out *what*
@@ -60,7 +60,7 @@ Debugging
 
 A simple fact of programming is that code almost never works the first time.
 **Debugging**, the process of finding and fixing **bugs** (errors) in code, is
-a critical part of the process.  In order to debug your code, you have to first
+a critical part of programming.  To debug your code, you have to first
 understand *what* has gone wrong, then try to figure out *why*.
 
 .. admonition:: Three Steps for Debugging
@@ -96,7 +96,7 @@ Syntax Errors
 ^^^^^^^^^^^^^
 
 **Syntax errors** are errors in the form of the code itself, when it doesn't
-conform to the the syntax rules of the language.
+conform to the the syntax rules of the programming language.
 
 For example, if you put a space in a variable name, Python thinks it is two operands
 without an operator, which is invalid:
@@ -161,7 +161,7 @@ occurred.  However, that line is not necessarily the location of the bug
 itself.  The code might have done something wrong earlier that only resulted in
 an invalid operation later on, and Python won't know that.  You may have to
 spend more time comparing details of what the program *should* do and what it
-*does* do to debug these.
+*does* do to debug runtime errors.
 
 
 .. index:: semantic error

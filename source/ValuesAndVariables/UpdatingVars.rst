@@ -6,26 +6,32 @@ Updating Variables
 
 A common pattern in assignment statements is an assignment statement
 that updates a variable, where the new value of the variable depends on
-the old.
+the old value of the variable. 
 
 .. code:: python
 
    x = x + 1
 
-This is the type of statement that makes little sense in mathematics (unless x
-is :math:`\infty` perhaps), but remember: :ref:`assignment is not equality
-<assignment-is-not-equality>`.  According to the :ref:`assignment statement
-syntax pattern <assignment-statement>`, this is interepreted by *first* evaluating the expression on the right, ``x + 1``, and *then* assigning that value to ``x``.  So the statement means "get the current value of
+As a math equation this doesn't make a lot of sense, (unless x
+is :math:`\infty`, but this works in programming beause :ref:`
+assignment is not equality <assignment-is-not-equality>`.
+
+According to the :ref:`assignment statement syntax pattern <assignment-statement>`,
+the computer will *first* evaluate the expression on the right, ``x + 1``,
+and *then* assign that value to ``x``.
+
+So the statement means "get the current value of
 ``x``, add 1 to it, and then update ``x`` with the new value."
 
-If you try to update a variable that doesn’t exist, you get an error,
-because Python evaluates the right side before it assigns a value to
-``x``:
+If x doesn't exist yet and has no value this staement will give you 
+an error. Python will evaluate the right side and be unable to proceed.
+Try this:
 
 .. activecode:: updatingvars01
 
    x = x + 1
 
+What's missing?
 Before you can update a variable, you have to *initialize* it, usually
 with a simple assignment:
 

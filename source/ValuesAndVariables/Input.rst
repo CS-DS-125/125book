@@ -58,7 +58,7 @@ correctly:
    print("That is", days, "days!")
 
 Often we put the conversion function in the input statement itself.
-Below the first line of program both asks for user input and converts
+Below, the first line of the program both asks for user input and converts
 that input to an ``int``. 
 
 A corrected version of the above example:
@@ -80,10 +80,10 @@ A corrected version of the above example:
    checking, so you should be careful to provide appropriate inputs when you
    run it.
 
-To make it more useful, we can add an input statement our previous 
-program that converted days to hours and weeks to be more useful.
+To make it more useful, we can add an input statement to our previous 
+program that converted days to hours and weeks to make it more useful.
 
-Here, I've separated out the type conversion from the input statement to
+Below, we've separated out the type conversion from the input statement to
 make the two separate functions more explicit:
 
 .. activecode:: input_example
@@ -106,7 +106,7 @@ make the two separate functions more explicit:
    print(minutes, "minutes")
    print(weeks, "weeks and", remaining_days, "days")
 
-In the program above the variable ``str_days`` refers to the string
+In the program above, the variable ``str_days`` refers to the string
 that is entered by the user. Even though this string may be ``100``,
 it is still a string of characters ('1', '0', and '0') and not a
 number when it is entered by the user.

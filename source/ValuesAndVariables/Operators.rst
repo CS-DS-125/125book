@@ -17,11 +17,14 @@ like addition and multiplication. The values the operator is applied to are
 called **operands**.  For example, in the expression ``5 + 10``, the operator is
 ``+``, and the values ``5`` and ``10`` are operands.
 
-The tokens ``+`` and ``-`` and the use of parentheses for grouping mean in
-Python what they mean in arithmetic.  Multiplication, division, and exponentiation
+Python uses``+`` and ``-`` and parentheses (for grouping) in the same way they
+are used in arithmetic.
+
+Multiplication, division, and exponentiation
 use ``*``, ``/``, and ``**``, respectively.  So ``3 * 4`` is "three times four"
-and ``3 ** 4`` is "three raised to the fourth power" or :math:`3^4`.  The follow
-code shows the results of various expressions involving these operators.
+and ``3 ** 4`` is "three raised to the fourth power" or :math:`3^4`.
+
+The following code demonstrates the use of operators.
 
 .. activecode:: operators01
 
@@ -36,7 +39,10 @@ code shows the results of various expressions involving these operators.
 
 When more than one operator appears in an expression, the order of
 evaluation depends on the *rules of precedence*.  For mathematical
-operators, Python follows mathematical convention.
+operators, Python follows mathematical convention:
+
+Parentheses, Exponentiation, Multiplication and Division,
+Addition and Subtraction.
 
 .. tip::
 
@@ -123,9 +129,9 @@ happens):
        if (i % 9) == 0:
            print(i, "is divisible by 9!")
 
-You can also extract the right-most digit or digits from a number. For example,
-``x % 10`` yields the right-most digit of ``x`` (in base 10).  Similarly, ``x %
-100`` yields the last two digits.
+You can also get the right-most digit or digits from a number using modulus.
+For example,``x % 10`` give you the right-most digit of ``x`` (in base 10).
+Similarly, ``x %100`` gives you the last two digits of ``x``.
 
 .. activecode:: operators07
 
@@ -156,9 +162,7 @@ the strings by linking them end to end. For example:
    print(first + second)
 
 The ``*`` operator also works with strings if applied to a string and an
-integer.  In this case, the operation is called **string repetition**, as it
-produces a new string that has repeated the left operand the number of times of
-the left operand:
+integer.  In this case, the operation is called **string repetition**.
 
 .. activecode:: operators09
 
@@ -186,12 +190,21 @@ Table of Operators
 Example
 ^^^^^^^
 
-Let's say we have a number of days, and we want to know how long that is in other units of time.  We know there are 24 hours in a day, 60 minutes in an hour, and 7 days in a week.
+Let's say we have a number of days, and we want to know how long that
+is in other units of time. For example, what is 17 days in hours? 
+What is 17 days in weeks?
 
-Converting to hours and minutes can be done with multiplication.  ``days * 24``
-is the total number of hours, for example.  But what if we want something a bit
-more complicated, like converting days into weeks plus days?  That is, if
-``days`` is 17, we'd like to calculate that that is 2 weeks and 3 days.  That's where integer division and modulus can come in.
+Converting to hours can be done with multiplication. If we set
+``days = 17``, and then enter the code ``hours = days * 24`` the
+computer would calculate our answer. 
+
+But what if we want something a bit more complicated, like 
+converting days into weeks plus days?  For example, how could
+we write a program where we enter ``days = 17`` and it then
+tells us: ``2 weeks and 3 days``?
+
+See if you can figure out how the code below uses division and
+modulus to get the make this conversion.  
 
 .. activecode:: operators_example
 

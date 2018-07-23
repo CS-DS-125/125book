@@ -4,9 +4,11 @@ Expressions
 -----------
 
 An **expression**, like we just saw in the :ref:`assignment statement syntax
-pattern <assignment-statement>`, is a combination of values, variables,
-operators, and function calls (which we'll learn more about in a bit). A value
-all by itself is considered an expression (called a **literal**), and so is a
+pattern <assignment-statement>`, is values, variables,
+operators, and function calls (which we'll learn more about in a bit)
+either by themselves or in combination with one another. 
+
+A value all by itself is considered an expression (called a **literal**), and so is a
 variable, so the following are all legal expressions (assuming that the
 variable ``x`` has been assigned a value):
 
@@ -34,12 +36,14 @@ following code outputs?
    x + 1
    len("Hi there!")
 
-If you guessed *nothing*, you were right!  Or you might have guessed the code
-would output 6, 7, and 9, because those are the values of the expressions on
-each line.  But an expression by itself doesn't output anything.  This is a
-common source of confusion for beginners.
+Are you surprised it outputs *nothing*? 
 
-To see the value of an expression, we can use the ``print()`` function:
+You might have guessed the code would output 6, 7, and 9, because those
+are the values of the expressions on each line.  But an expression by
+itself doesn't output anything.  This is a common source of confusion
+when you first start to code.
+
+To see the value of an expression, we use the ``print()`` function:
 
 .. activecode:: expressions02
 
@@ -48,7 +52,9 @@ To see the value of an expression, we can use the ``print()`` function:
    print(x + 1)
    print(len("Hi there!"))
 
-Then what *does* an expression do?  We have to understand Python's syntax rule
+So expression don't automatically create output. Then what *does* an expression do?
+
+To answer this questions, we have to understand Python's syntax rule
 for expressions.
 
 .. admonition:: Syntax Rule

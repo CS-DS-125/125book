@@ -19,6 +19,8 @@ comment
    anyone reading the source code) and has no effect on the execution of
    the program.
 
+.. index:: !evaluate
+
 evaluate
    To simplify an expression by performing the operations in order to
    yield a single value.
@@ -46,13 +48,15 @@ keyword
    cannot use keywords like ``if``, ``def``, and ``while`` as variable
    names.
 
+.. index:: !mnemoic
+
 mnemonic
    A memory aid. We often give variables mnemonic names to help us
    remember what is stored in the variable.
 
 .. index:: !modulus
 
-modulus operator
+modulus
    An operator, denoted with a percent sign (``%``), that works on
    integers and yields the remainder when one number is divided by
    another.
@@ -67,6 +71,8 @@ operand
 operator
    A special symbol that represents a simple computation like addition,
    multiplication, or string concatenation.
+
+.. index:: !rules of precedence
 
 rules of precedence
    The set of rules governing the order in which expressions involving

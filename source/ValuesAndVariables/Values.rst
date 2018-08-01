@@ -223,6 +223,7 @@ the number, called *truncation towards zero* on the number line.  For example:
 Python won't always succeed in converting from one data type to another.
 
 .. activecode:: typeconv02
+
     # What will this do?
     print('"23bottles"', int("23bottles"))
 

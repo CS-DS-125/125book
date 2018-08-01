@@ -20,4 +20,5 @@ complex analyses.
    WhileLoops
    Booleans
    LoopControl
+   LoopPatterns
    Glossary

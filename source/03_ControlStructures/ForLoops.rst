@@ -29,7 +29,7 @@ multiple values separated by commas between ``[`` and ``]`` symbols:
    print(type(friends))
 
 When we have a list of things to loop through, we can construct a **for loop**
-using a ``for`` statement.  A for loop starts with a for statement and includes
+using a ``for`` statement.  A for loop starts with a ``for`` statement and includes
 one or more indented lines below it that make up the **loop body**.  For
 example:
 
@@ -52,6 +52,8 @@ and ``friend`` and ``friends`` are variables.  In particular, ``friend`` is the
 ``friend`` changes for each iteration of the loop and controls when the ``for``
 loop completes. The loop variable successively gets each of the strings stored
 in the ``friends`` variable in order.
+
+.. _for-loop-syntax:
 
 .. admonition:: Syntax Pattern
 

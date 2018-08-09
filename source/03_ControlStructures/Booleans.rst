@@ -1,18 +1,44 @@
+.. index:: Boolean
+
 Booleans
 --------
 
-.. index:: boolean expression
+We've seen ``<condition>`` in two patterns so far: the conditional (``if``
+statements) and the while loop.  Until now, we've just said that it should be
+an expression that evaluates to ``True`` or ``False`` without going into much
+detail.  It turns out that there is a specific *data type* that is used for
+these values (``True`` and ``False``) and for the expressions used in conditions:
+the **Boolean** data type.
 
-.. index:: expression!boolean
+.. activecode:: boolean01
 
-.. index:: logical operator
+   print(type(True))
+   print(type(False))
 
-.. index:: operator!logical
+.. index:: True, False, bool type, type;bool
 
-A *boolean expression* is an expression that is either true or false.
-The following examples use the operator ``==``, which compares two
-operands and produces ``True`` if they are equal and ``False``
-otherwise:
+``True`` and ``False`` are the only two values that this ``bool`` data type can have.
+Note that they are *not* strings; they aren't written in quotation marks.
+
+.. index:: Boolean expression, comparison operator, operator;comparison
+
+Comparison Operators
+^^^^^^^^^^^^^^^^^^^^
+
+So if every condition for an ``if`` or ``while`` statement needs to evaluate to a
+Boolean value, how do we write expressions that produce the correct type?
+We've already seen some examples:
+
+.. code:: python
+
+   x < y
+   n > 0
+   choice == 'a'
+
+These are **Boolean expressions**, meaning they each evaluate to a Boolean
+value.  Each of those expressions is an *operator* with two *operands*.  The
+``==`` operator compares two operands and produces ``True`` if their values are
+equal and ``False`` otherwise:
 
 .. code:: python
 
@@ -20,201 +46,105 @@ otherwise:
    True
    >>> 5 == 6
    False
-   {}
+   >>> x = 'hello'
+   >>> y = 'hello'
+   >>> x == y
+   True
 
-``True`` and ``False`` are special values that belong to the class
-``bool``; they are not strings:
+The complete list of comparison operators:
 
+================ ===============================
+Operator         Interpretation
+================ ===============================
+``x == y``       x is equal to y
+``x != y``       x is not equal to y
+``x > y``        x is greater than y
+``x < y``        x is less than y
+``x >= y``       x is greater than or equal to y
+``x <= y``       x is less than or equal to y
+================ ===============================
 
-.. index:: True special value
+.. caution::
 
-.. index:: False special value
+   Although these operations are probably familiar to you, the Python symbols are
+   different from the mathematical symbols for the same operations. A common error
+   is to use a single equal sign (``=``) instead of a double equal sign (``==``).
+   But ``=`` is an assignment operator and ``==`` is a comparison operator.
 
-.. index:: special value!True
+   **Remember:** ``=`` is *setting* something equal to a value, while ``==`` is
+   *asking a question* about whether two things *are* equal.
 
-.. index:: special value!False, bool type
-
-.. index:: type!bool
-
-.. code:: python
-
-   >>> type(True)
-   <class 'bool'>
-   >>> type(False)
-   <class 'bool'>
-
-The ``==`` operator is one of the *comparison operators*; the others
-are:
-
-.. code:: python
-
-   x != y               # x is not equal to y
-   x > y                # x is greater than y
-   x < y                # x is less than y
-   x >= y               # x is greater than or equal to y
-   x <= y               # x is less than or equal to y
-   x is y               # x is the same as y
-   x is not y           # x is not the same as y
-
-Although these operations are probably familiar to you, the Python
-symbols are different from the mathematical symbols for the same
-operations. A common error is to use a single equal sign (``=``) instead
-of a double equal sign (``==``). Remember that ``=`` is an assignment
-operator and ``==`` is a comparison operator. There is no such thing as
-``=<`` or ``=>``.
+   Also, there is no such thing in Python as ``=<`` or ``=>``.  They're always
+   written like they're most commonly said aloud: e.g., ``<=`` is "less than or
+   equal to."
 
 
-.. index:: comparison operator
+.. index:: logical operator, operator;logical
+.. index:: and operator, or operator, not operator
 
-.. index:: operator!comparison
-
-Logical operators
+Logical Operators
 ^^^^^^^^^^^^^^^^^
 
+Sometimes we need a condition to depend on more than one comparion.  For
+example, what if we wanted a while loop to continue as long as one variable was
+greater than 5 and another was less than 5?  In Python, we can *often* (though
+certainly not always!) write a condition just as we would say it in English:
 
-.. index:: logical operator
+.. activecode:: boolean02
 
-.. index:: operator!logical
+   x = 8
+   y = 3
+   while x > 5 and y < 5:
+      print("Still going!  x is", x, "and y is", y)
+      x = x - 1
+      y = y + 1
+   print("Done.  x is", x, "and y is", y)
 
-There are three *logical operators*: ``and``, ``or``, and ``not``. The
-semantics (meaning) of these operators is similar to their meaning in
-English. For example,
+There are three **logical operators**: ``and``, ``or``, and ``not``. The
+semantics (meaning) of these operators is similar to their meaning in English.
+For example,
 
 ``x > 0 and x < 10``
 
 is true only if ``x`` is greater than 0 *and* less than 10.
 
+``n%2 == 0 or n%3 == 0`` is true if *either* of the conditions is true, that
+is, if the number is divisible by 2 *or* 3.
 
-.. index:: and operator, or operator
+Finally, the ``not`` operator negates a boolean expression, so ``not (x > y)``
+is true if ``x > y`` is false; that is, if ``x`` is less than or equal to
+``y``.
 
-.. index:: not operator, operator!and
+.. caution::
 
-.. index:: operator!or, operator!not
+   One common mistake for beginning programmers is to write conditions like this:
 
-``n%2 == 0 or n%3 == 0`` is true if *either* of the conditions is true,
-that is, if the number is divisible by 2 *or* 3.
+   .. code:: python
+   
+      x > 0 and < 10
 
-Finally, the ``not`` operator negates a boolean expression, so
-``not (x > y)`` is true if ``x > y`` is false; that is, if ``x`` is less
-than or equal to ``y``.
-
-Strictly speaking, the operands of the logical operators should be
-boolean expressions, but Python is not very strict. Any nonzero number
-is interpreted as "true."
-
-.. code:: python
-
-   >>> 17 and True
-   True
-
-This flexibility can be useful, but there are some subtleties to it that
-might be confusing. You might want to avoid it until you are sure you
-know what you are doing.
-
-
-
-
+   You might want to read that as "x is greater than 0 and less than 10."  But
+   in Python, this is *invalid syntax*!  Remember that ``and`` is an operator
+   that takes two *independent* operands.  ``x > 0`` is a valid expression that
+   will evaluate to ``True`` or ``False``, but ``< 10`` is not a valid
+   expression!
 
 Logical operators often provide a way to simplify nested conditional
-statements. For example, we can rewrite the following code using a
-single conditional:
+statements. For example, we can rewrite the following code using a single
+conditional:
 
-.. code:: python
+.. activecode:: boolean03
 
+   x = int(input("Please enter an integer: "))
    if 0 < x:
        if x < 10:
-           print('x is a positive single-digit number.')
+           print("x is a positive single-digit number.")
 
-The ``print`` statement is executed only if we make it past both
-conditionals, so we can get the same effect with the ``and`` operator:
+The ``print`` statement is executed only if we make it past both conditionals,
+so we can get the same effect with the ``and`` operator:
 
-.. code:: python
+.. activecode:: boolean04
 
+   x = int(input("Please enter an integer: "))
    if 0 < x and x < 10:
-       print('x is a positive single-digit number.')
-
-
-
-Short-circuit evaluation of logical expressions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-.. index:: short circuit
-
-When Python is processing a logical expression such as
-``x >= 2 and (x/y) > 2``, it evaluates the expression from left to
-right. Because of the definition of ``and``, if ``x`` is less than 2,
-the expression ``x >= 2`` is ``False`` and so the whole expression is
-``False`` regardless of whether ``(x/y) > 2`` evaluates to ``True`` or
-``False``.
-
-When Python detects that there is nothing to be gained by evaluating the
-rest of a logical expression, it stops its evaluation and does not do
-the computations in the rest of the logical expression. When the
-evaluation of a logical expression stops because the overall value is
-already known, it is called *short-circuiting* the evaluation.
-
-
-.. index:: guardian pattern
-
-.. index:: pattern!guardian
-
-While this may seem like a fine point, the short-circuit behavior leads
-to a clever technique called the *guardian pattern*. Consider the
-following code sequence in the Python interpreter:
-
-.. code:: python
-
-   >>> x = 6
-   >>> y = 2
-   >>> x >= 2 and (x/y) > 2
-   True
-   >>> x = 1
-   >>> y = 0
-   >>> x >= 2 and (x/y) > 2
-   False
-   >>> x = 6
-   >>> y = 0
-   >>> x >= 2 and (x/y) > 2
-   Traceback (most recent call last):
-     File "<stdin>", line 1, in <module>
-   ZeroDivisionError: division by zero
-   >>>
-
-The third calculation failed because Python was evaluating ``(x/y)`` and
-``y`` was zero, which causes a runtime error. But the second example did
-*not* fail because the first part of the expression ``x >= 2`` evaluated
-to ``False`` so the ``(x/y)`` was not ever executed due to the
-*short-circuit* rule and there was no error.
-
-We can construct the logical expression to strategically place a *guard*
-evaluation just before the evaluation that might cause an error as
-follows:
-
-.. code:: python
-
-   >>> x = 1
-   >>> y = 0
-   >>> x >= 2 and y != 0 and (x/y) > 2
-   False
-   >>> x = 6
-   >>> y = 0
-   >>> x >= 2 and y != 0 and (x/y) > 2
-   False
-   >>> x >= 2 and (x/y) > 2 and y != 0
-   Traceback (most recent call last):
-     File "<stdin>", line 1, in <module>
-   ZeroDivisionError: division by zero
-   >>>
-
-In the first logical expression, ``x >= 2`` is ``False`` so the
-evaluation stops at the ``and``. In the second logical expression,
-``x >= 2`` is ``True`` but ``y != 0`` is ``False`` so we never reach
-``(x/y)``.
-
-In the third logical expression, the ``y != 0`` is *after* the ``(x/y)``
-calculation so the expression fails with an error.
-
-In the second expression, we say that ``y != 0`` acts as a *guard* to
-insure that we only execute ``(x/y)`` if ``y`` is non-zero.
-
+       print("x is a positive single-digit number.")

@@ -17,7 +17,7 @@ like addition and multiplication. The values the operator is applied to are
 called **operands**.  For example, in the expression ``5 + 10``, the operator is
 ``+``, and the values ``5`` and ``10`` are operands.
 
-Python uses``+`` and ``-`` and parentheses (for grouping) in the same way they
+Python uses ``+`` and ``-`` and parentheses (for grouping) in the same way they
 are used in arithmetic.
 
 Multiplication, division, and exponentiation

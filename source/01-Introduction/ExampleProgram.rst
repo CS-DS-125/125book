@@ -15,7 +15,8 @@ co-occur with a product name and tracking how often these co-occurences happen o
 We are going to look at a really basic program that is designed to analyze text
 and tell us something about it. 
 
-The file below contains the opening lines of :title:`A Tale of Two Cities` by Charles Dickens.  
+The file below contains the opening lines of :title:`A Tale of Two Cities` by
+Charles Dickens (`source <https://www.gutenberg.org/ebooks/98>`_).
 
 .. datafile:: atotc_opening.txt
    :edit:

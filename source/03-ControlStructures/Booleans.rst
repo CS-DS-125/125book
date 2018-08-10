@@ -125,9 +125,11 @@ is true if ``x > y`` is false; that is, if ``x`` is less than or equal to
 
    You might want to read that as "x is greater than 0 and less than 10."  But
    in Python, this is *invalid syntax*!  Remember that ``and`` is an operator
-   that takes two *independent* operands.  ``x > 0`` is a valid expression that
-   will evaluate to ``True`` or ``False``, but ``< 10`` is not a valid
-   expression!
+   that takes two *independent* operands, one on each side.
+ 
+   On the left side of the ``and``, ``x > 0`` is a valid expression that will
+   evaluate to ``True`` or ``False``, but on the right side, ``< 10`` is not a
+   valid expression!
 
 Logical operators often provide a way to simplify nested conditional
 statements. For example, we can rewrite the following code using a single

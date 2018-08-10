@@ -103,7 +103,10 @@ value themselves.  The last line entered by the user, ``print(word1, word2)``
 does have an output below it, which is the result of evaluating that line.
 
 If you want to try out a Python REPL yourself, you can access one online at
-`https://www.python.org/shell/ <https://www.python.org/shell/>`_.
+`https://www.python.org/shell/ <https://www.python.org/shell/>`_.  Or, if you
+have Python installed on your own computer, you may be able to access its REPL
+by running the ``python3`` command in a Terminal or Command Prompt (details
+depend on your operating system).
 
 .. index:: syntax
 

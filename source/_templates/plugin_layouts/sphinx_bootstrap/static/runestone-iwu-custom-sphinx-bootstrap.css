@@ -82,7 +82,8 @@ div.figure p.caption:before {
 .footer {
     padding: 10px;
     margin-top: 15px;
-    background-color: #eeeeee;
+    background-color: #eee;
+    color: #777;
     font-size: 12pt;
     line-height: 1.25em;
 }

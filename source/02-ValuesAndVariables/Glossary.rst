@@ -19,6 +19,11 @@ comment
    anyone reading the source code) and has no effect on the execution of
    the program.
 
+.. index:: !decrement
+
+decrement
+   An update that decreases the value of a variable.
+
 .. index:: !evaluate
 
 evaluate
@@ -35,6 +40,11 @@ expression
 
 floating point
    A type that represents numbers with fractional parts.
+
+.. index:: !increment
+
+increment
+   An update that increases the value of a variable (often by one).
 
 .. index:: !integer
 
@@ -95,6 +105,11 @@ type
    A category of values. The types we have seen so far are integers
    (type ``int``), floating-point numbers (type ``float``), and strings
    (type ``str``).
+
+.. index:: !update
+
+update
+   An assignment to a variable that already has a value, giving it a new one.
 
 .. index:: !value
 

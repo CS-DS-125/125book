@@ -3,10 +3,10 @@
 Expressions
 -----------
 
-An **expression**, like we just saw in the :ref:`assignment statement syntax
-pattern <assignment-statement>`, is values, variables,
-operators, and function calls (which we'll learn more about in a bit)
-either by themselves or in combination with one another. 
+**Expressions**, like we just saw in the :ref:`assignment statement syntax
+pattern <assignment-statement>`, are values, variables, operators, and function
+calls (which we'll learn more about in a bit) either by themselves or in
+combination with one another. 
 
 A value all by itself is considered an expression (called a **literal**), and so is a
 variable, so the following are all legal expressions (assuming that the

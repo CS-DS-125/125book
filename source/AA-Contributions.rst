@@ -2,10 +2,10 @@
 Contributions
 =============
 
-This book has a long, *long* list of past authors and contributors.  It has
-been adapted and updated over many years and many versions.  The following
-includes contributors and prefaces from previous versions from which this book
-has grown.
+Portions of this book have long, *long* lists of past authors and contributors.
+They have been adapted and updated over many years and many versions.  The
+following includes contributors and prefaces from previous versions from which
+this book has grown.
 
 Preface for *Python for Everybody*
 ----------------------------------

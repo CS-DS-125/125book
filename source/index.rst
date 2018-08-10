@@ -12,9 +12,11 @@ Table of Contents
    :numbered:
    :maxdepth: 2
 
-   01_Introduction/toctree
-   02_ValuesAndVariables/toctree
-   03_ControlStructures/toctree
+   01-Introduction/toctree
+   02-ValuesAndVariables/toctree
+   03-ControlStructures/toctree
+   04-Functions/toctree
+   05-ObjectsAndVisualization/toctree
 
 Appendices
 ::::::::::

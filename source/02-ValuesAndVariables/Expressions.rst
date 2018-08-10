@@ -45,7 +45,7 @@ are the values of the expressions on each line.  But an expression by
 itself doesn't output anything.  This is a common source of confusion
 when you first start to code.
 
-To see the value of an expression, we use the ``print()`` function:
+To see the value of an expression, we can use the ``print()`` function:
 
 .. activecode:: expressions02
 
@@ -54,14 +54,12 @@ To see the value of an expression, we use the ``print()`` function:
    print(x + 1)
    print(len("Hi there!"))
 
-So expression don't automatically create output. Then what *does* an expression do?
-
-To answer this questions, we have to understand Python's syntax rule
-for expressions.
+So expressions don't automatically create output. Then what *does* Python do
+with an expression?  It **evaluates** it.
 
 .. admonition:: Syntax Rule
 
-   In Python, any expression, anywhere in the program, is **evaluated** to
+   In Python, any expression, anywhere in the program, will be **evaluated** to
    produce a value.  That value is then used *in place of* the expression as
    the statement it is in executes.
 

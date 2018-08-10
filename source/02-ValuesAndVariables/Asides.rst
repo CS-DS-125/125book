@@ -1,5 +1,5 @@
-Asides
-------
+Asides (Good Coding Practices)
+------------------------------
 
 Now is a good time to talk briefly about some good coding practices.
 These are things that will help you write better code

@@ -12,6 +12,8 @@ A value all by itself is considered an expression (called a **literal**), and so
 variable, so the following are all legal expressions (assuming that the
 variable ``x`` has been assigned a value):
 
+.. index:: len()
+
 .. code:: python
 
    17

@@ -95,7 +95,7 @@ What if we just wanted to know how many *whole* hours are in 1234 minutes?  Pyth
     print(whole_hours)
 
 
-.. index:: modulus (%), remainder (%)
+.. index:: modulus, remainder
    single: %; modulus / remainder
 
 Modulus

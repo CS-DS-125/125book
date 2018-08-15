@@ -88,8 +88,8 @@ Strings
 
 Python is using quotation marks to figure out what is a string and what is not.
 What happens when we want to use a quotation mark as part of a string? Any
-contraction, like I'm, or possessive, like her's, included in a string would
-would cause Python to think the string had ended. We can get around this by
+contraction or possessive included in a string (like "I'm" or "Alice's") 
+could cause Python to think the string had ended. We can get around this by
 starting and ending a string with different types of quotation marks.
 
 Strings enclosed in one kind of quote symbol can *contain* the other kind.

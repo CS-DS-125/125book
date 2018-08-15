@@ -84,7 +84,7 @@ div.figure p.caption:before {
     margin-top: 15px;
     background-color: #eee;
     color: #777;
-    font-size: 12pt;
+    font-size: 90%;
     line-height: 1.25em;
 }
 

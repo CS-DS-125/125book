@@ -7,5 +7,5 @@ Introduction
    WhatIsThisCourse
    WhatIsCS
    WhatIsDS
-   ExampleProgram
    Conventions
+   ExampleProgram

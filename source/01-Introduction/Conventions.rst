@@ -109,6 +109,7 @@ by running the ``python3`` command in a Terminal or Command Prompt (details
 depend on your operating system).
 
 .. index:: syntax
+.. _syntax-definition:
 
 Syntax patterns
 ^^^^^^^^^^^^^^^

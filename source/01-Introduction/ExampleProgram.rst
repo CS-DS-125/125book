@@ -54,6 +54,8 @@ running it!
 
 .. activecode:: wordcount_example
 
+   # Count words in a file starting with a given letter.
+
    countchar = 'w'
 
    file = open("atotc_opening.txt")
@@ -75,19 +77,56 @@ Unless you've had some programming before, this code probably looks like nonsens
 to you. By the time you're done with the class you'll be able to read this code
 and write similar programs for yourself. 
 
-Let's take a look at the code and start to get a rough sense of how programs work.
-The first line of code is telling the computer which character to look for
-in the text. Change the letter and re-run the code to see what kind of answer you
-get. (If you want to tinker a bit, see if uppercase and lowercase versions
-of the same letter give you the same result. Try replacing one letter with two,
-like "th" and see if it works.)
+Let's take a look at the code and start to get a rough sense of how programs
+work.  We'll point out and name some of the basic parts of Python programs
+here, and most of them will be discussed in depth in the next few chapters.
 
-The second line of code tells the computer where to find the data and opens up the
-data to be analyzed.
+.. index:: comment
 
-The rest of the program goes through every word in the text file and counts each
-word that starts with the letter we specified. The final line prints a statement
-with the result.
+The very first line is a **comment**:
+
+.. code:: python
+
+   # Count words in a file starting with a given letter.
+
+Programs are instructions for the computer to follow, but this isn't an
+instruction at all!  Comments are *ignored* by the computer when it executes
+the program, and we write them for *ourselves*.  They let us include extra
+information about the program that can help us or others reading our code
+understand what it is doing or why we have written the code that way.
+
+So how does the computer know that this is just a comment and not an
+instruction?  The ``#`` character ("hash mark," "pound sign," "octothorpe"...
+call it what you like) is the key.  The :ref:`syntax <syntax-definition>` of
+the Python language includes a rule that states that anything following a ``#``
+character is a comment.  So we have our first syntax pattern:
+
+.. admonition:: Syntax Pattern
+
+   **Comments** in Python start with a ``#`` character.
+
+   Comments (anything following the ``#`` character on a line) will be ignored
+   by Python when executing the program.
+
+The next line of the program ``countchar = 'w'`` is an example of *assigning a
+value to a variable*, also known as an *assignment*.  Here, it is telling the
+computer which character to look for in the text.  Change the letter and re-run
+the code to see what kind of answer you get. (If you want to tinker a bit, see
+if uppercase and lowercase versions of the same letter give you the same
+result. Try replacing one letter with two, like ``'th'`` and see if it works.)
+
+The following line of code ``file = open("atotc_opening.txt")`` tells the
+computer where to find the data and opens up the data to be analyzed.  It is
+another example of assigning a value to a variable (you can see that it shares
+the ``=`` symbol with the previous line), and it has a *function call*, where
+the name ``open`` is followed by parentheses ``(`` ``)``.
+
+The rest of the program involves more assignments and function calls (see if
+you can see where those patterns are repeated), a *for loop* (that executes a
+set of instructions repeatedly), and a *conditional* (starting with ``if``).
+With these, the program goes through every word in the text file and counts
+each word that starts with the letter we specified. The final line prints a
+statement with the result.
 
 You can tinker with the different lines to make the program do other things. You
 could make it say something else by replacing 'words start with' in the last line.
@@ -107,10 +146,12 @@ and then check to make sure the program counts them correctly when you re-run it
    repeat.  Try things [by changing the code] and see what happens [when you
    run the changed code].
 
-And just for fun, here is another program that does the exact same thing as the
-one above, but uses many fewer lines of code. 
+And just as an example, here is another program that does the exact same thing
+as the one above, but uses many fewer lines of code. 
 
 .. activecode:: wordcount_example_succint
+
+   # Count words in a file starting with a given letter.
 
    countchar = 'w'
 

@@ -8,21 +8,22 @@ Values and Data Types
 ---------------------
 
 Computers are very fast and very precise, but they don't understand things the
-way humans do. Humans know that a square root can be applied to 92 but not to our cat.  
+way humans do. Humans know that a square root can be applied to 93 but not to our cat.  
 Your computer doesn't have any categories at all built in, so humans have to help,
 so our interactions with computers are less likely to produce nonsense. 
 
 Any information we give to a program is called **data**. Data that is used by a program
-is almost always classified into a **data type**. 
+is classified into **data types**. 
 
-'Cat' is text information. The text data type is called **string**. In Python strings
-are always enclosed in quotations marks, like this: 'cat', or this "cat", and sometimes
-even this '''cat'''.
+``'Cat'`` is text information. The text data type is called **string**, because
+text is a string, or sequence, of characters. In Python, strings are always
+enclosed in quotations marks, like this: ``'Cat'``, or this ``"Cat"``, and
+sometimes even this ``'''Cat'''``.
 
-93 is numeric information. There are a few different numeric data types. This particular
-example's data type would be **integer**. 
+``93`` is numeric information. There are a few different numeric data types.
+This particular example's data type would be **integer**. 
 
-By classifying 'Cat' as a string and 93 as an integer, we have told the computer that
+By classifying ``'Cat'`` as a string and ``93`` as an integer, we have told the computer that
 certain kinds of actions (what we will call 'operations') make sense with one but not
 with the other. For example, if we try to divide two strings we get an error.
 
@@ -106,7 +107,6 @@ What do you think will happen if a string contains a quotation mark of the same
 kind that encloses it?
 
 .. activecode:: strings02
-    :nocanvas:
 
     print('What happens in 'this' case?')
 
@@ -118,13 +118,12 @@ type of quotation marks used.
 .. index::
    single: string; escaping
 
-There is another way to fix this issue. To put a quote character inside a string
+There is another way to fix this issue. To include a quote character 
 that is the same as the one used to start and end the string, the character 
 can be **escaped** by putting a backslash ``\`` in front of it, as in ``"The string
 \"four\" is four characters long."``.
 
 .. activecode:: strings03
-    :nocanvas:
 
     print('Okay, so \'this\' works.')
 
@@ -150,7 +149,7 @@ Python, but it is valid syntax:
 
    print(1,000,000)
 
-Well, that’s not what we expected at all! Python interprets ``1,000,000`` as a
+Well, that’s not what we expected at all! Python interprets ``1,000,000`` as
 three comma-separated integers, which it prints with spaces between.
 
 .. note::
@@ -208,17 +207,17 @@ the number, called *truncation towards zero* on the number line.  For example:
 .. activecode:: typeconv01
 
     print("Printing values of different types & their conversion to ints.")
-    print('The float', 3.0, 'converts to', int(3.0))
-    print('The float', 3.14, 'converts to', int(3.14))
+    print('The float 3.0 converts to', int(3.0))
+    print('The float 3.14 converts to', int(3.14))
     
     # This following does *not* round to the closest int!
-    print('The float', 3.9999, 'converts to', int(3.9999))  
+    print('The float 3.9999 converts to', int(3.9999))  
     
     # Note that the result is closer to zero
-    print('The float', -3.999,  'converts to', int(-3.999))
+    print('The float -3.999 converts to', int(-3.999))
     
     # A string can also produce an int
-    print('The string','"2345"',  'converts to',  int("2345")) 
+    print('The string "2345" converts to', int("2345")) 
 
 Python won't always succeed in converting from one data type to another.
 
@@ -237,10 +236,10 @@ string into a float.
     :nocanvas:
 
     print("Printing values of different types & their conversion to floats.")
-    print('The integer',123, 'converts to', float(123))
-    print('The string','"123"', 'converts to', float("123"))
-    print('The string','"123.45"', 'converts to', float("123.45"))
-    print('The float',123.45, 'converts to', float(123.45))
+    print('The integer 123 converts to', float(123))
+    print('The string "123" converts to', float("123"))
+    print('The string "123.45" converts to', float("123.45"))
+    print('The float 123.45 converts to', float(123.45))
 
 And finally, ``str()`` can convert just about anything into a string.  The
 applications of this are a bit less common, but it's worth remembering it

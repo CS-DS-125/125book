@@ -144,49 +144,6 @@ Similarly, ``x %100`` gives you the last two digits of ``x``.
    pair: string; concatenation
    pair: string; repetition
 
-String Operations
-^^^^^^^^^^^^^^^^^
-
-The ``+`` operator works with strings, but it is not addition in the
-mathematical sense. Instead it performs *concatenation*, which means joining
-the strings by linking them end to end. For example:
-
-.. activecode:: operators08
-
-   first = 10
-   second = 15
-   print(first+second)
-
-   first = '100'
-   second = '150'
-   print(first + second)
-
-The ``*`` operator also works with strings if applied to a string and an
-integer.  In this case, the operation is called **string repetition**.
-
-.. activecode:: operators09
-
-   word = 'Test'
-   number = 4
-   print(word * number)
-
-
-Table of Operators
-^^^^^^^^^^^^^^^^^^
-
-========== ================ =============== 
- Operator   int Operation    str Operation 
-========== ================ =============== 
- ``+``     Addition         Concatenation 
- ``-``     Subtraction                   
- ``*``     Multiplication   Repetition    
- ``/``     Division                      
- ``//``    Integer Division               
- ``%``     Modulus
- ``**``    Exponentiation                
-========== ================ ===============
-
-
 Example
 ^^^^^^^
 
@@ -223,4 +180,55 @@ modulus to get the make this conversion.
    print(hours, "hours")
    print(minutes, "minutes")
    print(weeks, "weeks and", remaining_days, "days")
+
+String Operations
+^^^^^^^^^^^^^^^^^
+
+Most of the operations that work with numbers don't make sense when applied to
+strings.  For example, as we've seen, ``'Cat' / 'Dog'`` is an invalid
+expression in Python.  But two of the operators above are defined for strings,
+though they do not perform arithmetic when applied to strings.
+
+The ``+`` operator works with strings, but it is not addition in the
+mathematical sense. Instead it performs *concatenation*, which means joining
+the strings by linking them end to end. For example:
+
+.. activecode:: operators08
+
+   first = 10
+   second = 15
+   print(first + second)
+
+   first = '100'
+   second = '150'
+   print(first + second)
+
+The ``*`` operator also works with strings if applied to a string and an
+integer.  In this case, the operation is called **string repetition**.
+
+.. activecode:: operators09
+
+   print("Hello" * 5)
+
+   word = 'Test'
+   number = 4
+   print(word * number)
+
+
+Table of Operators
+^^^^^^^^^^^^^^^^^^
+
+The following table summarizes the operators discussed above.
+
+========== ====================== =============== 
+ Operator   int, float Operation    str Operation 
+========== ====================== =============== 
+ ``+``     Addition               Concatenation 
+ ``-``     Subtraction                   
+ ``*``     Multiplication         Repetition    
+ ``/``     Division                      
+ ``//``    Integer Division               
+ ``%``     Modulus
+ ``**``    Exponentiation                
+========== ====================== ===============
 

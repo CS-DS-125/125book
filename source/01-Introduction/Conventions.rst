@@ -10,8 +10,8 @@ to you about code.
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Text formatted like this: ``variable1`` is used to indicate Python code. 
-Python code is how telling the computer what to do.  In this book we will 
-sometimes be mixing words meant to be read as code into regular sentences. 
+Python code is how we will be telling the computer what to do.  In this book we
+will sometimes be mixing words meant to be read as code into regular sentences.
 
 For example: 
 

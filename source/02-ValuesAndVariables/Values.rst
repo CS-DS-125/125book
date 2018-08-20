@@ -7,46 +7,49 @@
 Values and Data Types
 ---------------------
 
-Computers are very fast and very precise, but they don't understand things the
-way humans do. Humans know that a square root can be applied to 93 but not to our cat.  
-Your computer doesn't have any categories at all built in, so humans have to help,
-so our interactions with computers are less likely to produce nonsense. 
+Computers, and the programs that direct them, operate on **data**.  Data is
+information.  When the example program from the previous chapter reads in text
+from a file, that text is data.  Each word it extracts from that text is a
+piece of data.  The number it calculates, counting the number of words starting
+with a given letter, is data.  That letter itself is data.
 
-Any information we give to a program is called **data**. Data that is used by a program
-is classified into **data types**. 
+Storing and manipulating data is at the heart of everything a computer can do.
+In order to write programs, then, we will have to learn how to tell the
+computer to store and manipulate data.  We'll start with individual pieces of
+data.
+
+In programming, we use the word **value**, rather than data or datum, to talk
+about a specific piece of information -- like a word or a number -- that a
+program works with.  A few values we have seen so far are ``1``, ``2``, and
+``"Hello, World!"``.
+
+.. todo:: Update the "values seen so far" once the Intro is settled.
+
+There are many kinds of data.  You might already have noticed that ``2`` is a
+very different kind of thing than ``"Hello, World!"``.  Therefore, values are
+classified into different **data types**.
 
 ``'Cat'`` is text information. The text data type is called **string**, because
-text is a string, or sequence, of characters. In Python, strings are always
-enclosed in quotations marks, like this: ``'Cat'``, or this ``"Cat"``, and
-sometimes even this ``'''Cat'''``.
+text is a string, or sequence, of characters.  In Python, strings are always
+enclosed in quotations marks, like this: ``'Cat'``, or this ``"Cat"``.
 
 ``93`` is numeric information. There are a few different numeric data types.
-This particular example's data type would be **integer**. 
+This particular value is an example of the **integer** data type.
 
-By classifying ``'Cat'`` as a string and ``93`` as an integer, we have told the computer that
-certain kinds of actions (what we will call 'operations') make sense with one but not
-with the other. For example, if we try to divide two strings we get an error.
+A value's data type controls what the computer can do with that value.  Because
+``'Cat'`` is a string and ``93`` is an integer, certain kinds of actions (what
+we will call 'operations') make sense with one but not with the other.  For
+example, if we try to divide two strings we get an error.
 
 .. activecode:: types01
 
-    cat = 'cat'
-    dog = 'dog'
-    cat/dog
-    
-It we change the data type of cat and dog to something appropriate for division,
-Python will return a result. 
+   print("Cat" / "Dog")
+
+On the other hand, dividing two integers is an action the computer *can* perform:
 
 .. activecode:: types02
 
-    cat = 81
-    dog = 9
-    cat/dog
-
-In programming we will often use the word **value**, rather than data or datum,
-to talk about a specific piece of information that a program works with.
-
-The values we have worked with so far include ``'cat'``, ``'dog'``, ``81``,
-and ``9``.  
+   print(81 / 9)
 
 If you are not sure what the type of a particular value is, the ``type()``
 function can tell you:
@@ -57,8 +60,10 @@ function can tell you:
    print(type("Hello, World!"))
    print('The type of 17 is:')
    print(type(17))
+   print('The type of "17" is:')
+   print(type("17"))
 
-   # Try writing a line of code to find the type of 123.45
+   # Try writing a line of code here to find the type of 123.45
 
 Not surprisingly, strings belong to the type ``str`` and integers belong
 to the type ``int``.  Less obviously, numbers with a decimal point belong to a
@@ -86,15 +91,12 @@ They’re strings!  It's important to understand and remember that ``"17"`` and
 Strings
 ^^^^^^^
 
-Python is using quotation marks to figure out what is a string and what is not.
-What happens when we want to use a quotation mark as part of a string? Any
-contraction or possessive included in a string (like "I'm" or "Alice's") 
-could cause Python to think the string had ended. We can get around this by
-starting and ending a string with different types of quotation marks.
-
-Strings enclosed in one kind of quote symbol can *contain* the other kind.
-For example single quotations ``'`` can be wrapped in double ``"`` and
-double ``"`` can be wrapped in single.
+We have used two different kinds of quotation marks to create strings: single
+``'`` and double ``"``.  Python will take whatever follows a quotation mark as
+the contents of a string up until it finds a matching quotation mark.  Strings
+enclosed in one kind of quote symbol can *contain* the other kind.  For example
+single quotations ``'`` can be wrapped in double ``"`` and double ``"`` can be
+wrapped in single.
 
 .. activecode:: strings01
 
@@ -108,12 +110,13 @@ kind that encloses it?
 
 .. activecode:: strings02
 
-    print('What happens in 'this' case?')
+    print('I'm a string!')
+    print("What happens in this "odd" case?")
 
-There is a syntax error because the quotation mark that we want to be inside
-the string actually ends the string, and then the rest of the line is invalid
-Python syntax. See if you can get the code above to work by changing the 
-type of quotation marks used.
+These produce syntax errors because the quotation mark that we want to be
+inside the string actually ends the string, and then the rest of the line is
+invalid Python syntax. See if you can get the code above to work by changing
+the type of quotation marks used.
 
 .. index::
    single: string; escaping
@@ -170,7 +173,7 @@ three comma-separated integers, which it prints with spaces between.
 
 This is the first example we have seen of a **semantic error**: the code is
 *syntactically* valid and runs without producing an error message, but it
-doesn’t do what *thought* or *wanted* it to do.  In this case, Python's rule
+doesn’t do what we *thought* or *wanted* it to do.  In this case, Python's rule
 about what commas mean doesn't exactly match what we might assume about them
 based on using commas in everyday writing.
 
@@ -191,7 +194,7 @@ Type Conversion Functions
 
 Often data is in one form and we need it in another.  For example, if a data
 set is stored in a text format, every value will be stored as a string even if
-they are really numeric data.  Python provides a few **type conversion**
+it is really numeric data.  Python provides a few **type conversion**
 functions that will *attempt* to convert data from one type into another.  Each
 of the three data types we've seen so far has a matching function that converts
 into that type:

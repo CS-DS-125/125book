@@ -5,7 +5,9 @@ Variables
 ---------
 
 One of the most basic but important features of a programming language is the
-ability to manipulate **variables**.
+ability to store a value to be used later.  We do this by assigning the value
+to a particular name, and then referring to the value using that name in a
+later line of code.  These names with assigned values are called **variables**.
 
 .. admonition:: Definition
 
@@ -21,7 +23,7 @@ Variable Assignment
 
 **Assignment statements** both create new variables and give them values:
 
-.. code:: python
+.. activecode:: variable_assignment_example
 
    message = "Hi there!"
    n = 17
@@ -29,8 +31,11 @@ Variable Assignment
 
 This example makes three assignments. The first assigns the string value ``"Hi
 there!"`` to a new variable named ``message``; the second assigns the integer
-``17`` to ``n``; the third assigns the (approximate) value of :math:`\pi` to
-``pi`` as a floating point number.
+``17`` to ``n``; and the third assigns the (approximate) value of :math:`\pi`
+to ``pi`` as a floating point number.
+
+Notice that if you run this code, nothing is output.  Assigning variables does
+not print their values or produce any other output.
 
 .. _assignment-statement:
 
@@ -71,7 +76,7 @@ So what happens if you get it backwards?  Try running this:
    This also explains why ``17 = n`` is invalid: "17 gets n" doesn't make sense.
 
 It can be very useful to *visualize* how programs work to understand them better.
-When visualizing variable assignments, its common to
+When visualizing variable assignments, it is common to
 think of them as connections or arrows leading *from* a variable's name *to*
 the value that it references.  The figure below illustrates this for the three
 variables in the example code above.
@@ -82,9 +87,14 @@ variables in the example code above.
 
    A visual representation of variables referencing values.
 
-To output the value of a variable, you can use a print statement. If you are
-working in a notebook on an interpreter, you can simply enter the variable 
-to return its value. 
+You can see a similar visual representation of variables and their values in
+any of the code in this book by using the "CodeLens" view in any Active Code
+block.  Try it with :ref:`the block of example code
+above<variable_assignment_example>`.
+
+To output the value of a variable, you can use a print statement.  (If you are
+working in a notebook or an interpreter, you can simply type the variable name 
+as the last line of a cell to display its value. )
 
 .. activecode:: variables02
 
@@ -239,7 +249,7 @@ of your variable names and you don’t know why, see if it is on this list.
 Choosing Good Variable Names
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As long as you follow the simple rules of variable naming, and avoid
+As long as you follow the simple rules of variable naming and avoid
 keywords, you have a lot of choice when you name your variables.  In the
 beginning, this choice can be confusing both when you read a program and when
 you write your own programs. For example, the following three programs are
@@ -281,7 +291,7 @@ data will be stored in each variable.
    will help you and others understand your code and what each variable is used
    for.
 
-We call these wisely chosen variable names "mnemonic variable names".  The word
+We call these wisely chosen variable names "mnemonic variable names."  The word
 *mnemonic* means "memory aid". We choose mnemonic variable names to help us
 remember why we created the variable in the first place.
 
@@ -318,7 +328,7 @@ and you will start to see the keywords jumping out at you:
    </pre>
 
 The parts of the code that are defined by Python (``for``, ``in``, ``print``,
-and ``:``) are in bold and the programmer-chosen variables (``word`` and
+and ``:``) are in bold, and the programmer-chosen variables (``word`` and
 ``words``) are not in bold. Many text editors are aware of Python syntax and
 will "highlight" it, coloring keywords differently to give you clues to keep
 your variables and keywords separate. You'll notice all of the code in this

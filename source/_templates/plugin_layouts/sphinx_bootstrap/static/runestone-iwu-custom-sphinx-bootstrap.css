@@ -9,6 +9,10 @@ html {
     }
 }
 
+#book-cover h1 {
+    font-weight: 1000 !important;
+}
+
 /* all code, inline, pre, codemirror, etc. */
 code, pre, kbd, samp, .CodeMirror {
     font-family: Consolas, Monaco, Menlo, monospace;

@@ -22,7 +22,8 @@ sys.path.insert(0, os.path.abspath('_exts'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'CS/DS 125 Book (Title TBD)'
+project = '🐍🐼'
+#project = 'The Python and Pandas Field Guide'  # : An Introduction to Computer and Data Science'
 course_id = '125book'  # for Runestone
 copyright = '2018, Mark Liffiton and Brad Sheese'
 author = 'Mark Liffiton and Brad Sheese'
@@ -119,8 +120,8 @@ html_theme_options = {
     'globaltoc_depth': 1,
     'source_link_position': "",  # Options: 'nav', 'footer', anything else to disable
 }
-
-html_title = project
+html_title = 'The Python and Pandas Field Guide'  # : An Introduction to Computer and Data Science'
+# A shorter title for the navigation bar.  Default is the same as html_title.
 html_short_title = project
 
 # If this is not None, a ‘Last updated on:’ timestamp is inserted at every page

@@ -12,6 +12,6 @@ This chapter introduces some fundamental concepts in programming.  "Values" are 
    Operators
    Input
    UpdatingVars
-   Asides
+   Comments
    IntroExample
    Glossary

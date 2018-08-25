@@ -21,4 +21,5 @@ complex analyses.
    Booleans
    LoopControl
    LoopPatterns
+   Debugging
    Glossary

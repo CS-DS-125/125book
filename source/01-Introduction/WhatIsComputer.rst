@@ -157,19 +157,19 @@ to remember the following:
 
    When programming computers, they will always do precisely what you tell them
    to do -- no less and no more.  They won't make a guess about what you mean,
-   and they won't stop if you ask them to do something you didn't mean to.
+   and they won't stop if you tell them to do something you didn't mean to.
    They will blindly follow the instructions you give them.
 
 You can think of programming like giving commands to a dog.  When we train a
-dog, we use special words like "sit", "stay", and "fetch". When you talk to a
+dog, we use special words like "sit," "stay," and "fetch." When you talk to a
 dog and don’t use any of the words they know, they just look at you with a
 quizzical look on their face until you say one they recognize. For example, if
 you say, "I wish more people would walk to improve their overall health", what
 most dogs likely hear is, "blah blah blah *walk* blah blah blah blah." That is
 because "walk" is part of that dog's language.
 
-We will learn the words in the Python language in good time, but for now we
-will focus on the Python equivalent of "speak" (in human-to-dog language). The
+We will learn the words in the Python language in good time, but right now
+let's look at the Python equivalent of "speak" (in human-to-dog language). The
 nice thing about telling Python to speak is that we can even tell it what to
 say by giving it a message in quotes:
 
@@ -177,7 +177,35 @@ say by giving it a message in quotes:
 
    print("Hello, world!")
 
-And we have even written our first valid Python program!  Our program uses
-the function ``print()`` along with a string of text of our choosing enclosed
-in quotes.
+And now we have written our first valid Python program!  It only has a single
+line and gives a single instruction to the computer, but that fits the
+definition of a program.  Our program uses the function ``print()`` along with
+a string of text of our choosing enclosed in quotes.
+
+.. admonition:: Check your understanding
+
+   .. mchoice:: cyu_computer01
+      :answer_a: a part that provides cooling for the rest of the computer.
+      :answer_b: a small chip that executes instructions.
+      :answer_c: a place where data is stored long-term.
+      :answer_d: the box holding the computer.
+      :correct: b
+      :feedback_b: The CPU is the Central Processing Unit, and its primary purpose is to execute instructions.
+
+      In a computer, the CPU is:
+
+   .. mchoice:: cyu_computer02
+      :answer_a: code
+      :answer_b: input
+      :answer_c: memory
+      :answer_d: program
+      :answer_e: software
+      :correct: a,d,e
+      :feedback_a: Correct.
+      :feedback_b: "Input" refers to the *data* passed into the computer for the instructions to operate on.  The instructions themselves are not called "input."
+      :feedback_c: Memory is just where the instructions are held.
+      :feedback_d: Correct.
+      :feedback_e: Correct.
+      
+      A sequence of instructions for a computer can be called (select all that apply):
 

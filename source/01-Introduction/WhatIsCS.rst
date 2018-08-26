@@ -56,3 +56,21 @@ And so this is why this book focuses on teaching programming.  Knowing how to
 program and how to solve problems with computers is a critical foundation for
 computer science and data science.
 
+.. admonition:: Check your understanding
+
+   .. mchoice:: cyu_cs01
+      :answer_a: ... who invented computers.
+      :answer_b: ... what is inside a computer.
+      :answer_c: ... telescopes.
+      :answer_d: ... how to build computers.
+      :answer_e: ... what computers can do.
+      :correct: e
+      :feedback_a: That is a relevant side interest, but it is not the focus of computer science.
+      :feedback_b: That is a small piece of studying computer science, but it is not the focus of the field.
+      :feedback_c: Nope!
+      :feedback_d: This is well worth learning, but in computer science we *start* with a working computer and then think about how we can use it.
+      :feedback_e: This is the main question of interest, and it is asked and answered in many ways.
+
+      Which of the following best completes the sentence. (Many are true to very limited extents, but there is one that fits best by far.)
+
+      "Computer science is the study of ..."

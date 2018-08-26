@@ -14,12 +14,12 @@ Data scientists typically apply programming along with mathematics and applied s
 It is important to remember that data science tools only provide useful insights if the right data and the right tools are being used to solve the problem. It is easy to produce results that look important or insightful but might actually be misleading.  
 
 What Do I Need to Do to Do Data Science?
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 You will need to know programming. You will need to know statistics. You will need to know about your content area. 
 
 
 Some Examples of Data that Might be Used in Data Science
---------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Structured data such as databases or spreasheets. 
 
 Unstructured data such as e-mails, tweets, pictures, or videos. 
@@ -28,7 +28,7 @@ Natural langugage refers to data in the form of human language (written or spoke
 
 
 Some Examples of Data Science
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Financial
 Medical
@@ -36,6 +36,6 @@ Artistic
 Educational?
 
 Data Science Skills Currently in Demand
----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 https://imgur.com/UyloclO
 

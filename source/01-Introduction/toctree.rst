@@ -4,8 +4,9 @@ Introduction
 .. toctree::
    :maxdepth: 2
 
-   WhatIsThisCourse
+   WhatIsThis
+   WhatIsComputer
    WhatIsCS
    WhatIsDS
-   Conventions
    ExampleProgram
+   HowToUseThis

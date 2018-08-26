@@ -13,6 +13,7 @@ Data scientists typically apply programming along with mathematics and applied s
 
 It is important to remember that data science tools only provide useful insights if the right data and the right tools are being used to solve the problem. It is easy to produce results that look important or insightful but might actually be misleading.  
 
+<<<<<<< HEAD
 
 The Data Science Process
 ------------------------
@@ -25,10 +26,15 @@ What Skills Do I Need to Do Data Science?
 You will need to know programming. You will need to know statistics. You will need to know about your domain area. Data Scientists do differ quite a bit in how much they know about or use knoweldge in these three areas. Some are stronger in programming and statistics but not domain knowledge, others may be strong in programming and domain knowledge but not know about or need much statistics. However, one thing that differentiates a Data Scientist from a traditional programmer, a traditional statistician, and a traditional business analyst, is the degree to which the Data Scientist can use tools from each of these areas to solve problems. 
 
 Another common skill that is required for Data Scientists is communication. Great solutions to problems are only really great solutions if you can convince other people that they work. Knowing how to convey technical information about a solution to an audience that does not share your technical expertise is a great challenge. 
+=======
+What Do I Need to Do to Do Data Science?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+You will need to know programming. You will need to know statistics. You will need to know about your content area. 
+>>>>>>> 651b398818851ae3692c8bcc53350d5e4fd83ebc
 
 
 Some Examples of Data that Might be Used in Data Science
---------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Structured data such as databases or spreasheets. 
 
 Unstructured data such as e-mails, tweets, pictures, or videos. 
@@ -36,8 +42,13 @@ Unstructured data such as e-mails, tweets, pictures, or videos.
 Natural langugage data refers to data in the form of human language (written or spoken).
 
 
+<<<<<<< HEAD
 Some Examples of Data Science Work in Different Domains
 -------------------------------------------------------
+=======
+Some Examples of Data Science
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>>>>>>> 651b398818851ae3692c8bcc53350d5e4fd83ebc
 
 Financial
 Medical
@@ -46,7 +57,7 @@ Educational?
 
 
 Data Science Skills Currently in Demand
----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 https://imgur.com/UyloclO
 https://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-science/#3a29036b55cf
 

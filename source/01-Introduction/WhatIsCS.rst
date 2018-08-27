@@ -42,7 +42,7 @@ efficiently.
 
 So sorting and the development of efficient algorithms for sorting is just one tiny,
 tiny piece of computer science.  Wikipedia provides an `overview of the subfields of
-computer science<https://en.wikipedia.org/wiki/Computer_science#Areas_of_computer_science>`_.
+computer science <https://en.wikipedia.org/wiki/Computer_science#Areas_of_computer_science>`_.
 It's a wide range, but it all fits within the questions: What can we *do* with
 computers?  And how can we do those things efficiently?
 

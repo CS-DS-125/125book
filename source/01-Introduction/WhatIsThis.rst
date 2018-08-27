@@ -31,12 +31,9 @@ A short answer is:
 .. admonition:: Why study this?
 
    1. Computers are incredibly powerful.
-   2. There is data everywhere, in increasing quantities and pervading all aspects
-   of our lives.
-   3. The ability to direct computers to solve problems with data is a valuable
-   skill in any area(s) of interest you might have -- and it's often fun!
+   2. There is data everywhere, in increasing quantities and pervading all aspects of our lives.
+   3. The ability to direct computers to solve problems with data is a valuable skill in any area(s) of interest you might have -- and it's often fun!
    
-
 The main focus of this book will be on developing that ability, programming,
 and its application to data.  First, though, we will introduce you to some key concepts
 and ideas. 

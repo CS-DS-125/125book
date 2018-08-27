@@ -13,10 +13,11 @@ Data scientists typically apply programming along with mathematics and applied s
 
 It is important to remember that data science tools only provide useful insights if the right data and the right tools are being used to solve the problem. It is easy to produce results that look important or insightful but might actually be misleading.  
 
-.. figure:: DS_process_1.png
+.. figure:: figs/DS_process_1.png
    :alt: Data Science as a Process.
    :width: 500px
 
+Figure Attribution: 'Farcaster<https://en.wikipedia.org/wiki/User:Farcaster>' at English Wikipedia
 
 What Skills Do I Need to Do Data Science?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

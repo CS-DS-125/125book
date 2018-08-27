@@ -29,7 +29,9 @@ If we distill down what really makes a computer a computer, we get a definition 
    A **computer** is a *programmable* machine -- something that can execute a
    sequence of **instructions** in order to complete a task.
 
-The critical feature of a computer is its ability to be **programmed**, to be given a sequence of instructions it will follow.  And fundamentally, that's all computers do: they follow instructions.
+The critical feature of a computer is its ability to be **programmed**, to be given
+a sequence of instructions it will follow.  And fundamentally, that's all computers
+do; they follow instructions.
 
 .. index:: hardware, CPU, main memory, secondary memory, input device, output device
 
@@ -39,7 +41,8 @@ Computer Hardware
 Before we start learning the language we speak to give instructions to
 computers to develop software, we need to learn a small amount about how
 computers are built. If you were to take apart your computer or cell
-phone and look deep inside, you would find the following physical parts, referred to collectively as **hardware**:
+phone and look deep inside, you would find the following physical parts,
+referred to collectively as **hardware**:
 
 .. figure:: figs/arch.svg
    :alt: Hardware architecture.
@@ -55,7 +58,7 @@ The high-level definitions of these parts are as follows:
    instruction says.  It can execute literally *billions* of instructions in a
    single second.
 
--  The **Main Memory** is stores information that the CPU needs in a hurry.
+-  The **Main Memory** stores information that the CPU needs in a hurry.
    This includes the instructions that the CPU is always asking for as well as
    the data or information that the CPU operates on.  The main memory is nearly
    as fast as the CPU. But the information stored in the main memory vanishes
@@ -66,16 +69,16 @@ The high-level definitions of these parts are as follows:
    memory is that it can store information even when there is no power
    to the computer. This is where data is stored long term. Examples of
    secondary memory are disk drives and flash memory (typically found in USB
-   sticks and portable music players).
+   sticks and cell phones).
 
--  The *Input and Output Devices* are simply our screen, keyboard,
+-  The **Input and Output Devices** are simply our screen, keyboard,
    mouse, microphone, speaker, touchpad, etc. They are all of the ways
    we interact with the computer.
 
--  These days, most computers also have a *Network Connection* to
-   retrieve information over a network. We can think of the network as a
-   very slow place to store and retrieve data that might not always be
-   "up".
+-  These days, most computers also have a **Network Connection** to
+   retrieve information over a network. One way we can think of the network
+   is as a very slow place to store and retrieve data that might not always be
+   available.
 
 While most of the detail of how these components work is more than we need to
 know here, it helps to have some terminology so we can talk about them as we
@@ -105,11 +108,13 @@ do**.
 
 The CPU will execute whatever instructions you give it incredibly quickly, so
 you will write down your instructions in advance. We call these stored
-instructions a **program**, and the act of writing these instructions down and getting the instructions to be correct is **programming**.
+instructions a **program**, and the act of writing these instructions down and
+getting the instructions to be correct is **programming**.
 
 .. admonition:: Definition
 
-   A **program** is a stored sequence of instructions for a computer.  We will also call this **code** and **software**.
+   A **program** is a stored sequence of instructions for a computer.  We will
+   also call this **code** and **software**.
 
    The process of writing a program is called **programming** or **coding**.
 
@@ -122,10 +127,10 @@ data/information analysis problem and develop a program to solve the problem.
 
 In a sense, you need two skills to be a programmer:
 
--  First, you need to know the programming language (Python, in our case) --
-   you need to know the vocabulary and the grammar. You need to be able to
-   spell the words in this new language properly and know how to construct
-   well-formed "sentences" in this new language.
+-  First, you need to know the programming language (Python, in our case). 
+   Knowing a language means you need to know the vocabulary and 
+   the grammar. You need to be able to spell the words in this new language
+   properly and know how to construct well-formed "sentences" in this new language.
 
 -  Second, you need to "tell a story". In writing a story, you combine
    words and sentences to convey an idea to the reader. There is a skill
@@ -148,7 +153,7 @@ simple programs, and then we write increasingly complex programs over
 time. At some point you "get your muse" and see the patterns on your own
 and can see more naturally how to take a problem and write a program
 that solves that problem. And once you get to that point, programming
-becomes a very pleasant and creative process.
+becomes a very rewarding and creative process.
 
 Computers are very powerful, but they are also very dumb.  It's important
 to remember the following:
@@ -157,55 +162,34 @@ to remember the following:
 
    When programming computers, they will always do precisely what you tell them
    to do -- no less and no more.  They won't make a guess about what you mean,
-   and they won't stop if you tell them to do something you didn't mean to.
+   and they won't stop if you ask them to do something you didn't mean to.
    They will blindly follow the instructions you give them.
 
 You can think of programming like giving commands to a dog.  When we train a
-dog, we use special words like "sit," "stay," and "fetch." When you talk to a
+dog, we use special words like "sit", "stay", and "fetch". When you talk to a
 dog and don’t use any of the words they know, they just look at you with a
 quizzical look on their face until you say one they recognize. For example, if
 you say, "I wish more people would walk to improve their overall health", what
 most dogs likely hear is, "blah blah blah *walk* blah blah blah blah." That is
 because "walk" is part of that dog's language.
 
-We will learn the words in the Python language in good time, but right now
-let's look at the Python equivalent of "speak" (in human-to-dog language). The
-nice thing about telling Python to speak is that we can even tell it what to
-say by giving it a message in quotes:
+So let's give our first command to Python in a language it can understand.
+For this we will focus on the Python equivalent of "speak" (in human-to-dog
+language), which is "print". 
+
+In the code below, replace the text between the quotation marks with anything 
+you would like Python to say. If this is your first program it is customary to
+use "Hello, world!", but if that's not cool with you we understand. 
+
+Once you have replaced the text just click on the "Run" button to the right.
+Python will then do exactly what you told it to do.
 
 .. activecode:: programming01
 
-   print("Hello, world!")
+   print("Replace this text")
 
-And now we have written our first valid Python program!  It only has a single
-line and gives a single instruction to the computer, but that fits the
-definition of a program.  Our program uses the function ``print()`` along with
-a string of text of our choosing enclosed in quotes.
+And now you have written your first valid Python program!  
 
-.. admonition:: Check your understanding
-
-   .. mchoice:: cyu_computer01
-      :answer_a: a part that provides cooling for the rest of the computer.
-      :answer_b: a small chip that executes instructions.
-      :answer_c: a place where data is stored long-term.
-      :answer_d: the box holding the computer.
-      :correct: b
-      :feedback_b: The CPU is the Central Processing Unit, and its primary purpose is to execute instructions.
-
-      In a computer, the CPU is:
-
-   .. mchoice:: cyu_computer02
-      :answer_a: code
-      :answer_b: input
-      :answer_c: memory
-      :answer_d: program
-      :answer_e: software
-      :correct: a,d,e
-      :feedback_a: Correct.
-      :feedback_b: "Input" refers to the *data* passed into the computer for the instructions to operate on.  The instructions themselves are not called "input."
-      :feedback_c: Memory is just where the instructions are held.
-      :feedback_d: Correct.
-      :feedback_e: Correct.
-      
-      A sequence of instructions for a computer can be called (select all that apply):
+You have also seen your first *function*  and *string* (more on those later). We used 
+the function ``print()`` along with a string of text enclosed in quotes.  
 

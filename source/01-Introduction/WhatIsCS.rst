@@ -3,7 +3,7 @@
 What is Computer Science?
 -------------------------
 
-With an understanding of computers and programming, we can now turn our
+With a little understanding of computers and programming, we can now turn our
 attention to **computer science**, often abbreviated to **CS**.  Your first
 thought might be, "Surely that is the study of computers!  We can study how
 they work, how they are made, ..."
@@ -14,7 +14,13 @@ computers**.  Computer scientists use computers and programming to solve
 problems, and they are constantly using them to solve new problems or finding
 better solutions than those previously discovered.
 
-These solutions are often in the form of programs or **algorithms**, high-level descriptions of the steps a computer should follow, as opposed to the specific instructions given to the CPU.  For example, people have put a lot of work into finding algorithms for rearranging values to be in a certain order, such as putting numbers into increasing order, words into alphabetical order, and so on.  These are known as `sorting algorithms <https://en.wikipedia.org/wiki/Sorting_algorithm>`_, and people have developed a wide range of them.
+These solutions are often in the form of programs or **algorithms**, high-level
+descriptions of the steps a computer should follow, as opposed to the specific 
+instructions given to the CPU.  For example, people have put a lot of work into
+finding algorithms for rearranging values to be in a certain order, such as 
+putting numbers into increasing order, words into alphabetical order, and so on.
+These are known as `sorting algorithms <https://en.wikipedia.org/wiki/Sorting_algorithm>`_,
+and people have developed a wide range of them.
 
 .. figure:: figs/sort_algorithm.svg
    :alt: Sorting algorithm operating on ten words.
@@ -34,10 +40,11 @@ the search engine isn't scanning through everything on the internet each time;
 instead, it's using a variety of pre-sorted lists to look things up quickly and
 efficiently.
 
-So sorting and the development of efficient algorithms for it is just one tiny,
-tiny piece of computer science.  Wikipedia provides an `overview of the
-subfields of computer science
-<https://en.wikipedia.org/wiki/Computer_science#Areas_of_computer_science>`_.  It's a wide range, but it all fits within the questions: What can we *do* with computers?  And how can we do those things efficiently?
+So sorting and the development of efficient algorithms for sorting is just one tiny,
+tiny piece of computer science.  Wikipedia provides an `overview of the subfields of
+`computer science<https://en.wikipedia.org/wiki/Computer_science#Areas_of_computer_science>`_.
+It's a wide range, but it all fits within the questions: What can we *do* with
+computers?  And how can we do those things efficiently?
 
 And that is just the *science* or *research* part of computer science.  The
 *application* of computer science is much broader still.  Again, the focus is

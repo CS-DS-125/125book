@@ -75,9 +75,9 @@ Updating a variable by adding or subtracting 1 is very common in programming, an
           :x: Incorrect.  Assigning a value to ``y`` doesn't change ``x``.
       -   :12: Correct.  Assigning a value to ``z`` doesn't change ``x``.
           :x: Incorrect.  Assigning a value to ``z`` doesn't change ``x``.
-      -   :36: Correct.  ``x`` gets the sum of ``x`` (before the update) and ``y``.
+      -   :46: Correct.  ``x`` gets the sum of ``x`` (before the update) and ``y``.
           :x: Incorrect.  ``x`` gets the sum of ``x`` (before the update) and ``y``.
-      -   :36: Correct.  Assigning ``z`` doesn't change ``x``.
+      -   :46: Correct.  Assigning ``z`` doesn't change ``x``.
           :x: Incorrect.  Assigning ``z`` doesn't change ``x``.
       -   :34: Correct.  ``x`` gets the value of ``y``, which hasn't changed since it was initialized.
           :x: Incorrect.  ``x`` gets the value of ``y``, which hasn't changed since it was initialized.

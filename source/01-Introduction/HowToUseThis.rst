@@ -153,7 +153,7 @@ depend on your operating system).
 Syntax patterns
 ^^^^^^^^^^^^^^^
 
-A critical pieces of learning a programming langauge is knowing its **syntax**.
+A critical piece of learning a programming langauge is knowing its **syntax**.
 The syntax of a language is the set of rules that specify what is a *valid*
 program and what is not.  Any program that does not follow all of the syntax rules
 of its language cannot be run.

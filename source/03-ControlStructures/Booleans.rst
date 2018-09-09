@@ -123,13 +123,42 @@ is true if ``x > y`` is false; that is, if ``x`` is less than or equal to
    
       x > 0 and < 10
 
-   You might want to read that as "x is greater than 0 and less than 10."  But
-   in Python, this is *invalid syntax*!  Remember that ``and`` is an operator
-   that takes two *independent* operands, one on each side.
+   or like this:
+
+   .. code:: python
+
+      age == 18 or 19 or 20
+
+   You might want to read the first example as "x is greater than 0 and less
+   than 10," and the second *looks* like "age is 18, 19, or 20."  But in
+   Python, these are both *invalid syntax*!  Remember that ``and`` and ``or``
+   are operators that take two *independent* Boolean operands, one on each
+   side.  That is, each side of an ``and`` or an ``or`` must be something that
+   evaluates to ``True`` or ``False`` by itself.
  
-   On the left side of the ``and``, ``x > 0`` is a valid expression that will
-   evaluate to ``True`` or ``False``, but on the right side, ``< 10`` is not a
-   valid expression!
+   On the left side of the ``and``, ``x > 0`` is a valid Boolean expression
+   that will evaluate to ``True`` or ``False``, but on the right side, ``< 10``
+   is not a valid expression!
+
+.. admonition:: Check your understanding
+
+   .. mchoice:: cyu_bool01
+      :answer_a: year > 1900 < 2000
+      :answer_b: year > 1900 and < 2000
+      :answer_c: year > 1900 or < 2000
+      :answer_d: year > 1900 and year < 2000
+      :answer_e: year > 1900 or year < 2000
+      :correct: d
+      :feedback_a: This is invalid syntax.  The '<' operator has to be given two numbers, but its left hand side in this case is a Boolean value.
+      :feedback_b: This is invalid syntax.  The 'and' operator has to be given two Boolean values, but its right hand side in this case is an invalid expression, because the '<' needs a number on its left hand side.
+      :feedback_c: This is invalid syntax.  The 'or' operator has to be given two Boolean values, but its right hand side in this case is an invalid expression, because the '<' needs a number on its left hand side.
+      :feedback_d: Correct!
+      :feedback_e: This expression will evaluate to 'True' if 'year' is holding any number at all.  The 'or' evaluates to 'True' if either side is 'True', and in thise case, at least one of the two sides will always be 'True'.
+
+      Which of the following expressions is a correct, valid Python expression
+      for checking whether the ``year`` variable's value is between 1900 and
+      2000?
+   
 
 Logical operators often provide a way to simplify nested conditional
 statements. For example, we can rewrite the following code using a single
@@ -150,3 +179,22 @@ so we can get the same effect with the ``and`` operator:
    x = int(input("Please enter an integer: "))
    if 0 < x and x < 10:
        print("x is a positive single-digit number.")
+
+.. admonition:: Check your understanding
+
+   .. code:: python
+
+      if year == 1969:
+          if month == 'July':
+              if day == 20:
+                  print("Moon landing!")
+
+   In the ActiveCode below, rewrite the above conditional using a single if
+   statement with one conditional expression that is equivalent.
+
+   .. activecode:: cyubool02
+
+      # Your code here.
+
+   You can test your code and practice writing ``input()`` statements by adding
+   code that asks you to input a year, month, and day before the if statement.

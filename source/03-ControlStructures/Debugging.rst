@@ -47,7 +47,7 @@ Syntax Errors
 ^^^^^^^^^^^^^
 
 **Syntax errors** are errors in the form of the code itself, when it doesn't
-conform to the the syntax rules of the programming language.
+conform to the syntax rules of the programming language.
 
 For example, if you put a space in a variable name, Python thinks it is two operands
 without an operator, which is invalid:
@@ -170,9 +170,8 @@ running.  These print statements are not needed for the final program; they're
 just temporary, added for the purpose of giving you more visibility into the
 program's internal state.
 
-As an example, imagine you've seen ``for`` loops and the ``range()`` function
-(as in a few earlier examples), and so you try to use them to perform a simple
-calculation:
+As an example, imagine you're using a ``for`` loop and the ``range()`` function
+to perform a simple calculation:
 
 .. activecode:: print-debugging-example
 
@@ -207,4 +206,21 @@ much of this code works yet.
 
    print("The product is:", product)
 
+Here, we *expect* the values of ``i`` to go from 1 to 6, or at least that's
+what we intended for the code to do.  But by printing out the values ``i`` is
+actually getting, we see it only goes up to 5.  That might be enough to lead us
+to remember that the sequence of numbers produced by ``range()`` goes up to
+*but does not include* the value we specify for its end point.  We can then see
+that the call to ``range()`` should be changed to have an argument of 7 in
+place of 6, at which point the code will work correctly.
+
+This is a very useful technique.  In general, you can think about what a
+program should do at each step, make it *show* you what it is doing at each
+step, and look for the point at which it does something different than what you
+want or expect.  Print statements are an easy way to "see inside" the program
+as it runs.  The CodeLens tool in this book and the `Python
+Tutor <http://www.pythontutor.com/>`_ tool on which it is based provide another
+way.  Professional programmers often use programs called *debuggers* that
+provide powerful tools for doing this kind of investigation in more complex
+code.
 

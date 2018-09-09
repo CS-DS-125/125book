@@ -224,8 +224,8 @@ do at each step.]
 
 
    In the ActiveCode below, write code using a for loop to print the *length*
-   of each of the strings in the list provided.  (Remember the ``len()``
-   function.)
+   of each of the strings in the list provided.  The "length" of a string is
+   the number of characters in it.  (Remember the ``len()`` function.)
 
    .. activecode:: cyu_forloops04
 

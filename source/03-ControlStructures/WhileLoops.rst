@@ -84,7 +84,7 @@ terminates because we know that the value of ``n`` is finite, and we can see
 that the value of ``n`` gets smaller each time through the loop, so eventually
 we have to get to 0.
 
-Other times a loop might be obviously infinite.  The following examplesof
+Other times a loop might be obviously infinite.  The following examples of
 infinite loops are *not* ActiveCode, because running them might crash your
 browser!
 

@@ -26,9 +26,9 @@ the screen, separating them with spaces if there are multiple arguments."  We
 now have the word *arguments* to describe the values we've been passing into
 the ``print()`` function.
 
-Or for another example: "The ``len()`` function returns the number of items in
-its argument."  We can describe the function in terms of its *return value*
-and *argument*.
+Another example where we can describe a familiar function in terms of its *return value*
+and *argument*: "The ``len()`` function returns the number of items in
+its argument."  
 
 .. note::
 
@@ -36,7 +36,7 @@ and *argument*.
    (i.e., avoid using "max" as a variable name).
 
    Technically, Python will allow you to "override" their built-in definitions,
-   but it is likely to lead to confusion.
+   but this will likely to lead to confusion.
 
 .. index:: math module, math library
 .. index:: module, module object
@@ -45,7 +45,7 @@ Math Functions
 ~~~~~~~~~~~~~~
 
 Python has a ``math`` **module** (sometimes called a **library**) that provides
-most of the familiar mathematical functions. Before we can use the module, we
+many familiar mathematical functions. Before we can use the module, we
 have to import it with an **import statement**:
 
 .. code:: python
@@ -61,7 +61,7 @@ have to import it with an **import statement**:
 
 .. index:: dot notation
 
-This statement creates a **module object** named ``math``.  that contains a
+This statement creates a **module object** named ``math`` that contains a
 large set of built-in mathematical functions (and some variables).  To access
 one of the functions, you have to specify the name of the module and the name
 of the function, separated by a dot (also known as a period). This format is
@@ -106,7 +106,7 @@ called **dot notation**.
 This example uses a function named ``log10()`` inside the ``math`` module to
 compute the logarithm base 10 of a signal-to-noise ratio.  The math module also
 provides a function called ``log()`` that computes logarithms base :math:`e`.
-(If none of that is familiar to you, don't worry!  It's just an example of some
+(If none of this is familiar to you, don't worry!  It's just an example of some
 mathematical functions that are commonly used in certain types of
 calculations.)
 
@@ -123,7 +123,9 @@ calculations.)
 This second example finds the sine of ``radians``. The name of the
 variable is a hint that ``sin()`` and the other trigonometric functions
 (``cos()``, ``tan()``, etc.) take arguments in radians. To convert from
-degrees to radians, divide by 360 and multiply by :math:`2 \pi`.  The constant :math:`\pi` is an important, commonly used value, and so it is provided in the ``math`` module as well:
+degrees to radians, divide by 360 and multiply by :math:`2 \pi`.  The
+constant :math:`\pi` is an important, commonly used value,
+and so it is provided in the ``math`` module as well:
 
 .. activecode::  builtins03
 

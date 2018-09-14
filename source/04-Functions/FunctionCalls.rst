@@ -52,8 +52,8 @@ Each of those is an example of *calling a function* and *storing its return valu
 If we break this down, we see that it is an example of a :ref:`variable
 assignment <assignment-statement>`.  The rule for assignments says that
 variable on the left, ``name``, is assigned the value of the expression on the
-right.  On the right, we see ``input("Please enter your name: ")``.  Like we
-explained above, this is a *function call*, and ``"Please enter your name: "``
+right.  On the right, we see ``input("Please enter your name: ")`` This is a
+*function call*, and ``"Please enter your name: "``
 is its *argument*.  That means that we are passing the prompt string into the
 function to be used by it.  And then we know that the ``input()`` function
 produces a string containing whatever the user types in.  That string is its
@@ -89,13 +89,14 @@ assignment statement.  You have already seen and probably written a lot of code
 that uses return values like this (storing them in variables); now you can
 understand in some more detail exactly what is happening when you do.
 
-We can also unpack a common pattern we've been using for a while in order to understand it more fully:
+Let's look at common pattern we've been using for a while, and think about it
+in terms of what we have learned about functions:
 
 .. code:: python
 
    age = int(input("Please enter your age: "))
 
-Here, there are *two* function calls.  It is calling the ``int()`` function and
+This code has *two* function calls.  It is calling the ``int()`` function and
 the ``input()`` function.  We can see that the argument to ``input()`` is
 ``"Please enter your age: "``.  But what is the argument to ``int()``, exactly?
 
@@ -119,7 +120,7 @@ be used anywhere any other expression or value can be written.
       
       How many function calls have ``values`` as an argument?  |blank|
       
-      How many function calls have a single The code above has a single number as its argument?  |blank|
+      How many function calls have a single number as an argument?  |blank|
 
       -  :4: Correct.  ``sum()`` is called twice, ``len()`` once, and ``int()`` once.
          :x: Incorrect.  Think about how many times the function call syntax pattern appears.
@@ -137,7 +138,7 @@ be used anywhere any other expression or value can be written.
          something = last(firsthalf(name))
          print(something)
 
-      If the ``last()`` function returns the last letter in its argument, and the ``firsthalf()`` function returns the first half of its argument (e.g., the first 4 characters if its argument is an 8 character string):
+      The ``last()`` function returns the last letter in its argument. The ``firsthalf()`` function returns the first half of its argument (e.g., the first 4 characters if its argument is an 8 character string).
       
       What does the above code print?  |blank|
 

@@ -17,6 +17,7 @@ about the details of functions.
    :maxdepth: 2
 
    FunctionCalls
+   BuiltInFunctions
    FunctionDefinitions
    Glossary
 

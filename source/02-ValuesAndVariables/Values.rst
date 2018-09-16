@@ -20,12 +20,10 @@ data.
 
 In programming, we use the word **value**, rather than data or datum, to talk
 about a specific piece of information -- like a word or a number -- that a
-program works with.  A few values we have seen so far are ``1``, ``2``, and
+program works with.  A few values we have seen so far are ``0``, ``1``, and
 ``"Hello, World!"``.
 
-.. todo:: Update the "values seen so far" once the Intro is settled.
-
-There are many kinds of data.  You might already have noticed that ``2`` is a
+There are many kinds of data.  You might already have noticed that ``1`` is a
 very different kind of thing than ``"Hello, World!"``.  Therefore, values are
 classified into different **data types**.
 

@@ -67,7 +67,7 @@ one of the functions, you have to specify the name of the module and the name
 of the function, separated by a dot (also known as a period). This format is
 called **dot notation**.
 
-.. admonition:: syntax pattern
+.. admonition:: Syntax pattern
 
    Dot notation is used to access a function inside a module object:
 

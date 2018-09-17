@@ -387,7 +387,7 @@ function variable named ``added``. Then it used the ``return`` statement to
 send the computed value back to the calling code as the function result, which
 was assigned to the variable ``x`` and printed out.
 
-Again, it is worth using CodeLens to watch that happen and see how each line works.
+It is worth using CodeLens again to watch that happen and see how each line works.
 
 When you call a fruitful function, you almost always want to do something with
 the result it produces; for example, you might assign the result to a variable

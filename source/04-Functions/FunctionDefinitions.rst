@@ -120,15 +120,17 @@ function called ``repeat_lyrics()`` and call it:
 (But that’s not really how the song goes...)
 
 This program contains two function definitions: ``print_lyrics`` and
-``repeat_lyrics``.  It's important to recognize that the function definitions get executed just like other
-statements, doing so does *not* execute the functions.  To see this, open
-CodeLens for the above code, and step forward twice.  You'll see that each time
-Python executes one of the ``def ...`` lines, nothing is printed, but a new
-function is defined on the right.  The statements inside the function are
-*stored* when the function definition is executed, and they do not get executed
-until the function is *called*.
+``repeat_lyrics``.  It's important to recognize that the function definitions
+get executed just like other statements, but doing so does *not* execute the
+functions.  To see this, open CodeLens for the above code, and step forward
+twice.  You'll see that each time Python executes one of the ``def ...`` lines,
+nothing is printed, but a new function is defined on the right.  The statements
+inside the function are *stored* when the function definition is executed, and
+they do not get executed until the function is *called*.
 
-Step forward in the code one more time.  Now you'll see what happens when a function is called.  The function call on line 10 
+Step forward in the code one more time.  Now you'll see what happens when a
+function is called.  The function call on line 10 jumps into the
+``repeat_lyrics()`` function, and *then* the function is executed.
 
 .. index:: use before def
 

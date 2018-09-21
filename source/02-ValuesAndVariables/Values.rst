@@ -96,7 +96,7 @@ enclosed in one kind of quote symbol can *contain* the other kind.  For example
 single quotations ``'`` can be wrapped in double ``"`` and double ``"`` can be
 wrapped in single.
 
-.. activecode:: strings01
+.. activecode:: stringvals01
 
    print("This is a string.")
    print('This is also a string.')
@@ -106,7 +106,7 @@ wrapped in single.
 What do you think will happen if a string contains a quotation mark of the same
 kind that encloses it?
 
-.. activecode:: strings02
+.. activecode:: stringvals02
 
     print('I'm a string!')
     print("What happens in this "odd" case?")
@@ -124,7 +124,7 @@ that is the same as the one used to start and end the string, the character
 can be **escaped** by putting a backslash ``\`` in front of it, as in ``"The string
 \"four\" is four characters long."``.
 
-.. activecode:: strings03
+.. activecode:: stringvals03
 
     print('Okay, so \'this\' works.')
 
@@ -134,7 +134,7 @@ something as text, not just with quotation marks.
 And by the way: since strings are sequences of characters, and emoji are
 just sequences of characters...
 
-.. activecode:: strings04
+.. activecode:: stringvals04
 
    print('My password is ✓🐎🔋✂😕')
 

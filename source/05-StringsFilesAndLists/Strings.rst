@@ -182,7 +182,7 @@ to get the character at that index from the string, and it prints it out.
 Slicing
 :::::::
 
-A segment of a string is called a *slice*. Selecting a slice is similar
+A segment of a string is called a **slice**. Selecting a slice is similar
 to selecting a character:
 
 .. code:: python
@@ -209,10 +209,7 @@ the end of the string:
    'ana'
 
 If the first index is greater than or equal to the second the result is
-an *empty string*, represented by two quotation marks:
-
-
-.. index:: quotation mark
+an **empty string**, represented by two quotation marks:
 
 .. code:: python
 
@@ -227,8 +224,6 @@ that, it is the same as any other string.
 mean?**
 
 
-.. index:: copy!slice, slice!copy
-
 Strings are Immutable
 :::::::::::::::::::::
 
@@ -236,9 +231,8 @@ Strings are Immutable
 
 .. index:: string!immutable
 
-It is tempting to use the operator on the left side of an assignment,
+It is tempting to use the indexing operator on the left side of an assignment,
 with the intention of changing a character in a string. For example:
-
 
 .. index:: TypeError, exception!TypeError
 
@@ -408,7 +402,7 @@ for an object. The ``type`` function shows the type of an object and the
 While the ``dir`` function lists the methods, and you can use ``help``
 to get some simple documentation on a method, a better source of
 documentation for string methods would be
-https://docs.python.org/3.5/library/stdtypes.html#string-methods.
+https://docs.python.org/3/library/stdtypes.html#string-methods.
 
 Calling a *method* is similar to calling a function (it takes arguments
 and returns a value) but the syntax is different. We call a method by
@@ -523,7 +517,7 @@ multiple method calls in a single expression.
 **Exercise 4: There is a string method called ``count`` that is similar
 to the function in the previous exercise. Read the documentation of this
 method
-at**\ https://docs.python.org/3.5/library/stdtypes.html#string-methods\ **and
+at**\ https://docs.python.org/3/library/stdtypes.html#string-methods\ **and
 write an invocation that counts the number of times the letter a occurs
 in "banana".**
 
@@ -565,7 +559,7 @@ to *but not including* the space character".
 
 The documentation for the ``find`` method is available at
 
-https://docs.python.org/3.5/library/stdtypes.html#string-methods.
+https://docs.python.org/3/library/stdtypes.html#string-methods.
 
 String Formatting
 ~~~~~~~~~~~~~~~~~
@@ -642,7 +636,7 @@ element is the wrong type.
 The format operator is powerful, but it can be difficult to use. You can
 read more about it at
 
-https://docs.python.org/3.5/library/stdtypes.html#printf-style-string-formatting.
+https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting.
 
 Debugging
 ~~~~~~~~~
@@ -720,7 +714,7 @@ the extracted string into a floating point number.**
 .. index:: string method, method!string
 
 **Exercise 6: Read the documentation of the string methods
-at**\ https://docs.python.org/3.5/library/stdtypes.html#string-methods\ **You
+at**\ https://docs.python.org/3/library/stdtypes.html#string-methods\ **You
 might want to experiment with some of them to make sure you understand
 how they work. ``strip`` and ``replace`` are particularly useful.**
 

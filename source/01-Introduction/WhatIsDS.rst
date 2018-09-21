@@ -80,5 +80,5 @@ data scientist can use tools from each of these areas to solve problems.
 Another common skill that is required for data scientists is **communication**.
 Great insights and great solutions to problems are only really great if you can
 convince other people that they are correct. Conveying technical information
-about to an audience that does not share your technical expertise can be a
-great challenge. 
+to an audience that does not share your technical expertise can be a great
+challenge. 

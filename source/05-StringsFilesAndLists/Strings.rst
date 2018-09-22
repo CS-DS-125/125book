@@ -349,16 +349,19 @@ section includes a way to do that.
 Strings in Python can do a lot more than just hold a sequence of characters.
 Strings are an example of Python **objects**.
 
-.. admonition:: Objects
+.. admonition:: Definition
 
-   An object contains both data (the actual string itself) and **methods**,
-   which are functions that are built into the object and can modify or perform
-   operations on it.
+   An **object** contains both data and **methods**, which are functions that
+   are built into the object and can modify or perform operations on it.
 
    As another way of putting it, objects "know things" and "can do things":
 
    * Objects "know things": an object holds *data*.
    * Objects "can do things": an object contains *code* (the methods).
+
+In the case of a string object, the object's data is the characters of the
+string itself.  And there are a few ways to learn about what methods (code) it
+contains.
 
 Python has a function called ``dir()`` which lists the methods available for an
 object. The ``type()`` function shows the type of an object and the ``dir()``

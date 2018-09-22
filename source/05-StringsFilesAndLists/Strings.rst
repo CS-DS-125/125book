@@ -87,7 +87,7 @@ You can use any expression, including variables and operators, as an
 index, but the value of the index has to be an integer. Otherwise you
 get:
 
-.. index:: exception!TypeError, TypeError
+.. index:: exception;TypeError, TypeError
 
 .. code:: python
 
@@ -104,7 +104,7 @@ Recall the ``len()`` built-in function.  We can now see that it always returns t
 To get the last letter of a string, you might be tempted to try something like
 this:
 
-.. index:: exception!IndexError
+.. index:: exception;IndexError
 .. index:: IndexError
 
 .. activecode:: strings04

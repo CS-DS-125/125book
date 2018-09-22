@@ -488,7 +488,15 @@ method.
    one string within another.  Read about this method in `Python string method
    documentation <https://docs.python.org/3/library/stdtypes.html#str.count>`_
    and write a short program that uses ``count()`` to count the number of times
-   the letter 'a' occurs in 'banana'.
+   the letter 'a' occurs in a string the user types in.
+
+   .. activecode:: strings_cyu02
+
+      typed = input("Please enter a string: ")
+      # use the count() method here to count 'a's in typed
+      num_found = 0  # <--- replace 0 to store the result in num_found
+      print("Found", num_found, "'a's in", typed)
+
 
 Parsing Strings
 ~~~~~~~~~~~~~~~

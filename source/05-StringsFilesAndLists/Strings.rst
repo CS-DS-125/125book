@@ -573,14 +573,14 @@ values in columns.  The following example demonstrates both.
    # An ugly table
    print("Index  Value")
    for i in range(8):
-      print(i*5, i*0.125)
+       print(i*5, i*0.125)
 
    print()
 
    # A well-formatted table
    print("Index  Value")
    for i in range(8):
-      print("{:>5}  {:5.3}".format(i*5, i*0.125))
+       print("{:>5}  {:5.3}".format(i*5, i*0.125))
 
 In the format string here, ``"{:>5}  {:5.3}"``, the first placeholder is
 ``{:>5}``.  It includes a ``:`` to start the formatting options, the ``>``

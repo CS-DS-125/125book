@@ -101,11 +101,11 @@ Using ``len()`` with Strings
 
 Recall the ``len()`` built-in function.  We can now see that it always returns the number of elements in a sequence.  If the sequence we give it is a string, we get back the number of characters in the string.
 
-To get the last letter of a string, you might be tempted to try something like
-this:
-
 .. index:: exception;IndexError
 .. index:: IndexError
+
+To get the last letter of a string, you might be tempted to try something like
+this:
 
 .. activecode:: strings04
 

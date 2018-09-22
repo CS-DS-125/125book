@@ -73,9 +73,9 @@ running it!
 
    print("{} words start with '{}'.".format(count, countchar))
 
-Unless you've had some programming before, this code probably looks like nonsense
-to you. By the time you're done with the class you'll be able to read this code
-and write similar programs for yourself. 
+Unless you've learned some programming before, this code probably looks like
+nonsense to you. By the time you're done with the class you'll be able to read
+this code and write similar programs for yourself. 
 
 Let's take a look at the code and start to get a rough sense of how programs
 work.  We'll point out and name some of the basic parts of Python programs

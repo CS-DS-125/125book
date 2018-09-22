@@ -61,6 +61,8 @@ have to import it with an **import statement**:
 
 .. index:: dot notation
 
+.. _dot-notation:
+
 This statement creates a **module object** named ``math`` that contains a
 large set of built-in mathematical functions (and some variables).  To access
 one of the functions, you have to specify the name of the module and the name

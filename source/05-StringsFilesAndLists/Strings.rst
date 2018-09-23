@@ -590,8 +590,8 @@ In the format string here, ``"{:>5}  {:5.3f}"``, the first placeholder is
 makes the value "right-aligned" and the ``5`` controls how many characters the
 value is placed in.  So it always uses 5 characters, and it places the value on
 the right hand side of that space.  The second placeholder, ``{:5.3}`` uses 5
-characters, again, and the ``.3f`` makes it format it as a **f**loating point
-value and place 3 digits after the decimal point, again regardless of the value
+characters, again, and the ``.3f`` makes it format it as a floating point value
+and place 3 digits after the decimal point, again regardless of the value
 itself.  Values are left-aligned by default.  Try changing some of the values
 in the placeholders to see how it affects the formatting.
 

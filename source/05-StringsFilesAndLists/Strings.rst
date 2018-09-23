@@ -583,17 +583,17 @@ values in columns.  The following example demonstrates both.
    # A well-formatted table
    print("Index  Value")
    for i in range(8):
-       print("{:>5}  {:5.3}".format(i*5, i*0.125))
+       print("{:>5}  {:5.3f}".format(i*5, i*0.125))
 
-In the format string here, ``"{:>5}  {:5.3}"``, the first placeholder is
+In the format string here, ``"{:>5}  {:5.3f}"``, the first placeholder is
 ``{:>5}``.  It includes a ``:`` to start the formatting options, the ``>``
 makes the value "right-aligned" and the ``5`` controls how many characters the
 value is placed in.  So it always uses 5 characters, and it places the value on
 the right hand side of that space.  The second placeholder, ``{:5.3}`` uses 5
-characters, again, and the ``.3`` makes it place 3 digits after the decimal
-point, again regardless of the value itself.  Values are left-aligned by
-default.  Try changing some of the values in the placeholders to see how it
-affects the formatting.
+characters, again, and the ``.3f`` makes it format it as a **f**loating point
+value and place 3 digits after the decimal point, again regardless of the value
+itself.  Values are left-aligned by default.  Try changing some of the values
+in the placeholders to see how it affects the formatting.
 
 There are *many* more options for controlling what is included in the string
 and how it is formatted.  You can see the full set of options in the `"Format
@@ -620,5 +620,5 @@ a plain ``print()`` statement.  For example:
    print("The volume is " + str(volume) + " cubic " + units + ".")
 
    # String formatting  (just right!)
-   print("The volume is {:.2} cubic {}.".format(volume, units))
+   print("The volume is {:.2f} cubic {}.".format(volume, units))
 

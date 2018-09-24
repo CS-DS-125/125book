@@ -142,8 +142,8 @@ The ``in`` operator also works on lists.
 .. activecode:: lists02b
 
    cheeses = ['Cheddar', 'Edam', 'Gouda']
-   'Edam' in cheeses
-   'Brie' in cheeses
+   print('Edam' in cheeses)
+   print('Brie' in cheeses)
    
 
 Traversing a list
@@ -180,6 +180,8 @@ common way to do that is to combine the functions ``range`` and ``len``:
    
    for i in range(len(numbers)):
        numbers[i] = numbers[i] * 2
+       
+   print(numbers)
 
 This loop traverses the list and updates each element. ``len`` returns
 the number of elements in the list. ``range`` returns a list of indices
@@ -199,6 +201,8 @@ A ``for`` loop over an empty list never executes the body:
    
    for x in empty:
        print('This never happens.')
+       
+   print('But this does.')
 
 Although a list can contain another list, the nested list still counts
 as a single element. The length of this list is four:
@@ -275,7 +279,7 @@ slice is a copy of the whole list.
 .. activecode:: lists06d
 
    t = ['a', 'b', 'c', 'd', 'e', 'f']
-   t[:]
+   print(t[:])
 
 Since lists are mutable, it is often useful to make a copy before
 performing operations that fold, spindle, or mutilate lists.

@@ -6,7 +6,7 @@ Lists
 =====
 
 
-.. index:: list, type!list
+.. index:: list, type;list
 
 A list is a sequence
 --------------------
@@ -40,13 +40,13 @@ another list:
 A list within another list is *nested*.
 
 
-.. index:: nested list, list!nested
+.. index:: nested list, list;nested
 
 A list that contains no elements is called an empty list; you can create
 one with empty brackets, ``[]``.
 
 
-.. index:: empty list, list!empty
+.. index:: empty list, list;empty
 
 As you might expect, you can assign list values to variables:
 
@@ -65,13 +65,13 @@ Lists are mutable
 -----------------
 
 
-.. index:: list!element, access
+.. index:: list;element, access
 
 .. index:: index, 
 
 .. index:: bracket operator
 
-.. index:: operator!bracket
+.. index:: operator;bracket
 
 The syntax for accessing the elements of a list is the same as for
 accessing the characters of a string: the bracket operator. The
@@ -102,7 +102,7 @@ the list that will be assigned.
 The one-th element of ``numbers``, which used to be 123, is now 5.
 
 
-.. index:: index!starting at zero
+.. index:: index;starting at zero
 
 .. index:: zero, index starting at
 
@@ -113,7 +113,7 @@ elements.
 
 .. index:: item assignment
 
-.. index:: assignment!item
+.. index:: assignment;item
 
 List indices work the same way as string indices:
 
@@ -123,7 +123,7 @@ List indices work the same way as string indices:
    an ``IndexError``.
 
 
-.. index:: exception!IndexError
+.. index:: exception;IndexError
 
 .. index:: IndexError
 
@@ -131,11 +131,11 @@ List indices work the same way as string indices:
    the list.
 
 
-.. index:: list!index, list!membership
+.. index:: list;index, list;membership
 
-.. index:: membership!list, in operator
+.. index:: membership;list, in operator
 
-.. index:: operator!in
+.. index:: operator;in
 
 The ``in`` operator also works on lists.
 
@@ -150,11 +150,11 @@ Traversing a list
 -----------------
 
 
-.. index:: list!traversal, traversal!list
+.. index:: list;traversal, traversal;list
 
-.. index:: for loop, loop!for
+.. index:: for loop, loop;for
 
-.. index:: statement!for
+.. index:: statement;for
 
 The most common way to traverse the elements of a list is with a ``for``
 loop. The syntax is the same as for strings:
@@ -170,9 +170,9 @@ if you want to write or update the elements, you need the indices. A
 common way to do that is to combine the functions ``range`` and ``len``:
 
 
-.. index:: looping!with indices
+.. index:: looping;with indices
 
-.. index:: index!looping with
+.. index:: index;looping with
 
 .. activecode:: lists04
 
@@ -189,7 +189,7 @@ assignment statement in the body uses ``i`` to read the old value of the
 element and to assign the new value.
 
 
-.. index:: item update, update!item
+.. index:: item update, update;item
 
 A ``for`` loop over an empty list never executes the body:
 
@@ -204,7 +204,7 @@ Although a list can contain another list, the nested list still counts
 as a single element. The length of this list is four:
 
 
-.. index:: nested list, list!nested
+.. index:: nested list, list;nested
 
 .. code:: python
 
@@ -214,14 +214,14 @@ List operations
 ---------------
 
 
-.. index:: list!operation
+.. index:: list;operation
 
 The ``+`` operator concatenates lists:
 
 
-.. index:: concatenation!list
+.. index:: concatenation;list
 
-.. index:: list!concatenation
+.. index:: list;concatenation
 
 .. activecode:: lists06
 
@@ -233,9 +233,9 @@ The ``+`` operator concatenates lists:
 Similarly, the ``*`` operator repeats a list a given number of times:
 
 
-.. index:: repetition!list
+.. index:: repetition;list
 
-.. index:: list!repetition
+.. index:: list;repetition
 
 .. activecode:: lists06b
 
@@ -248,11 +248,11 @@ List slices
 -----------
 
 
-.. index:: slice operator, operator!slice
+.. index:: slice operator, operator;slice
 
-.. index:: index!slice, list!slice
+.. index:: index;slice, list;slice
 
-.. index:: slice!list
+.. index:: slice;list
 
 The slice operator also works on lists:
 
@@ -268,9 +268,9 @@ omit the second, the slice goes to the end. So if you omit both, the
 slice is a copy of the whole list.
 
 
-.. index:: list!copy, slice!copy
+.. index:: list;copy, slice;copy
 
-.. index:: copy!slice
+.. index:: copy;slice
 
 .. activecode:: lists06d
 
@@ -287,7 +287,7 @@ A slice operator on the left side of an assignment can update multiple
 elements:
 
 
-.. index:: slice!update, update!slice
+.. index:: slice;update, update;slice
 
 .. activecode:: lists07
 
@@ -300,13 +300,13 @@ List methods
 ------------
 
 
-.. index:: list!method, method, list
+.. index:: list;method, method, list
 
 Python provides methods that operate on lists. For example, ``append``
 adds a new element to the end of a list:
 
 
-.. index:: append method, method!append
+.. index:: append method, method;append
 
 .. activecode:: lists08
 
@@ -318,7 +318,7 @@ adds a new element to the end of a list:
 ``extend`` takes a list as an argument and appends all of the elements:
 
 
-.. index:: extend method, method!extend
+.. index:: extend method, method;extend
 
 .. activecode:: lists09
 
@@ -333,7 +333,7 @@ This example leaves ``t2`` unmodified.
 ``sort`` arranges the elements of the list from low to high:
 
 
-.. index:: sort method, method!sort
+.. index:: sort method, method;sort
 
 .. activecode:: lists10
 
@@ -346,11 +346,11 @@ you accidentally write ``t = t.sort()``, you will be disappointed with
 the result.
 
 
-.. index:: void method, method!void
+.. index:: void method, method;void
 
 .. index:: None special value
 
-.. index:: special value!None
+.. index:: special value;None
 
 Deleting elements
 -----------------
@@ -364,7 +364,7 @@ There are several ways to delete elements from a list. If you know the
 index of the element you want, you can use ``pop``:
 
 
-.. index:: pop method, method!pop
+.. index:: pop method, method;pop
 
 .. activecode:: lists11
 
@@ -380,7 +380,7 @@ you don’t provide an index, it deletes and returns the last element.
 If you don’t need the removed value, you can use the ``del`` operator:
 
 
-.. index:: del operator, operator!del
+.. index:: del operator, operator;del
 
 .. activecode:: lists12
 
@@ -392,7 +392,7 @@ If you know the element you want to remove (but not the index), you can
 use ``remove``:
 
 
-.. index:: remove method, method!remove
+.. index:: remove method, method;remove
 
 .. activecode:: lists13
 
@@ -406,7 +406,7 @@ The return value from ``remove`` is ``None``.
 
 .. index:: None special value
 
-.. index:: special value!None
+.. index:: special value;None
 
 To remove more than one element, you can use ``del`` with a slice index:
 
@@ -499,7 +499,7 @@ but a list of characters is not the same as a string. To convert from a
 string to a list of characters, you can use ``list``:
 
 
-.. index:: list!function, function!list
+.. index:: list;function, function;list
 
 .. activecode:: lists17
 
@@ -516,7 +516,7 @@ The ``list`` function breaks a string into individual letters. If you
 want to break a string into words, you can use the ``split`` method:
 
 
-.. index:: split method, method!split
+.. index:: split method, method;split
 
 .. activecode:: lists18
 
@@ -538,7 +538,7 @@ example uses a hyphen as a delimiter:
 
 .. index:: optional argument
 
-.. index:: argument!optional, delimiter
+.. index:: argument;optional, delimiter
 
 .. activecode:: lists19
 
@@ -553,7 +553,7 @@ concatenates the elements. ``join`` is a string method, so you have to
 invoke it on the delimiter and pass the list as a parameter:
 
 
-.. index:: join method, method!join
+.. index:: join method, method;join
 
 .. index:: concatenation
 
@@ -570,56 +570,7 @@ space between words. To concatenate strings without spaces, you can use
 the empty string, "", as a delimiter.
 
 
-.. index:: empty string, string!empty
-
-Parsing lines
--------------
-
-Usually when we are reading a file we want to do something to the lines
-other than just printing the whole line. Often we want to find the
-"interesting lines" and then *parse* the line to find some interesting
-*part* of the line. What if we wanted to print out the day of the week
-from those lines that start with "From"?
-
-::
-
-   From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
-
-The ``split`` method is very effective when faced with this kind of
-problem. We can write a small program that looks for lines where the
-line starts with "From", ``split`` those lines, and then print out the
-third word in the line:
-
-.. code:: python
-
-   fhand = open('mbox-short.txt')
-   for line in fhand:
-       line = line.rstrip()
-       if not line.startswith('From '): continue
-       words = line.split()
-       print(words[2])
-
-   # Code: http://www.py4e.com/code3/search5.py
-
-.. raw:: latex
-
-   \begin{trinketfiles}
-   ../code3/mbox-short.txt
-   \end{trinketfiles}
-
-The program produces the following output:
-
-::
-
-   Sat
-   Fri
-   Fri
-   Fri
-   ...
-
-Later, we will learn increasingly sophisticated techniques for picking
-the lines to work on and how we pull those lines apart to find the exact
-bit of information we are looking for.
+.. index:: empty string, string;empty
 
 Objects and values
 ------------------
@@ -650,7 +601,7 @@ In one case, ``a`` and ``b`` refer to two different objects that have
 the same value. In the second case, they refer to the same object.
 
 
-.. index:: is operator, operator!is
+.. index:: is operator, operator;is
 
 To check whether two variables refer to the same object, you can use the
 ``is`` operator.
@@ -693,7 +644,7 @@ Aliasing
 --------
 
 
-.. index:: aliasing, reference!aliasing
+.. index:: aliasing, reference;aliasing
 
 If ``a`` refers to an object and you assign ``b = a``, then both
 variables refer to the same object:
@@ -748,9 +699,9 @@ List arguments
 --------------
 
 
-.. index:: list!as argument, argument
+.. index:: list;as argument, argument
 
-.. index:: argument!list, reference
+.. index:: argument;list, reference
 
 .. index:: parameter
 
@@ -777,11 +728,11 @@ operations that create new lists. For example, the ``append`` method
 modifies a list, but the ``+`` operator creates a new list:
 
 
-.. index:: append method, method!append
+.. index:: append method, method;append
 
-.. index:: list!concatenation
+.. index:: list;concatenation
 
-.. index:: concatenation!list
+.. index:: concatenation;list
 
 .. code:: python
 
@@ -812,7 +763,7 @@ refer to it, but none of that has any effect on the list that was passed
 as an argument.
 
 
-.. index:: slice operator, operator!slice
+.. index:: slice operator, operator;slice
 
 An alternative is to write a function that creates and returns a new
 list. For example, ``tail`` returns all but the first element of a list:
@@ -845,15 +796,16 @@ used:
 
 
 
+.. index:: debugging
 
 Debugging
 ---------
 
-
-.. index:: debugging
-
 Careless use of lists (and other mutable objects) can lead to long hours
 of debugging. Here are some common pitfalls and ways to avoid them:
+
+
+.. index:: sort method, method;sort
 
 1. Don’t forget that most list methods modify the argument and return
    ``None``. This is the opposite of the string methods, which return a
@@ -871,9 +823,6 @@ of debugging. Here are some common pitfalls and ways to avoid them:
 
       t = t.sort()           # WRONG!
 
-
-.. index:: sort method, method!sort
-
    Because ``sort`` returns ``None``, the next operation you perform
    with ``t`` is likely to fail.
 
@@ -886,10 +835,10 @@ of debugging. Here are some common pitfalls and ways to avoid them:
    documented at
    https://docs.python.org/3.5/library/stdtypes.html#mutable-sequence-types.
 
-2. Pick an idiom and stick with it.
-
 
 .. index:: idiom
+
+2. Pick an idiom and stick with it.
 
    Part of the problem with lists is that there are too many ways to do
    things. For example, to remove an element from a list, you can use
@@ -917,12 +866,11 @@ of debugging. Here are some common pitfalls and ways to avoid them:
    runtime error; the other three are legal, but they do the wrong
    thing.
 
+.. index:: aliasing;copying to avoid
+.. index:: copy;to avoid aliasing
+
 3. Make copies to avoid aliasing.
 
-
-.. index:: aliasing!copying to avoid
-
-.. index:: copy!to avoid aliasing
 
    If you want to use a method like ``sort`` that modifies the argument,
    but you need to keep the original list as well, you can make a copy.
@@ -935,136 +883,6 @@ of debugging. Here are some common pitfalls and ways to avoid them:
    In this example you could also use the built-in function ``sorted``,
    which returns a new, sorted list and leaves the original alone. But
    in that case you should avoid using ``sorted`` as a variable name!
-
-4. Lists, ``split``, and files
-
-   When we read and parse files, there are many opportunities to
-   encounter input that can crash our program so it is a good idea to
-   revisit the *guardian* pattern when it comes writing programs that
-   read through a file and look for a "needle in the haystack".
-
-   Let’s revisit our program that is looking for the day of the week on
-   the from lines of our file:
-
-   ``From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008``
-
-   Since we are breaking this line into words, we could dispense with
-   the use of ``startswith`` and simply look at the first word of the
-   line to determine if we are interested in the line at all. We can use
-   ``continue`` to skip lines that don’t have "From" as the first word
-   as follows:
-
-   .. activecode:: lists28
-
-      fhand = open('mbox-short.txt')
-      for line in fhand:
-          words = line.split()
-          if words[0] != 'From' : continue
-          print(words[2])
-
-   This looks much simpler and we don’t even need to do the ``rstrip``
-   to remove the newline at the end of the file. But is it better?
-
-   :: code:: python
-
-      python search8.py
-      Sat
-      Traceback (most recent call last):
-        File "search8.py", line 5, in <module>
-          if words[0] != 'From' : continue
-      IndexError: list index out of range
-
-   It kind of works and we see the day from the first line (Sat), but
-   then the program fails with a traceback error. What went wrong? What
-   messed-up data caused our elegant, clever, and very Pythonic program
-   to fail?
-
-   You could stare at it for a long time and puzzle through it or ask
-   someone for help, but the quicker and smarter approach is to add a
-   ``print`` statement. The best place to add the print statement is
-   right before the line where the program failed and print out the data
-   that seems to be causing the failure.
-
-   Now this approach may generate a lot of lines of output, but at least
-   you will immediately have some clue as to the problem at hand. So we
-   add a print of the variable ``words`` right before line five. We even
-   add a prefix "Debug:" to the line so we can keep our regular output
-   separate from our debug output.
-
-   .. code:: python
-
-      for line in fhand:
-          words = line.split()
-          print('Debug:', words)
-          if words[0] != 'From' : continue
-          print(words[2])
-
-   When we run the program, a lot of output scrolls off the screen but
-   at the end, we see our debug output and the traceback so we know what
-   happened just before the traceback.
-
-   ::
-
-      Debug: ['X-DSPAM-Confidence:', '0.8475']
-      Debug: ['X-DSPAM-Probability:', '0.0000']
-      Debug: []
-      Traceback (most recent call last):
-        File "search9.py", line 6, in <module>
-          if words[0] != 'From' : continue
-      IndexError: list index out of range
-
-   Each debug line is printing the list of words which we get when we
-   ``split`` the line into words. When the program fails, the list of
-   words is empty ``[]``. If we open the file in a text editor and look
-   at the file, at that point it looks as follows:
-
-   ::
-
-      X-DSPAM-Result: Innocent
-      X-DSPAM-Processed: Sat Jan  5 09:14:16 2008
-      X-DSPAM-Confidence: 0.8475
-      X-DSPAM-Probability: 0.0000
-
-      Details: http://source.sakaiproject.org/viewsvn/?view=rev&rev=39772
-
-   The error occurs when our program encounters a blank line! Of course
-   there are "zero words" on a blank line. Why didn’t we think of that
-   when we were writing the code? When the code looks for the first word
-   (``word[0]``) to check to see if it matches "From", we get an "index
-   out of range" error.
-
-   This of course is the perfect place to add some *guardian* code to
-   avoid checking the first word if the first word is not there. There
-   are many ways to protect this code; we will choose to check the
-   number of words we have before we look at the first word:
-
-   .. code:: python
-
-      fhand = open('mbox-short.txt')
-      count = 0
-      for line in fhand:
-          words = line.split()
-          # print 'Debug:', words
-          if len(words) == 0 : continue
-          if words[0] != 'From' : continue
-          print(words[2])
-
-   First we commented out the debug print statement instead of removing
-   it, in case our modification fails and we need to debug again. Then
-   we added a guardian statement that checks to see if we have zero
-   words, and if so, we use ``continue`` to skip to the next line in the
-   file.
-
-   We can think of the two ``continue`` statements as helping us refine
-   the set of lines which are "interesting" to us and which we want to
-   process some more. A line which has no words is "uninteresting" to us
-   so we skip to the next line. A line which does not have "From" as its
-   first word is uninteresting to us so we skip it.
-
-   The program as modified runs successfully, so perhaps it is correct.
-   Our guardian statement does make sure that the ``words[0]`` will
-   never fail, but perhaps it is not enough. When we are programming, we
-   must always be thinking, "What might go wrong?"
 
 **Exercise 2: Figure out which line of the above program is still not
 properly guarded. See if you can construct a text file which causes the

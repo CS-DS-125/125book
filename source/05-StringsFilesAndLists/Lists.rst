@@ -554,6 +554,7 @@ example uses a hyphen as a delimiter:
    s = 'spam-spam-spam'
    delimiter = '-'
    s.split(delimiter)
+   print(s)
 
 
 ``join`` is the inverse of ``split``. It takes a list of strings and
@@ -570,6 +571,7 @@ invoke it on the delimiter and pass the list as a parameter:
    t = ['pining', 'for', 'the', 'fjords']
    delimiter = ' '
    delimiter.join(t)
+   print(t)
 
 
 In this case the delimiter is a space character, so ``join`` puts a
@@ -636,7 +638,7 @@ Objects and values
 
 If we execute these assignment statements:
 
-.. code:: python
+.. activecode:: lists21
 
    a = 'banana'
    b = 'banana'
@@ -647,7 +649,7 @@ whether they refer to the *same* string. There are two possible states:
 
 .. index:: aliasing
 
-.. figure:: ../images/list1.svg
+.. figure:: ../figs/list1.svg
    :alt: Variables and Objects
 
    Variables and Objects
@@ -661,25 +663,23 @@ the same value. In the second case, they refer to the same object.
 To check whether two variables refer to the same object, you can use the
 ``is`` operator.
 
-.. code:: python
+.. activecode:: lists22
 
-   >>> a = 'banana'
-   >>> b = 'banana'
-   >>> a is b
-   True
+   a = 'banana'
+   b = 'banana'
+   a is b   
 
 In this example, Python only created one string object, and both ``a``
 and ``b`` refer to it.
 
 But when you create two lists, you get two objects:
 
-.. code:: python
+.. activecode:: lists23
 
-   >>> a = [1, 2, 3]
-   >>> b = [1, 2, 3]
-   >>> a is b
-   False
-
+   a = [1, 2, 3]
+   b = [1, 2, 3]
+   a is b
+   
 In this case we would say that the two lists are *equivalent*, because
 they have the same elements, but not *identical*, because they are not
 the same object. If two objects are identical, they are also equivalent,

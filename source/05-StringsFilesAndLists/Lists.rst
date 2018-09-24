@@ -642,6 +642,7 @@ If we execute these assignment statements:
 
    a = 'banana'
    b = 'banana'
+   print(a, b)
 
 we know that ``a`` and ``b`` both refer to a string, but we don’t know
 whether they refer to the *same* string. There are two possible states:
@@ -667,7 +668,7 @@ To check whether two variables refer to the same object, you can use the
 
    a = 'banana'
    b = 'banana'
-   a is b   
+   print(a is b)   
 
 In this example, Python only created one string object, and both ``a``
 and ``b`` refer to it.
@@ -678,7 +679,7 @@ But when you create two lists, you get two objects:
 
    a = [1, 2, 3]
    b = [1, 2, 3]
-   a is b
+   print(a is b)
    
 In this case we would say that the two lists are *equivalent*, because
 they have the same elements, but not *identical*, because they are not
@@ -706,12 +707,11 @@ Aliasing
 If ``a`` refers to an object and you assign ``b = a``, then both
 variables refer to the same object:
 
-.. code:: python
+.. activecode:: lists24
 
-   >>> a = [1, 2, 3]
-   >>> b = a
-   >>> b is a
-   True
+   a = [1, 2, 3]
+   b = a
+   print(b is a)
 
 The association of a variable with an object is called a *reference*. In
 this example, there are two references to the same object.
@@ -728,11 +728,11 @@ that the object is *aliased*.
 If the aliased object is mutable, changes made with one alias affect the
 other:
 
-.. code:: python
+.. activecode:: lists25
 
-   >>> b[0] = 17
-   >>> print(a)
-   [17, 2, 3]
+   b[0] = 17
+   print(a)
+
 
 Although this behavior can be useful, it is error-prone. In general, it
 is safer to avoid aliasing when you are working with mutable objects.

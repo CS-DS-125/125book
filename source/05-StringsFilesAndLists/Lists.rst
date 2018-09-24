@@ -78,10 +78,11 @@ accessing the characters of a string: the bracket operator. The
 expression inside the brackets specifies the index. Remember that the
 indices start at 0:
 
-.. code:: python
+.. activecode:: lists01b
 
-   >>> print(cheeses[0])
-   Cheddar
+   cheeses = ['Cheddar', 'Edam', 'Gouda']
+   print(cheeses[0])
+   
 
 Unlike strings, lists are mutable because you can change the order of
 items in a list or reassign an item in a list. When the bracket operator
@@ -138,13 +139,12 @@ List indices work the same way as string indices:
 
 The ``in`` operator also works on lists.
 
-.. code:: python
+.. activecode:: lists02b
 
-   >>> cheeses = ['Cheddar', 'Edam', 'Gouda']
-   >>> 'Edam' in cheeses
-   True
-   >>> 'Brie' in cheeses
-   False
+   cheeses = ['Cheddar', 'Edam', 'Gouda']
+   'Edam' in cheeses
+   'Brie' in cheeses
+   
 
 Traversing a list
 -----------------
@@ -176,7 +176,8 @@ common way to do that is to combine the functions ``range`` and ``len``:
 
 .. activecode:: lists04
 
-   # THIS IS CURRENTLY MISSING
+   numbers = [17, 123]
+   
    for i in range(len(numbers)):
        numbers[i] = numbers[i] * 2
 
@@ -194,6 +195,8 @@ A ``for`` loop over an empty list never executes the body:
 
 .. activecode:: lists05
 
+   empty = []
+   
    for x in empty:
        print('This never happens.')
 
@@ -234,15 +237,12 @@ Similarly, the ``*`` operator repeats a list a given number of times:
 
 .. index:: list!repetition
 
-.. code:: python
+.. activecode:: lists06b
 
-   >>> [0] * 4
-   [0, 0, 0, 0]
-   >>> [1, 2, 3] * 3
-   [1, 2, 3, 1, 2, 3, 1, 2, 3]
+   print([0] * 4)
+   print([1, 2, 3] * 3)
 
-The first example repeats four times. The second example repeats the
-list three times.
+
 
 List slices
 -----------
@@ -256,15 +256,12 @@ List slices
 
 The slice operator also works on lists:
 
-.. code:: python
+.. activecode:: lists06c
 
-   >>> t = ['a', 'b', 'c', 'd', 'e', 'f']
-   >>> t[1:3]
-   ['b', 'c']
-   >>> t[:4]
-   ['a', 'b', 'c', 'd']
-   >>> t[3:]
-   ['d', 'e', 'f']
+   t = ['a', 'b', 'c', 'd', 'e', 'f']
+   print(t[1:3])
+   print(t[:4])
+   print(t[3:])
 
 If you omit the first index, the slice starts at the beginning. If you
 omit the second, the slice goes to the end. So if you omit both, the
@@ -275,10 +272,10 @@ slice is a copy of the whole list.
 
 .. index:: copy!slice
 
-.. code:: python
+.. activecode:: lists06d
 
-   >>> t[:]
-   ['a', 'b', 'c', 'd', 'e', 'f']
+   t = ['a', 'b', 'c', 'd', 'e', 'f']
+   t[:]
 
 Since lists are mutable, it is often useful to make a copy before
 performing operations that fold, spindle, or mutilate lists.
@@ -294,7 +291,6 @@ elements:
 
 .. activecode:: lists07
 
-   # THIS IS CURRENTLY MISSING
    t = ['a', 'b', 'c', 'd', 'e', 'f']
    t[1:3] = ['x', 'y']
    print(t)
@@ -430,19 +426,14 @@ Lists and functions
 There are a number of built-in functions that can be used on lists that
 allow you to quickly look through a list without writing your own loops:
 
-.. code:: python
+.. activecode:: lists14a
 
-   >>> nums = [3, 41, 12, 9, 74, 15]
-   >>> print(len(nums))
-   6
-   >>> print(max(nums))
-   74
-   >>> print(min(nums))
-   3
-   >>> print(sum(nums))
-   154
-   >>> print(sum(nums)/len(nums))
-   25
+   nums = [3, 41, 12, 9, 74, 15]
+   print(len(nums))
+   print(max(nums))
+   print(min(nums))
+   print(sum(nums))
+   print(sum(nums)/len(nums))
 
 The ``sum()`` function only works when the list elements are numbers.
 The other functions (``max()``, ``len()``, etc.) work with lists of
@@ -1021,8 +1012,6 @@ of debugging. Here are some common pitfalls and ways to avoid them:
         File "search9.py", line 6, in <module>
           if words[0] != 'From' : continue
       IndexError: list index out of range
-      
-   ::
 
    Each debug line is printing the list of words which we get when we
    ``split`` the line into words. When the program fails, the list of

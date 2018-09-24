@@ -884,20 +884,16 @@ of debugging. Here are some common pitfalls and ways to avoid them:
    which returns a new, sorted list and leaves the original alone. But
    in that case you should avoid using ``sorted`` as a variable name!
 
-**Exercise 2: Figure out which line of the above program is still not
-properly guarded. See if you can construct a text file which causes the
-program to fail and then modify the program so that the line is properly
-guarded and test it to make sure it handles your new text file.**
-
-**Exercise 3: Rewrite the guardian code in the above example without two
-``if`` statements. Instead, use a compound logical expression using the
-``and`` logical operator with a single ``if`` statement.**
-
-
-
-
 .. admonition:: Check your understanding
 
-   Give the students some task here. 
+   Write a program to remove duplicate values from a list.
 
-   .. activecode:: lists_cyu99
+   .. activecode:: lists_cyu02
+       
+       a_list = [2,6,7,3,4,5,6,3,2,5,6,4,2,5,7,5,3,2,3,5,6,7,7]
+       
+   Write a program to find the third smallest number in a list.
+
+   .. activecode:: lists_cyu03
+       
+       a_list = [2,6,7,3,4,5,6,3,2,5,6,4,2,5,7,5,3,2,3,5,6,7,7]

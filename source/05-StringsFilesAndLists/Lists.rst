@@ -78,7 +78,7 @@ accessing the characters of a string: the bracket operator. The
 expression inside the brackets specifies the index. Remember that the
 indices start at 0:
 
-.. acode:: python
+.. code:: python
 
    >>> print(cheeses[0])
    Cheddar
@@ -159,7 +159,7 @@ Traversing a list
 The most common way to traverse the elements of a list is with a ``for``
 loop. The syntax is the same as for strings:
 
-.. activecode:: lists
+.. activecode:: lists03
 
    cheeses = ['Cheddar', 'Edam', 'Gouda']
    for cheese in cheeses:
@@ -174,7 +174,7 @@ common way to do that is to combine the functions ``range`` and ``len``:
 
 .. index:: index!looping with
 
-.. activecode:: lists
+.. activecode:: lists04
 
    # THIS IS CURRENTLY MISSING
    for i in range(len(numbers)):
@@ -192,7 +192,7 @@ element and to assign the new value.
 
 A ``for`` loop over an empty list never executes the body:
 
-.. activecode:: lists
+.. activecode:: lists05
 
    for x in empty:
        print('This never happens.')
@@ -220,7 +220,7 @@ The ``+`` operator concatenates lists:
 
 .. index:: list!concatenation
 
-.. activecode:: lists
+.. activecode:: lists06
 
    a = [1, 2, 3]
    b = [4, 5, 6]
@@ -292,7 +292,7 @@ elements:
 
 .. index:: slice!update, update!slice
 
-.. activecode:: lists
+.. activecode:: lists07
 
    # THIS IS CURRENTLY MISSING
    t = ['a', 'b', 'c', 'd', 'e', 'f']
@@ -312,7 +312,7 @@ adds a new element to the end of a list:
 
 .. index:: append method, method!append
 
-.. activecode:: lists
+.. activecode:: lists08
 
    t = ['a', 'b', 'c']
    t.append('d')
@@ -324,7 +324,7 @@ adds a new element to the end of a list:
 
 .. index:: extend method, method!extend
 
-.. activecode:: lists
+.. activecode:: lists09
 
    t1 = ['a', 'b', 'c']
    t2 = ['d', 'e']
@@ -339,7 +339,7 @@ This example leaves ``t2`` unmodified.
 
 .. index:: sort method, method!sort
 
-.. activecode:: lists
+.. activecode:: lists10
 
    t = ['d', 'c', 'e', 'b', 'a']
    t.sort()
@@ -370,7 +370,7 @@ index of the element you want, you can use ``pop``:
 
 .. index:: pop method, method!pop
 
-.. activecode:: lists
+.. activecode:: lists11
 
    t = ['a', 'b', 'c']
    x = t.pop(1)
@@ -386,7 +386,7 @@ If you don’t need the removed value, you can use the ``del`` operator:
 
 .. index:: del operator, operator!del
 
-.. activecode:: lists
+.. activecode:: lists12
 
    t = ['a', 'b', 'c']
    del t[1]
@@ -398,7 +398,7 @@ use ``remove``:
 
 .. index:: remove method, method!remove
 
-.. activecode:: lists
+.. activecode:: lists13
 
    t = ['a', 'b', 'c']
    t.remove('b')
@@ -414,7 +414,7 @@ The return value from ``remove`` is ``None``.
 
 To remove more than one element, you can use ``del`` with a slice index:
 
-.. activecode:: lists
+.. activecode:: lists14
 
    t = ['a', 'b', 'c', 'd', 'e', 'f']
    del t[1:5]
@@ -453,7 +453,7 @@ of numbers entered by the user using a list.
 
 First, the program to compute an average without a list:
 
-.. activecode:: lists
+.. activecode:: lists15
 
    total = 0
    count = 0
@@ -476,7 +476,7 @@ the user for a number.
 We could simply remember each number as the user entered it and use
 built-in functions to compute the sum and count at the end.
 
-.. activecode:: lists
+.. activecode:: lists16
 
    numlist = list()
    while (True):
@@ -510,7 +510,7 @@ string to a list of characters, you can use ``list``:
 
 .. index:: list!function, function!list
 
-.. activecode:: lists
+.. activecode:: lists17
 
    s = 'spam'
    t = list(s)
@@ -527,7 +527,7 @@ want to break a string into words, you can use the ``split`` method:
 
 .. index:: split method, method!split
 
-.. activecode:: lists
+.. activecode:: lists18
 
    s = 'pining for the fjords'
    t = s.split()
@@ -549,7 +549,7 @@ example uses a hyphen as a delimiter:
 
 .. index:: argument!optional, delimiter
 
-.. activecode:: lists
+.. activecode:: lists19
 
    s = 'spam-spam-spam'
    delimiter = '-'
@@ -565,7 +565,7 @@ invoke it on the delimiter and pass the list as a parameter:
 
 .. index:: concatenation
 
-.. activecode:: lists
+.. activecode:: lists20
 
    t = ['pining', 'for', 'the', 'fjords']
    delimiter = ' '

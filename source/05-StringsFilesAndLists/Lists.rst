@@ -730,6 +730,8 @@ other:
 
 .. activecode:: lists25
 
+   a = [1, 2, 3]
+   b = a
    b[0] = 17
    print(a)
 
@@ -766,19 +768,15 @@ list. If the function modifies a list parameter, the caller sees the
 change. For example, ``delete_head`` removes the first element from a
 list:
 
-.. code:: python
+.. activecode:: lists26
 
    def delete_head(t):
        del t[0]
 
-Here’s how it is used:
-
-.. code:: python
-
-   >>> letters = ['a', 'b', 'c']
-   >>> delete_head(letters)
-   >>> print(letters)
-   ['b', 'c']
+   letters = ['a', 'b', 'c']
+   delete_head(letters)
+   print(letters)
+   
 
 The parameter ``t`` and the variable ``letters`` are aliases for the
 same object.
@@ -836,17 +834,26 @@ list. For example, ``tail`` returns all but the first element of a list:
 This function leaves the original list unmodified. Here’s how it is
 used:
 
-.. code:: python
+.. activecode:: lists27
 
-   >>> letters = ['a', 'b', 'c']
-   >>> rest = tail(letters)
-   >>> print(rest)
-   ['b', 'c']
+   def tail(t):
+       return t[1:]
+   
+   letters = ['a', 'b', 'c']
+   rest = tail(letters)
+   print(rest)
 
-**Exercise 1: Write a function called ``chop`` that takes a list and
-modifies it, removing the first and last elements, and returns ``None``.
-Then write a function called ``middle`` that takes a list and returns a
-new list that contains all but the first and last elements.**
+.. admonition:: Check your understanding
+
+    Write a function called ``chop`` that takes a list and
+    modifies it, removing the first and last elements, and returns ``None``.
+    Then write a function called ``middle`` that takes a list and returns a
+    new list that contains all but the first and last elements.**
+
+   .. activecode:: lists_cyu01
+
+
+
 
 Debugging
 ---------
@@ -956,7 +963,7 @@ of debugging. Here are some common pitfalls and ways to avoid them:
    ``continue`` to skip lines that don’t have "From" as the first word
    as follows:
 
-   .. activecode:: python
+   .. activecode:: lists28
 
       fhand = open('mbox-short.txt')
       for line in fhand:

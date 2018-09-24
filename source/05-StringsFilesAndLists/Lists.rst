@@ -78,7 +78,7 @@ accessing the characters of a string: the bracket operator. The
 expression inside the brackets specifies the index. Remember that the
 indices start at 0:
 
-.. code:: python
+.. acode:: python
 
    >>> print(cheeses[0])
    Cheddar
@@ -93,9 +93,9 @@ the list that will be assigned.
 
 .. activecode:: lists02
 
-   >>> numbers = [17, 123]
-   >>> numbers[1] = 5
-   >>> print(numbers)
+   numbers = [17, 123]
+   numbers[1] = 5
+   print(numbers)
    
 
 The one-th element of ``numbers``, which used to be 123, is now 5.
@@ -161,6 +161,7 @@ loop. The syntax is the same as for strings:
 
 .. activecode:: lists
 
+   cheeses = ['Cheddar', 'Edam', 'Gouda']
    for cheese in cheeses:
        print(cheese)
 
@@ -175,6 +176,7 @@ common way to do that is to combine the functions ``range`` and ``len``:
 
 .. activecode:: lists
 
+   # THIS IS CURRENTLY MISSING
    for i in range(len(numbers)):
        numbers[i] = numbers[i] * 2
 
@@ -292,6 +294,7 @@ elements:
 
 .. activecode:: lists
 
+   # THIS IS CURRENTLY MISSING
    t = ['a', 'b', 'c', 'd', 'e', 'f']
    t[1:3] = ['x', 'y']
    print(t)

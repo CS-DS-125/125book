@@ -1,4 +1,4 @@
-Strings, Files, and Lists (Multiple Pieces of Data)
+Strings, Lists, and Files (Multiple Pieces of Data)
 ===================================================
 
 If we want to do data science, we'll need tools to deal with many pieces of
@@ -12,8 +12,8 @@ pieces of data; we'll even see that a string is really multiple pieces of data
    :maxdepth: 3
 
    Strings
-   Files
    Lists
+   Files
    CleaningProcessing
 
    Glossary

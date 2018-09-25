@@ -674,7 +674,7 @@ Glossary
 catch
    To prevent an exception from terminating a program using the ``try``
    and ``except`` statements.
-.. index:: catch
+
 newline
    A special character used in files and strings to indicate the end of
    a line.

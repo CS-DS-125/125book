@@ -25,7 +25,7 @@ power is turned off, anything stored in either the CPU or main memory is
 erased. So up to now, our programs have just been transient fun
 exercises to learn Python.
 
-.. figure:: ../images/arch.svg
+.. figure:: ../figs/arch.svg
    :alt: Secondary Memory
 
    Secondary Memory
@@ -72,7 +72,7 @@ but instead it is a "handle" that we can use to read the data. You are
 given a handle if the requested file exists and you have the proper
 permissions to read the file.
 
-.. figure:: ../images/handle.svg
+.. figure:: ../figs/handle.svg
    :alt: A File Handle
 
    A File Handle
@@ -667,97 +667,3 @@ For most systems, there are applications to convert from one format to
 another. You can find them (and read more about this issue) at
 `wikipedia.org/wiki/Newline <wikipedia.org/wiki/Newline>`__. Or, of
 course, you could write one yourself.
-
-Glossary
---------
-
-catch
-   To prevent an exception from terminating a program using the ``try``
-   and ``except`` statements.
-.. index:: catch
-newline
-   A special character used in files and strings to indicate the end of
-   a line.
-.. index:: newline
-Pythonic
-   A technique that works elegantly in Python. "Using try and except is
-   the *Pythonic* way to recover from missing files".
-
-.. index:: Pythonic
-Quality Assurance
-   A person or team focused on insuring the overall quality of a
-   software product. QA is often involved in testing a product and
-   identifying problems before the product is released.
-
-.. index:: Quality Assurance, QA
-text file
-   A sequence of characters stored in permanent storage like a hard
-   drive.
-.. index:: text file
-
-Exercises
----------
-
-**Exercise 1: Write a program to read through a file and print the
-contents of the file (line by line) all in upper case. Executing the
-program will look as follows:**
-
-::
-
-   python shout.py
-   Enter a file name: mbox-short.txt
-   FROM STEPHEN.MARQUARD@UCT.AC.ZA SAT JAN  5 09:14:16 2008
-   RETURN-PATH: <POSTMASTER@COLLAB.SAKAIPROJECT.ORG>
-   RECEIVED: FROM MURDER (MAIL.UMICH.EDU [141.211.14.90])
-        BY FRANKENSTEIN.MAIL.UMICH.EDU (CYRUS V2.3.8) WITH LMTPA;
-        SAT, 05 JAN 2008 09:14:16 -0500
-
-**You can download the file from**
-`www.py4e.com/code3/mbox-short.txt <http://www.py4e.com/code3/mbox-short.txt>`__
-
-**Exercise 2: Write a program to prompt for a file name, and then read
-through the file and look for lines of the form:**
-
-::
-
-   X-DSPAM-Confidence: 0.8475
-
-**When you encounter a line that starts with "X-DSPAM-Confidence:" pull
-apart the line to extract the floating-point number on the line. Count
-these lines and then compute the total of the spam confidence values
-from these lines. When you reach the end of the file, print out the
-average spam confidence.**
-
-::
-
-   Enter the file name: mbox.txt
-   Average spam confidence: 0.894128046745
-
-   Enter the file name: mbox-short.txt
-   Average spam confidence: 0.750718518519
-
-**Test your file on the ``mbox.txt`` and ``mbox-short.txt`` files.**
-
-**Exercise 3: Sometimes when programmers get bored or want to have a bit
-of fun, they add a harmless Easter Egg to their program Modify the
-program that prompts the user for the file name so that it prints a
-funny message when the user types in the exact file name "na na boo
-boo". The program should behave normally for all other files which exist
-and don’t exist. Here is a sample execution of the program:**
-
-::
-
-   python egg.py
-   Enter the file name: mbox.txt
-   There were 1797 subject lines in mbox.txt
-
-   python egg.py
-   Enter the file name: missing.tyxt
-   File cannot be opened: missing.tyxt
-
-   python egg.py
-   Enter the file name: na na boo boo
-   NA NA BOO BOO TO YOU - You have been punk'd!
-
-**We are not encouraging you to put Easter Eggs in your programs; this
-is just an exercise.**

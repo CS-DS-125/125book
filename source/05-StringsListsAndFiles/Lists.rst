@@ -599,14 +599,13 @@ now altering ``b`` doesn't affect ``a``:
    print("b after:", b)
 
 
-.. index:: debugging
+.. index:: debugging; lists
 
-Debugging
----------
+Common Pitfalls
+---------------
 
 Careless use of lists (and other mutable objects) can lead to long hours
 of debugging. Here are some common pitfalls and ways to avoid them:
-
 
 .. index:: sort method, method;sort
 

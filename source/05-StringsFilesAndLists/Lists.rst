@@ -596,7 +596,7 @@ whether they refer to the *same* string. There are two possible states:
 
 .. index:: aliasing
 
-.. figure:: ../figs/list1.svg
+.. figure:: figs/list1.svg
    :alt: Variables and Objects
 
    Variables and Objects

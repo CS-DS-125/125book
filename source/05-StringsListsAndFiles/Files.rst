@@ -25,7 +25,7 @@ power is turned off, anything stored in either the CPU or main memory is
 erased. So up to now, our programs have just been transient fun
 exercises to learn Python.
 
-.. figure:: ../figs/arch.svg
+.. figure:: figs/arch.svg
    :alt: Secondary Memory
 
    Secondary Memory
@@ -57,11 +57,16 @@ name and make sure the file exists. In this example, we open the file
 when you start Python. You can download this file from
 `www.py4e.com/code3/mbox.txt <http://www.py4e.com/code3/mbox.txt>`__
 
-.. code:: python
 
-   >>> fhand = open('mbox.txt')
-   >>> print(fhand)
-   <_io.TextIOWrapper name='mbox.txt' mode='r' encoding='cp1252'>
+.. datafile:: mbox.txt
+   :edit:
+
+
+.. activecode:: files01
+
+   fhand = open('mbox.txt')
+   #print(fhand)
+   
 
 
 .. index:: file handle
@@ -72,7 +77,7 @@ but instead it is a "handle" that we can use to read the data. You are
 given a handle if the requested file exists and you have the proper
 permissions to read the file.
 
-.. figure:: ../figs/handle.svg
+.. figure:: figs/handle.svg
    :alt: A File Handle
 
    A File Handle

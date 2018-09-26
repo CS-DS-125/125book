@@ -129,17 +129,13 @@ two lines by the newline character.
 .. activecode:: files03
 
    stuff = 'Hello\nWorld!'
-   stuff
-   'Hello\nWorld!'
    print(stuff)
-   Hello
-   World!
+
    stuff = 'X\nY'
    print(stuff)
-   X
-   Y
+
    len(stuff)
-   3
+
 
 You can also see that the length of the string ``X\nY`` is *three*
 characters because the newline character is a single character.
@@ -209,10 +205,11 @@ main memory, you can read the whole file into one string using the
 
    fhand = open('mbox-short.txt')
    inp = fhand.read()
+   
    print(len(inp))
-   94626
+  
    print(inp[:20])
-   From stephen.marquar
+   
 
 In this example, the entire contents (all 94,626 characters) of the file
 ``mbox-short.txt`` are read directly into the variable ``inp``. We use
@@ -228,9 +225,9 @@ because each call to ``read`` exhausts the resource:
 
    fhand = open('mbox-short.txt')
    print(len(fhand.read()))
-   94626
+
    print(len(fhand.read()))
-   0
+
 
 Remember that this form of the ``open`` function should only be used if
 the file data will fit comfortably in the main memory of your computer.
@@ -561,7 +558,7 @@ parameter:
 
    fout = open('output.txt', 'w')
    print(fout)
-   <_io.TextIOWrapper name='output.txt' mode='w' encoding='cp1252'>
+   
 
 If the file already exists, opening it in write mode clears out the old
 data and starts fresh, so be careful! If the file doesn’t exist, a new
@@ -575,8 +572,7 @@ text for writing (and reading) strings.
 
    line1 = "This here's the wattle,\n"
    fout.write(line1)
-   24
-
+   
 
 .. index:: newline
 
@@ -592,7 +588,7 @@ The ``print`` statement automatically appends a newline, but the
 
    line2 = 'the emblem of our land.\n'
    fout.write(line2)
-   24
+   
 
 When you are done writing, you have to close the file to make sure that
 the last bit of data is physically written to the disk so it will not be
@@ -625,8 +621,7 @@ newlines are normally invisible:
 
    s = '1 2\t 3\n 4'
    print(s)
-   1 2  3
-    4
+
 
 
 .. index:: repr function, function;repr
@@ -640,7 +635,6 @@ it represents whitespace characters with backslash sequences:
 .. activecode:: files18
 
    print(repr(s))
-   '1 2\t 3\n 4'
 
 This can be helpful for debugging.
 

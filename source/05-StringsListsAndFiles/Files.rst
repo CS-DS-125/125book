@@ -126,7 +126,7 @@ actually a single character. When we look at the variable by entering
 when we use ``print`` to show the string, we see the string broken into
 two lines by the newline character.
 
-.. activecode:: files02
+.. activecode:: files03
 
    stuff = 'Hello\nWorld!'
    stuff
@@ -161,7 +161,7 @@ While the *file handle* does not contain the data for the file, it is
 quite easy to construct a ``for`` loop to read through and count each of
 the lines in a file:
 
-.. activecode:: files02
+.. activecode:: files04
 
    fhand = open('mbox-short.txt')
    count = 0
@@ -205,7 +205,7 @@ If you know the file is relatively small compared to the size of your
 main memory, you can read the whole file into one string using the
 ``read`` method on the file handle.
 
-.. activecode:: files02
+.. activecode:: files05
 
    fhand = open('mbox-short.txt')
    inp = fhand.read()
@@ -224,7 +224,7 @@ of the lines and newline characters are one big string in the variable
 ``inp``. It is a good idea to store the output of ``read`` as a variable
 because each call to ``read`` exhausts the resource:
 
-.. activecode:: files02
+.. activecode:: files06
 
    fhand = open('mbox-short.txt')
    print(len(fhand.read()))
@@ -253,7 +253,7 @@ For example, if we wanted to read a file and only print out lines which
 started with the prefix "From:", we could use the string method
 *startswith* to select only those lines with the desired prefix:
 
-.. activecode:: files02
+.. activecode:: files07
 
    fhand = open('mbox-short.txt')
    count = 0
@@ -293,7 +293,7 @@ We could use line slicing to print all but the last character, but a
 simpler approach is to use the *rstrip* method which strips whitespace
 from the right side of a string as follows:
 
-.. activecode:: files02
+.. activecode:: files08
 
    fhand = open('mbox-short.txt')
    for line in fhand:
@@ -331,7 +331,7 @@ interesting line, we do something with that line.
 We can structure the loop to follow the pattern of skipping
 uninteresting lines as follows:
 
-.. activecode:: files02
+.. activecode:: files09
 
    fhand = open('mbox-short.txt')
    for line in fhand:
@@ -363,7 +363,7 @@ found, we can write the following loop to show lines which contain the
 string "@uct.ac.za" (i.e., they come from the University of Cape Town in
 South Africa):
 
-.. activecode:: files02
+.. activecode:: files10
 
    fhand = open('mbox-short.txt')
    for line in fhand:
@@ -409,7 +409,7 @@ our program on different files without changing the Python code.
 This is quite simple to do by reading the file name from the user using
 ``input`` as follows:
 
-.. activecode:: files02
+.. activecode:: files11
 
    fname = input('Enter the file name: ')
    fhand = open(fname)
@@ -497,7 +497,7 @@ using the ``try``/``except`` structure. We need to assume that the
 ``open`` call might fail and add recovery code when the ``open`` fails
 as follows:
 
-.. activecode:: files02
+.. activecode:: files12
 
    fname = input('Enter the file name: ')
    try:
@@ -557,7 +557,7 @@ Writing files
 To write a file, you have to open it with mode "w" as a second
 parameter:
 
-.. activecode:: files02
+.. activecode:: files13
 
    fout = open('output.txt', 'w')
    print(fout)
@@ -571,7 +571,7 @@ The ``write`` method of the file handle object puts data into the file,
 returning the number of characters written. The default write mode is
 text for writing (and reading) strings.
 
-.. activecode:: files02
+.. activecode:: files14
 
    line1 = "This here's the wattle,\n"
    fout.write(line1)
@@ -588,7 +588,7 @@ explicitly inserting the newline character when we want to end a line.
 The ``print`` statement automatically appends a newline, but the
 ``write`` method does not add the newline automatically.
 
-.. activecode:: files02
+.. activecode:: files15
 
    line2 = 'the emblem of our land.\n'
    fout.write(line2)
@@ -598,7 +598,7 @@ When you are done writing, you have to close the file to make sure that
 the last bit of data is physically written to the disk so it will not be
 lost if the power goes off.
 
-.. activecode:: files02
+.. activecode:: files16
 
    fout.close()
 
@@ -621,7 +621,7 @@ When you are reading and writing files, you might run into problems with
 whitespace. These errors can be hard to debug because spaces, tabs, and
 newlines are normally invisible:
 
-.. activecode:: files02
+.. activecode:: files17
 
    s = '1 2\t 3\n 4'
    print(s)
@@ -637,7 +637,7 @@ The built-in function ``repr`` can help. It takes any object as an
 argument and returns a string representation of the object. For strings,
 it represents whitespace characters with backslash sequences:
 
-.. activecode:: files02
+.. activecode:: files18
 
    print(repr(s))
    '1 2\t 3\n 4'

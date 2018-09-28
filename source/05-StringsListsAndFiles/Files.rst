@@ -1,130 +1,101 @@
-.. role:: raw-latex(raw)
-   :format: latex
-..
+.. index:: file
 
 Files
 =====
 
-
-.. index:: file, type;file
+.. index:: persistence, secondary memory
 
 Persistence
 -----------
 
+So far, we have learned how to write programs and communicate our intentions to
+the *Central Processing Unit* using conditional execution, functions, and
+iterations. We have learned how to create and use data structures like lists
+and strings in the *Main Memory*. The CPU and memory are where our software
+works and runs. It is where all of the "thinking" happens.
 
-.. index:: persistence, secondary memory
-
-So far, we have learned how to write programs and communicate our
-intentions to the *Central Processing Unit* using conditional execution,
-functions, and iterations. We have learned how to create and use data
-structures in the *Main Memory*. The CPU and memory are where our
-software works and runs. It is where all of the "thinking" happens.
-
-But if you recall from our hardware architecture discussions, once the
-power is turned off, anything stored in either the CPU or main memory is
-erased. So up to now, our programs have just been transient fun
-exercises to learn Python.
+But if you recall from our hardware architecture discussions, once the power is
+turned off, anything stored in either the CPU or main memory is erased. So up
+to now, our programs have just been transient fun exercises to learn Python.
 
 .. figure:: figs/arch.svg
-   :alt: Secondary Memory
+   :alt: Hardware architecture, including secondary memory
 
-   Secondary Memory
+   Hardware architecture, including secondary memory
 
-In this chapter, we start to work with *Secondary Memory* (or files).
-Secondary memory is not erased when the power is turned off. Or in the
-case of a USB flash drive, the data we write from our programs can be
-removed from the system and transported to another system.
+In this chapter, we start to work with *Secondary Memory*, like hard drives,
+where **files** are stored.  Secondary memory is not erased when the power is
+turned off, and it has much more capacity than the main memory.  When
+processing data, the size of datasets (and the fact that we want them to
+stick around even when the computer is off) entail that most data will be
+stored in and accessed from files kept in secondary memory.
 
-We will primarily focus on reading and writing text files such as those
-we create in a text editor. Later we will see how to work with database
-files which are binary files, specifically designed to be read and
-written through database software.
+Example code in this section will treat the data in the box below as a file
+named ``atotc_opening2.txt``.  As before, this contains opening lines from *A
+Tale of Two Cities* (a few more this time).  You can edit the file below, and
+its changed contents will be used in any active code blocks.
 
-Opening files
--------------
+.. datafile:: atotc_opening2.txt
+   :edit:
+
+   It was the best of times,
+   it was the worst of times,
+   it was the age of wisdom,
+   it was the age of foolishness,
+   it was the epoch of belief,
+   it was the epoch of incredulity,
+   it was the season of Light,
+   it was the season of Darkness,
+   it was the spring of hope,
+   it was the winter of despair,
+   we had everything before us,
+   we had nothing before us,
+   we were all going direct to Heaven,
+   we were all going direct the other way--
+   in short, the period was so far like the present period, that some of
+   its noisiest authorities insisted on its being received, for good or for
+   evil, in the superlative degree of comparison only.
+
+   There were a king with a large jaw and a queen with a plain face, on the
+   throne of England; there were a king with a large jaw and a queen with a
+   fair face, on the throne of France. In both countries it was clearer than
+   crystal to the lords of the State preserves of loaves and fishes, that
+   things in general were settled for ever.
+
+   It was the year of Our Lord one thousand seven hundred and seventy-five.
+   Spiritual revelations were conceded to England at that favoured period, as
+   at this. Mrs. Southcott had recently attained her five-and-twentieth blessed
+   birthday, of whom a prophetic private in the Life Guards had heralded the
+   sublime appearance by announcing that arrangements were made for the
+   swallowing up of London and Westminster. Even the Cock-lane ghost had been
+   laid only a round dozen of years, after rapping out its messages, as the
+   spirits of this very year last past (supernaturally deficient in
+   originality) rapped out theirs. Mere messages in the earthly order of events
+   had lately come to the English Crown and People, from a congress of British
+   subjects in America: which, strange to relate, have proved more important to
+   the human race than any communications yet received through any of the
+   chickens of the Cock-lane brood. 
 
 
-.. index:: file;open, open function
-
-.. index:: function;open
-
-When we want to read or write a file (say on your hard drive), we first
-must *open* the file. Opening the file communicates with your operating
-system, which knows where the data for each file is stored. When you
-open a file, you are asking the operating system to find the file by
-name and make sure the file exists. In this example, we open the file
-``mbox-short.txt``.
-
-.. activecode:: files01
-
-   fhand = open('mbox-short.txt')
-   print(fhand)
-   
-
-
-.. index:: file handle
-
-If the ``open`` is successful, the operating system returns us a *file
-handle*. The file handle is not the actual data contained in the file,
-but instead it is a "handle" that we can use to read the data. You are
-given a handle if the requested file exists and you have the proper
-permissions to read the file.
-
-.. figure:: figs/handle.svg
-   :alt: A File Handle
-
-   A File Handle
-
-If the file does not exist, ``open`` will fail with a traceback and you
-will not get a handle to access the contents of the file:
-
-.. activecode:: files02
-
-   fhand = open('stuff.txt')
-
-Later we will use ``try`` and ``except`` to deal more gracefully with
-the situation where we attempt to open a file that does not exist.
-
-Text files and lines
+Text Files and Lines
 --------------------
 
 A text file can be thought of as a sequence of lines, much like a Python
-string can be thought of as a sequence of characters. For example, this
-is a sample of a text file which records mail activity from various
-individuals in an open source project development team:
-
-::
-
-   From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
-   Return-Path: <postmaster@collab.sakaiproject.org>
-   Date: Sat, 5 Jan 2008 09:12:18 -0500
-   To: source@collab.sakaiproject.org
-   From: stephen.marquard@uct.ac.za
-   Subject: [sakai] svn commit: r39772 - content/branches/
-   Details: http://source.sakaiproject.org/viewsvn/?view=rev&rev=39772
-   ...
-
-The entire file of mail interactions is in'mbox.txt' and a shortened
-version of the file is in 'mbox-short'.
-
-These files are in a standard format for a file containing multiple mail
-messages. The lines which start with "From" separate the messages and
-the lines which start with "From:" are part of the messages. For more
-information about the mbox format, see
-https://en.wikipedia.org/wiki/Mbox.
-
-To break the file into lines, there is a special character that
-represents the "end of the line" called the *newline* character.
-
+string can be thought of as a sequence of characters. For example,
+``atotc_opening2.txt`` above contains 37 lines.
 
 .. index:: newline
 
-In Python, we represent the *newline* character as a backslash-n in
-string constants. Even though this looks like two characters, it is
-actually a single character. When we look at the variable by entering
-"stuff" in the interpreter, it shows us the ``\n`` in the string, but
-when we use ``print`` to show the string, we see the string broken into
-two lines by the newline character.
+To break the file into lines, there is a special character that
+represents the "end of the line" called the **newline** character.
+
+In Python, we represent the newline character as ``\n`` in string constants.
+(That's a "backslash," because it is leaning backwards.) Even though this looks
+like two characters, it is understood by Python as a single character.
+
+If we print a string variable containing the newline character, we can see that
+it prints the string on two lines, moving to the beginning of the next line when the
+newline character is reached:
 
 .. activecode:: files03
 
@@ -133,521 +104,394 @@ two lines by the newline character.
 
    stuff = 'X\nY'
    print(stuff)
+   print(len(stuff))
 
-   len(stuff)
+You can also see that the length of the string ``X\nY`` is *three* characters
+because the newline character is a single character.
+
+So when we look at the lines in a file, we need to *imagine* that there is a
+special invisible character called the newline at the end of each line that
+marks the end of the line.
 
 
-You can also see that the length of the string ``X\nY`` is *three*
-characters because the newline character is a single character.
+.. index:: file;open, open function
+.. index:: function;open
 
-So when we look at the lines in a file, we need to *imagine* that there
-is a special invisible character called the newline at the end of each
-line that marks the end of the line.
-
-So the newline character separates the characters in the file into
-lines.
-
-Reading files
+Opening Files
 -------------
+
+When we want to read or write a file in a program, we first must **open** the
+file. Opening the file communicates with your operating system, which knows
+where the data for each file is stored. When you open a file, you are asking
+the operating system to find the file by name, make sure the file exists, and
+preparing it to be read from or written to.
+
+To open a file, we can use the ``open()`` function [[full
+documentation](https://docs.python.org/3/library/functions.html#open)].  In its
+simplest form, it takes one argument: a string containing the name of the file
+to open.  In this example, we open the file (from above) ``atotc_opening2.txt``:
+
+.. activecode:: files01
+
+   file = open('atotc_opening2.txt')
+   print(file)
+
+
+.. index:: file object
+
+If the call to ``open()`` is successful, it returns a **file object**. The file
+object is not the actual data contained in the file, but instead it has a
+"handle" that it can use to access the data.  You can use the object by calling
+its *methods* via *dot notation*, just like with other objects.  You are given
+a file object if the requested file exists and you have the proper permissions
+to read the file.
+
+.. figure:: figs/file_object.svg
+   :alt: A file object with file handle
+
+   A file object with file handle
+
+If the file does not exist, ``open`` will fail with a traceback and you
+will not get a file object to access the contents of the file:
+
+.. activecode:: files02
+
+   file = open('stuff.txt')
+
+Later we will use ``try`` and ``except`` to deal more gracefully with
+the situation where we attempt to open a file that does not exist.
 
 
 .. index:: file;reading, counter
 
-While the *file handle* does not contain the data for the file, it is
-quite easy to construct a ``for`` loop to read through and count each of
-the lines in a file:
+Reading Files
+-------------
+
+While the file object does not contain the data for the file, it is quite easy
+to construct a ``for`` loop to read through and count each of the lines in a
+file:
 
 .. activecode:: files04
 
-   fhand = open('mbox-short.txt')
+   file = open('atotc_opening2.txt')
+
    count = 0
-   for line in fhand:
+   for line in file:
        count = count + 1
+
    print('Line Count:', count)
 
-   # Code: http://www.py4e.com/code3/open.py
+.. note::
 
-.. raw:: latex
+   The code above reports 36 lines, despite the file having 37.  This appears
+   to be a bug in the Python interpreter used to run code in the browser.  It
+   skips the final line for some reason.  You can see this by adding
+   ``print(line)`` inside the for loop and comparing the output to the file data
+   above.
+ 
+   The code will work correctly in any "normal" Python interpreter.
 
-   \begin{trinketfiles}
-   ../code3/mbox-short.txt
-   \end{trinketfiles}
+We can use the file object as the sequence in our ``for`` loop, and each
+element in the sequence will be another line from the file. The ``for`` loop
+above counts the number of lines in the file and prints the count. The rough
+translation of the ``for`` loop into English is, "for each line in the file
+represented by the file object, add one to the ``count`` variable."
 
-We can use the file handle as the sequence in our ``for`` loop. Our
-``for`` loop simply counts the number of lines in the file and prints
-them out. The rough translation of the ``for`` loop into English is,
-"for each line in the file represented by the file handle, add one to
-the ``count`` variable."
+When the file is read using a ``for`` loop in this manner, Python takes care of
+splitting the data in the file into separate lines using the newline character.
+Python reads each line through the newline and includes the newline as the last
+character in the ``line`` variable for each iteration of the ``for`` loop.
 
-The reason that the ``open`` function does not read the entire file is
-that the file might be quite large with many gigabytes of data. The
-``open`` statement takes the same amount of time regardless of the size
-of the file. The ``for`` loop actually causes the data to be read from
-the file.
+Because the ``for`` loop reads the data one line at a time, it can efficiently
+read and count the lines in very large files without running out of main memory
+to store the data. The above program can count the lines in any size file using
+very little memory since each line is read, counted, and then discarded.
 
-When the file is read using a ``for`` loop in this manner, Python takes
-care of splitting the data in the file into separate lines using the
-newline character. Python reads each line through the newline and
-includes the newline as the last character in the ``line`` variable for
-each iteration of the ``for`` loop.
-
-Because the ``for`` loop reads the data one line at a time, it can
-efficiently read and count the lines in very large files without running
-out of main memory to store the data. The above program can count the
-lines in any size file using very little memory since each line is read,
-counted, and then discarded.
-
-If you know the file is relatively small compared to the size of your
-main memory, you can read the whole file into one string using the
-``read`` method on the file handle.
+If you know the file is relatively small compared to the size of your main
+memory, you can read the whole file into one string using the ``read()`` method
+of the file object.
 
 .. activecode:: files05
 
-   fhand = open('mbox-short.txt')
-   inp = fhand.read()
+   file = open('atotc_opening2.txt')
+   inp = file.read()
    
    print(len(inp))
   
    print(inp[:20])
-   
 
-In this example, the entire contents (all 94,626 characters) of the file
-``mbox-short.txt`` are read directly into the variable ``inp``. We use
-string slicing to print out the first 20 characters of the string data
-stored in ``inp``.
+In this example, the entire contents (all 1,862 characters) of the file
+``atotc_opening2.txt`` are read directly into the variable ``inp``. We use
+string slicing to print out the first 20 characters of the string data stored
+in ``inp``.
 
-When the file is read in this manner, all the characters including all
-of the lines and newline characters are one big string in the variable
-``inp``. It is a good idea to store the output of ``read`` as a variable
-because each call to ``read`` exhausts the resource:
+When the file is read in this manner, all the characters including all of the
+lines and newline characters are one big string in the variable ``inp``. It is
+a good idea to store the output of ``read`` as a variable so it is only called
+once.
+
+Remember that this form of the ``open`` function should only be used if the
+file data will fit comfortably in the main memory of your computer.  If the
+file is too large to fit in main memory, you should write your program to read
+the file in chunks using a loop.
+
+.. index:: close method, method;close
+
+Closing Files
+-------------
+
+When a program is done using a file, it should **close** the file using the
+`close()` method of the file object.  This will release resources in the
+computer and make sure everything is cleaned up correctly.
+
+Using a file object after it has been closed will not work:
 
 .. activecode:: files06
 
-   fhand = open('mbox-short.txt')
-   print(len(fhand.read()))
+   # open a file
+   file = open('atotc_opening2.txt')
+   inp1 = file.read()
+   print(len(inp1))
 
-   print(len(fhand.read()))
+   # close the file   
+   file.close()
 
+   # attempt to read from the same file object
+   inp2 = file.read()
+   print(len(inp2))
 
-Remember that this form of the ``open`` function should only be used if
-the file data will fit comfortably in the main memory of your computer.
-If the file is too large to fit in main memory, you should write your
-program to read the file in chunks using a ``for`` or ``while`` loop.
+To make sure a file is always closed and cleaned up, it is safest to use the
+`with` syntax:
 
-Searching through a file
-------------------------
+.. activecode:: files07
 
-When you are searching through data in a file, it is a very common
-pattern to read through a file, ignoring most of the lines and only
-processing lines which meet a particular condition. We can combine the
-pattern for reading a file with string methods to build simple search
-mechanisms.
+   # open a file, and automatically close it when the with block exits
+   with open('atotc_opening2.txt') as file:
+      inp1 = file.read()
+      print(len(inp1))
+
+Whenever the body of the ``with`` statement (the indented lines below it) exit,
+for any reason, the file object created by the ``open()`` call will automatically
+be closed.
+
+We will use the ``with`` syntax in the rest of the examples here, though manually
+opening and closing a file (with ``open()`` and ``.close()``) would work as well.
 
 
 .. index:: filter pattern, pattern;filter
 
-For example, if we wanted to read a file and only print out lines which
-started with the prefix "From:", we could use the string method
-*startswith* to select only those lines with the desired prefix:
+Searching Through a File
+------------------------
 
-.. activecode:: files07
+When you are searching through data in a file, it is a very common pattern to
+read through a file, ignoring most of the lines and only processing lines which
+meet a particular condition. We can combine the pattern for reading a file with
+string methods to build simple search mechanisms.
 
-   fhand = open('mbox-short.txt')
-   count = 0
-   for line in fhand:
-       if line.startswith('From:'):
-           print(line)
-
-   # Code: http://www.py4e.com/code3/search1.py
-
-.. raw:: latex
-
-   \begin{trinketfiles}
-   ../code3/mbox-short.txt
-   \end{trinketfiles}
-
-When this program runs, we get the following output:
-
-::
-
-   From: stephen.marquard@uct.ac.za
-
-   From: louis@media.berkeley.edu
-
-   From: zqian@umich.edu
-
-   From: rjlowe@iupui.edu
-   ...
-
-The output looks great since the only lines we are seeing are those
-which start with "From:", but why are we seeing the extra blank lines?
-This is due to that invisible *newline* character. Each of the lines
-ends with a newline, so the ``print`` statement prints the string in the
-variable *line* which includes a newline and then ``print`` adds
-*another* newline, resulting in the double spacing effect we see.
-
-We could use line slicing to print all but the last character, but a
-simpler approach is to use the *rstrip* method which strips whitespace
-from the right side of a string as follows:
+For example, if we wanted to read a file and only print out lines which started
+with the prefix ``'it'``, we could use the string method ``startswith()`` to select
+only those lines with the desired prefix:
 
 .. activecode:: files08
 
-   fhand = open('mbox-short.txt')
-   for line in fhand:
-       line = line.rstrip()
-       if line.startswith('From:'):
-           print(line)
+   with open('atotc_opening2.txt') as file:
+       count = 0
+       for line in file:
+           if line.startswith('it'):
+               print(line)
 
-   # Code: http://www.py4e.com/code3/search2.py
-
-.. raw:: latex
-
-   \begin{trinketfiles}
-   ../code3/mbox-short.txt
-   \end{trinketfiles}
 
 When this program runs, we get the following output:
 
 ::
 
-   From: stephen.marquard@uct.ac.za
-   From: louis@media.berkeley.edu
-   From: zqian@umich.edu
-   From: rjlowe@iupui.edu
-   From: zqian@umich.edu
-   From: rjlowe@iupui.edu
-   From: cwen@iupui.edu
-   ...
+   it was the worst of times,
 
-As your file processing programs get more complicated, you may want to
-structure your search loops using ``continue``. The basic idea of the
-search loop is that you are looking for "interesting" lines and
-effectively skipping "uninteresting" lines. And then when we find an
-interesting line, we do something with that line.
+   it was the age of wisdom,
 
-We can structure the loop to follow the pattern of skipping
-uninteresting lines as follows:
+   it was the age of foolishness,
+
+   it was the epoch of belief,
+
+   it was the epoch of incredulity,
+
+   it was the season of Light,
+
+   it was the season of Darkness,
+
+   it was the spring of hope,
+
+   it was the winter of despair,
+
+   its noisiest authorities insisted on its being received, for good or for
+
+The output looks great since the only lines we are seeing are those which start
+with ``'it'``, but why are we seeing the extra blank lines?  This is due to that
+invisible *newline* characters. Each of the lines ends with a newline, so the
+``print()`` statement prints the string in the variable ``line`` which includes a
+newline and then ``print()`` adds *its own* newline, resulting in the double
+spacing effect we see.
+
+We could use string slicing to print all but the last character, but a
+simpler approach is to use the ``rstrip()`` method, which strips whitespace
+(including newline characters) from the right side of a string:
 
 .. activecode:: files09
 
-   fhand = open('mbox-short.txt')
-   for line in fhand:
-       line = line.rstrip()
-       # Skip 'uninteresting lines'
-       if not line.startswith('From:'):
-           continue
-       # Process our 'interesting' line
-       print(line)
+   with open('atotc_opening2.txt') as file:
+       count = 0
+       for line in file:
+           line = line.rstrip()
+           if line.startswith('it'):
+               print(line)
 
-   # Code: http://www.py4e.com/code3/search3.py
+As your file processing programs get more complicated, you may want to
+structure your search loops using ``continue``. The basic idea of the search
+loop is that you are looking for "interesting" lines and effectively skipping
+"uninteresting" lines. And then when we find an interesting line, we do
+something with that line.
 
-.. raw:: latex
-
-   \begin{trinketfiles}
-   ../code3/mbox-short.txt
-   \end{trinketfiles}
-
-The output of the program is the same. In English, the uninteresting
-lines are those which do not start with "From:", which we skip using
-``continue``. For the "interesting" lines (i.e., those that start with
-"From:") we perform the processing on those lines.
-
-We can use the ``find`` string method to simulate a text editor search
-that finds lines where the search string is anywhere in the line. Since
-``find`` looks for an occurrence of a string within another string and
-either returns the position of the string or -1 if the string was not
-found, we can write the following loop to show lines which contain the
-string "@uct.ac.za" (i.e., they come from the University of Cape Town in
-South Africa):
+We can structure the loop to follow the pattern of skipping uninteresting lines
+as follows:
 
 .. activecode:: files10
 
-   fhand = open('mbox-short.txt')
-   for line in fhand:
-       line = line.rstrip()
-       if line.find('@uct.ac.za') == -1: continue
-       print(line)
+   with open('atotc_opening2.txt') as file:
+       count = 0
+       for line in file:
+           line = line.rstrip()
 
-   # Code: http://www.py4e.com/code3/search4.py
+           # Skip 'uninteresting lines'
+           if not line.startswith('it'):
+               continue
 
-.. raw:: latex
+           # If we get here, the line wasn't skipped,
+           # so we can process our 'interesting' line:
+           print(line)
 
-   \begin{trinketfiles}
-   ../code3/mbox-short.txt
-   \end{trinketfiles}
+The output of the program is the same. In English, the uninteresting
+lines are those which do *not* start with ``'it'``, which we skip using
+``continue``. For the "interesting" lines (i.e., those that start with
+``'it'``) we perform the processing on those lines.
 
-Which produces the following output:
-
-::
-
-   From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
-   X-Authentication-Warning: set sender to stephen.marquard@uct.ac.za using -f
-   From: stephen.marquard@uct.ac.za
-   Author: stephen.marquard@uct.ac.za
-   From david.horwitz@uct.ac.za Fri Jan  4 07:02:32 2008
-   X-Authentication-Warning: set sender to david.horwitz@uct.ac.za using -f
-   From: david.horwitz@uct.ac.za
-   Author: david.horwitz@uct.ac.za
-   ...
-
-Here we also use the contracted form of the ``if`` statement where we
-put the ``continue`` on the same line as the ``if``. This contracted
-form of the ``if`` functions the same as if the ``continue`` were on the
-next line and indented.
-
-Letting the user choose the file name
--------------------------------------
-
-We really do not want to have to edit our Python code every time we want
-to process a different file. It would be more usable to ask the user to
-enter the file name string each time the program runs so they can use
-our program on different files without changing the Python code.
-
-This is quite simple to do by reading the file name from the user using
-``input`` as follows:
+We can use the ``find()`` string method to find lines where a search string is
+anywhere in the line. Since ``find()`` looks for an occurrence of a string within
+another string and either returns the position of the string or -1 if the
+string was not found, we can write the following loop to show lines which
+contain the string ``'for'``:
 
 .. activecode:: files11
 
-   fname = input('Enter the file name: ')
-   fhand = open(fname)
-   count = 0
-   for line in fhand:
-       if line.startswith('Subject:'):
-           count = count + 1
-   print('There were', count, 'subject lines in', fname)
+   with open('atotc_opening2.txt') as file:
+       count = 0
+       for line in file:
+           line = line.rstrip()
 
-   # Code: http://www.py4e.com/code3/search6.py
+           # Skip 'uninteresting lines'
+           if line.find('for') == -1:
+               continue
 
-.. raw:: latex
-
-   \begin{trinketfiles}
-   ../code3/mbox-short.txt
-   \end{trinketfiles}
-
-We read the file name from the user and place it in a variable named
-``fname`` and open that file. Now we can run the program repeatedly on
-different files.
-
-::
-
-   python search6.py
-   Enter the file name: mbox.txt
-   There were 1797 subject lines in mbox.txt
-
-   python search6.py
-   Enter the file name: mbox-short.txt
-   There were 27 subject lines in mbox-short.txt
-
-Before peeking at the next section, take a look at the above program and
-ask yourself, "What could go possibly wrong here?" or "What might our
-friendly user do that would cause our nice little program to
-ungracefully exit with a traceback, making us look not-so-cool in the
-eyes of our users?"
-
-Using ``try, except,`` and ``open``
------------------------------------
-
-I told you not to peek. This is your last chance.
-
-What if our user types something that is not a file name?
-
-::
-
-   python search6.py
-   Enter the file name: missing.txt
-   Traceback (most recent call last):
-     File "search6.py", line 2, in <module>
-       fhand = open(fname)
-   FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'
-
-   python search6.py
-   Enter the file name: na na boo boo
-   Traceback (most recent call last):
-     File "search6.py", line 2, in <module>
-       fhand = open(fname)
-   FileNotFoundError: [Errno 2] No such file or directory: 'na na boo boo'
-
-Do not laugh. Users will eventually do every possible thing they can do
-to break your programs, either on purpose or with malicious intent. As a
-matter of fact, an important part of any software development team is a
-person or group called *Quality Assurance* (or QA for short) whose very
-job it is to do the craziest things possible in an attempt to break the
-software that the programmer has created.
-
-
-.. index:: Quality Assurance, QA
-
-The QA team is responsible for finding the flaws in programs before we
-have delivered the program to the end users who may be purchasing the
-software or paying our salary to write the software. So the QA team is
-the programmer’s best friend.
-
-
-.. index:: try statement, statement;try
-
-.. index:: open function, function;open
-
-.. index:: exception;IOError, IOError
-
-So now that we see the flaw in the program, we can elegantly fix it
-using the ``try``/``except`` structure. We need to assume that the
-``open`` call might fail and add recovery code when the ``open`` fails
-as follows:
-
-.. activecode:: files12
-
-   fname = input('Enter the file name: ')
-   try:
-       fhand = open(fname)
-   except:
-       print('File cannot be opened:', fname)
-       exit()
-   count = 0
-   for line in fhand:
-       if line.startswith('Subject:'):
-           count = count + 1
-   print('There were', count, 'subject lines in', fname)
-
-   # Code: http://www.py4e.com/code3/search7.py
-
-.. raw:: latex
-
-   \begin{trinketfiles}
-   ../code3/mbox-short.txt
-   \end{trinketfiles}
-
-The ``exit`` function terminates the program. It is a function that we
-call that never returns. Now when our user (or QA team) types in
-silliness or bad file names, we "catch" them and recover gracefully:
-
-::
-
-   python search7.py
-   Enter the file name: mbox.txt
-   There were 1797 subject lines in mbox.txt
-
-   python search7.py
-   Enter the file name: na na boo boo
-   File cannot be opened: na na boo boo
-
-
-.. index:: Pythonic
-
-Protecting the ``open`` call is a good example of the proper use of
-``try`` and ``except`` in a Python program. We use the term "Pythonic"
-when we are doing something the "Python way". We might say that the
-above example is the Pythonic way to open a file.
-
-Once you become more skilled in Python, you can engage in repartee with
-other Python programmers to decide which of two equivalent solutions to
-a problem is "more Pythonic". The goal to be "more Pythonic" captures
-the notion that programming is part engineering and part art. We are not
-always interested in just making something work, we also want our
-solution to be elegant and to be appreciated as elegant by our peers.
-
-Writing files
--------------
+           # If we get here, the line wasn't skipped,
+           # so we can process our 'interesting' line:
+           print(line)
 
 
 .. index:: file;writing
 
-To write a file, you have to open it with mode "w" as a second
-parameter:
+Writing Files
+-------------
+
+To write data into a file, we have to open it with a **mode** value ``'w'`` as
+the second argument to the ``open()`` function call:
+
+.. activecode:: files12
+
+   with open('output.txt', 'w') as file:
+       print(file)
+
+If the file already exists, opening it in write mode **deletes** the old data
+and starts fresh, so be careful! If the file doesn’t exist, a new one is
+created.
+
+The ``write()`` method of the file object puts data into the file, returning
+the number of characters written. The default write mode is text for writing
+(and reading) strings.
 
 .. activecode:: files13
 
-   fout = open('output.txt', 'w')
-   print(fout)
-   
+   with open('output.txt', 'w') as file:
+       line1 = "This here's the wattle,\n"
+       file.write(line1)
 
-If the file already exists, opening it in write mode clears out the old
-data and starts fresh, so be careful! If the file doesn’t exist, a new
-one is created.
-
-The ``write`` method of the file handle object puts data into the file,
-returning the number of characters written. The default write mode is
-text for writing (and reading) strings.
-
-.. activecode:: files14
-
-   line1 = "This here's the wattle,\n"
-   fout.write(line1)
-   
-
-.. index:: newline
-
-Again, the file object keeps track of where it is, so if you call
-``write`` again, it adds the new data to the end.
+The file object keeps track of where it is, so if you call ``write()`` again,
+it will add the new data to the end of the file.
 
 We must make sure to manage the ends of lines as we write to the file by
 explicitly inserting the newline character when we want to end a line.
-The ``print`` statement automatically appends a newline, but the
-``write`` method does not add the newline automatically.
+The ``print()`` statement automatically appends a newline, but the
+``write()`` method does not add the newline automatically.
 
-.. activecode:: files15
+.. activecode:: files14
 
-   line2 = 'the emblem of our land.\n'
-   fout.write(line2)
-   
+   with open('output.txt', 'w') as file:
+       line1 = "This here's the wattle,\n"
+       line2 = 'the emblem of our land.\n'
+       file.write(line1)
+       file.write(line2)
 
-When you are done writing, you have to close the file to make sure that
-the last bit of data is physically written to the disk so it will not be
-lost if the power goes off.
+.. note::
 
-.. activecode:: files16
+   Both of the above code examples write to a file.  This will show up as a
+   text box labeled ``output.txt``.  The second example will write data into
+   the file text box created by the first example.  Scroll up if it has gone
+   off the page.
 
-   fout.close()
+Closing files is especially important after writing data into them.
+Data might not be physically written to the secondary memory until ``close()``
+is called, and it remains in danger of being lost if the computer loses power.
 
-We could close the files which we open for read as well, but we can be a
-little sloppy if we are only opening a few files since Python makes sure
-that all open files are closed when the program ends. When we are
-writing files, we want to explicitly close the files so as to leave
-nothing to chance.
+Again, using the ``with`` syntax ensures the file is closed automatically.
+Otherwise, be sure to add a call to the ``close()`` method when done writing.
 
 
-.. index:: close method, method;close
+.. index:: debugging, whitespace
+.. index:: repr function, function;repr
+.. index:: string representation
 
 Debugging
 ---------
 
-
-.. index:: debugging, whitespace
-
 When you are reading and writing files, you might run into problems with
-whitespace. These errors can be hard to debug because spaces, tabs, and
-newlines are normally invisible:
+whitespace. These errors can be hard to debug because spaces, tabs (written in
+string constants as ``\t``), and newlines are normally invisible:
 
-.. activecode:: files17
+.. activecode:: files15
 
    s = '1 2\t 3\n 4'
    print(s)
 
-
-
-.. index:: repr function, function;repr
-
-.. index:: string representation
-
-The built-in function ``repr`` can help. It takes any object as an
+The built-in function ``repr()`` can help. It takes any object as an
 argument and returns a string representation of the object. For strings,
 it represents whitespace characters with backslash sequences:
 
 .. activecode:: files18
 
+   s = '1 2\t 3\n 4'
    print(repr(s))
 
-This can be helpful for debugging.
-
-One other problem you might run into is that different systems use
-different characters to indicate the end of a line. Some systems use a
-newline, represented ``\n``. Others use a return character, represented
-``\r``. Some use both. If you move files between different systems,
-these inconsistencies might cause problems.
-
+This can be helpful when debugging.
 
 .. index:: end of line character
 
-For most systems, there are applications to convert from one format to
-another. You can find them (and read more about this issue) at
-`wikipedia.org/wiki/Newline <wikipedia.org/wiki/Newline>`__. Or, of
-course, you could write one yourself.
+One other problem you might run into is that different systems use different
+characters to indicate the end of a line. Some systems use a newline,
+represented ``\n``. Others use a return character, represented ``\r``. Some use
+both. If you move files between different systems, these inconsistencies might
+cause problems.
+
+For most systems, there are applications to convert from one format to another.
+You can find them (and read more about this issue that you wouldn't think
+should be so complex) at `wikipedia.org/wiki/Newline
+<https://wikipedia.org/wiki/Newline>`_. Or, perhaps, you might write the code
+to do the conversion yourself.
+

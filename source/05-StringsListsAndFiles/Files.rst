@@ -9,14 +9,14 @@ Persistence
 -----------
 
 So far, we have learned how to write programs and communicate our intentions to
-the *Central Processing Unit* using conditional execution, functions, and
+the *Central Processing Unit* using conditionals, functions, and
 iterations. We have learned how to create and use data structures like lists
 and strings in the *Main Memory*. The CPU and memory are where our software
 works and runs. It is where all of the "thinking" happens.
 
-But if you recall from our hardware architecture discussions, once the power is
+But if you recall from our hardware discussions, once the power is
 turned off, anything stored in either the CPU or main memory is erased. So up
-to now, our programs have just been transient fun exercises to learn Python.
+until now, our programs have only produced temporary results. 
 
 .. figure:: figs/arch.svg
    :alt: Hardware architecture, including secondary memory
@@ -25,10 +25,9 @@ to now, our programs have just been transient fun exercises to learn Python.
 
 In this chapter, we start to work with *Secondary Memory*, like hard drives,
 where **files** are stored.  Secondary memory is not erased when the power is
-turned off, and it has much more capacity than the main memory.  When
-processing data, the size of datasets (and the fact that we want them to
-stick around even when the computer is off) entail that most data will be
-stored in and accessed from files kept in secondary memory.
+turned off, and it has much more capacity than the main memory.  If we keep our
+data long-term or work with large datasets we need to learn to access and store
+data in files.
 
 Example code in this section will treat the data in the box below as a file
 named ``atotc_opening2.txt``.  As before, this contains opening lines from *A
@@ -121,10 +120,8 @@ Opening Files
 -------------
 
 When we want to read or write a file in a program, we first must **open** the
-file. Opening the file communicates with your operating system, which knows
-where the data for each file is stored. When you open a file, you are asking
-the operating system to find the file by name, make sure the file exists, and
-preparing it to be read from or written to.
+file. When you open a file, you are asking the operating system to find the
+file by name, make sure the file exists, and prepare it to be read from or written to.
 
 To open a file, we can use the ``open()`` function [[full
 documentation](https://docs.python.org/3/library/functions.html#open)].  In its
@@ -325,9 +322,9 @@ When this program runs, we get the following output:
 
    its noisiest authorities insisted on its being received, for good or for
 
-The output looks great since the only lines we are seeing are those which start
-with ``'it'``, but why are we seeing the extra blank lines?  This is due to that
-invisible *newline* characters. Each of the lines ends with a newline, so the
+The output looks correct since the only lines we are seeing are those which start
+with ``'it'``, but why are we seeing the extra blank lines?  This is due to 
+invisible *newline* characters. Each of the lines in the file ends with a newline, so the
 ``print()`` statement prints the string in the variable ``line`` which includes a
 newline and then ``print()`` adds *its own* newline, resulting in the double
 spacing effect we see.
@@ -401,7 +398,8 @@ contain the string ``'for'``:
 Writing Files
 -------------
 
-To write data into a file, we have to open it with a **mode** value ``'w'`` as
+To write data into a new file or to overwrite an old file,
+we open the file with a **mode** value ``'w'`` as
 the second argument to the ``open()`` function call:
 
 .. activecode:: files12
@@ -409,13 +407,17 @@ the second argument to the ``open()`` function call:
    with open('output.txt', 'w') as file:
        print(file)
 
-If the file already exists, opening it in write mode **deletes** the old data
-and starts fresh, so be careful! If the file doesn’t exist, a new one is
-created.
+If the file doesn’t exist, a new one is created and opened. If the file
+already exists, opening it in write mode **deletes** the old data
+and starts fresh, so be careful! 
 
-The ``write()`` method of the file object puts data into the file, returning
-the number of characters written. The default write mode is text for writing
-(and reading) strings.
+Once the file is opened we can use the ``write()`` method of the
+file object to put data into the file. The ``write()`` methods writes
+characters into the file and then returns the number of characters
+written. 
+
+There are different modes for writing characters into the file. 
+The default write mode is text for writing (and reading) strings.
 
 .. activecode:: files13
 
@@ -451,7 +453,8 @@ Data might not be physically written to the secondary memory until ``close()``
 is called, and it remains in danger of being lost if the computer loses power.
 
 Again, using the ``with`` syntax ensures the file is closed automatically.
-Otherwise, be sure to add a call to the ``close()`` method when done writing.
+Otherwise, be sure to add a call to the ``close()`` method when the program
+is done writing to the file.
 
 
 .. index:: debugging, whitespace
@@ -470,9 +473,11 @@ string constants as ``\t``), and newlines are normally invisible:
    s = '1 2\t 3\n 4'
    print(s)
 
-The built-in function ``repr()`` can help. It takes any object as an
-argument and returns a string representation of the object. For strings,
-it represents whitespace characters with backslash sequences:
+The built-in function ``repr()`` can help by explicitly showing you the 'invisible'
+characters in your file.  ``repr()``  takes any object as an
+argument and returns a string representation of the object. If we pass in a
+string,  ``repr()`` returns  that string with 'invisible' characters shown as 
+backslash sequences:
 
 .. activecode:: files18
 
@@ -483,13 +488,14 @@ This can be helpful when debugging.
 
 .. index:: end of line character
 
-One other problem you might run into is that different systems use different
-characters to indicate the end of a line. Some systems use a newline,
-represented ``\n``. Others use a return character, represented ``\r``. Some use
-both. If you move files between different systems, these inconsistencies might
-cause problems.
+If you are running code of different computers one problem you might run into
+is that different systems use different characters to indicate the end of a line.
+Some systems use a newline, represented ``\n``. Others use a return character,
+represented ``\r``. Some use both. For now, you do not need to worry about this,
+but it is important to keep in mind that your code may function differently 
+on different operating systems or computers because of these slight variations.
 
-For most systems, there are applications to convert from one format to another.
+For most systems, there are applications to convert files from one format to another.
 You can find them (and read more about this issue that you wouldn't think
 should be so complex) at `wikipedia.org/wiki/Newline
 <https://wikipedia.org/wiki/Newline>`_. Or, perhaps, you might write the code

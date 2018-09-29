@@ -211,26 +211,25 @@ of the file object.
 .. activecode:: files05
 
    file = open('atotc_opening2.txt')
-   inp = file.read()
+   contents = file.read()
    
-   print(len(inp))
+   print(len(contents))
   
-   print(inp[:20])
+   print(contents[:20])
 
 In this example, the entire contents (all 1,862 characters) of the file
-``atotc_opening2.txt`` are read directly into the variable ``inp``. We use
+``atotc_opening2.txt`` are read directly into the variable ``contents``. We use
 string slicing to print out the first 20 characters of the string data stored
-in ``inp``.
+in ``contents``.
 
 When the file is read in this manner, all the characters including all of the
-lines and newline characters are one big string in the variable ``inp``. It is
-a good idea to store the output of ``read`` as a variable so it is only called
-once.
+lines and newline characters are one big string in the variable ``contents``.
+Using the ``read()`` method like this will not work well for *really* large
+files (bigger than 100 megabytes, perhaps), because they might not fit in the
+computer's memory.  For such large files, it will be better to process the file
+line by line in a loop (which doesn't read the entire file all at once) or to
+use more sophisticated tools.
 
-Remember that this form of the ``open`` function should only be used if the
-file data will fit comfortably in the main memory of your computer.  If the
-file is too large to fit in main memory, you should write your program to read
-the file in chunks using a loop.
 
 .. index:: close method, method;close
 
@@ -247,15 +246,15 @@ Using a file object after it has been closed will not work:
 
    # open a file
    file = open('atotc_opening2.txt')
-   inp1 = file.read()
-   print(len(inp1))
+   contents1 = file.read()
+   print(len(contents1))
 
    # close the file   
    file.close()
 
    # attempt to read from the same file object
-   inp2 = file.read()
-   print(len(inp2))
+   contents2 = file.read()
+   print(len(contents2))
 
 To make sure a file is always closed and cleaned up, it is safest to use the
 `with` syntax:
@@ -264,8 +263,8 @@ To make sure a file is always closed and cleaned up, it is safest to use the
 
    # open a file, and automatically close it when the with block exits
    with open('atotc_opening2.txt') as file:
-      inp1 = file.read()
-      print(len(inp1))
+      contents1 = file.read()
+      print(len(contents1))
 
 Whenever the body of the ``with`` statement (the indented lines below it) exit,
 for any reason, the file object created by the ``open()`` call will automatically
@@ -292,7 +291,6 @@ only those lines with the desired prefix:
 .. activecode:: files08
 
    with open('atotc_opening2.txt') as file:
-       count = 0
        for line in file:
            if line.startswith('it'):
                print(line)
@@ -336,17 +334,18 @@ simpler approach is to use the ``rstrip()`` method, which strips whitespace
 .. activecode:: files09
 
    with open('atotc_opening2.txt') as file:
-       count = 0
        for line in file:
            line = line.rstrip()
            if line.startswith('it'):
                print(line)
 
 As your file processing programs get more complicated, you may want to
-structure your search loops using ``continue``. The basic idea of the search
-loop is that you are looking for "interesting" lines and effectively skipping
-"uninteresting" lines. And then when we find an interesting line, we do
-something with that line.
+structure your search loops using ``continue``.  The ``continue`` keyword skips
+the rest of a loop body and goes to the next iteration.  Shen processing a file
+in a loop, you can use ``continue`` in cases where you don't want to process a
+line.  The basic idea of the search loop is that you are looking for
+"interesting" lines and effectively skipping "uninteresting" lines. And then
+when we find an interesting line, we do something with that line.
 
 We can structure the loop to follow the pattern of skipping uninteresting lines
 as follows:
@@ -354,7 +353,6 @@ as follows:
 .. activecode:: files10
 
    with open('atotc_opening2.txt') as file:
-       count = 0
        for line in file:
            line = line.rstrip()
 
@@ -380,7 +378,6 @@ contain the string ``'for'``:
 .. activecode:: files11
 
    with open('atotc_opening2.txt') as file:
-       count = 0
        for line in file:
            line = line.rstrip()
 
@@ -414,10 +411,7 @@ and starts fresh, so be careful!
 Once the file is opened we can use the ``write()`` method of the
 file object to put data into the file. The ``write()`` methods writes
 characters into the file and then returns the number of characters
-written. 
-
-There are different modes for writing characters into the file. 
-The default write mode is text for writing (and reading) strings.
+written, though the return value is rarely used or important.
 
 .. activecode:: files13
 

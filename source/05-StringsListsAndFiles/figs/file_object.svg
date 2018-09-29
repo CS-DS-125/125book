@@ -88,7 +88,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.7039657"
      inkscape:cx="266.6454"
-     inkscape:cy="140.73924"
+     inkscape:cy="129.00977"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -110,7 +110,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -121,20 +121,12 @@
      transform="translate(-28.603859,-65.273543)">
     <path
        style="opacity:1;fill:#dcdcdc;fill-opacity:1;stroke:none;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 50.027695,86.172963 V 81.95509 c 0,-1.465791 1.180042,-2.645833 2.645833,-2.645833 v 0 h 24.631854 l -0.139248,6.863706 z"
+       d="m 50.027695,86.70213 v -4.543055 c 0,-1.578799 1.180042,-2.849818 2.645833,-2.849818 v 0 h 24.631854 l -0.139248,7.392873 z"
        id="path2610"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csccccc" />
     <g
-       aria-label="It was the best of times,
-it was the worst of times,
-it was the age of wisdom,
-it was the age of foolishness,
-it was the epoch of belief,
-it was the epoch of incredulity,
-it was the season of Light,
-it was the season of Darkness,
-[...]"
+       aria-label="It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, [...]"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1;font-family:Consolas;-inkscape-font-specification:Consolas;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="text853">
       <path
@@ -1047,47 +1039,8 @@ it was the season of Darkness,
          id="path2605" />
     </g>
     <g
-       id="g2679"
-       transform="translate(2.2505525,0.52916667)">
-      <path
-         d="m 53.29266,89.784714 q 0.07028,0 0.132291,0.02687 0.06408,0.02687 0.109554,0.07441 0.04754,0.04754 0.07441,0.111621 0.02687,0.06201 0.02687,0.134358 0,0.07028 -0.02687,0.132292 -0.02687,0.06201 -0.07441,0.109554 -0.04548,0.04548 -0.109554,0.07235 -0.06201,0.02687 -0.132291,0.02687 -0.07235,0 -0.134359,-0.02687 -0.06201,-0.02687 -0.109554,-0.07235 -0.04547,-0.04754 -0.07235,-0.109554 -0.02687,-0.06201 -0.02687,-0.132292 0,-0.07235 0.02687,-0.134358 0.02687,-0.06408 0.07235,-0.111621 0.04754,-0.04754 0.109554,-0.07441 0.06201,-0.02687 0.134359,-0.02687 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.5;font-family:Consolas;-inkscape-font-specification:Consolas;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="path2513"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 56.614421,89.381638 q 0,0.241845 -0.06821,0.444417 -0.06821,0.200504 -0.196371,0.345198 -0.128157,0.142627 -0.312125,0.223243 -0.183968,0.07855 -0.417546,0.07855 -0.223242,0 -0.401009,-0.06821 -0.1757,-0.07028 -0.299723,-0.204639 -0.121957,-0.134358 -0.188103,-0.332796 -0.06408,-0.198437 -0.06408,-0.45682 0,-0.241845 0.06821,-0.440283 0.06821,-0.200504 0.19637,-0.343131 0.128158,-0.144694 0.312126,-0.223242 0.183968,-0.08062 0.417545,-0.08062 0.223242,0 0.398942,0.07028 0.177767,0.06821 0.299724,0.202572 0.124023,0.132292 0.188102,0.330729 0.06615,0.198438 0.06615,0.454753 z m -0.367937,0.01654 q 0,-0.192236 -0.04341,-0.334863 -0.04134,-0.144694 -0.119889,-0.239779 -0.07855,-0.09715 -0.192236,-0.144694 -0.111622,-0.04961 -0.250114,-0.04961 -0.161231,0 -0.276986,0.06408 -0.113688,0.06201 -0.188102,0.167431 -0.07235,0.10542 -0.107487,0.24598 -0.03307,0.138493 -0.03307,0.291455 0,0.192236 0.04134,0.33693 0.04341,0.144694 0.121956,0.241846 0.07855,0.09508 0.19017,0.144694 0.111621,0.04754 0.252181,0.04754 0.16123,0 0.274918,-0.06201 0.115755,-0.06408 0.188102,-0.169499 0.07442,-0.10542 0.107487,-0.243913 0.03514,-0.14056 0.03514,-0.295589 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.5;font-family:Consolas;-inkscape-font-specification:Consolas;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="path2515"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 58.912988,89.360967 q 0,0.276986 -0.07855,0.483691 -0.07648,0.206706 -0.212907,0.343132 -0.136426,0.136426 -0.322461,0.204639 -0.186035,0.06821 -0.403076,0.06821 -0.09922,0 -0.198437,-0.01033 -0.09715,-0.01033 -0.198438,-0.03514 v 0.868164 h -0.359668 v -2.922819 h 0.320394 l 0.02274,0.347266 q 0.155029,-0.212907 0.330729,-0.297656 0.1757,-0.08682 0.380338,-0.08682 0.177767,0 0.312126,0.07441 0.134359,0.07441 0.225309,0.21084 0.09095,0.134359 0.136426,0.326595 0.04547,0.19017 0.04547,0.425814 z m -0.367936,0.01654 q 0,-0.163298 -0.02481,-0.299724 -0.02274,-0.136426 -0.07441,-0.233577 -0.05168,-0.09715 -0.132291,-0.150895 -0.08062,-0.05581 -0.192237,-0.05581 -0.06821,0 -0.138493,0.02274 -0.07028,0.02067 -0.146761,0.07235 -0.07441,0.04961 -0.159163,0.134358 -0.08268,0.08268 -0.177767,0.206706 v 1.006657 q 0.09922,0.04134 0.208773,0.06615 0.109554,0.02274 0.214974,0.02274 0.291455,0 0.456819,-0.19637 0.165365,-0.198438 0.165365,-0.595312 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.5;font-family:Consolas;-inkscape-font-specification:Consolas;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="path2517"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 61.223958,89.28862 q 0,0.07648 -0.0021,0.128158 -0.0021,0.05168 -0.0062,0.09715 h -1.457275 q 0,0.318327 0.177767,0.489893 0.177767,0.169499 0.51263,0.169499 0.09095,0 0.181901,-0.0062 0.09095,-0.0083 0.1757,-0.02067 0.08475,-0.0124 0.16123,-0.02687 0.07855,-0.01654 0.144694,-0.03514 v 0.295589 q -0.146761,0.04134 -0.332796,0.06615 -0.183968,0.02687 -0.382406,0.02687 -0.26665,0 -0.458886,-0.07235 -0.192237,-0.07235 -0.31626,-0.208773 -0.121956,-0.138493 -0.181901,-0.33693 -0.05788,-0.200505 -0.05788,-0.452686 0,-0.219108 0.06201,-0.413411 0.06408,-0.196371 0.183968,-0.343132 0.121957,-0.148828 0.297656,-0.235644 0.1757,-0.08682 0.398942,-0.08682 0.217041,0 0.384473,0.06821 0.167432,0.06821 0.28112,0.194304 0.115755,0.124023 0.173633,0.303857 0.05994,0.177767 0.05994,0.398942 z m -0.374137,-0.05168 q 0.0062,-0.138493 -0.02687,-0.252181 -0.03307,-0.115756 -0.103353,-0.198438 -0.06821,-0.08268 -0.171565,-0.128157 -0.103353,-0.04754 -0.239779,-0.04754 -0.117822,0 -0.214974,0.04548 -0.09715,0.04547 -0.167432,0.128157 -0.07028,0.08268 -0.113688,0.198438 -0.04341,0.115755 -0.05374,0.254248 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.5;font-family:Consolas;-inkscape-font-specification:Consolas;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="path2519"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 61.802734,88.360511 h 0.320394 l 0.01447,0.334864 q 0.09095,-0.107487 0.1757,-0.177767 0.08475,-0.07235 0.165365,-0.115755 0.08268,-0.04341 0.167431,-0.05994 0.08475,-0.0186 0.1757,-0.0186 0.320394,0 0.483692,0.19017 0.165364,0.188102 0.165364,0.56844 v 1.353923 h -0.359668 v -1.324984 q 0,-0.243913 -0.09095,-0.359668 -0.09095,-0.117822 -0.270785,-0.117822 -0.06615,0 -0.130224,0.02067 -0.06201,0.0186 -0.130225,0.06821 -0.06821,0.04754 -0.148828,0.130225 -0.07855,0.08268 -0.177767,0.206706 v 1.37666 h -0.359668 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.5;font-family:Consolas;-inkscape-font-specification:Consolas;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="path2521"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 65.376676,91.304001 q -0.952914,-0.882634 -0.952914,-1.951302 0,-0.250114 0.04961,-0.498161 0.05168,-0.250114 0.163297,-0.500228 0.113688,-0.250114 0.297656,-0.500228 0.186036,-0.250114 0.450619,-0.496093 l 0.208773,0.212907 q -0.802019,0.791682 -0.802019,1.754931 0,0.479557 0.202572,0.921908 0.202572,0.44235 0.599447,0.835091 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.5;font-family:Consolas;-inkscape-font-specification:Consolas;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="path2523"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 66.889762,87.357989 q 0.952914,0.882633 0.952914,1.963704 0,0.223242 -0.04548,0.463021 -0.04548,0.239778 -0.155029,0.491959 -0.109554,0.250114 -0.295589,0.508496 -0.183968,0.258383 -0.465088,0.518832 l -0.208773,-0.212907 q 0.403076,-0.398942 0.601514,-0.833024 0.198437,-0.434082 0.198437,-0.909505 0,-0.98392 -0.799951,-1.769401 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.5;font-family:Consolas;-inkscape-font-specification:Consolas;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="path2525"
-         inkscape:connector-curvature="0" />
-    </g>
-    <g
        id="g2689"
-       transform="translate(1.0847325,0.52916667)">
+       transform="translate(1.0847325,12.170835)">
       <path
          d="m 53.29266,96.165719 q 0.07028,0 0.132291,0.02687 0.06408,0.02687 0.109554,0.07441 0.04754,0.04754 0.07441,0.111621 0.02687,0.06201 0.02687,0.134359 0,0.07028 -0.02687,0.132292 -0.02687,0.06201 -0.07441,0.109554 -0.04548,0.04548 -0.109554,0.07235 -0.06201,0.02687 -0.132291,0.02687 -0.07235,0 -0.134359,-0.02687 -0.06201,-0.02687 -0.109554,-0.07235 -0.04547,-0.04754 -0.07235,-0.109554 -0.02687,-0.06201 -0.02687,-0.132292 0,-0.07235 0.02687,-0.134359 0.02687,-0.06408 0.07235,-0.111621 0.04754,-0.04754 0.109554,-0.07441 0.06201,-0.02687 0.134359,-0.02687 z"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.5;font-family:Consolas;-inkscape-font-specification:Consolas;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1131,7 +1084,7 @@ it was the season of Darkness,
     </g>
     <g
        id="g2698"
-       transform="translate(2.2505525,0.52916667)">
+       transform="translate(2.2505525,-11.112497)">
       <path
          d="m 53.29266,102.54672 q 0.07028,0 0.132291,0.0269 0.06408,0.0269 0.109554,0.0744 0.04754,0.0475 0.07441,0.11162 0.02687,0.062 0.02687,0.13436 0,0.0703 -0.02687,0.13229 -0.02687,0.062 -0.07441,0.10956 -0.04548,0.0455 -0.109554,0.0723 -0.06201,0.0269 -0.132291,0.0269 -0.07235,0 -0.134359,-0.0269 -0.06201,-0.0269 -0.109554,-0.0723 -0.04547,-0.0476 -0.07235,-0.10956 -0.02687,-0.062 -0.02687,-0.13229 0,-0.0724 0.02687,-0.13436 0.02687,-0.0641 0.07235,-0.11162 0.04754,-0.0475 0.109554,-0.0744 0.06201,-0.0269 0.134359,-0.0269 z"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.5;font-family:Consolas;-inkscape-font-specification:Consolas;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1170,7 +1123,7 @@ it was the season of Darkness,
     </g>
     <g
        id="g2708"
-       transform="translate(1.0847325,0.52916667)">
+       transform="translate(1.0847325,-9.0423432)">
       <path
          d="m 53.29266,108.92773 q 0.07028,0 0.132291,0.0269 0.06408,0.0269 0.109554,0.0744 0.04754,0.0475 0.07441,0.11162 0.02687,0.062 0.02687,0.13436 0,0.0703 -0.02687,0.13229 -0.02687,0.062 -0.07441,0.10955 -0.04548,0.0455 -0.109554,0.0724 -0.06201,0.0269 -0.132291,0.0269 -0.07235,0 -0.134359,-0.0269 -0.06201,-0.0269 -0.109554,-0.0724 -0.04547,-0.0475 -0.07235,-0.10955 -0.02687,-0.062 -0.02687,-0.13229 0,-0.0724 0.02687,-0.13436 0.02687,-0.0641 0.07235,-0.11162 0.04754,-0.0476 0.109554,-0.0744 0.06201,-0.0269 0.134359,-0.0269 z"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.5;font-family:Consolas;-inkscape-font-specification:Consolas;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1214,22 +1167,17 @@ it was the season of Darkness,
     </g>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 49.927553,86.172963 H 77.166134"
+       d="M 49.927553,86.70213 H 77.166134"
        id="path995"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 49.927553,92.515275 H 77.166135"
-       id="path995-0"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 49.927553,98.857607 H 77.166135"
+       d="M 49.927553,103.65725 H 77.166135"
        id="path995-9"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 49.927553,105.19991 H 77.166135"
+       d="M 49.927553,95.20609 H 77.166135"
        id="path995-4"
        inkscape:connector-curvature="0" />
     <path
@@ -1272,10 +1220,5 @@ it was the season of Darkness,
        id="path1024"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 75.090703,79.419517 v 6.885761"
-       id="path995-2"
-       inkscape:connector-curvature="0" />
   </g>
 </svg>

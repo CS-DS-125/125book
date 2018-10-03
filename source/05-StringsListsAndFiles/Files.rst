@@ -298,9 +298,11 @@ automatically be closed.
    closed.
 
    *[Technically, we are omitting some details here, and there is more involved
-   than described.  This is enough to understand the basic use of the syntax,
-   though, and additional details would just complicate matters at this
-   point.]*
+   than described.*  `The documentation
+   <https://docs.python.org/3/reference/compound_stmts.html#the-with-statement>`_
+   *provides the full details.  The description above is sufficient for using
+   the syntax, though, and additional details would just complicate matters at
+   this point.]*
 
 We will use the ``with`` syntax in the rest of the examples here, though manually
 opening and closing a file (with ``open()`` and ``.close()``) would work as well.

@@ -112,6 +112,16 @@ So when we look at the lines in a file, we need to *imagine* that there is a
 special invisible character called the newline at the end of each line that
 marks the end of the line.
 
+.. index:: escape character
+
+.. note::
+
+   The backslash ``\`` character is an *escape* character, meaning it is used
+   to indicate the start of a special character in a string.  But what if you
+   want to include an actual backslash followed by an ``n`` in a string?  You
+   can escape the backslash itself: ``"\\n"`` is a string with two characters:
+   a backslash and an ``n``.
+
 
 .. index:: file;open, open function
 .. index:: function;open
@@ -148,15 +158,12 @@ to read the file.
 
    A file object with file handle
 
-If the file does not exist, ``open`` will fail with a traceback and you
+If the file does not exist, ``open()`` will fail with a traceback and you
 will not get a file object to access the contents of the file:
 
 .. activecode:: files02
 
    file = open('stuff.txt')
-
-Later we will use ``try`` and ``except`` to deal more gracefully with
-the situation where we attempt to open a file that does not exist.
 
 
 .. index:: file;reading, counter
@@ -188,11 +195,15 @@ file:
  
    The code will work correctly in any "normal" Python interpreter.
 
-We can use the file object as the sequence in our ``for`` loop, and each
-element in the sequence will be another line from the file. The ``for`` loop
-above counts the number of lines in the file and prints the count. The rough
-translation of the ``for`` loop into English is, "for each line in the file
-represented by the file object, add one to the ``count`` variable."
+We can use the file object as the sequence in a ``for`` loop, and each element
+in the sequence will be another line from the file.  This may feel a bit odd,
+but file objects have all kinds of functionality built in to them, and acting
+as a sequence for a ``for`` loop is just one of the things they can do.
+
+The ``for`` loop above counts the number of lines in the file and prints the
+count. The rough translation of the ``for`` loop into English is, "for each
+line in the file represented by the file object, add one to the ``count``
+variable."
 
 When the file is read using a ``for`` loop in this manner, Python takes care of
 splitting the data in the file into separate lines using the newline character.
@@ -232,6 +243,7 @@ use more sophisticated tools.
 
 
 .. index:: close method, method;close
+.. index:: with statement
 
 Closing Files
 -------------
@@ -257,7 +269,7 @@ Using a file object after it has been closed will not work:
    print(len(contents2))
 
 To make sure a file is always closed and cleaned up, it is safest to use the
-`with` syntax:
+``with`` syntax:
 
 .. activecode:: files07
 
@@ -266,9 +278,29 @@ To make sure a file is always closed and cleaned up, it is safest to use the
       contents1 = file.read()
       print(len(contents1))
 
-Whenever the body of the ``with`` statement (the indented lines below it) exit,
-for any reason, the file object created by the ``open()`` call will automatically
-be closed.
+Whenever the body of the ``with`` statement (the indented lines below it)
+exits, for any reason, the file object created by the ``open()`` call will
+automatically be closed.
+
+.. admonition:: Syntax Pattern
+
+   A ``with`` statement has the form:
+
+   ::
+
+      with <expression> as <var>:
+          <body>
+
+   When Python interprets this syntax, it evaluates the expression and stores
+   the result in the variable ``<var>``.  It then executes the body.  Upon
+   leaving the body for any reason (an error, a ``return`` statement, or just
+   reaching the end), the object stored in ``<var>`` will automatically be
+   closed.
+
+   *[Technically, we are omitting some details here, and there is more involved
+   than described.  This is enough to understand the basic use of the syntax,
+   though, and additional details would just complicate matters at this
+   point.]*
 
 We will use the ``with`` syntax in the rest of the examples here, though manually
 opening and closing a file (with ``open()`` and ``.close()``) would work as well.
@@ -320,12 +352,13 @@ When this program runs, we get the following output:
 
    its noisiest authorities insisted on its being received, for good or for
 
-The output looks correct since the only lines we are seeing are those which start
-with ``'it'``, but why are we seeing the extra blank lines?  This is due to 
-invisible *newline* characters. Each of the lines in the file ends with a newline, so the
-``print()`` statement prints the string in the variable ``line`` which includes a
-newline and then ``print()`` adds *its own* newline, resulting in the double
-spacing effect we see.
+The output looks correct since the only lines we are seeing are those which
+start with ``'it'``, but why are we seeing the extra blank lines?  This is due
+to invisible *newline* characters. Each of the lines in the file ends with a
+newline, so the ``line`` variable will as well.  The ``print()`` statement
+prints the string in the variable ``line``, including its newline character,
+and then ``print()`` adds *its own* newline, resulting in the double spacing
+effect we see.
 
 We could use string slicing to print all but the last character, but a
 simpler approach is to use the ``rstrip()`` method, which strips whitespace
@@ -396,8 +429,8 @@ Writing Files
 -------------
 
 To write data into a new file or to overwrite an old file,
-we open the file with a **mode** value ``'w'`` as
-the second argument to the ``open()`` function call:
+we open the file with a **mode** value ``'w'`` (for 'w'rite mode) as the
+second argument to the ``open()`` function call:
 
 .. activecode:: files12
 
@@ -424,8 +457,10 @@ it will add the new data to the end of the file.
 
 We must make sure to manage the ends of lines as we write to the file by
 explicitly inserting the newline character when we want to end a line.
-The ``print()`` statement automatically appends a newline, but the
-``write()`` method does not add the newline automatically.
+The ``print()`` statement automatically appends a newline, but the ``write()``
+method does not add the newline automatically.  If you write strings into a
+file without adding newline characters, they will all end up as one long line,
+which is probably not what you want.
 
 .. activecode:: files14
 
@@ -437,10 +472,10 @@ The ``print()`` statement automatically appends a newline, but the
 
 .. note::
 
-   Both of the above code examples write to a file.  This will show up as a
-   text box labeled ``output.txt``.  The second example will write data into
-   the file text box created by the first example.  Scroll up if it has gone
-   off the page.
+   Both of the above code examples write to a file.  When run in this book, the
+   new file will show up as a text box labeled ``output.txt``.  The second
+   example will write data into the file text box created by the first example.
+   Scroll up if it has gone off the page.
 
 Closing files is especially important after writing data into them.
 Data might not be physically written to the secondary memory until ``close()``

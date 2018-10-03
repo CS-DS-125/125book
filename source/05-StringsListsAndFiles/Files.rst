@@ -374,7 +374,7 @@ simpler approach is to use the ``rstrip()`` method, which strips whitespace
 
 As your file processing programs get more complicated, you may want to
 structure your search loops using ``continue``.  The ``continue`` keyword skips
-the rest of a loop body and goes to the next iteration.  Shen processing a file
+the rest of a loop body and goes to the next iteration.  When processing a file
 in a loop, you can use ``continue`` in cases where you don't want to process a
 line.  The basic idea of the search loop is that you are looking for
 "interesting" lines and effectively skipping "uninteresting" lines. And then

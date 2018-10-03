@@ -14,7 +14,6 @@ pieces of data; we'll even see that a string is really multiple pieces of data
    Strings
    Lists
    Files
-   CleaningProcessing
 
    Glossary
 

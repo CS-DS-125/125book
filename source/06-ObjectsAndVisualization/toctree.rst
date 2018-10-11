@@ -8,4 +8,6 @@ Objects and Visualization
    :maxdepth: 2
 
    Glossary
+   
+   charts
 

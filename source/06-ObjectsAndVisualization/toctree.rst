@@ -7,7 +7,8 @@ Objects and Visualization
 .. toctree::
    :maxdepth: 2
 
-   Glossary
-   
    charts
+   matplotlib
+
+   Glossary
 

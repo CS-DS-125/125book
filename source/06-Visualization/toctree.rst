@@ -9,6 +9,7 @@ Visualization
 
    charts
    matplotlib
+   pandas-matplotlib
 
    Glossary
 

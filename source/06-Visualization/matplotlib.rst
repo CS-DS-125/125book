@@ -108,7 +108,7 @@ The methods used here are:
 
 
 
-.. image:: matplotlib_figs/output_12_0.png
+.. image:: figs_matplotlib/output_12_0.png
 
 
 Bar chart
@@ -134,7 +134,7 @@ The methods ``plt.xlabel()``, ``plt.ylabel()``, ``plt.title()``, and
 
 
 
-.. image:: matplotlib_figs/output_14_0.png
+.. image:: figs_matplotlib/output_14_0.png
 
 
 Or, we can create a *horizontal* bar chart. This might work better for
@@ -154,7 +154,7 @@ swapped the x- and y-axis labels.
 
 
 
-.. image:: matplotlib_figs/output_16_0.png
+.. image:: figs_matplotlib/output_16_0.png
 
 
 Histogram
@@ -177,7 +177,7 @@ number of values that fall in each bin to create the plot.
 
 
 
-.. image:: matplotlib_figs/output_18_0.png
+.. image:: figs_matplotlib/output_18_0.png
 
 
 We can control the number of bins using the ``bins=`` argument to the
@@ -193,7 +193,7 @@ We can control the number of bins using the ``bins=`` argument to the
 
 
 
-.. image:: matplotlib_figs/output_20_0.png
+.. image:: figs_matplotlib/output_20_0.png
 
 
 Scatter plot
@@ -213,7 +213,7 @@ values, respectively, for each point in the chart:
 
 
 
-.. image:: matplotlib_figs/output_22_0.png
+.. image:: figs_matplotlib/output_22_0.png
 
 
 We might want to make the individual markers somewhat transparent to
@@ -232,5 +232,5 @@ markers. The ``alpha=0.25`` argument makes each marker 25% opaque (thus
 
 
 
-.. image:: matplotlib_figs/output_24_0.png
+.. image:: figs_matplotlib/output_24_0.png
 

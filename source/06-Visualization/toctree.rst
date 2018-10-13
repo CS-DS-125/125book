@@ -11,5 +11,3 @@ Visualization
    matplotlib
    pandas-matplotlib
 
-   Glossary
-

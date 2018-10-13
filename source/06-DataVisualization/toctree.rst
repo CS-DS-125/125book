@@ -1,7 +1,7 @@
 .. index:: visualization
 
-Visualization
-=============
+Data Visualization
+==================
 
 
 .. toctree::

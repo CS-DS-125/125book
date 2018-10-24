@@ -8,4 +8,5 @@ Pandas (Processing Lots of Data)
    :maxdepth: 2
 
    pandas-descriptives
-
+   pandas-manipulate
+   pandas-categorical

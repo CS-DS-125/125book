@@ -1,4 +1,5 @@
 .. index:: pandas, descriptive statistics, summary statistics
+.. index:: dataframe;.shape, dataframe;.head(), dataframe;.tail(), dataframe;.describe(), dataframe;.transpose(), dataframe;.sort_values(), dataframe;.mean()
 
 .. note::
    This is a static copy of a Jupyter notebook.  You can access a live
@@ -23,7 +24,7 @@ tool for working with data.
 The specific dataframe methods we will use that we haven’t covered
 before are:
 
--  ``shape()``
+-  ``shape``
 -  ``head()``
 -  ``tail()``
 -  ``describe()``

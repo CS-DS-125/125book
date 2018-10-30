@@ -7,5 +7,6 @@ Pandas (Processing Lots of Data)
 .. toctree::
    :maxdepth: 2
 
-   Glossary
-
+   pandas-descriptives
+   pandas-manipulate
+   pandas-categorical

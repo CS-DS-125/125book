@@ -1,7 +1,7 @@
 .. index:: visualization
 
-Visualization
-=============
+Data Visualization
+==================
 
 
 .. toctree::
@@ -10,6 +10,4 @@ Visualization
    charts
    matplotlib
    pandas-matplotlib
-
-   Glossary
 

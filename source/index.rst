@@ -8,10 +8,12 @@
    <div id="book-cover" class="col-sm-7">
    <h1>The Python and Pandas Field Guide</h1>
    <h2 style="font-style: italic; color: #777;">An Introduction to Computer and Data Science</h2>
+   <figure id="cover_image">
    <img src="_static/snakebear.svg" width="80%">
    <figcaption>
    anaconda by parkjisun; panda by Liane Kirschner; both from the Noun Project
    </figcaption>
+   </figure>
    </div>
    <div id="book-contents" class="col-sm-5">
 
@@ -52,4 +54,10 @@ Index and Search
    </div>
    <!-- close div#cover-page -->
    </div>
+
+   <script>
+   document.getElementById("cover_image").addEventListener('dblclick', function(e) {
+      document.getElementById("cover_image").innerHTML = "<img style='max-height: 30em;' src='_static/snakebear_bonus.png'>";
+   });
+   </script>
 

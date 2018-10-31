@@ -10,3 +10,4 @@ Pandas (Processing Lots of Data)
    pandas-descriptives
    pandas-manipulate
    pandas-categorical
+   pandas-continuous

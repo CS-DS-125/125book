@@ -341,7 +341,9 @@ format, such as all lowercase, before performing the comparison.  The next
 section includes a way to do that.
 
 
-.. index:: object, method
+.. index:: object, method, object;method
+
+.. _string-objects:
 
 ``string`` Objects and Methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

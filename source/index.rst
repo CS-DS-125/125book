@@ -31,6 +31,7 @@ Table of Contents
    05-StringsListsAndFiles/toctree
    06-DataVisualization/toctree
    07-Pandas/toctree
+   08-Classes/toctree
 
 Appendices
 ^^^^^^^^^^

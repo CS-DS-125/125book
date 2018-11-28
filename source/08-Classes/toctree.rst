@@ -1,7 +1,7 @@
 .. index:: pandas
 
-Classes (New Kinds of Objects)
-==============================
+Classes (Defining New Kinds of Objects)
+=======================================
 
 A class defines a type of object.  Therefore, to define new kinds of objects,
 we will need to create classes.  This chapter introduces the syntax of class

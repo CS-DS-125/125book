@@ -357,6 +357,7 @@ we call it ``thing``.
 .. index:: void function
 .. index:: function; fruitful
 .. index:: function; void
+.. _fruitful_vs_void:
 
 Fruitful Functions and Void Functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

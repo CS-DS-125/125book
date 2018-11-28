@@ -57,7 +57,8 @@ particular syntax:
    conventionally named ``self``.  [This isn't an absolute rule, but it will
    always be followed as far as we are concerned in this book.]
 
-Let's look at an example:
+Let's look at an example.  Try running the following with CodeLens.  It won't
+print anything out, but it will create the class.
 
 .. activecode:: classes_01
 

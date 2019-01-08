@@ -29,8 +29,8 @@ before are:
 -  ``cut()``
 -  ``drop()``
 -  ``copy()``
--  ``columns``
 -  ``tolist()``
+-  ``columns``
 
 .. code:: python3
 
@@ -1876,13 +1876,12 @@ take a label, or list of labels, and drop them from the dataframe.
 ``drop()`` can be used to remove rows as well so we have to tell is to
 specifically look for a column with the label we specified. We tell it
 to look for column by specifying ``axis=1`` (we would use ``axis=0`` if
-we wanted to drop rows). The ``inplace=True`` argument is something we
-will discuss later.
+we wanted to drop rows).
 
 .. code:: python3
 
-    df.drop('New Column!', axis=1, inplace=True)
-    df.head()
+    df_dropped = df.drop('New Column!', axis=1)
+    df_dropped.head()
 
 
 

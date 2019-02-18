@@ -5,9 +5,9 @@ Charts
 
 When you are dealing with a very small number of data points, its often easy to simply look and know something about what you've got. Let's say you were playing a card game and you had five cards in your hand. Without too much effort you could look at your hand and tell me the most common suit. However, the more data you have the harder it gets to just look and then draw some kind of reasonable conclusion. Let's say you could hold fifty cards in your hand. You would probably have to count them all to figure out the most common suit. Or rather than counting them, you could sort them into nice stacks and see which is the biggest. Fifty cards sorted into four nice stacks is a kind of summary of the data that may hide some of the detail, but helps you answer the question you are interested in. Good visualizations work the same way. 
 
-Vizualizations are visual representations of data that are designed to make it easier to understand something about that data. They are a type of abstract representation and if they are done well they can be very powerful. However, it is also easy to do them poorly and to make something that is confusing or potentially misleading. Good visualizations should be clear and honest. 
+Visualizations are visual representations of data that are designed to make it easier to understand something about that data. They are a type of abstract representation and if they are done well they can be very powerful. However, it is also easy to do them poorly and to make something that is confusing or potentially misleading. Good visualizations should be clear and honest. 
 
-There are many many different types of visuzalizations with different strengths and weakenesses. Choosing the right visualization for your question can be challenging, so for now we are going to keep it simple and just talk about some key types of visualizations.  
+There are many many different types of visualizations with different strengths and weaknesses. Choosing the right visualization for your question can be challenging, so for now we are going to keep it simple and just talk about some key types of visualizations.  
 
 
 Chart Terminology
@@ -16,16 +16,16 @@ Chart Terminology
 A **chart** is a fairly common type of data visualization. Charts are often
 2-dimensional figures with a horizontal **x-axis** and a vertical **y-axis**.
 Data is represented on these two axes using graphical elements such as lines,
-bars, or individual markers. The x and y axes are typically labelled and marked
+bars, or individual markers. The x and y axes are typically labeled and marked
 with tick marks to help you understand what the axis is representing. 
 
 
 Bar Charts
 ~~~~~~~~~~
 
-Bar charts are good at representing differences between types of things. They typically plot different types of things (categories) along one axis and quantitative (numeric) variables along the other. For example, a bar chart of my typical cookie consumption for the week might list types of cookies on the x-axis (categories: chocolate chip, oatmeal, sugarcookie) and then represent the number of each kind of cookie I ate (quantitative data) as bars of different heights.  The height of each bar would represent the quantitity of cookies consummed as indicated on the y-axis.
+Bar charts are good at representing differences between types of things. They typically plot different types of things (categories) along one axis and quantitative (numeric) variables along the other. For example, a bar chart of my typical cookie consumption for the week might list types of cookies on the x-axis (categories: chocolate chip, oatmeal, sugar cookie) and then represent the number of each kind of cookie I ate (quantitative data) as bars of different heights.  The height of each bar would represent the quantity of cookies consumed as indicated on the y-axis.
 
-It is important to realize that meanings of the bars can be very different. Those bars could represent the total number of calories in the cookies or my average mood following cookie consumption, instead of just number eaten. This is one reason that labelling your axis is important.
+It is important to realize that meanings of the bars can be very different. Those bars could represent the total number of calories in the cookies or my average mood following cookie consumption, instead of just number eaten. This is one reason that labeling your axis is important.
 
 .. important::
 
@@ -138,7 +138,7 @@ levels, weekly revenue was much higher in the 2010s than in the 1990s.
 Histograms
 ~~~~~~~~~~
 
-Histograms look a lot like bar charts, but they are used to tell us something a bit more specific. Histograms are used to tell us the frequency at which something occurred in our data. Going back to cookies one last time, we might ask in a month of cookie eating how many days did I eat exactly five cookies? How many days did I eat zero cookies? In a histogram of cookie consumption the x-axis would represent the number of cookies consumed; the y-axis would represent the number of times that specific value occurred. I honestly don't eat all that many cookies, so in a thirty day period the most common number of cookies consummed would be zero. The next most common would probably be two, because who eats just one cookie? So if we looked at the bars in a histogram what we are seeing is the frequency (or count) of the number of times something occurs in our data.   
+Histograms look a lot like bar charts, but they are used to tell us something a bit more specific. Histograms are used to tell us the frequency at which something occurred in our data. Going back to cookies one last time, we might ask in a month of cookie eating how many days did I eat exactly five cookies? How many days did I eat zero cookies? In a histogram of cookie consumption the x-axis would represent the number of cookies consumed; the y-axis would represent the number of times that specific value occurred. I honestly don't eat all that many cookies, so in a thirty day period the most common number of cookies consumed would be zero. The next most common would probably be two, because who eats just one cookie? So if we looked at the bars in a histogram what we are seeing is the frequency (or count) of the number of times something occurs in our data.   
 
 There is an additional complication to making histograms. When we make the chart we have to decide how many 'bins' to create along the x-axis. In the example above it might make sense to have each number represented by a single bin. This is the simplest kind of binning but its often not possible to do use the x-axis in this way. Let's say we wanted to make a histogram representing average monthly income for people from all around the world. It would not be possible to represent every value on the x-axis in a practical way - our chart would likely be  too long to be displayed. Instead we would make a decision about grouping certain ranges of incomes together. The histograms would then represent the frequency of data points that we placed into these 'bins'. How we choose to bin can have a significant impact on what the histogram looks like, and what conclusion we might come to about the data, so you will need to be careful and thoughtful about how you selected bins.   
 
@@ -169,3 +169,48 @@ answer the question(s) you are asking.
 | Histogram    | Frequencies   | Quantitative           | Frequency    |
 +--------------+---------------+------------------------+--------------+
 
+
+.. admonition:: Check your understanding
+
+   For each of the following scenarios, which chart type is most appropriate?
+
+   .. mchoice:: cyu_charts01
+      :answer_a: Bar chart
+      :answer_b: Line chart
+      :answer_c: Scatter plot
+      :answer_d: Histogram
+      :correct: b
+      :feedback_a: Incorrect.  A bar chart does not work well for dozens of data points (each month's sales) across multiple series (each product).  Bars also do not convey changes over time well.
+      :feedback_b: Correct!  With regular datapoints over time, a line chart is a good one to use, and it can easily contain multiple lines to represent the different products.
+      :feedback_c: Incorrect.  A scatter plot can represent this data, but it is not the most natural choice when changes over time are of interest, because each data point is presented disconnected from all others in a scatter plot.
+      :feedback_d: Incorrect.  This analysis is not looking at frequencies or counts of different values in the data, which is what histograms are made for.
+
+      You have monthly sales data for a variety of products over several years, and you want to compare how the products sell relative to each other in different seasons.
+
+
+   .. mchoice:: cyu_charts02
+      :answer_a: Bar chart
+      :answer_b: Line chart
+      :answer_c: Scatter plot
+      :answer_d: Histogram
+      :correct: d
+      :feedback_a: Incorrect.  The given data is just a list of ages; it doesn't contain counts for each age to be plotted.
+      :feedback_b: Incorrect.  There is no sequential, increasing value (like time) against which you want to plot any values in this case.
+      :feedback_c: Incorrect.  The data do not contain two series of numerical values that could be compared.
+      :feedback_d: Correct!  Histograms are made for looking at frequencies or counts of different values in data.  The histogram takes numerical data, groups it into bins, and calculates numerical counts to be plotted.
+
+      You have a list of character ages for all novels written in a particular time period, and you want to see how common each age (or range of ages, say 20-25) is across all of those novels.
+
+
+   .. mchoice:: cyu_charts03
+      :answer_a: Bar chart
+      :answer_b: Line chart
+      :answer_c: Scatter plot
+      :answer_d: Histogram
+      :correct: c
+      :feedback_a: Incorrect.  A bar chart does not work well for dozens of elements or more, especially when comparing two different values for each element.
+      :feedback_b: Incorrect.  There is no sequential, increasing value (like time) against which you want to plot any values in this case.
+      :feedback_c: Correct!  A scatter plot is an excellent tool for looking for correlations or other relationships between paired data.
+      :feedback_d: Incorrect.  This analysis is not looking at frequencies or counts of different values in the data, which is what histograms are made for.
+
+      You have run a biology experiment on a large number of samples, collecting two different measurements for each sample.  You are interested to see if there is any relationship or correlation between the two measurements across the collection of all samples.

@@ -1152,9 +1152,16 @@ Line Chart
 ----------
 
 For line charts, again we call Matplotlib’s plotting function
-(``plt.plot()`` in this case), specifying column labels as arguments
-(for the x and y axis) and a dataframe as a data source using the
+(``plt.plot()`` in this case), specifying column labels as the first two
+arguments (for the x and y axis) and a dataframe as a data source using the
 ``data`` argument.
+
+[You may have noticed by now that the ``plt.plot()`` function is the one charting
+function for which we do *not* write ``x=`` and ``y=`` before the x and y
+arguments.  The other functions allow it, and doing so is best for writing
+clear code, but if you try to add those for ``plt.plot()``, you will get an
+error.  So do use the ``x=``, etc. argument labels in other chart drawing
+functions for clarity, but leave them out with ``plt.plot()``.]
 
 Here, we want to compare revenue over time for *Rent* and *The Lion
 King*, so we make two new dataframes each containing just the data for
@@ -1194,8 +1201,8 @@ points easier to see.
 
 .. code:: python
 
-    plt.scatter('Attendance', 'Gross', data=df_rent, alpha=0.25, s=5)
-    plt.scatter('Attendance', 'Gross', data=df_lionking, alpha=0.25, s=5)
+    plt.scatter(x='Attendance', y='Gross', data=df_rent, alpha=0.25, s=5)
+    plt.scatter(x='Attendance', y='Gross', data=df_lionking, alpha=0.25, s=5)
     plt.xlabel("Attendance (weekly)")
     plt.ylabel("Gross Revenue (weekly, $)")
     plt.legend(["Rent", "The Lion King"])

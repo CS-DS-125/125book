@@ -46,7 +46,23 @@ As you might expect, you can assign list values to variables:
    numbers = [17, 123]
    empty = []
    print(cheeses, numbers, empty)
-   
+
+.. index:: list;index, list;membership
+.. index:: membership;list, in operator
+.. index:: operator;in
+
+The ``in`` operator also works on lists in a similar fashion to how it works with strings.
+
+.. activecode:: lists01b
+
+   cheeses = ['Cheddar', 'Edam', 'Gouda']
+   print('Edam' in cheeses)
+   print('Brie' in cheeses)
+
+An ``<a> in <b>`` expression, in general, evaluates to ``True`` if the ``<a>``
+value on the left of ``in`` is found in the list or other sequence ``<b>`` on
+the right.
+
 .. index:: list;element
 .. index:: indexing
 .. index:: bracket operator
@@ -55,15 +71,15 @@ As you might expect, you can assign list values to variables:
 .. index:: item assignment
 .. index:: assignment;item
 
-Lists are Mutable
------------------
+Indexing (Lists are Mutable)
+----------------------------
 
 The syntax for accessing the elements of a list is the same as for
 accessing the characters of a string: the bracket operator. The
 expression inside the brackets specifies the index. Remember that the
 indices start at 0:
 
-.. activecode:: lists01b
+.. activecode:: lists02
 
    cheeses = ['Cheddar', 'Edam', 'Gouda']
    print(cheeses[0])
@@ -73,7 +89,7 @@ items in a list or reassign an item in a list. When the bracket operator
 appears on the left side of an assignment, it identifies the element of
 the list that will be assigned.
 
-.. activecode:: lists02
+.. activecode:: lists02b
 
    numbers = [17, 123]
    print(numbers)
@@ -98,19 +114,6 @@ Indexing in a list works the same way as indexing in a string:
   an ``IndexError``.
 - If an index has a negative value, it counts backward from the end of
   the list.
-
-.. index:: list;index, list;membership
-.. index:: membership;list, in operator
-.. index:: operator;in
-
-The ``in`` operator also works on lists:
-
-.. activecode:: lists02b
-
-   cheeses = ['Cheddar', 'Edam', 'Gouda']
-   print('Edam' in cheeses)
-   print('Brie' in cheeses)
-   
 
 .. index:: list;traversal, traversal;list
 .. index:: for loop, loop;for

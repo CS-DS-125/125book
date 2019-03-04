@@ -60,7 +60,7 @@ The ``in`` operator also works on lists in a similar fashion to how it works wit
    print('Brie' in cheeses)
 
 An ``<a> in <b>`` expression, in general, evaluates to ``True`` if the ``<a>``
-value on the left of ``in`` is found in the list or other sequence ``<b>`` on
+value on the left of ``in`` is found in the list (or other sequence) ``<b>`` on
 the right.
 
 .. index:: list;element

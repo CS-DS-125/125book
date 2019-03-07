@@ -528,7 +528,7 @@ on different operating systems or computers because of these slight variations.
 
 For most systems, there are applications to convert files from one format to another.
 You can find them (and read more about this issue that you wouldn't think
-should be so complex) at `wikipedia.org/wiki/Newline
-<https://wikipedia.org/wiki/Newline>`_. Or, perhaps, you might write the code
+should be so complex) at `en.wikipedia.org/wiki/Newline
+<https://en.wikipedia.org/wiki/Newline>`_. Or, perhaps, you might write the code
 to do the conversion yourself.
 

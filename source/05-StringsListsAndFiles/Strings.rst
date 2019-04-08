@@ -365,7 +365,7 @@ In the case of a string object, the object's data is the characters of the
 string itself.  And there are a few ways to learn about what methods (code) it
 contains.
 
-Python has a function called ``dir()`` which lists the methods available for an
+Python has a function called ``dir()`` which lists the methods available in an
 object. The ``type()`` function shows the type of an object and the ``dir()``
 function shows the available methods.
 
@@ -399,8 +399,8 @@ documentation for string methods is the official Python documentation:
 .. index:: dot notation
 
 Methods, like any other function, can be called to execute them.  Calling a
-method is similar to calling a function (it takes arguments and returns a
-value) but to access a method within an object, we use :ref:`dot notation
+method is similar to calling a function (it takes arguments and can return a
+value), but to access a method within an object, we use :ref:`dot notation
 <dot-notation>` just like when accessing functions within modules.
 
 .. index:: upper() method
@@ -416,8 +416,8 @@ with all uppercase letters:
    print(new_word)
 
 This form of dot notation specifies the name of the method, ``upper()``, and the
-name of the string to apply the method to, ``word``. The empty parentheses
-indicate that this method takes no argument.
+name of the string to apply the method to, ``word``. The parenthese are empty
+because this method takes no arguments.
 
 .. index:: find() method
 

@@ -4,11 +4,11 @@ Classes
 =======
 
 The objects we've seen and used thus far have all had specific *types*, and
-each type is consistent between objects of that type.  Every DataFrame contains
-the same set of methods and attributes, every String object works the same way,
-and every File object can be used just like any other.  The consistent set of
-functionality within an object of a given type must be defined somewhere.
-That's where classes come in.
+any given object type has a consistent definition across all objects of that
+type.  Every DataFrame contains the same set of methods and attributes, every
+String object works the same way, and every File object can be used just like
+any other.  The consistent set of functionality within an object of a given
+type must be defined somewhere.  That's where classes come in.
 
 A **class** defines a type of object.  It specifies what attributes any object
 of that type will have and what methods it will have.  A common analogy is to
@@ -24,7 +24,8 @@ be used to make one cookie or many cookies with that shape.
 
 We often call each object created from a given class an **instance** of that
 class, sometimes referring to the variables that hold those objects as "instance
-variables."
+variables."  For example, if ``df`` is a DataFrame object, we could also say that
+``df`` is an instance of the DataFrame class.
 
 Defining a Class
 ----------------
@@ -52,7 +53,7 @@ particular syntax:
       def <method name>(self, <optionally more parameters>):
           <body> 
 
-   Each method definition is like any other function definition, but each
+   A method definition is like any other function definition, but every
    method must have at least one parameter, and that first parameter is
    conventionally named ``self``.  [This isn't an absolute rule, but it will
    always be followed as far as we are concerned in this book.]
@@ -75,14 +76,15 @@ print anything out, but it will create the class.
 
 This defines a class named ``Box`` (capitalized, as noted above) with two
 methods: ``__init__()`` and ``draw()``.  Notice that both method definitions
-are indented.  This puts them inside the body of the class definition.  If one
-were not indented, it would just be a normal function definition, no longer
-part of the class.
+are indented inside the class.  This puts them inside the body of the class
+definition.  If one were not indented, it would just be a normal function
+definition, no longer part of the class.  (Try editing the code to remove
+the indentation of ``draw`` and see what changes when you re-run it.)
 
 When this code is executed, it creates the class, but none of the instructions
-in its methods are executed (try it!).  This is like with a function
-definition; executing the definition creates the function, but it doesn't run
-the function's body until it is called.
+in its methods are executed (try it!).  Class definitions are similar to function
+definitions in this way; executing a function definition creates the function,
+but it doesn't run the function's body until it is called.
 
 .. index:: instantiate, constructor, __init__()
 
@@ -110,7 +112,10 @@ class, because we are creating an instance of it.
                print('|' + ' ' * (self.w - 2) + '|')
            print("+" * self.w)   
 
+   # Instantiate a Box object
    a = Box(6, 4)
+
+   # Call a method in the new Box object
    a.draw()
 
 The above code is best explored using the CodeLens tool.  Upon executing the
@@ -146,11 +151,11 @@ created and assigned using dot notation with the ``self`` parameter.
 Watch in CodeLens as ``__init__()`` is called.  The method is defined with
 three parameters, ``self``, ``width``, and ``height``, but it is called with
 just two arguments, ``6`` and ``4``.  The first argument, ``self`` is
-automatically assigned a reference to a new "Box instance", while ``width`` and
-``height`` get the two arguments from the function call.
+automatically assigned a reference to a new ``Box`` instance, while ``width``
+and ``height`` get the two arguments from the function call.
 
-With ``self`` referring to a new Box instance, ``self.w`` and ``self.h`` are then
-two attributes, named ``w`` and ``h``, within that instance.  The two assignments
+With ``self`` referring to a new ``Box`` instance, ``self.w`` and ``self.h`` are then
+two attributes, named ``w`` and ``h``, of that instance.  The two assignments
 in the ``__init__()`` method create them and give them values.
 
 .. note::
@@ -202,15 +207,18 @@ in CodeLens.
                print('|' + ' ' * (self.w - 2) + '|')
            print("+" * self.w)   
 
+   # Instantiate three new Box objects
    a = Box(6, 4)
    b = Box(3, 3)
    c = Box(8, 2)
+
+   # Call methods in the different objects
    a.draw()
    b.draw()
    c.draw()
    a.draw()
 
-Each time, ``__init__()`` is called, its ``self`` parameter is referencing a
+Each time ``__init__()`` is called, its ``self`` parameter is referencing a
 new object.  And each time ``draw()`` is called, its ``self`` parameter
 references just the particular object in which ``draw()`` was called.  Another
 way of thinking about it is that for a method called via dot notation, ``self``
@@ -221,8 +229,9 @@ Fruitful Methods and Void Methods
 
 In the chapter on Functions, we discussed two types of functions in
 :ref:`fruitful_vs_void`.  The same distinction can be applied to a class's
-methods as well.  The ``draw()`` method above is a *void* method.  We can
-define fruitful methods as well.  For example:
+methods as well.  The ``draw()`` method above is a *void* method, because it
+doesn't return a value.  We can define fruitful methods that return values as
+well.  For example:
 
 .. activecode:: classes_04
 
@@ -242,6 +251,8 @@ define fruitful methods as well.  For example:
            return area
 
    a = Box(6, 4)
+
+   # Call a fruitful method, and save its return value
    box_area = a.get_area()
    print(box_area)
 
@@ -257,5 +268,7 @@ Here, the ``get_area()`` method returns a value.  When it is called, it returns 
 
    This can help when designing classes as well.  As you design a class and
    define its methods, think about whether each method is something you want an
-   object of that type to do or a question the rest of the program might need
-   to ask that object.
+   object of that type to do (implies it should be a void method) or a question
+   the rest of the program might need to ask that object (suggests a fruitful
+   method with a return value).
+

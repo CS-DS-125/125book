@@ -170,7 +170,7 @@ in the ``__init__()`` method create them and give them values.
    .. code:: python
 
       class Example:
-          def __init__(param1, param2, param3):
+          def __init__(self, param1, param2, param3):
               self.attr1 = param1
               self.attr2 = param2
               self.attr3 = param3

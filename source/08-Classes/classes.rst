@@ -256,7 +256,9 @@ well.  For example:
    box_area = a.get_area()
    print(box_area)
 
-Here, the ``get_area()`` method returns a value.  When it is called, it returns a value.
+Here, the ``get_area()`` method is a fruitful method with a return statement.
+When it is called, the method returns a value, which here we save in a new
+variable.
 
 .. note::
 

@@ -52,14 +52,14 @@ extensions += ['runestone.common', 'runestone.activecode', 'runestone.assess', '
 #extensions += runestone.runestone_extensions()
 
 # Add my extension
-extensions += ['trinket']
+#extensions += ['trinket']
 
 
 # Enable todos
 todo_include_todos = True
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+#templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -104,12 +104,12 @@ rst_prolog = ".. |blank| replace:: :blank:`x`"
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_bootstrap'
+html_theme = '125book'
+# Just for testing components updates against the original theme
+#html_theme = 'thinkcspy_orig'
 
 # Tell it where to find the theme
-html_theme_path = ["_templates/plugin_layouts"]
-# Just for testing components updates against the original theme
-#html_theme_path = ["_templates/thinkcspy_orig"]
+html_theme_path = ["_themes"]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

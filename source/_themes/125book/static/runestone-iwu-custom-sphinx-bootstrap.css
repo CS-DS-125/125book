@@ -69,7 +69,7 @@ div#content-wrapper {
 
 div.figure {
     text-align: center;
-    margin: 0;
+    margin: 0 !important;  /* override Sphinx 2.0's cenetering (across the entire page) */
     padding: 0;
 }
 div.figure p.caption {

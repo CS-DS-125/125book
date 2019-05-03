@@ -45,30 +45,20 @@ div.flexcontainer {
 }
 
 div#content-wrapper {
-    flex-grow: 1;
+    flex: 1 1 auto;
     max-width: 100%;
     min-width: 0;  /* so flexbox will push beyond what CodeMirror might otherwise want when shrinking. */
     padding: 0 1em;
 }
 .container  .section >*:not(.section) {
 	max-width: 500pt;
-    /*
-	margin-left: auto;
-	margin-right: auto;
-    */
-}
-/* This rule is meant to override the behavior of the
-   previous rule since it is not possible to exclude
-   more than one section in the not() part of the rule
-*/
-.container .section div.full-width.container {
-	margin-left: auto;
-	margin-right: auto;
-    max-width: 90%;
 }
 
 .container .section > .table {
     width: unset;  /* don't need to stretch tables to 100%, which is what bootstrap seems to want */
+}
+.container .section > .table.align-left {
+    margin-left: 2em;
 }
 
 .container .section a.image-reference {

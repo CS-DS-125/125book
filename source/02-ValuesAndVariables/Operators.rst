@@ -220,15 +220,18 @@ Table of Operators
 
 The following table summarizes the operators discussed above.
 
-========== ====================== =============== 
- Operator   int, float Operation    str Operation 
-========== ====================== =============== 
- ``+``     Addition               Concatenation 
- ``-``     Subtraction                   
- ``*``     Multiplication         Repetition    
- ``/``     Division                      
- ``//``    Integer Division               
- ``%``     Modulus
- ``**``    Exponentiation                
-========== ====================== ===============
+.. table::
+   :align: left
+
+   ========== ====================== =============== 
+   Operator   int, float Operation   str Operation 
+   ========== ====================== =============== 
+   ``+``      Addition               Concatenation 
+   ``-``      Subtraction                   
+   ``*``      Multiplication         Repetition    
+   ``/``      Division                      
+   ``//``     Integer Division               
+   ``%``      Modulus
+   ``**``     Exponentiation                
+   ========== ====================== ===============
 

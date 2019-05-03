@@ -157,17 +157,20 @@ what the x- and y-axis of that type typically represents.  Always think
 carefully about what type of chart will best represent the data you have and
 answer the question(s) you are asking.
 
-+--------------+---------------+------------------------+--------------+
-| Chart Type   | Use to Show   | X-axis                 | Y-axis       |
-+==============+===============+========================+==============+
-| Bar Chart    | Comparison    | Categorical            | Quantitative |
-+--------------+---------------+------------------------+--------------+
-| Line Chart   | Trend, Change | Quantitative (ordered) | Quantitative |
-+--------------+---------------+------------------------+--------------+
-| Scatter Plot | Relationship  | Quantitative           | Quantitative |
-+--------------+---------------+------------------------+--------------+
-| Histogram    | Frequencies   | Quantitative           | Frequency    |
-+--------------+---------------+------------------------+--------------+
+.. table::
+   :align: left
+
+   +--------------+---------------+------------------------+--------------+
+   | Chart Type   | Use to Show   | X-axis                 | Y-axis       |
+   +==============+===============+========================+==============+
+   | Bar Chart    | Comparison    | Categorical            | Quantitative |
+   +--------------+---------------+------------------------+--------------+
+   | Line Chart   | Trend, Change | Quantitative (ordered) | Quantitative |
+   +--------------+---------------+------------------------+--------------+
+   | Scatter Plot | Relationship  | Quantitative           | Quantitative |
+   +--------------+---------------+------------------------+--------------+
+   | Histogram    | Frequencies   | Quantitative           | Frequency    |
+   +--------------+---------------+------------------------+--------------+
 
 
 .. admonition:: Check your understanding

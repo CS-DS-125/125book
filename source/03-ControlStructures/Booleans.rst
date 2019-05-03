@@ -53,16 +53,19 @@ equal and ``False`` otherwise:
 
 The complete list of comparison operators:
 
-================ ===============================
-Operator         Interpretation
-================ ===============================
-``x == y``       x is equal to y
-``x != y``       x is not equal to y
-``x > y``        x is greater than y
-``x < y``        x is less than y
-``x >= y``       x is greater than or equal to y
-``x <= y``       x is less than or equal to y
-================ ===============================
+.. table::
+   :align: left
+
+   ================ ===============================
+   Operator         Interpretation
+   ================ ===============================
+   ``x == y``       x is equal to y
+   ``x != y``       x is not equal to y
+   ``x > y``        x is greater than y
+   ``x < y``        x is less than y
+   ``x >= y``       x is greater than or equal to y
+   ``x <= y``       x is less than or equal to y
+   ================ ===============================
 
 .. caution::
 

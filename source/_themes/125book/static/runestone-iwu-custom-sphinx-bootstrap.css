@@ -140,58 +140,9 @@ input[type="checkbox"] {
     margin-bottom: 0;
 }
 
-/* ActiveCode and CodeLens styling */
-/* Flex, flex-wrap, and order to rearrange things without having to change runestonecomponents html */
-div.ac_section, div.cd_section {
-    color: #000;
-    padding: 0 5px;
-    border: none;
-    margin: 1em 0;
-}
-div.ac_section > div.ac_section, div.cd_section > div {
-    background: none;
-    margin: 0.25em 0;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-}
-div.ac_section div.ac_section .btn {
-    margin: 0.25em;
-}
-div.ac_section > *, div.cd_section > * {
-    margin: 0;
-}
-.ac_section > .col-md-12 {
-    width: 100% !important;
-}
-@media (min-width: 512pt) {
-    .ac_section > div, .ac_section > .col-md-12 {
-        max-width: 500pt !important;
-    }
-}
-@media (max-width: 513pt) {
-    .ac_section > div, .ac_section > .col-md-12 {
-        max-width: 100% !important;
-    }
-}
-div.ac_actions {
-    /* move after the code */
-    order: 100;
-}
-.ac_caption, .cl_caption {
-    font-style: italic;
-    font-weight: normal;
-    max-width: 500pt;
-    text-align: center;
-}
-
 /* Copied/adapted from: video.css, for some reason, and so not included if we don't include the video extension... */
 .cl_caption:before {
     content: "CodeLens " counter(codelens) ": ";
-    counter-increment: codelens;
-}
-.ac_caption:before {
-    content: "ActiveCode " counter(codelens) ": ";
     counter-increment: codelens;
 }
 /* End copy from video.css. */

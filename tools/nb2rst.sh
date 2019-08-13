@@ -11,6 +11,7 @@
 # It will cd to the directory containing the ipynb to do the conversion and
 # file moving.
 set -x # echo on
+set -e # exit immediately on failure
 
 NBFILE=$1
 NBDIR=`dirname $NBFILE`
@@ -22,6 +23,5 @@ jupyter-nbconvert --to rst ${NBNAME}.ipynb
 sed -i -e "s/ipython3/python3/g" ${NBNAME}.rst
 sed -i -e "s/^\.\. image:: \(.*\)$/.. figure:: \1\n   :width: 100%/g" ${NBNAME}.rst
 mv ${NBNAME}.rst ../${NBNAME}.inc
-rm -r ../${NBNAME}_files/
+rm -rf ../${NBNAME}_files/
 mv ${NBNAME}_files/ ../
-

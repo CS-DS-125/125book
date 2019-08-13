@@ -53,6 +53,7 @@ extensions += ['runestone.common', 'runestone.activecode', 'runestone.assess', '
 
 # Add my extension
 #extensions += ['trinket']
+extensions += ['live_notebook']
 
 
 # Enable todos

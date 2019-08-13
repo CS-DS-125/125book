@@ -10,6 +10,7 @@ BUILDDIR      = build
 
 # Put it first so that "make" without argument is like "make normal".
 normal: Makefile
+	tools/convert_all_nb.sh
 	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
 
 help:

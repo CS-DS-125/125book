@@ -1032,7 +1032,7 @@ better sense of what this r value means.
 
 
 
-.. image:: pandas-continuous_files/pandas-continuous_29_0.svg
+.. figure:: pandas-continuous_files/pandas-continuous_29_0.svg
    :width: 100%
 
 

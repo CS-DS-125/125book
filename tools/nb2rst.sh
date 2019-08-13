@@ -24,4 +24,6 @@ sed -i -e "s/ipython3/python3/g" ${NBNAME}.rst
 sed -i -e "s/^\.\. image:: \(.*\)$/.. figure:: \1\n   :width: 100%/g" ${NBNAME}.rst
 mv ${NBNAME}.rst ../${NBNAME}.inc
 rm -rf ../${NBNAME}_files/
-mv ${NBNAME}_files/ ../
+if [ -d ${NBNAME}_files ] ; then
+    mv ${NBNAME}_files/ ../
+fi

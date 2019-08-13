@@ -1,7 +1,0 @@
-Python for Everybody (www.py4e.com) book source.
-
-Original from https://github.com/csev/py4e [in book3 folder]
-
-Translated to .rst with Pandoc 2.2.1 -- June 23, 2018.
-
-Converted with fix_index_stmnts.sh.

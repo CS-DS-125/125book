@@ -27,12 +27,12 @@ We will also be using a few methods we have seen previously:
 
 First, some imports and some code to make our charts look nicer.
 
-.. code:: python
+.. code:: python3
 
     import pandas as pd
     import matplotlib.pyplot as plt
 
-.. code:: python
+.. code:: python3
 
     # For slightly nicer charts
     %config InlineBackend.figure_formats = ['svg']
@@ -46,7 +46,7 @@ Now we read a CSV file of quiz grades and assign it to a variable called
 contains a column of dates that we want pandas to treat as dates so we
 are going to include an argument to treat the ‘Full’ column as a date.
 
-.. code:: python
+.. code:: python3
 
     df = pd.read_csv("broadway.csv", parse_dates=["Full"])
 
@@ -54,7 +54,7 @@ At this point all we know is that we’ve successfully read a CSV file.
 Let’s find out some more about the data. First, let’s find out how much
 data there is in the file.
 
-.. code:: python
+.. code:: python3
 
     df.shape
 
@@ -77,7 +77,7 @@ seems like a bit much to look at all at once. We can look at just parts
 of the dataframe by using the dataframe methods ``head()`` and/or
 ``tail()``.
 
-.. code:: python
+.. code:: python3
 
     df.head()
 
@@ -200,7 +200,7 @@ of the dataframe by using the dataframe methods ``head()`` and/or
 
 
 
-.. code:: python
+.. code:: python3
 
     df.tail()
 
@@ -329,7 +329,7 @@ the last five rows.
 We can pass an integer as an argument to ``head()`` or ``tail()`` to get
 more rows or fewer rows.
 
-.. code:: python
+.. code:: python3
 
     df.head(15)
 
@@ -613,7 +613,7 @@ some summary statistics to see if anything looks odd.
 Pandas has a nice dataframe method for looking at summary statistics
 called ``describe()``.
 
-.. code:: python
+.. code:: python3
 
     df.describe()
 
@@ -754,7 +754,7 @@ and vice versa). The ``describe()`` method returns a dataframe, so we
 can flip it by calling ``.transpose()`` on the result of
 ``.describe()``:
 
-.. code:: python
+.. code:: python3
 
     df.describe().transpose()
 
@@ -911,7 +911,7 @@ looking at the Capacity column earlier, so it is worth looking into this
 to see if this Attendance number seems reasonable. One way we can do
 that is to plot a histogram of attendance.
 
-.. code:: python
+.. code:: python3
 
     plt.hist(x="Attendance", data=df, bins=20)
     plt.xlabel("Attendance")
@@ -921,7 +921,8 @@ that is to plot a histogram of attendance.
 
 
 
-.. image:: pandas-descriptives_files/pandas-descriptives_18_0.svg
+.. figure:: pandas-descriptives_files/pandas-descriptives_18_0.svg
+   :width: 100%
 
 
 Now we have a sense on the Attendance data as a whole, but we can’t see
@@ -929,7 +930,7 @@ much about the highest range on this histogram. Let’s use the
 ``query()`` method we used earlier to only look at Attendance counts
 above 16000.
 
-.. code:: python
+.. code:: python3
 
     df_filtered_attend = df.query('Attendance > 16000')
     plt.hist(x="Attendance", data=df_filtered_attend, bins=40)
@@ -940,7 +941,8 @@ above 16000.
 
 
 
-.. image:: pandas-descriptives_files/pandas-descriptives_20_0.svg
+.. figure:: pandas-descriptives_files/pandas-descriptives_20_0.svg
+   :width: 100%
 
 
 Our histogram indicates that anything above 16000 in attendance occurs
@@ -951,7 +953,7 @@ performances in terms of attendance.
 
 The ``sort_values()`` dataframe method will help us do this.
 
-.. code:: python
+.. code:: python3
 
     df.sort_values(by='Attendance', ascending=False).head(20)
 
@@ -1317,7 +1319,7 @@ It’s notable here that while ‘Dreams and Nightmares’ was the highest
 attended event, it was not the highest grossing. Let’s sort the
 dataframe again and see what the highest grossing events are.
 
-.. code:: python
+.. code:: python3
 
     df.sort_values(by='Gross', ascending=False).head(20)
 
@@ -1671,7 +1673,7 @@ So let’s do a bit more investigating to compare the highest grossing and
 the highest attendance performance in our dataset. Let’s take a quick
 look at both using some of the new methods we’ve been working with.
 
-.. code:: python
+.. code:: python3
 
     df.sort_values(by='Attendance', ascending=False).head(20).describe().transpose()
 
@@ -1803,7 +1805,7 @@ look at both using some of the new methods we’ve been working with.
 
 
 
-.. code:: python
+.. code:: python3
 
     df.sort_values(by='Gross', ascending=False).head(20).describe().transpose()
 
@@ -1952,7 +1954,7 @@ Let’s take a closer look at trends in the mean by year for Gross and
 Attendance. We can do this by using the ``groupby()`` method and the
 ``mean()`` method.
 
-.. code:: python
+.. code:: python3
 
     df.groupby(by='Year').mean()
 
@@ -2284,11 +2286,11 @@ and then use that data for our plots. We are also going to use
 ``reset_index()`` to make it easier to access the ‘Year’ column (don’t
 worry about this for now).
 
-.. code:: python
+.. code:: python3
 
     df_means = df.groupby(by='Year').mean().reset_index()
 
-.. code:: python
+.. code:: python3
 
     plt.plot('Year', 'Attendance', data=df_means)
     plt.xlabel('Year')
@@ -2298,10 +2300,11 @@ worry about this for now).
 
 
 
-.. image:: pandas-descriptives_files/pandas-descriptives_32_0.svg
+.. figure:: pandas-descriptives_files/pandas-descriptives_32_0.svg
+   :width: 100%
 
 
-.. code:: python
+.. code:: python3
 
     plt.plot('Year', 'Gross', data=df_means)
     plt.xlabel('Year')
@@ -2311,7 +2314,8 @@ worry about this for now).
 
 
 
-.. image:: pandas-descriptives_files/pandas-descriptives_33_0.svg
+.. figure:: pandas-descriptives_files/pandas-descriptives_33_0.svg
+   :width: 100%
 
 
 So what do we make of all of this? Attendance appears to have peaked in
@@ -2323,7 +2327,7 @@ rising until 2013 when it started to plateau.
 Let’s consider one more question. Does this pattern we’ve observed hold
 for both Musicals and Plays?
 
-.. code:: python
+.. code:: python3
 
     df_musicals = df.query('Type == "Musical"')
     df_musicals_means = df_musicals.groupby(by='Year').mean().reset_index()
@@ -2341,7 +2345,7 @@ we:
 -  applied ``reset_index()`` to make the ‘Year’ column easier to work
    with
 
-.. code:: python
+.. code:: python3
 
     df_musicals = df.query('Type == "Musical"')
     df_musicals_means = df_musicals.groupby(by='Year').mean().reset_index()
@@ -2359,10 +2363,11 @@ we:
 
 
 
-.. image:: pandas-descriptives_files/pandas-descriptives_37_0.svg
+.. figure:: pandas-descriptives_files/pandas-descriptives_37_0.svg
+   :width: 100%
 
 
-.. code:: python
+.. code:: python3
 
     plt.plot('Year', 'Gross', data=df_musicals_means)
     plt.plot('Year', 'Gross', data=df_plays_means)
@@ -2374,7 +2379,8 @@ we:
 
 
 
-.. image:: pandas-descriptives_files/pandas-descriptives_38_0.svg
+.. figure:: pandas-descriptives_files/pandas-descriptives_38_0.svg
+   :width: 100%
 
 
 It appears that while plays have lower attendance and gross revenue than

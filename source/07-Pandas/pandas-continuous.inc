@@ -1310,12 +1310,13 @@ control the type of colors that are displayed in the heatmap.
 
 .. parsed-literal::
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x2b2bec194dd8>
+    <matplotlib.axes._subplots.AxesSubplot at 0x2ae5ef754a90>
 
 
 
 
-.. image:: pandas-continuous_files/pandas-continuous_40_1.svg
+.. figure:: pandas-continuous_files/pandas-continuous_40_1.svg
+   :width: 100%
 
 
 Another method for visualizing associations across a data set is a
@@ -1333,12 +1334,13 @@ create our scatter matrix of movie ratings.
 
 .. parsed-literal::
 
-    <seaborn.axisgrid.PairGrid at 0x2b2bec1a5ba8>
+    <seaborn.axisgrid.PairGrid at 0x2ae5ef754278>
 
 
 
 
-.. image:: pandas-continuous_files/pandas-continuous_42_1.svg
+.. figure:: pandas-continuous_files/pandas-continuous_42_1.svg
+   :width: 100%
 
 
 There’s a lot of information packed into the scatter matrix. First,
@@ -1585,12 +1587,13 @@ pairplots with groups.
 
 .. parsed-literal::
 
-    <seaborn.axisgrid.PairGrid at 0x2b2bec1ae278>
+    <seaborn.axisgrid.PairGrid at 0x2ae5f272cb00>
 
 
 
 
-.. image:: pandas-continuous_files/pandas-continuous_54_1.svg
+.. figure:: pandas-continuous_files/pandas-continuous_54_1.svg
+   :width: 100%
 
 
 The diagonals are again providing information about the frequency of

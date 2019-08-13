@@ -14,3 +14,5 @@
 
 
 .. include:: pandas-continuous.inc
+
+.. image:: pandas-continuous_files/pandas-continuous_29_0.svg

@@ -1032,7 +1032,7 @@ better sense of what this r value means.
 
 
 
-.. figure:: pandas-continuous_files/pandas-continuous_29_0.svg
+.. image:: pandas-continuous_files/pandas-continuous_29_0.svg
 
 
 So an r-value of .68 means that we generally see that movies scoring

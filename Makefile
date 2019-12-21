@@ -1,24 +1,22 @@
-# Minimal makefile for Sphinx documentation
-#
-
 # You can set these variables from the command line.
-# e.g.  "make normal SPHINXOPTS=-a"
+# e.g.  "make SPHINXOPTS=-a"
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = build
 
-# Put it first so that "make" without argument is like "make normal".
-normal: Makefile
-	tools/convert_all_nb.sh
+# For auto-converting notebooks
+VPATH := $(wildcard $(SOURCEDIR)/??-*/)   # so make will match the %.inc rule below *in* its directory, so % won't expand with the full path
+NB_SOURCES := $(wildcard $(SOURCEDIR)/*/notebooks/*.ipynb)
+NB_INCS := $(patsubst %.ipynb, %.inc, $(subst /notebooks/,/,$(NB_SOURCES)))
+
+all: Makefile $(NB_INCS)
 	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
+
+%.inc: notebooks/%.ipynb
+	tools/nb2rst.sh $^
 
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-.PHONY: help Makefile
-
-# Catch-all target: route all unknown targets to Sphinx using the new
-# "make mode" option.
-%: Makefile
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
+.PHONY: all help

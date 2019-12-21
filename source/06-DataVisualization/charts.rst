@@ -67,6 +67,7 @@ Here's a more serious line chart. Let's look at it and see what it is trying to 
 
 .. figure:: figs_charts/line_attendance_shubert.svg
    :alt: Line chart: weekly attendance at the Shubert Theatre
+   :width: 100%
 
 Again, the chart is self-sufficient.  We can see that it is plotting weekly
 attendance at the Shubert Theatre over time from 1994 to 2016.  Each point on
@@ -93,11 +94,13 @@ We can see a similar pattern in another chart:
 
 .. figure:: figs_charts/line_attendance_minskoff.svg
    :alt: Line chart: weekly attendance at the Minskoff Theatre
+   :width: 100%
 
 Here, we see the Minskoff Theatre hit a high attendance level in late 2006 and stayed there, fairly consistently, for years.  In this case, `The Lion King <https://en.wikipedia.org/wiki/The_Lion_King_(musical)>`_ moved to the Minskoff Theatre in 2006.  From Wikipedia: "It is Broadway's third longest-running show in history, and has grossed more than $1 billion, making it the highest grossing Broadway production of all time."  Charting the revenue of that theater over time tells us a little more:
 
 .. figure:: figs_charts/line_revenue_minskoff.svg
    :alt: Line chart: weekly gross revenue at the Minskoff Theatre
+   :width: 100%
 
 Even with attendance relatively flat for ten years, the revenue steadily
 increased.  Clearly ticket prices were increasing, no doubt thanks to the
@@ -115,6 +118,7 @@ Here's a more serious scatterplot. Let's look at it and see what it is trying to
 
 .. figure:: figs_charts/scatter_revenue_attendance.png
    :alt: Scatter plot: weekly attendance vs weekly revenue
+   :width: 100%
 
 The x-axis here represents weekly attendance, while the y-axis is weekly revenue.  We can see a clear relationship between the two, as higher attendance correlates (tends to occur with) higher revenue.  This makes sense, as each attendee will pay for their ticket, and so more attendees will result in more revenue.
 
@@ -129,6 +133,7 @@ dimension to a chart.  For example, color:
 
 .. figure:: figs_charts/scatter_revenue_attendance_year.png
    :alt: Scatter plot: weekly attendance vs weekly revenue, colored by year
+   :width: 100%
 
 Here, each marker in the chart is colored based on the year of the datapoint it
 represents.  Now we can see that ticket prices have varied considerably, but
@@ -146,6 +151,7 @@ Here's a more serious histogram. Let's look at it and see what it is trying to c
 
 .. figure:: figs_charts/histogram_attendance.svg
    :alt: Histogram: frequency of weekly attendance counts
+   :width: 100%
 
 This histogram shows us the frequency of different weekly attendance values in the data set.  We can see there are some smaller counts, below 5,000 attendees per week; the most common values are between 5,000 and 10,000; nearly all attendance numbers are less than 15,000; and there are just a tiny few weeks that counted attendance at one theater around 20,000 people.
 

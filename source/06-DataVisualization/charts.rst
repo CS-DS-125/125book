@@ -47,7 +47,7 @@ revenue of about $16 billion, plays $3 billion, and "special" shows somewhere
 less than $1 billion.  We know what each bar represents and what its value is.
 
 This data, and the data in all following charts, is from a set of data about
-Broadway shows from 1994 through 2016 [`source <https://think.cs.vt.edu/corgis/csv/broadway/broadway.html>`_ - part of the `CORGIS Dataset Project <https://think.cs.vt.edu/corgis/csv/index.html>`_].  With that context, we can see that across all Broadway shows, musicals make far more revenue than plays or other shows.
+Broadway shows from 1994 through 2016 [`source <https://think.cs.vt.edu/corgis/csv/broadway/>`_ - part of the `CORGIS Dataset Project <https://think.cs.vt.edu/corgis/csv/>`_].  With that context, we can see that across all Broadway shows, musicals make far more revenue than plays or other shows.
 
 The meaning of the bars changes based on the labels.  If we were interested in average weekly revenue (as opposed to total revenue over time), we would generate a chart like this:
 

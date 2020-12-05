@@ -28,7 +28,7 @@ course_id = '125book'  # for Runestone
 copyright = '2018, Mark Liffiton and Brad Sheese'
 author = 'Mark Liffiton and Brad Sheese'
 license_text = """
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="/_static/by-nc-sa.svg" /></a> This work is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>.  See <a href="/AB-License.html">License</a> for details.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="/_static/by-nc-sa.svg" /></a> This work is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>.  See <a href="/AB-License.html">License</a> for details.  See <a href="https://github.com/CS-DS-125/125book/">Github</a> for source and to report <a href="https://github.com/CS-DS-125/125book/issues">issues</a> with the contents or website.
 """
 
 # The short X.Y version

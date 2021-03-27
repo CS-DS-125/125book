@@ -1,5 +1,3 @@
-.. index:: pandas
-
 Classes (Defining New Kinds of Objects)
 =======================================
 

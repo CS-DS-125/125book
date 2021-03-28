@@ -29,10 +29,12 @@ Table of Contents
    03-ControlStructures/toctree
    04-Functions/toctree
    05-StringsListsAndFiles/toctree
-   06-Pandas/toctree
-   07-Statistics/toctree
-   08-DataVisualization/toctree
-   09-Classes/toctree
+   06-PandasSeries/toctree
+   07-PandasDataframes/toctree
+   08-Statistics/toctree
+   09-DataVisualization/index
+   10-DataCleaning/index
+   11-Classes/toctree
 
 Appendices
 ^^^^^^^^^^

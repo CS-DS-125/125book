@@ -20,7 +20,10 @@ NBNAME=`basename $NBFILE .ipynb`
 cd $NBDIR
 
 # Execute the notebook, but fall back to not executing it if that fails
-jupyter-nbconvert --to rst --execute ${NBNAME}.ipynb || jupyter-nbconvert --to rst ${NBNAME}.ipynb
+#jupyter-nbconvert --to rst --execute ${NBNAME}.ipynb || jupyter-nbconvert --to rst ${NBNAME}.ipynb
+
+jupyter-nbconvert --to rst ${NBNAME}.ipynb
+
 sed -i -e "s/ipython3/python3/g" ${NBNAME}.rst
 sed -i -e "s/^\.\. image:: \(.*\)$/.. figure:: \1\n   :width: 100%/g" ${NBNAME}.rst
 mv ${NBNAME}.rst ../${NBNAME}.inc

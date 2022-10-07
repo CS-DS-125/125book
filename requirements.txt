@@ -1,0 +1,2 @@
+nbconvert
+# RunestoneComponents w/ a pip -e . in the repo directory

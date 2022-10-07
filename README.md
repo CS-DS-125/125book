@@ -22,3 +22,11 @@ Please report any issues with the content or the website in the [Github reposito
 
 ![Creative Commons BY-NC-SA 3.0](/source/_themes/125book/static/by-nc-sa.svg)
 This work is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/).  See [source/AB-License.rst](source/AB-License.rst) for details.
+
+## Building
+
+Requires a [fork of RunestoneComponents](https://github.com/liffiton/RunestoneComponents/tree/mine).
+Install that with `pip -e .` in the `RunestoneComponents` directory.
+Then `pip -r requirements.txt` in the book directory.
+Finally, `make` should build everything.
+

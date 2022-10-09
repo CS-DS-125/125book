@@ -22,7 +22,7 @@ introduction.  Here it is again:
 
    file.close()
 
-   print("{} words start with '{}'.".format(count, countchar))
+   print(f"{count} words start with '{countchar}'.")
 
 Here is what we can understand so far, just based on the contents of this
 chapter:
@@ -91,8 +91,10 @@ plus one.
 
    file.close()
 
-   print("{} words start with '{}'.".format(count, countchar))
+   print(f"{count} words start with '{countchar}'.")
 
 In these remaining lines, we see a print statement, but with an oddly-formed
-string, and something to do with the ``file`` variable above, whose meaning can be guessed from the names used and the context, but for which we have no precise interpretation yet.
+string, and something to do with the ``file`` variable above.  The meaning of
+these can be guessed from the names used and the context, but we have no
+precise interpretation for them yet.
 

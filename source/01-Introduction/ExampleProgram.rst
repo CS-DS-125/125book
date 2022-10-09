@@ -71,7 +71,7 @@ running it!
 
    file.close()
 
-   print("{} words start with '{}'.".format(count, countchar))
+   print(f"{count} words start with '{countchar}'.")
 
 Unless you've learned some programming before, this code probably looks like
 nonsense to you. By the time you're done with the class you'll be able to read
@@ -158,7 +158,7 @@ as the one above, but uses many fewer lines of code.
    with open("atotc_opening.txt") as f:
        count = sum(word.startswith(countchar) for word in f.read().split())
 
-   print("{} words start with '{}'.".format(count, countchar))
+   print(f"{count} words start with '{countchar}'.")
 
 This version probably makes even less sense, and that's okay. It's important to
 understand that the same task can be solved many different ways in programming. And 

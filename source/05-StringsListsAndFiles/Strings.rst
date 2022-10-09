@@ -540,73 +540,80 @@ The `documentation for the find method
 optional arguments.
 
 
-.. index:: format() method, string formatting
+.. index:: f-string, string formatting
 
-String Formatting
-~~~~~~~~~~~~~~~~~
+String Formatting with F-Strings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``format()`` string method is one of the most commonly used.  It allows us
-to construct strings, replacing parts of the strings with the data stored in
-variables or calculated in expressions.  Let's look at an example:
+When printing the results of some computation, we very frequently want to place
+data (such as in a variable) into a string of text.  "F-Strings" give us a good
+way to accomplish that.  They allow us to *construct* strings, replacing parts
+of the strings with the data stored in variables or calculated in expressions.
+Let's look at an example:
 
 .. activecode:: strings21
 
    count = 12
    countchar = 'a'
-   print("{} words start with '{}'.".format(count, countchar))
+   print(f"{count} words start with '{countchar}'.")
 
-The syntax might look a little strange.  It is calling the ``format()`` method
-via dot notation, but instead of writing a string variable to the left of the
-dot, we wrote a string literal.  This is commonly how ``format()`` is called.
+The syntax might look a little strange.  The ``f`` before the string literal begins
+may look out of place to you, but it's an important part of the syntax.  That
+**string prefix** tells Python the string that follows should be treated in a
+particular way; in this case, it is a **format string**.
 
 .. index:: format string
 
-The string literal (from which the ``format()`` method is called) is known as a
-**format string**.  The format string should contain one or more
-**placeholders**, written as ``{}`` (known as "curly braces").  Then, each
-argument given to the ``format()`` method is placed into the string in place of
-each of the placeholders in order.
+A format string should contain one or more placeholders, written as ``{ }``
+(known as "curly braces") with some variable or expression written inside.
+Each ``{ }`` placeholder will be replaced with the *value* of whatever is
+written inside.  So you can see in the example above how each placeholder
+ends up replaced with the value of the specified variable.
 
-Each placeholder can contain information inside the ``{}`` curly braces that
-specifies how the value included there should be formatted.  There are many
-options for controlling how the string is formatted, but the more commonly-used
-options control how floating point values are printed and allow for aligning
-values in columns.  The following example demonstrates both.
+A placeholder can optionally contain additional information inside the ``{ }``
+curly braces that specifies how the value included there should be formatted.
+There are many options for controlling how the string is formatted, but the
+more commonly-used options control how floating point values are printed and
+allow for aligning values in columns.  The following example demonstrates both.
 
 .. activecode:: strings22
 
    # An ugly table
    print("Index  Value")
    for i in range(8):
-       print(i*5, i*0.125)
+       bigger = i * 5
+       smaller = i * 0.125
+       print(bigger, smaller)
 
    print()
 
    # A well-formatted table
    print("Index  Value")
    for i in range(8):
-       print("{:>5}  {:5.3f}".format(i*5, i*0.125))
+       bigger = i * 5
+       smaller = i * 0.125
+       print(f"{bigger:>5}  {smaller:5.3f}")
 
-In the format string here, ``"{:>5}  {:5.3f}"``, the first placeholder is
-``{:>5}``.  It includes a ``:`` to start the formatting options, the ``>``
-makes the value "right-aligned" and the ``5`` controls how many characters the
-value is placed in.  So it always uses 5 characters, and it places the value on
-the right hand side of that space.  The second placeholder, ``{:5.3}`` uses 5
-characters, again, and the ``.3f`` makes it format it as a floating point value
-and place 3 digits after the decimal point, again regardless of the value
-itself.  Values are left-aligned by default.  Try changing some of the values
-in the placeholders to see how it affects the formatting.
+In the f-string here, ``f"{bigger:>5}  {smaller:5.3f}"``, the first
+placeholder's format is ``:>5``.  It includes a ``:`` to start the formatting
+options, the ``>`` makes the value "right-aligned" and the ``5`` controls how
+many characters the value is placed in.  So it always uses 5 characters, and it
+places the value on the right hand side of that space.  The second
+placeholder's format, ``:5.3f`` uses 5 characters, again, and the ``.3f`` makes
+it format it as a floating point value and place 3 digits after the decimal
+point, regardless of the value itself.  Values are left-aligned by default.
+Try changing some of the values in the placeholders to see how it affects the
+formatting.
 
 There are *many* more options for controlling what is included in the string
-and how it is formatted.  You can see the full set of options in the `"Format
-String Syntax" documentation
-<https://docs.python.org/3/library/string.html#formatstrings>`_, and the
-`examples <https://docs.python.org/3/library/string.html#format-examples>`_
-provided can help you learn about additional features.
+and how it is formatted.  See
+`fstring.help <https://fstring.help/>`_ for a guide to f-strings
+that shows many of the possibilities.
 
-Using string formatting is often easier than building strings by concatenating
-different pieces and provides more control than including multiple arguments in
-a plain ``print()`` statement.  For example:
+Using f-strings is often easier than building strings by concatenating
+different pieces, it provides more control than including multiple arguments in
+a plain ``print()`` statement, and it makes for clean, readable code.  For
+example:
 
 .. activecode:: strings23
 
@@ -621,6 +628,6 @@ a plain ``print()`` statement.  For example:
    # Concatenation  (complex expression, prone to errors)
    print("The volume is " + str(volume) + " cubic " + units + ".")
 
-   # String formatting  (just right!)
-   print("The volume is {:.2f} cubic {}.".format(volume, units))
+   # F-string  (just right!)
+   print(f"The volume is {volume:.2f} cubic {units}.")
 

@@ -638,7 +638,7 @@ ul.dropdown-menu.globaltoc {
 div.nb-output-cell {
   margin-top: 0;
 }
-div.nb-output-cell pre {
+div.nb-output-cell pre, pre.nb-output-cell {
   border-left: 4px solid #990000;
 }
 

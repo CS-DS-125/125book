@@ -630,6 +630,18 @@ ul.dropdown-menu.globaltoc {
     overflow: auto;
 }
 
+/* Notebook output cells from Jupyter notebooks */
+.nb-output-cell-label {
+  color: #990000;
+  margin: 0;
+}
+div.nb-output-cell {
+  margin-top: 0;
+}
+div.nb-output-cell pre {
+  border-left: 4px solid #990000;
+}
+
 /* Dataframes from Jupyter notebooks */
 .dataframe {
     border: none;

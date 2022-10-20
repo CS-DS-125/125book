@@ -24,8 +24,8 @@ cd $NBDIR
 
 jupyter-nbconvert --to rst ${NBNAME}.ipynb
 
-sed -i -e "s/ipython3/python3/g" ${NBNAME}.rst
-sed -i -e "s/parsed-literal/nboutput/g" ${NBNAME}.rst
+sed -i -e "s/code:: ipython3/code:: python3/g" ${NBNAME}.rst
+sed -i -e "s/parsed-literal::/nboutput::/g" ${NBNAME}.rst
 sed -i -e "s/^\.\. image:: \(.*\)$/.. figure:: \1\n   :width: 100%/g" ${NBNAME}.rst
 mv ${NBNAME}.rst ../${NBNAME}.inc
 rm -rf ../${NBNAME}_files/

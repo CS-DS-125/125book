@@ -1,2 +1,4 @@
 nbconvert
+ipython   # for ipython3 parser in pygments
+#nbsphinx
 # RunestoneComponents w/ a pip -e . in the repo directory

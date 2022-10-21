@@ -52,6 +52,7 @@ div#content-wrapper {
 }
 .container  .section >*:not(.section) {
 	max-width: 500pt;
+    overflow: scroll;
 }
 
 .container .section > .table {
@@ -644,9 +645,8 @@ div.nb-output-cell pre, pre.nb-output-cell {
 
 /* Dataframes from Jupyter notebooks */
 .dataframe {
-    border: none;
-    margin: 1em 0;
-    border: 1px solid #ddd;
+    margin-bottom: 1em;
+    border: 4px solid #ddd;
     font-size: 90%;
 }
 .dataframe th, table.dataframe td {

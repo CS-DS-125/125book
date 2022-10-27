@@ -52,7 +52,7 @@ div#content-wrapper {
 }
 .container  .section >*:not(.section) {
 	max-width: 500pt;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .container .section > .table {

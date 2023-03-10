@@ -50,38 +50,38 @@ div#content-wrapper {
     min-width: 0;  /* so flexbox will push beyond what CodeMirror might otherwise want when shrinking. */
     padding: 0 1em;
 }
-.container  .section >*:not(.section) {
+.container  section >*:not(section) {
 	max-width: 500pt;
     overflow: auto;
 }
 
-.container .section > .table {
+.container section > .table {
     width: unset;  /* don't need to stretch tables to 100%, which is what bootstrap seems to want */
 }
-.container .section > .table.align-left {
+.container section > .table.align-left {
     margin-left: 2em;
 }
 
-.container .section a.image-reference {
+.container section a.image-reference {
     /* to get them centered within the weird width thing we have going here */
 	display: block;
     margin: 1em auto;
 }
 
-div.figure {
+figure {
     text-align: center;
     margin: 0 !important;  /* override Sphinx 2.0's cenetering (across the entire page) */
     padding: 0;
 }
-div.figure p.caption {
+figure p.caption {
     font-style: italic;
 }
-div.figure p.caption:before {
+figure p.caption:before {
     content: "Figure " counter(figure) ": ";
     counter-increment: figure;
 }
 
-.container  .section .parsons, .container  .section .parsons .sortable-code-container, .container  .section .ac_section, .container  .section .cd_section{
+.container  section .parsons, .container  section .parsons .sortable-code-container, .container  section .ac_section, .container  section .cd_section{
 	max-width: none !important;
 }
 
@@ -497,7 +497,7 @@ ul#bottom-relations-console {
     background-color: #fff;
 }
 
-.container  .section>div.sidebar {
+.container  section>div.sidebar {
 	margin: 0 0 0.5em 1em;
 	width: auto;
 	}
@@ -516,17 +516,17 @@ iframe[seamless] {
 }
 
 @media (min-width: 768px){
-	.container  .section>div.sidebar {
+	.container  section>div.sidebar {
 		margin: 0 3em 0.5em 1em;
 	}
 }
 @media (min-width: 992px){
-	.container  .section>div.sidebar {
+	.container  section>div.sidebar {
 		margin: 0 11em 0.5em 1em;
 	}
 }
 @media (min-width: 1200px){
-	.container  .section>div.sidebar {
+	.container  section>div.sidebar {
 		margin: 0 18em 0.5em 1em;
 	}
 }

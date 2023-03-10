@@ -26,7 +26,7 @@ This work is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licens
 ## Building
 
 Requires a [fork of RunestoneComponents](https://github.com/liffiton/RunestoneComponents/tree/mine).
-Install that with `pip -e .` in the `RunestoneComponents` directory.
+Install that with `pip install -e .` in the `RunestoneComponents` directory.
 Then `pip -r requirements.txt` in the book directory.
 Finally, `make` should build everything.
 

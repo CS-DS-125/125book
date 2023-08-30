@@ -1,5 +1,8 @@
 nbconvert
 pandas
+matplotlib
+seaborn
+numpy
 ipython   # for ipython3 parser in pygments
 #nbsphinx
 # RunestoneComponents w/ a pip install -e . in the repo directory

@@ -5,7 +5,7 @@ _TEMPLATE = '''
 This is a static copy of a Jupyter notebook.
 
 You can access a live version allowing you to modify and execute the code using
-`Binder <https://mybinder.org/v2/gh/CS-DS-125/125book/master?urlpath=lab/tree/{{NOTEBOOK_PATH}}&filepath={{NOTEBOOK_PATH}}>`_.
+`Binder <https://mybinder.org/v2/gh/CS-DS-125/125book/master?urlpath=lab/tree/{{NOTEBOOK_PATH}}>`_.
 '''
 
 #- `Jhub

@@ -19,7 +19,7 @@ discussed.  A few key points repeated from that chapter:
    As another way of putting it, objects "know things" and "can do things":
 
    * Objects "know things": an object holds *data*.
-   * Objects "can do things": an object contains *code* (the methods).
+   * Objects "can do things": an object contains *code* (its methods).
 
 In the case of a string object, the object's data is the characters of the
 string itself.  And there are a few ways to learn about what methods (code) it

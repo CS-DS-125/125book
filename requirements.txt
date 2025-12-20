@@ -4,5 +4,6 @@ matplotlib
 seaborn
 numpy
 ipython   # for ipython3 parser in pygments
+setuptools<81  # for pkg_resources
 #nbsphinx
 # RunestoneComponents w/ a pip install -e . in the repo directory

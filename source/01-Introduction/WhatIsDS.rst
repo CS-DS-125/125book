@@ -55,7 +55,7 @@ and statistics.
 
 Data scientists typically apply programming along with mathematics and applied
 statistics to problems within a specific domain area (for example, finance or
-meterology). Knowing how and when to use data science tools requires expertise
+meteorology). Knowing how and when to use data science tools requires expertise
 in the domain area where the tools are being used. 
 
 It is important to remember that data science tools only provide useful
@@ -69,7 +69,7 @@ What Skills Do I Need to Do Data Science?
 You will need to know **programming**, you will need to know **statistics**,
 and you will need to know about your **domain area**. (As we've mentioned, this
 book will focus on the fundamentals of the first of those: programming.) Data
-scientists do differ quite a bit in how much they know about or use knoweldge
+scientists do differ quite a bit in how much they know about or use knowledge
 in these three areas. Some are stronger in programming and statistics but not
 domain knowledge, others may be strong in programming and domain knowledge but
 might not know about or need much statistics. However, one thing that

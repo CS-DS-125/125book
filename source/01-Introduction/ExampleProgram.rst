@@ -167,7 +167,7 @@ about writing programs that other people can read and understand.
 
 Good code not only solves the problem, it is also clear and well-organized
 (we will use the term well-structured inthe course). Bad code either doesn't do the
-job correctly or is so convuoluted that other people can't understand it. When bad
+job correctly or is so convoluted that other people can't understand it. When bad
 code breaks it may be easier to simply re-write everything from scratch rather than
 trying to decipher the code. By the end of this course you will understand 
 how to write clear, straight-forward code that both instructs the computer to how to

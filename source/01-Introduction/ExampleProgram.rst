@@ -10,7 +10,7 @@ texts in Tweets to attempt to find out how much people like their product.
 (This type of analysis is called 'sentiment' analysis.)
 
 Sentiment analysis might involve counting how often some words (like 'Great!')
-co-occur with a product name and tracking how often these co-occurences happen over time. 
+co-occur with a product name and tracking how often these co-occurrences happen over time. 
 
 We are going to look at a really basic program that is designed to analyze text
 and tell us something about it. 
@@ -149,7 +149,7 @@ and then check to make sure the program counts them correctly when you re-run it
 And just as an example, here is another program that does the exact same thing
 as the one above, but uses many fewer lines of code. 
 
-.. activecode:: wordcount_example_succint
+.. activecode:: wordcount_example_succinct
 
    # Count words in a file starting with a given letter.
 
@@ -166,7 +166,7 @@ since there isn't just one solution for any problem, we will need to also learn
 about writing programs that other people can read and understand. 
 
 Good code not only solves the problem, it is also clear and well-organized
-(we will use the term well-structured inthe course). Bad code either doesn't do the
+(we will use the term well-structured in the course). Bad code either doesn't do the
 job correctly or is so convoluted that other people can't understand it. When bad
 code breaks it may be easier to simply re-write everything from scratch rather than
 trying to decipher the code. By the end of this course you will understand 
